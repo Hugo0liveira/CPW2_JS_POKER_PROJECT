@@ -1,0 +1,139 @@
+html {
+  background: url('https://libn.com/wp-content/blogs.dir/1/files/2014/06/Calverton-National-Cemetery-1.jpg') no-repeat center center fixed;
+  background-color: #000000;
+}
+* {
+  box-sizing: border-box; margin: 0; padding: 0;
+}
+body {
+  font-family: Arial, sans-serif;
+}
+.container {
+  display: flex;flex-direction: column;
+  align-items: center;justify-content: center;width: 100%;height: 100vh; 
+}
+.player-section {
+  display: flex;flex-direction: column;align-items: center;justify-content: center;
+  width: 100%;height: 200px; margin-top: 10px;
+}
+.player-section-2 {
+  border-bottom: 5px solid #000000;  
+}
+.sectionPlayerHand2{ margin-bottom: 50px;   }
+.player-section-1 {
+  border-top: 5px solid #000000;   
+}
+.player-name {
+  padding: 0px;font-style: italic;font-size: larger;color: #000000;
+  text-align: center;font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;  
+  font-size: 23px;text-shadow: 5px 5px 10px rgb(255, 255, 255);
+  font-weight: bold; 
+}
+.player-chips {
+  font-size: 18px;font-weight: bold; padding: 5px;text-align: center;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-style: italic;font-size: larger;color: #000000;font-size: 18px;
+  text-shadow: 5px 5px 10px rgb(255, 255, 255);
+}
+.player-hand {
+  display: flex;flex-direction: row;justify-content: center;
+  align-items: center;width: 100%;height: 60px; margin-top: 45px;
+}
+.community-cards {
+  display: flex;flex-direction: row; margin-top: 10px;
+}
+.card {
+  width: 119px;height: 120px;background-color: #d8d6d6;border: 1px solid #050505;
+  border-radius: 5px;margin-right: 10px;display: flex;flex-direction: 
+  column;justify-content: center;align-items: center; 
+}
+.card .value {
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-style: italic;color: black;
+}
+.card .suit {
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-style: italic;color: #5645aa;font-size: 14px;
+}
+.card .power {
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  color: rgb(230, 89, 89);
+}
+.actions {
+  display: flex;justify-content: center;align-items: center; margin-top: 10px;
+}
+.btn-fold,.btn-check,.btn-raise,.btn-call {
+  padding: 10px; font-size: 18px;font-weight: bold; margin-right: 10px;border-radius: 18%;    }
+.btn-fold {
+  background-color: #f44336;color: #fff;border: none;   }
+.btn-check {
+  background-color: #4CAF50;color: #fff;border: none;   }
+.btn-raise {
+  background-color: #2196F3;color: #fff;border: none;   }
+.btn-call {
+  background-color: #f3de21;color: #fff;border: none;   }
+.info {  
+  text-align: center;font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-style: italic;color: #000000;text-shadow: 5px 5px 10px rgb(254, 0, 0); margin-top: 10px;
+}
+.yearsAndValue{
+  display: flex;flex-direction: column;
+}
+.riskAndValue{
+  display: flex;flex-direction: column;
+}
+.years {
+  margin-top: 5%; font-size: 18px; }
+.yearsSurviving {
+  margin-top: 5%; font-size: 18px;  }
+.risk {
+  margin-top: 5%; font-size: 18px;   }
+.riskValue {
+  margin-top: 5%; font-size: 18px;
+}
+.btn-disabled {
+  background-color: #ccc;color: #fff;border: none;  }
+.active-player {
+  background-color: #eee; }
+@media (max-width: 768px) {
+  .container {padding: 20px; }
+}
+@media (max-width: 480px) {
+  .player-section {height: 140px;}
+  .player-section-2 {
+    border-bottom: 3px solid #000000;  
+  }
+  .player-section-1 {
+    border-top: 3px solid #000000;        
+  }
+  .sectionPlayerHand2{ margin-bottom: 5px;   }
+  .player-name {
+    font-size: 14px;}
+  .player-chips {
+    font-size: 12px;}
+    .player-hand {      
+      margin-top: 11px;    }
+  .card {
+    width: 56px; height: 74px;}
+  .card .value {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-style: italic;color: black;font-size: 11px; margin-top: 5px;}
+  .card .suit {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-style: italic;color: #5645aa;font-size: 9px; margin-top: -7px;  }
+  .card .power {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: rgb(230, 89, 89); font-size: 10px; margin-top: -11px;  }
+    .actions { margin-top: -11px;   }
+  .btn-fold,.btn-check,.btn-raise,.btn-call {
+    padding: 4px;font-size: 11px;font-weight: bold;
+    margin-right: 5px;border-radius: 23%;  }
+  .info {
+    display: flex;flex-direction: column; justify-content: center;align-items: center;margin-top: 8px;text-align: center;   }
+    .years{ font-size: 11px; }
+  .yearsSurviving {    
+    margin-top: 5%; font-size: 13px;  }
+    .risk{ font-size: 11px;   }
+  .riskValue {    
+    margin-top: 5%; font-size: 13px;  }
+}
