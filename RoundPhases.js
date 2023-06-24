@@ -1,58 +1,58 @@
 
-import { Player, deck, originalDeck, allCommunityCards, game, conditionsPreflop, conditionsFlop, conditionsTurn, conditionsRiver, preflop, flop, turn, river, fold, call, comparehands, conditionsComparehands, check, raise, risk, years, gameOver, initialMessage } from './Variables.js';
 import { shuffleDeck, cleanAllCommunityCards, distributeCards, addCardOnCommunityCards, concatenateHand } from "./DeckManipulation.js";
 import {determineWinnersHand} from "./DetermineWinnersHand.js";
+import { Variables } from "./Variables.js"
 
 // Buttons functions 
 function functionFold(event) {
   event.stopPropagation(); // Stop event propagation
-  if(conditionsPreflop==1){
-  fold = 1; checkConditionsPreFlop(); 
+  if(Variables.conditionsPreflop==1){
+    Variables.fold = 1; checkConditionsPreFlop(); 
   } else if(conditionsFlop==1){
-  fold = 2; checkConditionsFlop(); 
+    Variables.fold = 2; checkConditionsFlop(); 
   } else if(conditionsTurn==1){
-    fold = 3; checkConditionsTurn(); 
+    Variables.fold = 3; checkConditionsTurn(); 
   } else if(conditionsRiver==1){
-    fold = 4; checkConditionsRiver(); 
+    Variables.fold = 4; checkConditionsRiver(); 
   }
 }
 
 function functionCall(event) {
   event.stopPropagation(); // Stop event propagation     
-  if(conditionsPreflop==1){
-    call = 1; checkConditionsPreFlop(); 
-    } else if(conditionsFlop==1){
-    call = 2; checkConditionsFlop(); 
-    } else if(conditionsTurn==1){
-      call = 3; checkConditionsTurn(); 
-    } else if(conditionsRiver==1){
-      call = 4; checkConditionsRiver(); 
+  if(Variables.conditionsPreflop==1){
+    Variables.call = 1; checkConditionsPreFlop(); 
+    } else if(Variables.conditionsFlop==1){
+      Variables.call = 2; checkConditionsFlop(); 
+    } else if(Variables.conditionsTurn==1){
+      Variables.call = 3; checkConditionsTurn(); 
+    } else if(Variables.conditionsRiver==1){
+      Variables.call = 4; checkConditionsRiver(); 
     }
 }
 
 function functionCheck(event) {
   event.stopPropagation(); // Stop event propagation
-  if(conditionsPreflop==1){
-    check = 1; checkConditionsPreFlop(); 
-    } else if(conditionsFlop==1){
-    check = 2; checkConditionsFlop(); 
-  } else if(conditionsTurn==1){
-    check = 3; checkConditionsTurn(); 
-  } else if(conditionsRiver==1){
-    check = 4; checkConditionsRiver(); 
+  if(Variables.conditionsPreflop==1){
+    Variables.check = 1; checkConditionsPreFlop(); 
+    } else if(Variables.conditionsFlop==1){
+    Variables.check = 2; checkConditionsFlop(); 
+  } else if(Variables.conditionsTurn==1){
+    Variables.check = 3; checkConditionsTurn(); 
+  } else if(Variables.conditionsRiver==1){
+    Variables.check = 4; checkConditionsRiver(); 
   }
 }
 
 function functionRaise(event) {             //ERRO! raise acionando phaseTurn()
   event.stopPropagation(); // Stop event propagation
-  if(conditionsPreflop==1){
-    raise=1; checkConditionsPreFlop();
-  } else if(conditionsFlop==1){ 
-    raise = 2; checkConditionsFlop(); 
-  } else if(conditionsTurn==1){ 
-    raise = 3; checkConditionsTurn(); 
-  } else if(conditionsRiver==1){ 
-    raise = 4; checkConditionsRiver(); 
+  if(Variables.conditionsPreflop==1){
+    Variables.raise=1; checkConditionsPreFlop();
+  } else if(Variables.conditionsFlop==1){ 
+    Variables.raise = 2; checkConditionsFlop(); 
+  } else if(Variables.conditionsTurn==1){ 
+    Variables.raise = 3; checkConditionsTurn(); 
+  } else if(Variables.conditionsRiver==1){ 
+    Variables.raise = 4; checkConditionsRiver(); 
   } 
 }
 
@@ -62,33 +62,33 @@ function functionRaise(event) {             //ERRO! raise acionando phaseTurn()
   const raiseButton = document.querySelector(".btn-raise");
 
 //CHECK CONDITIONS BUTTONS on each phase of the game
-function checkConditionsPreFlop(player1, player2) {
-  if(conditionsPreflop==1){
-      if (fold == 1) {
+function checkConditionsPreFlop() {
+  if(Variables.conditionsPreflop==1){
+      if (Variables.fold == 1) {
         window.alert("FOLD on Phase PRE-FLOP! ");     
-        player1.chips -= risk; player2.chips += risk;  infoRisk.innerHTML = risk;
-        preflop = 1; flop = 0; turn = 0; river = 0; comparehands=0; 
-          conditionsFlop=0; conditionsRiver=0; conditionsTurn =0;
-        PhasePreFlop(player1, player2);
+        Variables.player1.chips -= Variables.risk; Variables.player2.chips += Variables.risk;  Variables.infoRisk.innerHTML = Variables.risk;
+        Variables.preflop = 1; Variables.flop = 0; Variables.turn = 0; Variables.river = 0; Variables.comparehands=0; 
+        Variables.conditionsFlop=0; Variables.conditionsRiver=0; Variables.conditionsTurn =0;
+        PhasePreFlop();
       }  
-      if (call == 1) {        
+      if (Variables.call == 1) {        
         window.alert("CALL on Phase PRE-FLOP! ");         
-        preflop = 0; flop = 1; turn = 0; river = 0; comparehands=0; 
-          conditionsFlop=0; conditionsRiver=0; conditionsTurn =0;
-        PhaseFlop(player1, player2); 
+        Variables.preflop = 0; Variables.flop = 1; Variables.turn = 0; Variables.river = 0; Variables.comparehands=0; 
+        Variables.conditionsFlop=0; Variables.conditionsRiver=0; Variables.conditionsTurn =0;
+        PhaseFlop(Variables.player1, Variables.player2); 
       }  
-      if (check == 1) {
-        check == 0;
+      if (Variables.check == 1) {
+        Variables.check == 0;
         window.alert("Check button is not used on preflop phase!");          
       }
-      if (raise == 1) {
+      if (Variables.raise == 1) {
         window.alert("RAISE on Phase PRE-FLOP! ");     
-        if(player1.chips >= risk*2){
-        risk = risk + risk; 
-        infoRisk.innerHTML = risk;        
-        raise = 0; flop = 1; turn = 0; river = 0; conditionsPreflop=0;
+        if(Variables.player1.chips >= Variables.risk*2){
+          Variables.risk = Variables.risk + Variables.risk; 
+          Variables.infoRisk.innerHTML = Variables.risk;        
+          Variables.raise = 0; Variables.flop = 1; Variables.turn = 0; Variables.river = 0; Variables.conditionsPreflop=0;
          console.log("RAISE on Phase PRE-FLOP");                         
-         PhaseFlop(player1, player2);
+         PhaseFlop();
         } else {
           window.alert("Not enough lives!");     
         }
@@ -97,34 +97,34 @@ function checkConditionsPreFlop(player1, player2) {
     }                       
 }        
 
-function checkConditionsFlop(player1, player2) {  
+function checkConditionsFlop() {  
   
-  if(conditionsFlop==1){
-      if (fold == 2) {
+  if(Variables.conditionsFlop==1){
+      if (Variables.fold == 2) {
         window.alert("FOLD on Phase FLOP! ");     
-        player1.chips -= risk; player2.chips += risk;  infoRisk.innerHTML = risk;
-        preflop = 1; flop = 0; turn = 0; river = 0; comparehands=0; 
-          conditionsFlop=0; conditionsRiver=0; conditionsTurn =0;
-        PhasePreFlop(player1, player2);
+        Variables.player1.chips -= Variables.risk; Variables.player2.chips += Variables.risk;  Variables.infoRisk.innerHTML = Variables.risk;
+        Variables.preflop = 1; Variables.flop = 0; Variables.turn = 0; Variables.river = 0; Variables.comparehands=0; 
+        Variables.conditionsFlop=0; Variables.conditionsRiver=0; Variables.conditionsTurn =0;
+        PhasePreFlop();
       }  
-      if (call == 2) {          
-        call == 0;
+      if (Variables.call == 2) {          
+        Variables.call == 0;
         window.alert("Call button is NOT used on Phase FLOP! ");             
       }    
-      if (check == 2) {
+      if (Variables.check == 2) {
         window.alert("CHECK on Phase FLOP! ");     
-        preflop=0; flop =0; turn = 1; river=0; comparehands=0; 
-          conditionsFlop=0; conditionsRiver=0; conditionsTurn =0;
-        PhaseTurn(player1, player2);
+        Variables.preflop=0; Variables.flop =0; Variables.turn = 1; Variables.river=0; Variables.comparehands=0; 
+        Variables.conditionsFlop=0; Variables.conditionsRiver=0; Variables.conditionsTurn =0;
+        PhaseTurn();
       }    
-      if (raise == 2) {
+      if (Variables.raise == 2) {
         window.alert("RAISE on Phase FLOP! ");     
-        if(player1.chips >= risk*2){
-          risk = risk + risk;
-          infoRisk.innerHTML = risk;
-          preflop = 0; flop = 0; conditionsFlop=0; river = 0; turn = 1;
+        if(Variables.player1.chips >= Variables.risk*2){
+          Variables.risk = Variables.risk + Variables.risk;
+          Variables.infoRisk.innerHTML = Variables.risk;
+          Variables.preflop = 0; Variables.flop = 0; Variables.conditionsFlop=0; Variables.river = 0; Variables.turn = 1;
           console.log("RAISE on Phase FLOP");                                 
-          PhaseTurn(player1, player2);
+          PhaseTurn();
           } else{
             window.alert("Not enough lives!");     
           }
@@ -133,33 +133,33 @@ function checkConditionsFlop(player1, player2) {
     }                           
 }        
 
-function checkConditionsTurn(player1, player2) {  
-  if(conditionsTurn==1){
-      if (fold == 3) {
+function checkConditionsTurn() {  
+  if(Variables.conditionsTurn==1){
+      if (Variables.fold == 3) {
         window.alert("FOLD on Phase TURN! ");     
-        player1.chips -= risk; player2.chips += risk;  infoRisk.innerHTML = risk;
-        preflop = 1; flop = 0; turn = 0; river = 0; comparehands=0; 
-          conditionsFlop=0; conditionsRiver=0; conditionsTurn =0;
-        PhasePreFlop(player1, player2);
+        Variables.player1.chips -= Variables.risk; Variables.player2.chips += Variables.risk;  Variables.infoRisk.innerHTML = Variables.risk;
+        Variables.preflop = 1; Variables.flop = 0; Variables.turn = 0; Variables.river = 0; Variables.comparehands=0; 
+        Variables.conditionsFlop=0; Variables.conditionsRiver=0; Variables.conditionsTurn =0;
+        PhasePreFlop();
       }  
-      if (call == 3) {          
-        call == 0;
+      if (Variables.call == 3) {          
+        Variables.call == 0;
         window.alert("Call button is NOT used on Phase TURN! ");             
       }    
-      if (check == 3) {
+      if (Variables.check == 3) {
         window.alert("CHECK on Phase TURN! ");     
-        preflop=0; flop =0; turn=0; river=1; comparehands=0; 
-          conditionsFlop=0; conditionsRiver=0; conditionsTurn =0;
-        PhaseRiver(player1, player2);
+        Variables.preflop=0; Variables.flop =0; Variables.turn=0; Variables.river=1; Variables.comparehands=0; 
+        Variables.conditionsFlop=0; Variables.conditionsRiver=0; Variables.conditionsTurn =0;
+        PhaseRiver();
       }    
-      if (raise == 3) {  
+      if (Variables.raise == 3) {  
         window.alert("RAISE on Phase TURN! ");         
-        if(player1.chips >= risk*2){
-          risk = risk + risk;
-          infoRisk.innerHTML = risk;
-          preflop = 0;  flop = 0; turn = 0; conditionsTurn=0; river = 1; 
+        if(Variables.player1.chips >= Variables.risk*2){
+          Variables.risk = Variables.risk + Variables.risk;
+          Variables.infoRisk.innerHTML = Variables.risk;
+          Variables.preflop = 0;  Variables.flop = 0; Variables.turn = 0; Variables.conditionsTurn=0; Variables.river = 1; 
           console.log("RAISE on Phase TURN! ");         
-        PhaseRiver(player1, player2);        
+        PhaseRiver();        
           } else{
             window.alert("Not enough lives!");     
           }                 
@@ -168,33 +168,33 @@ function checkConditionsTurn(player1, player2) {
     }      
 }        
 
-function checkConditionsRiver(player1, player2, allCommunityCards) {  
-  if(conditionsRiver==1){
-      if (fold == 4) {
+function checkConditionsRiver() {  
+  if(Variables.conditionsRiver==1){
+      if (Variables.fold == 4) {
         window.alert("FOLD on Phase RIVER! ");     
-        player1.chips = player1.chips - (risk*2); player2.chips += risk;  infoRisk.innerHTML = risk;
-        preflop = 1; flop = 0; turn = 0; river = 0; comparehands=0; 
-          conditionsFlop=0; conditionsRiver=0; conditionsTurn =0;    
+        Variables.player1.chips = Variables.player1.chips - (Variables.risk*2); Variables.player2.chips += Variables.risk;  Variables.infoRisk.innerHTML = Variables.risk;
+        Variables.preflop = 1; Variables.flop = 0; Variables.turn = 0; Variables.river = 0; Variables.comparehands=0; 
+        Variables.conditionsFlop=0; Variables.conditionsRiver=0; Variables.conditionsTurn =0;    
         PhasePreFlop();
       }  
-      if (call == 4) {          
-        call == 0;
+      if (Variables.call == 4) {          
+        Variables.call == 0;
         window.alert("Call button is NOT used on Phase RIVER! ");             
       }    
-      if (check == 4) {
+      if (Variables.check == 4) {
         window.alert("CHECK on Phase RIVER! ");     
-        preflop=0; flop =0; turn =0; river=0; comparehands=1; 
-          conditionsFlop=0; conditionsRiver=0; conditionsTurn =0;
-          compareTheHands(player1, player2, allCommunityCards);
+        Variables.preflop=0; Variables.flop =0; Variables.turn =0; Variables.river=0; Variables.comparehands=1; 
+        Variables.conditionsFlop=0; Variables.conditionsRiver=0; Variables.conditionsTurn =0;
+          compareTheHands();
       }    
       if (raise == 4) {        
         window.alert("RAISE on Phase RIVER! ");     
-        if(player1.chips >= risk*2){
-          risk = risk + risk;
-          infoRisk.innerHTML = risk;
-          preflop = 0;  flop = 0; turn = 0; conditionsRiver=0; comparehands=1;
+        if(Variables.player1.chips >= Variables.risk*2){
+          Variables.risk = Variables.risk + Variables.risk;
+          Variables.infoRisk.innerHTML = Variables.risk;
+          Variables.preflop = 0;  Variables.flop = 0; Variables.turn = 0; Variables.conditionsRiver=0; Variables.comparehands=1;
           // comparar cartas e decidir vencedor de rodada          
-          compareTheHands(player1, player2, allCommunityCards);
+          compareTheHands();
           console.log("RAISE on Phase RIVER! ");     
           } else{
             window.alert("Not enough lives!");     
@@ -205,20 +205,20 @@ function checkConditionsRiver(player1, player2, allCommunityCards) {
   }     
 
 // PHASES OF THE GAME
-function PhasePreFlop(originalDeck, player1, player2){
-    var deck = originalDeck;
-    deck = shuffleDeck(deck);
+function PhasePreFlop(){
+    Variables.deck = Variables.originalDeck;
+    Variables.deck = shuffleDeck();
 
-    if (player1.chips < 0) {        
+    if (Variables.player1.chips < 0) {        
       window.alert("ALL DEAD!");
       window.alert("Cohle: \n“Time is a flat circle. \nEverything we have done\n or will do\n we will do\n over and over and over again—forever.” ");
       resetGame();
     }
     cleanAllCommunityCards();
-    if(preflop==1){
-      conditionsPreflop=1; conditionsFlop=0; conditionsTurn=0; conditionsRiver=0; 
-      fold = 0; check = 0; call = 0;  raise = 0;      
-      deck = distributeCards(deck, player1, player2);             
+    if(Variables.preflop==1){
+      Variables.conditionsPreflop=1; Variables.conditionsFlop=0; Variables.conditionsTurn=0; Variables.conditionsRiver=0; 
+      Variables.fold = 0; Variables.check = 0; Variables.call = 0; Variables.raise = 0;      
+      Variables.deck = distributeCards();             
       foldButton.addEventListener("click", functionFold);
       callButton.addEventListener("click", functionCall);
       checkButton.addEventListener("click", functionCheck);
@@ -227,23 +227,20 @@ function PhasePreFlop(originalDeck, player1, player2){
     }
   }
 
-  function PhaseFlop(player1, deck){
-    if (player1.chips < 0) {        
+  function PhaseFlop(){
+    if (Variables.player1.chips < 0) {        
       window.alert("ALL DEAD!");
       window.alert("Cohle: \n“Time is a flat circle. \nEverything we have done\n or will do\n we will do\n over and over and over again—forever.” ");
       resetGame();
     }
 
-    if (flop == 1) { //flop
-      conditionsPreflop=0; conditionsFlop=1; conditionsTurn=0; conditionsRiver=0;    
-      fold = 0; check = 0; call = 0;  raise = 0;            
-      // PUTS 3 COMMUNITY CARDS
-      var communityCardsElEl = document.querySelector(".community-cards");
-      var randomIndex; var dealtCard; var cardEl;
+    if (Variables.flop == 1) { //flop
+      Variables.conditionsPreflop=0; Variables.conditionsFlop=1; Variables.conditionsTurn=0; Variables.conditionsRiver=0;    
+      Variables.fold = 0; Variables.check = 0; Variables.call = 0; Variables.raise = 0;                    
       // remove previous community cards  
-      cleancommunityCardsEl();
-      addCardOnCommunityCards(deck); addCardOnCommunityCards(deck); addCardOnCommunityCards(deck);
-
+      cleanAllCommunityCards();
+         // PUTS 3 COMMUNITY CARDS
+      addCardOnCommunityCards(); addCardOnCommunityCards(); addCardOnCommunityCards();
         foldButton.addEventListener("click", functionFold);
         callButton.addEventListener("click", functionCall);
         checkButton.addEventListener("click", functionCheck);
@@ -252,16 +249,16 @@ function PhasePreFlop(originalDeck, player1, player2){
    }//flop     
   }
   
-  function PhaseTurn(player1, deck){
-    if (player1.chips < 0) {        
+  function PhaseTurn(){
+    if (Variables.player1.chips < 0) {        
       window.alert("ALL DEAD!");
       window.alert("Cohle: \n“Time is a flat circle. \nEverything we have done\n or will do\n we will do\n over and over and over again—forever.” ");
       resetGame();
     }
-    if (turn == 1) { //turn
-      conditionsPreflop=0; conditionsFlop=0; conditionsTurn=1;conditionsRiver=0;
-      fold = 0; check = 0; call = 0;  raise = 0;
-      addCardOnCommunityCards(deck) 
+    if (Variables.turn == 1) { //turn
+      Variables.conditionsPreflop=0; Variables.conditionsFlop=0; Variables.conditionsTurn=1; Variables.conditionsRiver=0;
+      Variables.fold = 0; Variables.check = 0; Variables.call = 0;  Variables.raise = 0;
+      addCardOnCommunityCards(Variables.deck) 
       foldButton.addEventListener("click", functionFold);
       callButton.addEventListener("click", functionCall);
       checkButton.addEventListener("click", functionCheck);     
@@ -269,16 +266,16 @@ function PhasePreFlop(originalDeck, player1, player2){
       console.log("PhaseTurn");
     }
   }
-  function PhaseRiver(player1, deck){
-    if (player1.chips < 0) {        
+  function PhaseRiver(){
+    if (Variables.player1.chips < 0) {        
       window.alert("ALL DEAD!");
       window.alert("Cohle: \n“Time is a flat circle. \nEverything we have done\n or will do\n we will do\n over and over and over again—forever.” ");
       resetGame();
     }
-    if (river == 1) { //river
-      conditionsPreflop=0; conditionsFlop=0; conditionsTurn=0; conditionsRiver=1;
-      fold = 0; check = 0; call = 0;  raise = 0;
-      addCardOnCommunityCards(deck) 
+    if (Variables.river == 1) { //river
+      Variables.conditionsPreflop=0; Variables.conditionsFlop=0; Variables.conditionsTurn=0; Variables.conditionsRiver=1;
+      Variables.fold = 0; Variables.check = 0; Variables.call = 0; Variables.raise = 0;
+      addCardOnCommunityCards(Variables.deck) 
       foldButton.addEventListener("click", functionFold);
       callButton.addEventListener("click", functionCall);
       checkButton.addEventListener("click", functionCheck);
@@ -287,11 +284,11 @@ function PhasePreFlop(originalDeck, player1, player2){
     }//river 
   }
 
-function compareTheHands(player1, player2, allCommunityCards){
-    if (comparehands == 1) { //river
-      preflop=1;
-      fold = 0; check = 0; call = 0;  raise = 0;
-      conditionsPreflop=1; conditionsFlop=0; conditionsTurn=0; conditionsRiver=0; 
+function compareTheHands(){
+    if (Variables.comparehands == 1) { //river
+      Variables.preflop=1;
+      Variables.fold = 0; Variables.check = 0; Variables.call = 0;  Variables.raise = 0;
+      Variables.conditionsPreflop=1; Variables.conditionsFlop=0; Variables.conditionsTurn=0; Variables.conditionsRiver=0; 
 
 
     console.log("compareTheHands()");  
@@ -299,55 +296,53 @@ function compareTheHands(player1, player2, allCommunityCards){
 
 
     // take all the cards on the community cards and puts in an array
-    var allCommunityCards = document.querySelector(".community-cards");
+    Variables.allCommunityCards = document.querySelector(".community-cards");
 
 
-    let roundWinner = determineWinnersHand(player1, player2, allCommunityCards);         
+    var roundWinner = determineWinnersHand(Variables.player1, Variables.player2, Variables.allCommunityCards);         
     if(roundWinner == 0){
       window.alert("DRAW!");  
       console.log("DRAW!"); 
     } else if(roundWinner == 1){
       window.alert("PLAYER 1 won the round.");
       console.log("PLAYER 1 won the round.");
-      player1.chips += risk;
-      player2.chips -= risk;
-    } else if(roundWinner == 2){
+      Variables.player1.chips += Variables.risk;
+      Variables.player2.chips -= Variables.risk;
+    } else if(Variables.roundWinner == 2){
       window.alert("PLAYER 2 won the round.");
       console.log("PLAYER 2 won the round.");
-      player2.chips += risk;
-      player1.chips -= risk;
+      Variables.player2.chips += Variables.risk;
+      Variables.player1.chips -= Variables.risk;
     } else {
       window.alert("ERROR: roundWinner");
       console.log("ERROR: roundWinner");
     }    
-    if (player1.chips < 0) {        
+    if (Variables.player1.chips < 0) {        
       window.alert("ALL DEAD!");
       window.alert("Cohle: \n“Time is a flat circle. \nEverything we have done\n or will do\n we will do\n over and over and over again—forever.” ");
       resetGame();
     } else{        
-        years = parseInt(infoYears.innerHTML); 
-        years += 1;
-        infoYears.innerHTML = years.toString();        
-        PhasePreFlop(originalDeck, player1, player2);  
+      Variables.years = parseInt(Variables.infoYears.innerHTML); 
+      Variables.years += 1;
+      Variables.infoYears.innerHTML = Variables.years.toString();        
+        PhasePreFlop();  
       }
     }
   }
 
   function resetGame() {
     // Reset variables    
-    game = 0; conditionsPreflop = 0;  conditionsFlop = 0;  conditionsTurn = 0;  conditionsRiver = 0;
-    preflop = 0;  flop = 0;  turn = 0;  river = 0;  comparehands = 0;
-    fold = 0; call = 0; check = 0;  raise = 0;    
-    risk = 67100000;
-    years = 0;
-    player.chips = 8000000000; player2.chips = 107000000000;   
+    Variables.game = 0; Variables.conditionsPreflop = 0;  Variables.conditionsFlop = 0;  Variables.conditionsTurn = 0;  Variables.conditionsRiver = 0;
+    Variables.preflop = 0;  Variables.flop = 0;  Variables.turn = 0;  Variables.river = 0;  Variables.comparehands = 0;
+    Variables.fold = 0; Variables.call = 0; Variables.check = 0;  Variables.raise = 0;    
+    Variables.risk = 67100000;
+    Variables.years = 0;
+    Variables.player1.chips = 8000000000; Variables.player2.chips = 107000000000;   
     // Reset DOM elements
-    infoYears.innerHTML = years;
-    infoRisk.innerHTML = risk;  
+    Variables.infoYears.innerHTML = Variables.years;
+    Variables.infoRisk.innerHTML = Variables.risk;  
     main();
   }
 
-  export { functionFold, functionCall, functionCheck, functionRaise, foldButton, callButton, checkButton, raiseButton, 
-        checkConditionsPreFlop, checkConditionsFlop, checkConditionsTurn, checkConditionsRiver,  
-         PhasePreFlop, PhaseFlop, PhaseTurn, PhaseRiver, compareTheHands, resetGame };
+  export { functionFold, functionCall, functionCheck, functionRaise, foldButton, callButton, checkButton, raiseButton, checkConditionsPreFlop, checkConditionsFlop, checkConditionsTurn, checkConditionsRiver, PhasePreFlop, PhaseFlop, PhaseTurn, PhaseRiver, compareTheHands, resetGame };
   

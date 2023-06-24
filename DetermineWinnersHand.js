@@ -1,3 +1,4 @@
+import { Variables } from "./Variables.js";
 import { shuffleDeck, cleanAllCommunityCards, distributeCards, addCardOnCommunityCards, concatenateHand } from "./DeckManipulation.js";
 import {royalflush} from "./RoyalFlush.js";
 import {straightflushPower, straightflush} from "./StraightFlush.js";
@@ -10,14 +11,14 @@ import { twoPairKicker, worstPairPower, bestPairPower, twoPair } from "./TwoPair
 import { pair, pairPower, pairKickerOne, pairKickerTwo, pairKickerThree} from "./Pair.js";
 import  {higherCard, higherCardTwo, higherCardThree  } from "./HighCard.js";
 
-  // returns 0 if is a tie. returns 1 if player1 wins. returns 2 if player2 wins.
-  function determineWinnersHand(player1, player2, allCommunityCards) {
-    player1 = concatenateHand(player1, allCommunityCards);
-    player2 = concatenateHand(player2, allCommunityCards);
+  // returns 0 if is a tie. returns 1 if Variables.player1 wins. returns 2 if Variables.player2 wins.
+  function determineWinnersHand() {
+    Variables.player1 = concatenateHand();
+    Variables.player2 = concatenateHand();
       // determine winner
 
-      let royalflush1 = royalflush(player1);
-      let royalflush2 = royalflush(player2);
+      var royalflush1 = royalflush(Variables.player1);
+      var royalflush2 = royalflush(Variables.player2);
       if(royalflush1 == 1 && royalflush2 == 1) {      
           console.log("It's a tie!");  
           window.alert( "It's a tie!");   
@@ -32,10 +33,10 @@ import  {higherCard, higherCardTwo, higherCardThree  } from "./HighCard.js";
         return 2;
       } else if (royalflush1 == 0 && royalflush2 == 0) {
       
-        let straightflush1 = straightflush(player1);
-        let straightflush2 = straightflush(player2);
-        let straightflush1Power = straightflushPower(player1);
-        let straightflush2Power = straightflushPower(player2);
+        var straightflush1 = straightflush(Variables.player1);
+        var straightflush2 = straightflush(Variables.player2);
+        var straightflush1Power = straightflushPower(Variables.player1);
+        var straightflush2Power = straightflushPower(Variables.player2);
 
           if(straightflush1 == 1 && straightflush2 == 1) {      
             if (straightflush1Power > straightflush2Power) {
@@ -61,12 +62,12 @@ import  {higherCard, higherCardTwo, higherCardThree  } from "./HighCard.js";
           return 2;
         } else if(straightflush1 == 0 && straightflush2 == 0) {
 
-          let four1 = fourOfaKind(player1);
-          let four2 = fourOfaKind(player2);
-          let four1Power = fourOfaKindPower(player1);
-          let four2Power = fourOfaKindPower(player2);
-          let kicker1 = fourOfaKindKicker(player1);
-          let kicker2 = fourOfaKindKicker(player2);
+          var four1 = fourOfaKind(Variables.player1);
+          var four2 = fourOfaKind(Variables.player2);
+          var four1Power = fourOfaKindPower(Variables.player1);
+          var four2Power = fourOfaKindPower(Variables.player2);
+          var kicker1 = fourOfaKindKicker(Variables.player1);
+          var kicker2 = fourOfaKindKicker(Variables.player2);
 
           if(four1 == 1 && four2 == 1) {
               if (four1Power > four2Power) {
@@ -100,12 +101,12 @@ import  {higherCard, higherCardTwo, higherCardThree  } from "./HighCard.js";
               return 2;
           } else if(four1 == 0 && four2 == 0) {
             
-            let fullhouse1 = fullhouse(player1);
-            let fullhouse2 = fullhouse(player2);
-            let threeOfAKind1Power = fullhouseThreeOfAKindPower(player1);
-            let threeOfAKind2Power = fullhouseThreeOfAKindPower(player2);
-            let Pair1Power = fullhousePairPower(player1);
-            let Pair2Power = fullhousePairPower(player2);
+            var fullhouse1 = fullhouse(Variables.player1);
+            var fullhouse2 = fullhouse(Variables.player2);
+            var threeOfAKind1Power = fullhouseThreeOfAKindPower(Variables.player1);
+            var threeOfAKind2Power = fullhouseThreeOfAKindPower(Variables.player2);
+            var Pair1Power = fullhousePairPower(Variables.player1);
+            var Pair2Power = fullhousePairPower(Variables.player2);
             
             if(fullhouse1 == 1 && fullhouse2 == 1) {
                 if (threeOfAKind1Power > threeOfAKind2Power) {
@@ -142,18 +143,18 @@ import  {higherCard, higherCardTwo, higherCardThree  } from "./HighCard.js";
                 return 2;
             } else if(fullhouse1 == 0 && fullhouse2 == 0) {
 
-              let flush1 = flush(player1);
-              let flush2 = flush(player2);
-              let flush1One = flushKickerOne(player1);
-              let flush2One = flushKickerOne(player2);
-              let flush1Two = flushKickerTwo(player1);
-              let flush2Two = flushKickerTwo(player2);
-              let flush1Three = flushKickerThree(player1);
-              let flush2Three = flushKickerThree(player2);
-              let flush1Four = flushKickerFour(player1);
-              let flush2Four = flushKickerFour(player2);
-              let flush1Five = flushKickerFive(player1);
-              let flush2Five = flushKickerFive(player2);
+              var flush1 = flush(Variables.player1);
+              var flush2 = flush(Variables.player2);
+              var flush1One = flushKickerOne(Variables.player1);
+              var flush2One = flushKickerOne(Variables.player2);
+              var flush1Two = flushKickerTwo(Variables.player1);
+              var flush2Two = flushKickerTwo(Variables.player2);
+              var flush1Three = flushKickerThree(Variables.player1);
+              var flush2Three = flushKickerThree(Variables.player2);
+              var flush1Four = flushKickerFour(Variables.player1);
+              var flush2Four = flushKickerFour(Variables.player2);
+              var flush1Five = flushKickerFive(Variables.player1);
+              var flush2Five = flushKickerFive(Variables.player2);
               
               if(flush1 == 1 && flush2 == 1) {
                   if (flush1One > flush2One) {
@@ -220,10 +221,10 @@ import  {higherCard, higherCardTwo, higherCardThree  } from "./HighCard.js";
                   return 2;
               } else if(flush1 == 0 && flush2 == 0) {
 
-                let straight1 = straight(player1);
-                let straight2 = straight(player2);
-                let straight1Power = straightPower(player1);
-                let straight2Power = straightPower(player2);
+                var straight1 = straight(Variables.player1);
+                var straight2 = straight(Variables.player2);
+                var straight1Power = straightPower(Variables.player1);
+                var straight2Power = straightPower(Variables.player2);
                 
                 if(straight1 == 1 && straight2 == 1) {
                     if (straight1Power > straight2Power) {
@@ -250,14 +251,14 @@ import  {higherCard, higherCardTwo, higherCardThree  } from "./HighCard.js";
                     return 2;
                 } else if(straight1 == 0 && straight2 == 0) {
 
-                  let threeOfAKind1 = threeOfAKind(player1);
-                  let threeOfAKind2 = threeOfAKind(player2);
-                  let threeOfAKind1Power = threeOfAKindPower(player1);
-                  let threeOfAKind2Power = threeOfAKindPower(player2);
-                  let threeOfAKind1KickerOne = threeOfAKindKickerOne(player1);
-                  let threeOfAKind2KickerOne = threeOfAKindKickerOne(player2);
-                  let threeOfAKind1KickerTwo = threeOfaKindKickerTwo(player1);                  
-                  let threeOfAKind2KickerTwo = threeOfaKindKickerTwo(player2);                  
+                  var threeOfAKind1 = threeOfAKind(Variables.player1);
+                  var threeOfAKind2 = threeOfAKind(Variables.player2);
+                  var threeOfAKind1Power = threeOfAKindPower(Variables.player1);
+                  var threeOfAKind2Power = threeOfAKindPower(Variables.player2);
+                  var threeOfAKind1KickerOne = threeOfAKindKickerOne(Variables.player1);
+                  var threeOfAKind2KickerOne = threeOfAKindKickerOne(Variables.player2);
+                  var threeOfAKind1KickerTwo = threeOfaKindKickerTwo(Variables.player1);                  
+                  var threeOfAKind2KickerTwo = threeOfaKindKickerTwo(Variables.player2);                  
                   
                   if(threeOfAKind1 == 1 && threeOfAKind2 == 1) {
                       if (threeOfAKin1Power > threeOfAKind2Power) {
@@ -303,14 +304,14 @@ import  {higherCard, higherCardTwo, higherCardThree  } from "./HighCard.js";
                       return 2;
                   } else if(threeOfAKind1 == 0 && threeOfAKind2 == 0) {
 
-                    let twoPair1 = twoPair(player1);
-                    let twoPair2 = twoPair(player2);
-                    let bestPairPower1 = bestPairPower(player1);
-                    let bestPairPower2 = bestPairPower(player2);
-                    let worstPairPower1 = worstPairPower(player1);
-                    let worstPairPower2 = worstPairPower(player2);
-                    let kicker1 = twoPairKicker(player1);
-                    let kicker2 = twoPairKicker(player2);
+                    var twoPair1 = twoPair(Variables.player1);
+                    var twoPair2 = twoPair(Variables.player2);
+                    var bestPairPower1 = bestPairPower(Variables.player1);
+                    var bestPairPower2 = bestPairPower(Variables.player2);
+                    var worstPairPower1 = worstPairPower(Variables.player1);
+                    var worstPairPower2 = worstPairPower(Variables.player2);
+                    var kicker1 = twoPairKicker(Variables.player1);
+                    var kicker2 = twoPairKicker(Variables.player2);
 
                     if(twoPair1 == 1 && twoPair2 == 1) {
                         if (bestPairPower1 > bestPairPower2) {
@@ -357,16 +358,16 @@ import  {higherCard, higherCardTwo, higherCardThree  } from "./HighCard.js";
                         return 2;
                     } else if(twoPair1 == 0 && twoPair2 == 0) {
 
-                        let pair1 = pair(player1);
-                        let pair2 = pair(player2);
-                        let pair1Power = pairPower(player1);
-                        let pair2Power = pairPower(player2);
-                        let pair1kickerOne = pairKickerOne(player1);
-                        let pair2kickerOne = pairKickerOne(player2);
-                        let pair1kickerTwo = pairKickerTwo(player1);
-                        let pair2kickerTwo = pairKickerTwo(player2);
-                        let pair1kickerThree = pairKickerThree(player1);
-                        let pair2kickerThree = pairKickerThree(player2);
+                        var pair1 = pair(Variables.player1);
+                        var pair2 = pair(Variables.player2);
+                        var pair1Power = pairPower(Variables.player1);
+                        var pair2Power = pairPower(Variables.player2);
+                        var pair1kickerOne = pairKickerOne(Variables.player1);
+                        var pair2kickerOne = pairKickerOne(Variables.player2);
+                        var pair1kickerTwo = pairKickerTwo(Variables.player1);
+                        var pair2kickerTwo = pairKickerTwo(Variables.player2);
+                        var pair1kickerThree = pairKickerThree(Variables.player1);
+                        var pair2kickerThree = pairKickerThree(Variables.player2);
                         
                       if(pair1 == 1 && pair2 == 1) {
                           if (pair1Power > pair2Power) {
@@ -423,16 +424,16 @@ import  {higherCard, higherCardTwo, higherCardThree  } from "./HighCard.js";
                           return 2;
                       } else if(pair1 == 0 && pair2 == 0) {
 
-                        let higherCard1One = higherCard(player1);
-                        let higherCard2One = higherCard(player2);
-                        let higherCard1Two = higherCardTwo(player1);
-                        let higherCard2Two = higherCardTwo(player2);
-                        let higherCard1Three = higherCardThree(player1);
-                        let higherCard2Three = higherCardThree(player2);
-                        let higherCard1Four = higherCardFour(player1);
-                        let higherCard2Four = higherCardFour(player2);
-                        let higherCard1Five = higherCardFive(player1);
-                        let higherCard2Five = higherCardFive(player2);
+                        var higherCard1One = higherCard(Variables.player1);
+                        var higherCard2One = higherCard(Variables.player2);
+                        var higherCard1Two = higherCardTwo(Variables.player1);
+                        var higherCard2Two = higherCardTwo(Variables.player2);
+                        var higherCard1Three = higherCardThree(Variables.player1);
+                        var higherCard2Three = higherCardThree(Variables.player2);
+                        var higherCard1Four = higherCardFour(Variables.player1);
+                        var higherCard2Four = higherCardFour(Variables.player2);
+                        var higherCard1Five = higherCardFive(Variables.player1);
+                        var higherCard2Five = higherCardFive(Variables.player2);
 
                         if(higherCard1One > higherCard2One){
                             console.log("Player 1 wins with a high card!");
