@@ -15,3 +15,5 @@ function functionStart(){
 
 functionStart();
 
+export { functionStart };
+

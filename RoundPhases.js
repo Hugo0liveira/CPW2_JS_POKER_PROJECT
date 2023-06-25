@@ -2,17 +2,18 @@
 import { shuffleDeck, cleanAllCommunityCards, distributeCards, addCardOnCommunityCards, concatenateHand } from "./DeckManipulation.js";
 import {determineWinnersHand} from "./DetermineWinnersHand.js";
 import { Variables } from "./Variables.js"
+import {functionStart} from "./main.js"
 
 // Buttons functions 
 function functionFold(event) {
   event.stopPropagation(); // Stop event propagation
   if(Variables.conditionsPreflop==1){
     Variables.fold = 1; checkConditionsPreFlop(); 
-  } else if(conditionsFlop==1){
+  } else if(Variables.conditionsFlop==1){
     Variables.fold = 2; checkConditionsFlop(); 
-  } else if(conditionsTurn==1){
+  } else if(Variables.conditionsTurn==1){
     Variables.fold = 3; checkConditionsTurn(); 
-  } else if(conditionsRiver==1){
+  } else if(Variables.conditionsRiver==1){
     Variables.fold = 4; checkConditionsRiver(); 
   }
 }
@@ -187,7 +188,7 @@ function checkConditionsRiver() {
         Variables.conditionsFlop=0; Variables.conditionsRiver=0; Variables.conditionsTurn =0;
           compareTheHands();
       }    
-      if (raise == 4) {        
+      if (Variables.raise == 4) {        
         window.alert("RAISE on Phase RIVER! ");     
         if(Variables.player1.chips >= Variables.risk*2){
           Variables.risk = Variables.risk + Variables.risk;
@@ -206,15 +207,14 @@ function checkConditionsRiver() {
 
 // PHASES OF THE GAME
 function PhasePreFlop(){
+  cleanAllCommunityCards();
     Variables.deck = Variables.originalDeck;    
     Variables.deck = shuffleDeck();    
-
     if (Variables.player1.chips < 0) {        
       window.alert("ALL DEAD!");
       window.alert("Cohle: \n“Time is a flat circle. \nEverything we have done\n or will do\n we will do\n over and over and over again—forever.” ");
       resetGame();
-    }
-    cleanAllCommunityCards();
+    }    
     if(Variables.preflop==1){
       Variables.conditionsPreflop=1; Variables.conditionsFlop=0; Variables.conditionsTurn=0; Variables.conditionsRiver=0; 
       Variables.fold = 0; Variables.check = 0; Variables.call = 0; Variables.raise = 0;      
@@ -296,18 +296,24 @@ function compareTheHands(){
     var roundWinner = determineWinnersHand();         
     if(roundWinner == 0){
       window.alert("DRAW!");  
-      console.log("DRAW!"); 
+      console.log("DRAW!");     
+      Variables.chips1Html.innerHTML = Variables.player1.chips.toString();      
+      Variables.chips2Html.innerHTML = Variables.player2.chips.toString();
     } else if(roundWinner == 1){
       window.alert("PLAYER 1 won the round.");
       console.log("PLAYER 1 won the round.");
       Variables.player1.chips += Variables.risk;
+      Variables.chips1Html.innerHTML = Variables.player1.chips.toString();
       Variables.player2.chips -= Variables.risk;
+      Variables.chips2Html.innerHTML = Variables.player2.chips.toString();
     } else if(Variables.roundWinner == 2){
       window.alert("PLAYER 2 won the round.");
       console.log("PLAYER 2 won the round.");
-      Variables.player2.chips += Variables.risk;
       Variables.player1.chips -= Variables.risk;
-    } else {
+      Variables.chips1Html.innerHTML = Variables.player1.chips.toString();
+      Variables.player2.chips += Variables.risk;
+      Variables.chips2Html.innerHTML = Variables.player2.chips.toString();
+    } else if (roundWinner != 0 && roundWinner != 1 && roundWinner != 2) {
       window.alert("ERROR: roundWinner");
       console.log("ERROR: roundWinner");
     }    

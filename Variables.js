@@ -46,7 +46,7 @@ for (let i = 0; i < originalDeck.length; i++) {
 }
 */
 
-const allCommunityCardsHTML = document.querySelectorAll(".community-cards");
+const allCommunityCardsHTML = document.querySelector(".community-cards");
 const allCommunityCards = [];
 const game = 0; const conditionsPreflop=0; const conditionsFlop=0; const conditionsTurn=0; const conditionsRiver=0;
 const preflop = 0; const flop=0; const turn=0; const river=0; const fold = 0; const call = 0; const comparehands=0; const conditionsComparehands=0;
@@ -71,10 +71,12 @@ class Player {
 
 const player1 = new Player("Humanity", 8000000000);
 const chips1Html = document.querySelector(".player1-chips");
-chips1Html.innerHTML = player1.chips;    
+chips1Html.innerHTML = player1.chips.toString();    
 const player2 = new Player("Death", 107000000000);
 const chips2Html = document.querySelector(".player2-chips");
-chips2Html.innerHTML = player2.chips;
+chips2Html.innerHTML = player2.chips.toString();
+const player1HandHTML = document.querySelector(".player1-hand");
+const player2HandHTML = document.querySelector(".player2-hand");
 
 export const Variables = {
   player1: player1, 
@@ -103,5 +105,9 @@ export const Variables = {
   years: years,
   gameOver: gameOver,
   infoYears: infoYears,
-  infoRisk: infoRisk  
+  infoRisk: infoRisk ,
+  chips1Html: chips1Html,
+  chips2Html: chips2Html,
+  player1HandHTML: player1HandHTML,
+  player2HandHTML: player2HandHTML
 }

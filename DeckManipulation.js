@@ -15,12 +15,22 @@ function shuffleDeck() {
   
   function cleanAllCommunityCards() {
     // clean the community cards element
-    Variables.allCommunityCards = "";
-    Variables.allCommunityCardsHTML = "";
+    Variables.allCommunityCards = [];
+    Variables.allCommunityCardsHTML.innerHTML = "";
+  }
+
+  function cleanHands() {
+    // clean the player hands element
+    Variables.player1.hand = [];
+    Variables.player2.hand = [];
+    Variables.player1HandHTML.innerHTML = "";
+    Variables.player2HandHTML.innerHTML = "";   
   }
   
   //   Distribute 2 cards to each player 
  function distributeCards() {     
+  cleanAllCommunityCards();
+  cleanHands();
     const [ card1 ] = Variables.deck.splice(0, 1);
     const [ card2 ] = Variables.deck.splice(0, 1);
     const [ card3 ] = Variables.deck.splice(0, 1);
@@ -68,8 +78,7 @@ function shuffleDeck() {
   }  
   
   // function to put one card at a time on the community cards
-  function addCardOnCommunityCards() {
-    const communityCardsEl = document.querySelector(".community-cards");    
+  function addCardOnCommunityCards() {     
       const [card] = Variables.deck.splice(0,1);         
       console.log('card:', card);
       //const cardObject = JSON.parse(JSON.stringify(card));
@@ -81,7 +90,7 @@ function shuffleDeck() {
         <div class="suit">${card.suit}</div> <BR>
         <div class="power">${card.power}</div>
       `;
-      communityCardsEl.appendChild(cardEl);
+       Variables.allCommunityCardsHTML.appendChild(cardEl);
       return Variables.deck;
   }
   
