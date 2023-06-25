@@ -13,8 +13,8 @@ import  {higherCard, higherCardTwo, higherCardThree  } from "./HighCard.js";
 
   // returns 0 if is a tie. returns 1 if Variables.player1 wins. returns 2 if Variables.player2 wins.
   function determineWinnersHand() {
-    Variables.player1 = concatenateHand();
-    Variables.player2 = concatenateHand();
+    Variables.player1 = concatenateHand(Variables.player1);
+    Variables.player2 = concatenateHand(Variables.player2);
       // determine winner
 
       var royalflush1 = royalflush(Variables.player1);

@@ -206,8 +206,8 @@ function checkConditionsRiver() {
 
 // PHASES OF THE GAME
 function PhasePreFlop(){
-    Variables.deck = Variables.originalDeck;
-    Variables.deck = shuffleDeck();
+    Variables.deck = Variables.originalDeck;    
+    Variables.deck = shuffleDeck();    
 
     if (Variables.player1.chips < 0) {        
       window.alert("ALL DEAD!");
@@ -258,7 +258,7 @@ function PhasePreFlop(){
     if (Variables.turn == 1) { //turn
       Variables.conditionsPreflop=0; Variables.conditionsFlop=0; Variables.conditionsTurn=1; Variables.conditionsRiver=0;
       Variables.fold = 0; Variables.check = 0; Variables.call = 0;  Variables.raise = 0;
-      addCardOnCommunityCards(Variables.deck) 
+      addCardOnCommunityCards(); 
       foldButton.addEventListener("click", functionFold);
       callButton.addEventListener("click", functionCall);
       checkButton.addEventListener("click", functionCheck);     
@@ -275,7 +275,7 @@ function PhasePreFlop(){
     if (Variables.river == 1) { //river
       Variables.conditionsPreflop=0; Variables.conditionsFlop=0; Variables.conditionsTurn=0; Variables.conditionsRiver=1;
       Variables.fold = 0; Variables.check = 0; Variables.call = 0; Variables.raise = 0;
-      addCardOnCommunityCards(Variables.deck) 
+      addCardOnCommunityCards();
       foldButton.addEventListener("click", functionFold);
       callButton.addEventListener("click", functionCall);
       checkButton.addEventListener("click", functionCheck);
@@ -290,16 +290,10 @@ function compareTheHands(){
       Variables.fold = 0; Variables.check = 0; Variables.call = 0;  Variables.raise = 0;
       Variables.conditionsPreflop=1; Variables.conditionsFlop=0; Variables.conditionsTurn=0; Variables.conditionsRiver=0; 
 
-
     console.log("compareTheHands()");  
     window.alert("COMPARING HANDS... ");
 
-
-    // take all the cards on the community cards and puts in an array
-    Variables.allCommunityCards = document.querySelector(".community-cards");
-
-
-    var roundWinner = determineWinnersHand(Variables.player1, Variables.player2, Variables.allCommunityCards);         
+    var roundWinner = determineWinnersHand();         
     if(roundWinner == 0){
       window.alert("DRAW!");  
       console.log("DRAW!"); 
@@ -341,7 +335,7 @@ function compareTheHands(){
     // Reset DOM elements
     Variables.infoYears.innerHTML = Variables.years;
     Variables.infoRisk.innerHTML = Variables.risk;  
-    main();
+    functionStart();
   }
 
   export { functionFold, functionCall, functionCheck, functionRaise, foldButton, callButton, checkButton, raiseButton, checkConditionsPreFlop, checkConditionsFlop, checkConditionsTurn, checkConditionsRiver, PhasePreFlop, PhaseFlop, PhaseTurn, PhaseRiver, compareTheHands, resetGame };
