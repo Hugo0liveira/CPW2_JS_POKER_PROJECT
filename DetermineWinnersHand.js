@@ -9,14 +9,15 @@ import  {straight, straightPower} from "./Straight.js";
 import  {threeOfAKind, threeOfAKindPower, threeOfAKindKickerOne, threeOfAKindKickerTwo} from "./ThreeOfAKind.js";
 import { twoPairKicker, worstPairPower, bestPairPower, twoPair } from "./TwoPair.js";
 import { pair, pairPower, pairKickerOne, pairKickerTwo, pairKickerThree} from "./Pair.js";
-import  {higherCard, higherCardTwo, higherCardThree  } from "./HighCard.js";
+import  {higherCard, higherCardTwo, higherCardThree, higherCardFour, higherCardFive } from "./HighCard.js";
 
   // returns 0 if is a tie. returns 1 if Variables.player1 wins. returns 2 if Variables.player2 wins.
   function determineWinnersHand() {
-    Variables.player1 = concatenateHand(Variables.player1);
-    Variables.player2 = concatenateHand(Variables.player2);
+    Variables.player1.hand = concatenateHand(Variables.player1);
+    Variables.player2.hand = concatenateHand(Variables.player2);
       // determine winner
-
+      //console.log("player1.hand: ", Variables.player1.hand);
+     // console.log("player2.hand: ", Variables.player2.hand);
       var royalflush1 = royalflush(Variables.player1);
       var royalflush2 = royalflush(Variables.player2);
       if(royalflush1 == 1 && royalflush2 == 1) {      
@@ -257,8 +258,8 @@ import  {higherCard, higherCardTwo, higherCardThree  } from "./HighCard.js";
                   var threeOfAKind2Power = threeOfAKindPower(Variables.player2);
                   var threeOfAKind1KickerOne = threeOfAKindKickerOne(Variables.player1);
                   var threeOfAKind2KickerOne = threeOfAKindKickerOne(Variables.player2);
-                  var threeOfAKind1KickerTwo = threeOfaKindKickerTwo(Variables.player1);                  
-                  var threeOfAKind2KickerTwo = threeOfaKindKickerTwo(Variables.player2);                  
+                  var threeOfAKind1KickerTwo = threeOfAKindKickerTwo(Variables.player1);                  
+                  var threeOfAKind2KickerTwo = threeOfAKindKickerTwo(Variables.player2);                  
                   
                   if(threeOfAKind1 == 1 && threeOfAKind2 == 1) {
                       if (threeOfAKin1Power > threeOfAKind2Power) {

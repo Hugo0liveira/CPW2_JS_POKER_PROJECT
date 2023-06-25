@@ -57,7 +57,7 @@ body {
   border-radius: 5px;margin-right: 10px;display: flex;flex-direction: 
   column;justify-content: center;align-items: center; 
 }
-.card .value {
+.card .author {
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
   font-style: italic;color: black;
 }
@@ -105,6 +105,7 @@ body {
   background-color: #ccc;color: #fff;border: none;  }
 .active-player {
   background-color: #eee; }
+
 @media (max-width: 768px) {
   .container {padding: 20px; }
 }
@@ -121,16 +122,24 @@ body {
     font-size: 14px;}
   .player-chips {
     font-size: 12px;}
-    .player-hand {      
+    .player1-hand {      
       margin-top: 11px;    }
+    .player2-hand {      
+      margin-top: 11px;    }
+      .player1-chips { font-size: 11px;     }
+      .player2-chips { font-size: 11px;     }
   .card {
     width: 56px; height: 74px;}
-  .card .value {
+  .card .author {
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     font-style: italic;color: black;font-size: 11px; margin-top: 5px;}
   .card .suit {
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     font-style: italic;color: #5645aa;font-size: 9px; margin-top: -7px;  }
+    .contemplation { color: #04c4ff;}
+    .suicide { color: #e318b7;}
+    .revolution { color: #00ff11;}
+    .domination { color: #eaff00;}
   .card .power {
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     color: rgb(230, 89, 89); font-size: 10px; margin-top: -11px;  }

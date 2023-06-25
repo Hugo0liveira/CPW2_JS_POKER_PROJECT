@@ -155,4 +155,4 @@ function  higherCardFive(player) {
     return higherCard;
   }    
 
-  export {higherCard, higherCardTwo, higherCardThree  };
+  export {higherCard, higherCardTwo, higherCardThree, higherCardFour, higherCardFive  };

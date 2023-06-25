@@ -87,13 +87,12 @@ function shuffleDeck() {
   
    // concatenate the player's hand with the community cards 
    function concatenateHand(player){    
-    console.log("Variables.allCommunityCards: ", Variables.allCommunityCards );
-
+    //console.log("Variables.allCommunityCards: ", Variables.allCommunityCards );
     player.hand = player.hand.concat(Variables.allCommunityCards );
     // sort the player's hand by power
     player.hand.sort((a, b) => b.power - a.power);
-    console.log("player.hand: ", player.hand);
-    console.log("player.hand.length: ", player.hand.length);
+    //console.log("player.hand: ", player.hand);
+    //console.log("player.hand.length: ", player.hand.length);
 
     return player.hand;
   } // end of concatenateHand function
