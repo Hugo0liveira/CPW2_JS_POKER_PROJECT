@@ -1,8 +1,7 @@
 import { Variables } from "./Variables.js"
 import { PhasePreFlop } from "./RoundPhases.js"
 
-function functionStart(){
-  console.log("deck: ", Variables.deck);
+function functionStart(){  
  // window.alert( Variables.initialMessage ); 
  Variables.game = 1;
  // while (Variables.game == 1) {  

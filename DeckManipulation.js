@@ -35,7 +35,7 @@ function shuffleDeck() {
     const [ card2 ] = Variables.deck.splice(0, 1);
     const [ card3 ] = Variables.deck.splice(0, 1);
     const [ card4 ] = Variables.deck.splice(0, 1);
-    console.log(card1); console.log(card2); console.log(card3); console.log(card4);
+    console.log('card1:',card1); console.log('card2:',card2); console.log('card3:',card3); console.log('card4:',card4);
     // to player 1
     Variables.player1.hand = [card1, card2];    
     const playerHandEl = document.querySelector('.player1-hand');

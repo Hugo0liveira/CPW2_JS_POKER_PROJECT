@@ -44,7 +44,7 @@ function functionCheck(event) {
   }
 }
 
-function functionRaise(event) {             //ERRO! raise acionando phaseTurn()
+function functionRaise(event) {            
   event.stopPropagation(); // Stop event propagation
   if(Variables.conditionsPreflop==1){
     Variables.raise=1; checkConditionsPreFlop();
@@ -206,12 +206,18 @@ function checkConditionsRiver() {
   }     
 
 // PHASES OF THE GAME
-function PhasePreFlop(){
+function PhasePreFlop(){  
+  Variables.chips1Html.innerHTML = Variables.player1.chips;
+  Variables.chips2Html.innerHTML = Variables.player2.chips;
   cleanAllCommunityCards();
-    Variables.deck = Variables.originalDeck;    
-    Variables.deck = shuffleDeck();    
+  // refill deck with original deck
+  Variables.deck = [];
+  Variables.deck = Variables.deck.concat(Variables.originalDeck);  
+  Variables.deck = shuffleDeck();    
+    console.log("deck:", Variables.deck);
+    console.log("originalDeck:", Variables.originalDeck);
     if (Variables.player1.chips < 0) {        
-      window.alert("ALL DEAD!");
+      window.alert("EVERYONE IS DEAD!!!\n\n    GAME OVER!");
       window.alert("Cohle: \n“Time is a flat circle. \nEverything we have done\n or will do\n we will do\n over and over and over again—forever.” ");
       resetGame();
     }    
@@ -229,7 +235,7 @@ function PhasePreFlop(){
 
   function PhaseFlop(){
     if (Variables.player1.chips < 0) {        
-      window.alert("ALL DEAD!");
+      window.alert("EVERYONE IS DEAD!!!\n\n    GAME OVER!");
       window.alert("Cohle: \n“Time is a flat circle. \nEverything we have done\n or will do\n we will do\n over and over and over again—forever.” ");
       resetGame();
     }
@@ -251,7 +257,7 @@ function PhasePreFlop(){
   
   function PhaseTurn(){
     if (Variables.player1.chips < 0) {        
-      window.alert("ALL DEAD!");
+      window.alert("EVERYONE IS DEAD!!!\n\n    GAME OVER!");
       window.alert("Cohle: \n“Time is a flat circle. \nEverything we have done\n or will do\n we will do\n over and over and over again—forever.” ");
       resetGame();
     }
@@ -268,7 +274,7 @@ function PhasePreFlop(){
   }
   function PhaseRiver(){
     if (Variables.player1.chips < 0) {        
-      window.alert("ALL DEAD!");
+      window.alert("EVERYONE IS DEAD!!!\n\n    GAME OVER!");
       window.alert("Cohle: \n“Time is a flat circle. \nEverything we have done\n or will do\n we will do\n over and over and over again—forever.” ");
       resetGame();
     }
@@ -296,31 +302,36 @@ function compareTheHands(){
     var roundWinner = determineWinnersHand();         
     if(roundWinner == 0){
       window.alert("DRAW!");  
-      console.log("DRAW!");     
-      Variables.chips1Html.innerHTML = Variables.player1.chips.toString();      
-      Variables.chips2Html.innerHTML = Variables.player2.chips.toString();
-    } else if(roundWinner == 1){
-      window.alert("PLAYER 1 won the round.");
-      console.log("PLAYER 1 won the round.");
-      Variables.player1.chips += Variables.risk;
-      Variables.chips1Html.innerHTML = Variables.player1.chips.toString();
-      Variables.player2.chips -= Variables.risk;
-      Variables.chips2Html.innerHTML = Variables.player2.chips.toString();
-    } else if(Variables.roundWinner == 2){
-      window.alert("PLAYER 2 won the round.");
-      console.log("PLAYER 2 won the round.");
-      Variables.player1.chips -= Variables.risk;
-      Variables.chips1Html.innerHTML = Variables.player1.chips.toString();
-      Variables.player2.chips += Variables.risk;
-      Variables.chips2Html.innerHTML = Variables.player2.chips.toString();
-    } else if (roundWinner != 0 && roundWinner != 1 && roundWinner != 2) {
+      console.log("DRAW!");           
+    } 
+    if(roundWinner == 1){
+      window.alert("HUMANITY won the round.");
+      console.log("HUMANITY won the round.");
+      Variables.player1.chips += Variables.risk;      
+      Variables.player2.chips -= Variables.risk;      
+    } 
+    if(roundWinner == 2){
+      window.alert("DEATH won the round.");
+      console.log("DEATH won the round.");
+      Variables.player1.chips -= Variables.risk;      
+      Variables.player2.chips += Variables.risk;      
+    } 
+    if (roundWinner != 0 && roundWinner != 1 && roundWinner != 2) {
       window.alert("ERROR: roundWinner");
       console.log("ERROR: roundWinner");
-    }    
-    if (Variables.player1.chips < 0) {        
-      window.alert("ALL DEAD!");
+    } 
+    // update chips on screen
+    Variables.chips1Html.innerHTML = Variables.player1.chips.toString();      
+    Variables.chips2Html.innerHTML = Variables.player2.chips.toString();   
+    if (Variables.player1.chips <= 0) {        
+      window.alert("EVERYONE IS DEAD!!!\n\n    GAME OVER!");
       window.alert("Cohle: \n“Time is a flat circle. \nEverything we have done\n or will do\n we will do\n over and over and over again—forever.” ");
       resetGame();
+    } else if(Variables.player2.chips <= 0){ 
+      // load video from youtube https://www.youtube.com/watch?v=pw4VEW3StIw  
+      const  video = document.querySelector('container');
+      video.innerHTML = '<iframe width="560" height="315" src="https://www.youtube.com/embed/pw4VEW3StIw?autoplay=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>';              
+      
     } else{        
       Variables.years = parseInt(Variables.infoYears.innerHTML); 
       Variables.years += 1;
@@ -336,7 +347,7 @@ function compareTheHands(){
     Variables.preflop = 0;  Variables.flop = 0;  Variables.turn = 0;  Variables.river = 0;  Variables.comparehands = 0;
     Variables.fold = 0; Variables.call = 0; Variables.check = 0;  Variables.raise = 0;    
     Variables.risk = 67100000;
-    Variables.years = 0;
+    Variables.years = 300000;
     Variables.player1.chips = 8000000000; Variables.player2.chips = 107000000000;   
     // Reset DOM elements
     Variables.infoYears.innerHTML = Variables.years;
