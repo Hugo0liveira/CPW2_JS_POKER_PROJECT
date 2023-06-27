@@ -1,9 +1,5 @@
 
 function  pairKickerThree(player) {
-    var pair = 0; 
-    var pairPower = 0; 
-    var kickerOne = 0;
-    var kickerTwo = 0;
     var kickerThree = 0;
     for (var m = 0; m < player.hand.length; m++) {
       for (var l = 0; l < player.hand.length; l++) {      
@@ -13,10 +9,6 @@ function  pairKickerThree(player) {
               for (var h = 0; h < player.hand.length; h++) {
                 for (var g = 0; g < player.hand.length; g++) {   
                   if(player.hand[g].power == player.hand[h].power && player.hand[h].power != player.hand[i].power && player.hand[i].power > player.hand[j].power && player.hand[j].power > player.hand[k].power && player.hand[k].power > player.hand[l].power && player.hand[l].power > player.hand[m].power && g != h && g != i && g != j && g != k && g != l && g != m && h != i && h != j && h != k && h != l && h != m && i != j && i != k && i != l && i != m && j != k && j != l && j != m && k != l && k != m && l != m) {
-                    pair = 1;
-                    pairPower = player.hand[g].power;
-                    kickerOne = player.hand[i].power;
-                    kickerTwo = player.hand[j].power;
                     kickerThree = player.hand[k].power;
                   }
                 }
@@ -31,11 +23,7 @@ function  pairKickerThree(player) {
   }
 
   function  pairKickerTwo(player) {
-    var pair = 0; 
-    var pairPower = 0; 
-    var kickerOne = 0;
     var kickerTwo = 0;
-    var kickerThree = 0;
     for (var m = 0; m < player.hand.length; m++) {
       for (var l = 0; l < player.hand.length; l++) {      
         for (var k = 0; k < player.hand.length; k++) {          
@@ -44,11 +32,7 @@ function  pairKickerThree(player) {
               for (var h = 0; h < player.hand.length; h++) {
                 for (var g = 0; g < player.hand.length; g++) {   
                   if(player.hand[g].power == player.hand[h].power && player.hand[h].power != player.hand[i].power && player.hand[i].power > player.hand[j].power && player.hand[j].power > player.hand[k].power && player.hand[k].power > player.hand[l].power && player.hand[l].power > player.hand[m].power && g != h && g != i && g != j && g != k && g != l && g != m && h != i && h != j && h != k && h != l && h != m && i != j && i != k && i != l && i != m && j != k && j != l && j != m && k != l && k != m && l != m) {
-                    pair = 1;
-                    pairPower = player.hand[g].power;
-                    kickerOne = player.hand[i].power;
                     kickerTwo = player.hand[j].power;
-                    kickerThree = player.hand[k].power;
                   }
                 }
               }
@@ -62,11 +46,7 @@ function  pairKickerThree(player) {
   }
 
   function  pairKickerOne(player) {
-    var pair = 0; 
-    var pairPower = 0; 
     var kickerOne = 0;
-    var kickerTwo = 0;
-    var kickerThree = 0;
     for (var m = 0; m < player.hand.length; m++) {
       for (var l = 0; l < player.hand.length; l++) {      
         for (var k = 0; k < player.hand.length; k++) {          
@@ -75,11 +55,7 @@ function  pairKickerThree(player) {
               for (var h = 0; h < player.hand.length; h++) {
                 for (var g = 0; g < player.hand.length; g++) {   
                   if(player.hand[g].power == player.hand[h].power && player.hand[h].power != player.hand[i].power && player.hand[i].power > player.hand[j].power && player.hand[j].power > player.hand[k].power && player.hand[k].power > player.hand[l].power && player.hand[l].power > player.hand[m].power && g != h && g != i && g != j && g != k && g != l && g != m && h != i && h != j && h != k && h != l && h != m && i != j && i != k && i != l && i != m && j != k && j != l && j != m && k != l && k != m && l != m) {
-                    pair = 1;
-                    pairPower = player.hand[g].power;
                     kickerOne = player.hand[i].power;
-                    kickerTwo = player.hand[j].power;
-                    kickerThree = player.hand[k].power;
                   }
                 }
               }
@@ -93,11 +69,7 @@ function  pairKickerThree(player) {
   }
 
   function  pairPower(player) {
-    var pair = 0; 
     var pairPower = 0; 
-    var kickerOne = 0;
-    var kickerTwo = 0;
-    var kickerThree = 0;
     for (var m = 0; m < player.hand.length; m++) {
       for (var l = 0; l < player.hand.length; l++) {      
         for (var k = 0; k < player.hand.length; k++) {          
@@ -106,11 +78,7 @@ function  pairKickerThree(player) {
               for (var h = 0; h < player.hand.length; h++) {
                 for (var g = 0; g < player.hand.length; g++) {   
                   if(player.hand[g].power == player.hand[h].power && player.hand[h].power != player.hand[i].power && player.hand[i].power > player.hand[j].power && player.hand[j].power > player.hand[k].power && player.hand[k].power > player.hand[l].power && player.hand[l].power > player.hand[m].power && g != h && g != i && g != j && g != k && g != l && g != m && h != i && h != j && h != k && h != l && h != m && i != j && i != k && i != l && i != m && j != k && j != l && j != m && k != l && k != m && l != m) {
-                    pair = 1;
                     pairPower = player.hand[g].power;
-                    kickerOne = player.hand[i].power;
-                    kickerTwo = player.hand[j].power;
-                    kickerThree = player.hand[k].power;
                   }
                 }
               }
@@ -126,10 +94,6 @@ function  pairKickerThree(player) {
   // check for one pair. Each card on the hand is compared with all the others. If there is a pair, the author of the pair is stored in the variable pair1Power or pair2Power. 
   function  pair(player) {
     var pair = 0; 
-    var pairPower = 0; 
-    var kickerOne = 0;
-    var kickerTwo = 0;
-    var kickerThree = 0;
     for (var m = 0; m < player.hand.length; m++) {
       for (var l = 0; l < player.hand.length; l++) {      
         for (var k = 0; k < player.hand.length; k++) {          
@@ -139,10 +103,6 @@ function  pairKickerThree(player) {
                 for (var g = 0; g < player.hand.length; g++) {   
                   if(player.hand[g].power == player.hand[h].power && player.hand[h].power != player.hand[i].power && player.hand[i].power > player.hand[j].power && player.hand[j].power > player.hand[k].power && player.hand[k].power > player.hand[l].power && player.hand[l].power > player.hand[m].power && g != h && g != i && g != j && g != k && g != l && g != m && h != i && h != j && h != k && h != l && h != m && i != j && i != k && i != l && i != m && j != k && j != l && j != m && k != l && k != m && l != m) {
                     pair = 1;
-                    pairPower = player.hand[g].power;
-                    kickerOne = player.hand[i].power;
-                    kickerTwo = player.hand[j].power;
-                    kickerThree = player.hand[k].power;
                   }
                 }
               }

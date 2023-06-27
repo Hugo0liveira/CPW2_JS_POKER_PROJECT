@@ -15,17 +15,17 @@ function royalflush(player) {
                   if (player.hand[l].power == 11) {
                     for (var m = 0; m < player.hand.length; m++) {
                       if (player.hand[m].power == 10 && i != j && i != k && i != l && i != m && j != k && j != l && j != m && k != l && k != m && l != m ) {
-                        royalflush += 1;
-                      }
-                    }
-                  }
-                }
-              }
-            }
-          }
-        }          
-      }
-    }    
+                        royalflush = 1;
+                      } // end if
+                    } // end for m
+                  } // end if
+                } // end for l
+              } // end if
+            } // end for k
+          } // end if
+        } // end for j          
+      } // end if
+    } // end for i    
     console.log("royalflush: " + royalflush);
     return royalflush;
   }

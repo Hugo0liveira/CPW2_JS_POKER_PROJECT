@@ -1,8 +1,5 @@
 
 function threeOfAKindKickerTwo(player) {
-    var threeOfAKind = 0;
-    var threeOfAKindPower = 0;
-    var kickerOne = 0;
     var kickerTwo = 0;
     for (var m = 0; m < player.hand.length; m++) {
       for (var l = 0; l < player.hand.length; l++) {      
@@ -13,10 +10,6 @@ function threeOfAKindKickerTwo(player) {
                 for (var g = 0; g < player.hand.length; g++) {      
                   // check for three of a kind
                   if ( player.hand[g].power == player.hand[h].power && player.hand[h].power == player.hand[i].power && player.hand[i].power != player.hand[j].power && player.hand[j].power > player.hand[k].power && player.hand[k].power > player.hand[l].power && player.hand[l].power > player.hand[m].power && g != h && g != i && g != j && g != k && g != l && g != m && h != i && h != j && h != k && h != l && h != m && i != j && i != k && i != l && i != m && j != k && j != l && j != m && k != l && k != m && l != m) {
-                    // determine the kickerOne (the highest card on the hand that is not part of the three of a kind)
-                    threeOfAKind = 1;
-                    threeOfAKindPower = player.hand[g].power;
-                    kickerOne = player.hand[j].power;
                     // detemine the kickerTwo (the second highest card on the hand that is not part of the three of a kind)
                     kickerTwo = player.hand[k].power;
                   }
@@ -33,10 +26,7 @@ function threeOfAKindKickerTwo(player) {
   
    // check for three of a kind
    function  threeOfAKindKickerOne(player) {
-    var threeOfAKind = 0;
-    var threeOfAKindPower = 0;
     var kickerOne = 0;
-    var kickerTwo = 0;
     for (var m = 0; m < player.hand.length; m++) {
       for (var l = 0; l < player.hand.length; l++) {      
         for (var k = 0; k < player.hand.length; k++) {          
@@ -47,11 +37,7 @@ function threeOfAKindKickerTwo(player) {
                   // check for three of a kind
                   if (player.hand[g].power == player.hand[h].power && player.hand[h].power == player.hand[i].power && player.hand[i].power != player.hand[j].power && player.hand[j].power > player.hand[k].power && player.hand[k].power > player.hand[l].power && player.hand[l].power > player.hand[m].power && g != h && g != i && g != j && g != k && g != l && g != m && h != i && h != j && h != k && h != l && h != m && i != j && i != k && i != l && i != m && j != k && j != l && j != m && k != l && k != m && l != m) {
                     // determine the kickerOne (the highest card on the hand that is not part of the three of a kind)
-                    threeOfAKind = 1;
-                    threeOfAKindPower = player.hand[g].power;
                     kickerOne = player.hand[j].power;
-                    // detemine the kickerTwo (the second highest card on the hand that is not part of the three of a kind)
-                    kickerTwo = player.hand[k].power;
                   }
                 }
               }
@@ -65,11 +51,8 @@ function threeOfAKindKickerTwo(player) {
   }
   
     // check for three of a kind
-    function  threeOfAKindPower(player) {
-      var threeOfAKind = 0;
+    function  threeOfAKindPower(player) {      
       var threeOfAKindPower = 0;
-      var kickerOne = 0;
-      var kickerTwo = 0;
       for (var m = 0; m < player.hand.length; m++) {
         for (var l = 0; l < player.hand.length; l++) {      
           for (var k = 0; k < player.hand.length; k++) {          
@@ -80,11 +63,7 @@ function threeOfAKindKickerTwo(player) {
                     // check for three of a kind
                     if ( player.hand[g].power == player.hand[h].power && player.hand[h].power == player.hand[i].power && player.hand[i].power != player.hand[j].power && player.hand[j].power > player.hand[k].power && player.hand[k].power > player.hand[l].power && player.hand[l].power > player.hand[m].power && g != h && g != i && g != j && g != k && g != l && g != m && h != i && h != j && h != k && h != l && h != m && i != j && i != k && i != l && i != m && j != k && j != l && j != m && k != l && k != m && l != m) {
                       // determine the kickerOne (the highest card on the hand that is not part of the three of a kind)
-                      threeOfAKind = 1;
                       threeOfAKindPower = player.hand[g].power;
-                      kickerOne = player.hand[j].power;
-                      // detemine the kickerTwo (the second highest card on the hand that is not part of the three of a kind)
-                      kickerTwo = player.hand[k].power;
                     }
                   }
                 }
@@ -100,9 +79,6 @@ function threeOfAKindKickerTwo(player) {
     // check for three of a kind
     function  threeOfAKind(player) {
       var threeOfAKind = 0;
-      var threeOfAKindPower = 0;
-      var kickerOne = 0;
-      var kickerTwo = 0;
       for (var m = 0; m < player.hand.length; m++) {
         for (var l = 0; l < player.hand.length; l++) {      
           for (var k = 0; k < player.hand.length; k++) {          
@@ -114,10 +90,6 @@ function threeOfAKindKickerTwo(player) {
                     if ( player.hand[g].power == player.hand[h].power && player.hand[h].power == player.hand[i].power && player.hand[i].power != player.hand[j].power && player.hand[j].power > player.hand[k].power && player.hand[k].power > player.hand[l].power && player.hand[l].power > player.hand[m].power && g != h && g != i && g != j && g != k && g != l && g != m && h != i && h != j && h != k && h != l && h != m && i != j && i != k && i != l && i != m && j != k && j != l && j != m && k != l && k != m && l != m) {
                       // determine the kickerOne (the highest card on the hand that is not part of the three of a kind)
                       threeOfAKind = 1;
-                      threeOfAKindPower = player.hand[g].power;
-                      kickerOne = player.hand[j].power;
-                      // detemine the kickerTwo (the second highest card on the hand that is not part of the three of a kind)
-                      kickerTwo = player.hand[k].power;
                     }
                   }
                 }

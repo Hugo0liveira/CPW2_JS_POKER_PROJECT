@@ -328,9 +328,12 @@ function compareTheHands(){
       window.alert("Cohle: \n“Time is a flat circle. \nEverything we have done\n or will do\n we will do\n over and over and over again—forever.” ");
       resetGame();
     } else if(Variables.player2.chips <= 0){ 
+      window.alert("What is the strongest cure?--Victory.\n     Friedrich Nietzsche");
       // load video from youtube https://www.youtube.com/watch?v=pw4VEW3StIw  
-      const  video = document.querySelector('container');
-      video.innerHTML = '<iframe width="560" height="315" src="https://www.youtube.com/embed/pw4VEW3StIw?autoplay=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>';              
+      const container = document.querySelector('#end');
+      window.alert('"If one shifts the centre of gravity of life out of life into the “Beyond”—into nothingness—one has deprived life as such of its centre of gravity. The great lie of personal immortality destroys all rationality, all naturalness of instinct—all that is salutary, all that is life-furthering. . . . So to live that there is no longer any meaning in living: that now becomes the “meaning” of life. . . . Christianity has waged a war to the death against every feeling of reverence and distance between man and man . . . against everything noble, joyful, high-spirited on earth, against our happiness on earth."\n     Friedrich Nietzsche');
+      container.innerHTML = '<iframe width="1080" height="1080" src="https://www.youtube.com/embed/VbJm1OcII-g?autoplay=1" frameborder="1" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>';
+               
       
     } else{        
       Variables.years = parseInt(Variables.infoYears.innerHTML); 

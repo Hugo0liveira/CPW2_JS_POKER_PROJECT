@@ -1,0 +1,51 @@
+
+    body {
+      background-image: url("https://i.redd.it/e31i8qtegam21.png");
+      background-position: center;
+      padding: 32px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    
+    h1 {
+      color: #fff;
+      text-align: center;
+    }
+    
+    ul {
+      list-style-type: none;
+      padding: 0;
+      margin: 20px;
+    }
+    
+    li {
+      margin-bottom: 30px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+    
+    a {
+      display: block;
+      padding: 3px;
+      color: #fff;
+      text-decoration: none;
+      background-color: rgba(0, 0, 0, 0.7);
+      border-radius: 11px;
+    }
+    
+    @media only screen and (min-width: 768px) {
+      body {
+        padding: 40px;
+      }
+      
+      ul {
+        margin: 40px;
+      }
+      
+      li {
+        margin-bottom: 20px;
+      }
+    }

@@ -16,13 +16,9 @@ body {
   display: flex;flex-direction: column;align-items: center;justify-content: center;
   width: 100%;height: 200px; margin-top: 10px;
 }
-.player-section-2 {
-  border-bottom: 5px solid #000000;  
-}
+
 .sectionPlayerHand2{ margin-bottom: 50px;   }
-.player-section-1 {
-  border-top: 5px solid #000000;   
-}
+
 .player-name {
   padding: 0px;font-style: italic;font-size: larger;color: #000000;
   text-align: center;font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;  
@@ -106,17 +102,18 @@ body {
 .active-player {
   background-color: #eee; }
 
+ 
+
+
+
+
+
 @media (max-width: 768px) {
   .container {padding: 20px; }
 }
 @media (max-width: 480px) {
   .player-section {height: 140px;}
-  .player-section-2 {
-    border-bottom: 3px solid #000000;  
-  }
-  .player-section-1 {
-    border-top: 3px solid #000000;        
-  }
+  
   .sectionPlayerHand2{ margin-bottom: 5px;   }
   .player-name {
     font-size: 14px;}
@@ -136,10 +133,7 @@ body {
   .card .suit {
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     font-style: italic;color: #5645aa;font-size: 9px; margin-top: -7px;  }
-    .contemplation { color: #04c4ff;}
-    .suicide { color: #e318b7;}
-    .revolution { color: #00ff11;}
-    .domination { color: #eaff00;}
+  
   .card .power {
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     color: rgb(230, 89, 89); font-size: 10px; margin-top: -11px;  }
@@ -156,3 +150,11 @@ body {
   .riskValue {    
     margin-top: 5%; font-size: 13px;  }
 }
+
+
+/*
+  .contemplation { color: #04c4ff;}
+    .suicide { color: #e318b7;}
+    .revolution { color: #00ff11;}
+    .domination { color: #eaff00;}
+*/
