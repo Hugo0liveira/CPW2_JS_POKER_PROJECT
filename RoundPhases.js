@@ -1,5 +1,5 @@
 
-import { shuffleDeck, cleanAllCommunityCards, distributeCards, addCardOnCommunityCards, concatenateHand } from "./DeckManipulation.js";
+import { shuffleDeck, cleanAllCommunityCards, distributeCards1, distributeCards2, addCardOnCommunityCards1, addCardOnCommunityCards2, addCardOnCommunityCards3, addCardOnCommunityCards4, addCardOnCommunityCards5, concatenateHand } from "./DeckManipulation.js";
 import {determineWinnersHand} from "./DetermineWinnersHand.js";
 import { Variables } from "./Variables.js"
 import {functionStart} from "./main.js"
@@ -170,7 +170,7 @@ function checkConditionsTurn() {
 }        
 
 function checkConditionsRiver() {  
-  if(Variables.conditionsRiver==1){
+  if(Variables.conditionsRiver==1){    
       if (Variables.fold == 4) {
         window.alert("FOLD on Phase RIVER! ");     
         Variables.player1.chips = Variables.player1.chips - (Variables.risk*2); Variables.player2.chips += Variables.risk;  Variables.infoRisk.innerHTML = Variables.risk;
@@ -207,6 +207,7 @@ function checkConditionsRiver() {
 
 // PHASES OF THE GAME
 function PhasePreFlop(){  
+  
   AppearButtonCall();
   DisappearButtonCheck();
   Variables.chips1Html.innerHTML = Variables.player1.chips;
@@ -226,7 +227,7 @@ function PhasePreFlop(){
     if(Variables.preflop==1){
       Variables.conditionsPreflop=1; Variables.conditionsFlop=0; Variables.conditionsTurn=0; Variables.conditionsRiver=0; 
       Variables.fold = 0; Variables.check = 0; Variables.call = 0; Variables.raise = 0;      
-      Variables.deck = distributeCards();             
+      Variables.deck = distributeCards1();             
       foldButton.addEventListener("click", functionFold);
       callButton.addEventListener("click", functionCall);
       checkButton.addEventListener("click", functionCheck);
@@ -250,7 +251,7 @@ function PhasePreFlop(){
       // remove previous community cards  
       cleanAllCommunityCards();
          // PUTS 3 COMMUNITY CARDS
-      addCardOnCommunityCards(); addCardOnCommunityCards(); addCardOnCommunityCards();
+        addCardOnCommunityCards1(); addCardOnCommunityCards2(); addCardOnCommunityCards3();
         foldButton.addEventListener("click", functionFold);
         callButton.addEventListener("click", functionCall);
         checkButton.addEventListener("click", functionCheck);
@@ -268,7 +269,7 @@ function PhasePreFlop(){
     if (Variables.turn == 1) { //turn
       Variables.conditionsPreflop=0; Variables.conditionsFlop=0; Variables.conditionsTurn=1; Variables.conditionsRiver=0;
       Variables.fold = 0; Variables.check = 0; Variables.call = 0;  Variables.raise = 0;
-      addCardOnCommunityCards(); 
+      addCardOnCommunityCards4();
       foldButton.addEventListener("click", functionFold);
       callButton.addEventListener("click", functionCall);
       checkButton.addEventListener("click", functionCheck);     
@@ -276,7 +277,7 @@ function PhasePreFlop(){
       console.log("PhaseTurn");
     }
   }
-  function PhaseRiver(){
+  function PhaseRiver(){    
     if (Variables.player1.chips < 0) {        
       window.alert("EVERYONE IS DEAD!!!\n\n    GAME OVER!");
       window.alert("Cohle: \n“Time is a flat circle. \nEverything we have done\n or will do\n we will do\n over and over and over again—forever.” ");
@@ -285,24 +286,26 @@ function PhasePreFlop(){
     if (Variables.river == 1) { //river
       Variables.conditionsPreflop=0; Variables.conditionsFlop=0; Variables.conditionsTurn=0; Variables.conditionsRiver=1;
       Variables.fold = 0; Variables.check = 0; Variables.call = 0; Variables.raise = 0;
-      addCardOnCommunityCards();
+      addCardOnCommunityCards5();
       foldButton.addEventListener("click", functionFold);
       callButton.addEventListener("click", functionCall);
       checkButton.addEventListener("click", functionCheck);
       raiseButton.addEventListener("click", functionRaise);
-      console.log("PhaseRiver");
-    }//river 
+      console.log("PhaseRiver");      
+    }//river      
   }
+  
+function compareTheHands(){      
+  distributeCards2();
 
-function compareTheHands(){
     if (Variables.comparehands == 1) { //river
       Variables.preflop=1;
       Variables.fold = 0; Variables.check = 0; Variables.call = 0;  Variables.raise = 0;
-      Variables.conditionsPreflop=1; Variables.conditionsFlop=0; Variables.conditionsTurn=0; Variables.conditionsRiver=0; 
+      Variables.conditionsPreflop=1; Variables.conditionsFlop=0; Variables.conditionsTurn=0; Variables.conditionsRiver=0;       
 
     console.log("compareTheHands()");  
     window.alert("COMPARING HANDS... ");
-
+    
     var roundWinner = determineWinnersHand();         
     if(roundWinner == 0){
       window.alert("DRAW!");  
@@ -364,29 +367,30 @@ function compareTheHands(){
 
   // Disapear buttons
   function DisappearButtonCheck(){
-   // const checkButton = document.querySelector('.btn-check');
-   // checkButton.innerHTML = "";    
+   const checkButton = document.querySelector('.btn-check');
+   checkButton.innerHTML = "";    
+   // change css to transparent
+     checkButton.style.backgroundColor = "transparent";
+      checkButton.style.color = "transparent";
   }
   function DisappearButtonCall(){
-   // const callButton = document.querySelector('.btn-call');
-   // callButton.innerHTML = "";
+    const callButton = document.querySelector('.btn-call');    
+    // change css to transparent
+    callButton.style.backgroundColor = "transparent";
+    callButton.style.color = "transparent";
   }
   // Appear buttons
   function AppearButtonCheck(){
-   // const checkButton = document.querySelector('.btn-check');
-   // checkButton.innerHTML = ` 
-   // <button class="btn-check" onclick="functionCheck()">${Check}</button>  
-   // `; 
-   // const actionsHTML = document.querySelector('.actions');
-   // actionsHTML.appendChild(checkButton);
+    const checkButton = document.querySelector('.btn-check');
+    checkButton.innerHTML = ` 
+    <button class="btn-check" onclick="functionCheck()">Check</button>  
+    `;  
   }
   function AppearButtonCall(){
-   // const callButton = document.querySelector('.btn-call');
-   // callButton.innerHTML = `
-   // <button class="btn-call" onclick="functionCall()">Call</button>
-   // `;
-   // const actionsHTML = document.querySelector('.actions');
-   // actionsHTML.appendChild(callButton);
+    const callButton = document.querySelector('.btn-call');
+    // undo the transparence of css     
+    callButton.style.backgroundColor = "#f3de21";
+    callButton.style.color = "rgb(0, 0, 0)";         
   }
 
 

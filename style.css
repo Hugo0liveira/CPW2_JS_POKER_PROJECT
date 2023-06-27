@@ -104,7 +104,14 @@ body {
 .active-player {
   background-color: #eee; }
 
- 
+  .cardFaceDown {
+    width: 126px;height: 120px;background-color: #bcbbbb;border: 5px solid #ffffff;  
+    border-bottom: #000000; border-right: #000000;
+    border-radius: 3px;  margin-right: 10px;display: flex; flex-direction: 
+    column; justify-content: center; align-items: center; 
+    border-top-left-radius: 23%; border-top-right-radius: 23%;   
+
+  }
 
 
 
@@ -152,12 +159,40 @@ body {
     .risk{ font-size: 11px;   }
   .riskValue {    
     margin-top: 5%; font-size: 13px;  }
+    .card .suit1 {
+      font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+      font-style: italic;color: #5645aa;font-size: 9px; margin-top: -7px;  }
+      .card .suit2 {
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        font-style: italic;color: #5645aa;font-size: 9px; margin-top: -7px;  }
+        .card .suit3 {
+          font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+          font-style: italic;color: #5645aa;font-size: 9px; margin-top: -7px;  }
+          .card .suit4 {
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            font-style: italic;color: #5645aa;font-size: 9px; margin-top: -7px;  }
+            .card .suit11 {
+              font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+              font-style: italic;color: #5645aa;font-size: 9px; margin-top: -7px;  }
+              .card .suit12 {
+                font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+                font-style: italic;color: #5645aa;font-size: 9px; margin-top: -7px;  }
+                .card .suit13 {
+                  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+                  font-style: italic;color: #5645aa;font-size: 9px; margin-top: -7px;  }
+                  .card .suit14 {
+                    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+                    font-style: italic;color: #5645aa;font-size: 9px; margin-top: -7px;  }
+                    .card .suit15 {
+                      font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+                      font-style: italic;color: #5645aa;font-size: 9px; margin-top: -7px;  }
+                      .cardFaceDown {
+                        width: 62px; height: 76px; background-color: #bcbbbb;border: 5px solid #ffffff;  
+                        border-bottom: #000000; border-right: #000000;
+                        border-radius: 3px;  margin-right: 10px;display: flex; flex-direction: 
+                        column; justify-content: center; align-items: center; 
+                        border-top-left-radius: 23%; border-top-right-radius: 23%;   
+                    
+                      }
 }
 
-
-/*
-  .contemplation { color: #04c4ff;}
-    .suicide { color: #e318b7;}
-    .revolution { color: #00ff11;}
-    .domination { color: #eaff00;}
-*/
