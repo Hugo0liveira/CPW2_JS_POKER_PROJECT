@@ -2,6 +2,7 @@ import { Variables } from "./Variables.js"
 import { PhasePreFlop } from "./RoundPhases.js"
 
 function functionStart(){  
+  //window.alert( Variables.initialMessage0 ); 
   //window.alert( Variables.initialMessage1 ); 
   //window.alert( Variables.initialMessage2 ); 
  

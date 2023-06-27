@@ -207,6 +207,8 @@ function checkConditionsRiver() {
 
 // PHASES OF THE GAME
 function PhasePreFlop(){  
+  AppearButtonCall();
+  DisappearButtonCheck();
   Variables.chips1Html.innerHTML = Variables.player1.chips;
   Variables.chips2Html.innerHTML = Variables.player2.chips;
   cleanAllCommunityCards();
@@ -234,6 +236,8 @@ function PhasePreFlop(){
   }
 
   function PhaseFlop(){
+    DisappearButtonCall();
+    AppearButtonCheck();
     if (Variables.player1.chips < 0) {        
       window.alert("EVERYONE IS DEAD!!!\n\n    GAME OVER!");
       window.alert("Cohle: \n“Time is a flat circle. \nEverything we have done\n or will do\n we will do\n over and over and over again—forever.” ");
@@ -357,6 +361,34 @@ function compareTheHands(){
     Variables.infoRisk.innerHTML = Variables.risk;  
     functionStart();
   }
+
+  // Disapear buttons
+  function DisappearButtonCheck(){
+   // const checkButton = document.querySelector('.btn-check');
+   // checkButton.innerHTML = "";    
+  }
+  function DisappearButtonCall(){
+   // const callButton = document.querySelector('.btn-call');
+   // callButton.innerHTML = "";
+  }
+  // Appear buttons
+  function AppearButtonCheck(){
+   // const checkButton = document.querySelector('.btn-check');
+   // checkButton.innerHTML = ` 
+   // <button class="btn-check" onclick="functionCheck()">${Check}</button>  
+   // `; 
+   // const actionsHTML = document.querySelector('.actions');
+   // actionsHTML.appendChild(checkButton);
+  }
+  function AppearButtonCall(){
+   // const callButton = document.querySelector('.btn-call');
+   // callButton.innerHTML = `
+   // <button class="btn-call" onclick="functionCall()">Call</button>
+   // `;
+   // const actionsHTML = document.querySelector('.actions');
+   // actionsHTML.appendChild(callButton);
+  }
+
 
   export { functionFold, functionCall, functionCheck, functionRaise, foldButton, callButton, checkButton, raiseButton, checkConditionsPreFlop, checkConditionsFlop, checkConditionsTurn, checkConditionsRiver, PhasePreFlop, PhaseFlop, PhaseTurn, PhaseRiver, compareTheHands, resetGame };
   
