@@ -49,6 +49,9 @@ const messageDoTheEvolution1 = "I'm a thief, I'm a liar There's my church, I sin
 const messageDoTheEvolution2 = "Admire me, admire my home, admire my son, admire my clones 'Cause we know, appetite for a nightly feast!";
 const messageDoTheEvolution3 = "I am ahead, I am advanced, I am the first mammal to make plans, yeah!";
 const messageDoTheEvolution4 = "Ah, do the evolution! Come on, come on, come on!";
+const messageNietzscheWin2 = '"If one shifts the centre of gravity of life out of life into the “Beyond”—into nothingness—one has deprived life as such of its centre of gravity. The great lie of personal immortality destroys all rationality, all naturalness of instinct—all that is salutary, all that is life-furthering. . . . So to live that there is no longer any meaning in living: that now becomes the “meaning” of life. . . . Christianity has waged a war to the death against every feeling of reverence and distance between man and man . . . against everything noble, joyful, high-spirited on earth, against our happiness on earth."\n     Friedrich Nietzsche';
+const messageNietzscheWin1 = "What is the strongest cure?--Victory.\n     Friedrich Nietzsche";
+
 class Player {
   constructor(name, chips) {
     this.name = name;
@@ -60,7 +63,7 @@ class Player {
   }
 }
 
-const player1 = new Player("Humanity", 8000000000);
+const player1 = new Player("Humanity", 1);
 const chips1Html = document.querySelector(".player1-chips");
 chips1Html.innerHTML = player1.chips.toString();    
 const player2 = new Player("Death", 100000000000);
@@ -84,6 +87,8 @@ export const Variables = {
   messageDoTheEvolution2: messageDoTheEvolution2,
   messageDoTheEvolution3: messageDoTheEvolution3,
   messageDoTheEvolution4: messageDoTheEvolution4,
+  messageNietzscheWin1: messageNietzscheWin1,
+  messageNietzscheWin2: messageNietzscheWin2,
   allCommunityCardsHTML: allCommunityCardsHTML,
   allCommunityCards: allCommunityCards,
   game: game,

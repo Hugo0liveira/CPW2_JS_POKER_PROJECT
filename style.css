@@ -22,7 +22,7 @@ body {
 .player-name {
   padding: 0px;font-style: italic;font-size: larger;color: #000000;
   text-align: center;font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;  
-  font-size: 23px;text-shadow: 5px 5px 10px rgb(255, 255, 255);
+  font-size: 23px; text-shadow: 5px 5px 10px rgb(255, 255, 255);
   font-weight: bold; 
 }
 .player1-chips {
@@ -57,12 +57,39 @@ body {
 }
 .card .author {
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; margin-top: 2px;
-  font-style: italic;color: black; margin-inline-start: 9px; margin-inline-end: 7px;
+  font-style: italic; color: black; margin-inline-start: 9px; margin-inline-end: 7px;
 }
 .card .suit {
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-  font-style: italic;color: #5645aa;font-size: 14px;
+  font-style: italic; color: #5645aa; font-size: 14px;
 }
+.card .suit1 {
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-style: italic; font-size: 14px; margin-top: -7px; text-shadow: 1px 1px 1px rgb(0, 0, 0); }
+  .card .suit2 {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-style: italic; font-size: 14px; margin-top: -7px; text-shadow: 1px 1px 1px rgb(0, 0, 0); }
+    .card .suit3 {
+      font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+      font-style: italic; font-size: 14px; margin-top: -7px; text-shadow: 1px 1px 1px rgb(0, 0, 0); }
+      .card .suit4 {
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        font-style: italic; font-size: 14px; margin-top: -7px; text-shadow: 1px 1px 1px rgb(0, 0, 0); }
+        .card .suit11 {
+          font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+          font-style: italic; font-size: 14px; margin-top: -7px; text-shadow: 1px 1px 1px rgb(0, 0, 0); }
+          .card .suit12 {
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            font-style: italic; font-size: 14px; margin-top: -7px; text-shadow: 1px 1px 1px rgb(0, 0, 0); }
+            .card .suit13 {
+              font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+              font-style: italic; font-size: 14px; margin-top: -7px; text-shadow: 1px 1px 1px rgb(0, 0, 0); }
+              .card .suit14 {
+                font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+                font-style: italic; font-size: 14px; margin-top: -7px; text-shadow: 1px 1px 1px rgb(0, 0, 0); }
+                .card .suit15 {
+                  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+                  font-style: italic; font-size: 14px; margin-top: -7px;  text-shadow: 1px 1px 1px rgb(0, 0, 0); }
 .card .power {
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; margin-bottom: 1px; 
   color: rgb(230, 89, 89);
@@ -91,13 +118,13 @@ body {
   display: flex;flex-direction: column;
 }
 .years {
-  margin-top: 5%; font-size: 18px; }
+  margin-top: 0%; font-size: 18px; }
 .yearsSurviving {
-  margin-top: 5%; font-size: 18px;  }
+  margin-top: 0%; font-size: 18px;  }
 .risk {
-  margin-top: 5%; font-size: 18px;   }
+  margin-top: 2%; font-size: 18px;   }
 .riskValue {
-  margin-top: 5%; font-size: 18px;
+  margin-top: 0%; font-size: 18px;
 }
 .btn-disabled {
   background-color: #ccc;color: #fff;border: none;  }
@@ -117,14 +144,25 @@ body {
     position: absolute; top: 50%; transform: translateY(-50%);}
    .welcomeDeath{/* element width full  */   width: 100%; /*vertically  centralized*/ 
     position: absolute; top: 50%; transform: translateY(-50%); }
-
-
+    .deathDancingAdd{ width: 100%;   }
+    .welcomeDeathAdd1{ visibility: hidden; }
+      .welcomeDeathAdd2{ visibility: hidden; }
+        .welcomeDeathAdd3{visibility: hidden; }
+          .welcomeDeathAdd4{visibility: hidden; }
+            .welcomeDeathAdd5{ visibility: hidden; }
+    
 
 
 @media (max-width: 768px) {
   .container {padding: 20px; }
 }
-@media (max-width: 480px) {
+
+@media (max-width: 677px) {
+  /*change backgroud image height*/
+  html {
+  background-size: 1300px;
+  }
+
   .player-section {height: 140px;}
   
   .sectionPlayerHand2{ margin-bottom: 5px;   }
@@ -139,14 +177,14 @@ body {
       .player1-chips { font-size: 11px;     }
       .player2-chips { font-size: 11px;     }
   .card {
-    width: 62px; height: 76px;
+    width: 67px; height: 76px;
     border-top-left-radius: 23%; border-top-right-radius: 23%; }     
   .card .author {
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    font-style: italic;color: black;font-size: 11px; margin-top: 5px; margin-inline-start: 7px; margin-inline-end: 7px;}
+    font-style: italic;color: black;font-size: 10px; margin-top: 5px; margin-inline-start: 7px; margin-inline-end: 7px;}
   .card .suit {
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    font-style: italic;color: #5645aa;font-size: 9px; margin-top: -7px;  }
+    font-style: italic; font-size: 9px; margin-top: -7px;  }
   
   .card .power {
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
@@ -159,37 +197,37 @@ body {
     display: flex;flex-direction: column; justify-content: center;align-items: center;margin-top: 8px;text-align: center;   }
     .years{ font-size: 11px; }
   .yearsSurviving {    
-    margin-top: 5%; font-size: 13px;  }
+    margin-top: 0%; font-size: 13px;  }
     .risk{ font-size: 11px;   }
   .riskValue {    
-    margin-top: 5%; font-size: 13px;  }
+    margin-top: 0%; font-size: 13px;  }
     .card .suit1 {
       font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-      font-style: italic;color: #5645aa;font-size: 9px; margin-top: -7px;  }
+      font-style: italic; font-size: 9px; margin-top: -7px; text-shadow: 1px 1px 1px rgb(0, 0, 0); }
       .card .suit2 {
         font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-        font-style: italic;color: #5645aa;font-size: 9px; margin-top: -7px;  }
+        font-style: italic; font-size: 9px; margin-top: -7px; text-shadow: 1px 1px 1px rgb(0, 0, 0); }
         .card .suit3 {
           font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-          font-style: italic;color: #5645aa;font-size: 9px; margin-top: -7px;  }
+          font-style: italic; font-size: 9px; margin-top: -7px;  text-shadow: 1px 1px 1px rgb(0, 0, 0); }
           .card .suit4 {
             font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-            font-style: italic;color: #5645aa;font-size: 9px; margin-top: -7px;  }
+            font-style: italic; font-size: 9px; margin-top: -7px;  text-shadow: 1px 1px 1px rgb(0, 0, 0); }
             .card .suit11 {
               font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-              font-style: italic;color: #5645aa;font-size: 9px; margin-top: -7px;  }
+              font-style: italic; font-size: 9px; margin-top: -7px; text-shadow: 1px 1px 1px rgb(0, 0, 0); }
               .card .suit12 {
                 font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-                font-style: italic;color: #5645aa;font-size: 9px; margin-top: -7px;  }
+                font-style: italic; font-size: 9px; margin-top: -7px;  text-shadow: 1px 1px 1px rgb(0, 0, 0); }
                 .card .suit13 {
                   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-                  font-style: italic;color: #5645aa;font-size: 9px; margin-top: -7px;  }
+                  font-style: italic; font-size: 9px; margin-top: -7px; text-shadow: 1px 1px 1px rgb(0, 0, 0); }
                   .card .suit14 {
                     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-                    font-style: italic;color: #5645aa;font-size: 9px; margin-top: -7px;  }
+                    font-style: italic; font-size: 9px; margin-top: -7px; text-shadow: 1px 1px 1px rgb(0, 0, 0); }
                     .card .suit15 {
                       font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-                      font-style: italic;color: #5645aa;font-size: 9px; margin-top: -7px;  }
+                      font-style: italic; font-size: 9px; margin-top: -7px;  text-shadow: 1px 1px 1px rgb(0, 0, 0); }
                       .cardFaceDown {
                         width: 62px; height: 76px; background-color: #bcbbbb;border: 5px solid #ffffff;  
                         border-bottom: #000000; border-right: #000000;
@@ -201,6 +239,52 @@ body {
   .deathKiss{ width: 320px; }
   .deathDancing{  /* element width full  */  width: 100%;  }   
 
-  .Schopenhauer{ font-size: 3px;  }
+  .card .Schopenhauer1{ font-size: 8px;  }
+  .card .Schopenhauer2{ font-size: 8px;  }
+  .card .Schopenhauer3{ font-size: 8px;  }
+  .card .Schopenhauer4{ font-size: 8px;  }
+  .card .Schopenhauer11{ font-size: 8px;  }
+  .card .Schopenhauer12{ font-size: 8px;  }
+  .card .Schopenhauer13{ font-size: 8px;  }
+  .card .Schopenhauer14{ font-size: 8px;  }
+  .card .Schopenhauer15{ font-size: 8px;  }
+
+  .welcomeDeath{/* element width full  */   width: 100%; /*vertically  centralized*/ 
+    position: absolute; top: 30%; transform: translateY(-50%); }
+    .welcomeDeathAdd1{/* element width full  */   width: 100%; /*vertically  centralized*/ 
+      position: absolute; top: 70%; transform: translateY(-50%); visibility: visible;  }
+      .welcomeDeathAdd2{ visibility: hidden; }
+        .welcomeDeathAdd3{visibility: hidden; }
+          .welcomeDeathAdd4{visibility: hidden; }
+            .welcomeDeathAdd5{ visibility: hidden; }
+
+  
 }
 
+
+@media (max-width: 365px) {
+  html {
+    background-size: 1470px;
+    }
+  .community-cards {
+    display: flex;flex-direction: column;  margin-top:1px; margin-bottom: -16px;
+  }
+   .card {
+    width: 67px; height: 70px;
+    border-top-left-radius: 23%; border-top-right-radius: 23%; margin-top:3px;}    
+    .btn-fold,.btn-check,.btn-raise,.btn-call {
+      padding: 0px;font-size: 11px;font-weight: bold;
+      margin-right: 2px;border-radius: 23%;  }
+      .welcomeDeath{/* element width full  */   width: 100%; /*vertically  centralized*/ 
+        position: absolute; top: 15%; transform: translateY(-50%); }
+        .welcomeDeathAdd1{/* element width full  */   width: 100%; /*vertically  centralized*/ 
+          position: absolute; top: 30%; transform: translateY(-50%); }
+          .welcomeDeathAdd2{/* element width full  */   width: 100%; /*vertically  centralized*/ 
+            position: absolute; top: 45%; transform: translateY(-50%); visibility: visible;  }
+            .welcomeDeathAdd3{/* element width full  */   width: 100%; /*vertically  centralized*/ 
+              position: absolute; top: 60%; transform: translateY(-50%); visibility: visible;  }
+              .welcomeDeathAdd4{/* element width full  */   width: 100%; /*vertically  centralized*/ 
+                position: absolute; top: 75%; transform: translateY(-50%); visibility: visible;  }
+                .welcomeDeathAdd5{/* element width full  */   width: 100%; /*vertically  centralized*/ 
+                  position: absolute; top: 90%; transform: translateY(-50%); visibility: visible;  }
+}

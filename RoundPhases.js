@@ -309,48 +309,65 @@ function compareTheHands(){
     console.log("compareTheHands()");  
    // window.alert("COMPARING HANDS... ");
     
-    var roundWinner = determineWinnersHand();         
-    if(roundWinner == 0){
-      window.alert("DRAW!");  
-      console.log("DRAW!");           
-    } 
-    if(roundWinner == 1){
-      window.alert("HUMANITY won the round.");
-      console.log("HUMANITY won the round.");
-      Variables.player1.chips += Variables.risk;      
-      Variables.player2.chips -= Variables.risk;      
-    } 
-    if(roundWinner == 2){
-      window.alert("DEATH won the round.");
-      console.log("DEATH won the round.");
-      Variables.player1.chips -= Variables.risk;      
-      Variables.player2.chips += Variables.risk;      
-    } 
-    if (roundWinner != 0 && roundWinner != 1 && roundWinner != 2) {
-      window.alert("ERROR: roundWinner");
-      console.log("ERROR: roundWinner");
-    } 
-    // update chips on screen
-    Variables.chips1Html.innerHTML = Variables.player1.chips.toString();      
-    Variables.chips2Html.innerHTML = Variables.player2.chips.toString();   
-   
-    gameLost();   
-   
-   if(Variables.player2.chips <= 0){ 
-      window.alert("What is the strongest cure?--Victory.\n     Friedrich Nietzsche");
-      // load video from youtube https://www.youtube.com/watch?v=pw4VEW3StIw  
-      const container = document.querySelector('#end');
-      window.alert('"If one shifts the centre of gravity of life out of life into the “Beyond”—into nothingness—one has deprived life as such of its centre of gravity. The great lie of personal immortality destroys all rationality, all naturalness of instinct—all that is salutary, all that is life-furthering. . . . So to live that there is no longer any meaning in living: that now becomes the “meaning” of life. . . . Christianity has waged a war to the death against every feeling of reverence and distance between man and man . . . against everything noble, joyful, high-spirited on earth, against our happiness on earth."\n     Friedrich Nietzsche');
-      container.innerHTML = '<iframe width="1080" height="1080" src="https://www.youtube.com/embed/VbJm1OcII-g?autoplay=1" frameborder="1" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>';
-               
+    var roundWinner = determineWinnersHand();   
+
+        if(roundWinner == 0){
+          window.alert("DRAW!");  
+          console.log("DRAW!");    
+          PhasePreFlop();         
+        }
+
+        if(roundWinner == 1){
+          roundLostDeathKiss();
+          window.alert("HUMANITY won the round.");
+          console.log("HUMANITY won the round.");
+          Variables.player1.chips += Variables.risk;      
+          Variables.player2.chips -= Variables.risk;   
+          // to delay the execution of the next line of code
+          setTimeout( awaitReaction1, 3000);
+          function awaitReaction1() {
+            PhasePreFlop();    
+          }
+        } 
+
+        if(roundWinner == 2){
+          roundWonDeathReaction()
+          //window.alert("DEATH won the round.");
+          console.log("DEATH won the round.");
+          Variables.player1.chips -= Variables.risk;      
+          Variables.player2.chips += Variables.risk; 
+          // to delay the execution of the next line of code
+          setTimeout( awaitReaction2, 2000);
+          function awaitReaction2() {   
+            gameLost();   
+            PhasePreFlop();    
+          }      
+        } 
+        if (roundWinner != 0 && roundWinner != 1 && roundWinner != 2) {
+          window.alert("ERROR: roundWinner");
+          console.log("ERROR: roundWinner");
+        } 
+        // update chips on screen
+        Variables.chips1Html.innerHTML = Variables.player1.chips.toString();      
+        Variables.chips2Html.innerHTML = Variables.player2.chips.toString();   
       
-    } else{        
-      Variables.years = parseInt(Variables.infoYears.innerHTML); 
-      Variables.years += 1;
-      Variables.infoYears.innerHTML = Variables.years.toString();        
-        PhasePreFlop();  
-      }
-    }
+        
+      if(Variables.player2.chips <= 0){ 
+          window.alert(Variables.messageNietzscheWin1);
+          // load video from youtube https://www.youtube.com/watch?v=pw4VEW3StIw  
+          const container = document.querySelector('#end');
+          window.alert(Variables.messageNietzscheWin2);
+          container.innerHTML = '<iframe width="1080" height="1080" src="https://www.youtube.com/embed/VbJm1OcII-g?autoplay=1" frameborder="1" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>';
+                  
+          
+        } else{        
+          Variables.years = parseInt(Variables.infoYears.innerHTML); 
+          Variables.years += 1;
+          Variables.infoYears.innerHTML = Variables.years.toString();                    
+          }
+        }
+
+        
   }
 
   function resetGame() {
@@ -434,7 +451,7 @@ function compareTheHands(){
     container.classList.add('deathKiss');
     container.innerHTML = `
     <div class="deathKiss">
-    <img src="https://e.snmc.io/i/1200/s/aa08d0118429c181cb01899f34af890b/9314020" alt="Death" class="deathKiss">
+    <img src="https://64.media.tumblr.com/8d92d659587f8434d360c8aaf123e1ca/tumblr_pb39eyKcr71w1y15so1_640.gif" alt="Death" class="deathKiss">
     </div>
     `;
     Variables.player2HandHTML.appendChild(container);
@@ -451,14 +468,35 @@ function compareTheHands(){
     <div class="deathDancing">
     <img src="https://steamuserimages-a.akamaihd.net/ugc/158030922591272127/DA8CFF0E533C01FB45C950F858B33501B6DB8F15/?imw=5000&imh=5000&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=false" alt="Death" class="deathDancing">
     </div>
-    `;    
+    `;        
     document.body.innerHTML = "";
     document.body.appendChild(container);
+  }
+
+  function deathDancingAdd() {         
+  //  Variables.player1HandHTML.innerHTML = "";   
+    const container = document.createElement('div');
+    container.classList.add('deathDancingAdd');
+    container.innerHTML = `
+    <div class="deathDancingAdd">
+    <img src="https://steamuserimages-a.akamaihd.net/ugc/158030922591272127/DA8CFF0E533C01FB45C950F858B33501B6DB8F15/?imw=5000&imh=5000&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=false" alt="Death" class="deathDancingAdd">
+    </div>
+    `;            
+    document.body.appendChild(container);    
   }
   
   function gameLost() {
     if (Variables.player1.chips < 0) {        
       deathDancing(); 
+      deathDancingAdd(); 
+      deathDancingAdd(); 
+      deathDancingAdd(); 
+      deathDancingAdd(); 
+      deathDancingAdd();       
+      deathDancingAdd();       
+      deathDancingAdd();       
+      deathDancingAdd();       
+      deathDancingAdd();       
       // to delay the execution of the next line of code
         setTimeout( awaitToEnd, 11000);
         function awaitToEnd() {            
@@ -480,5 +518,93 @@ function compareTheHands(){
     Variables.player2HandHTML.appendChild(container);    
   }
 
-  export { functionFold, functionCall, functionCheck, functionRaise, foldButton, callButton, checkButton, raiseButton, checkConditionsPreFlop, checkConditionsFlop, checkConditionsTurn, checkConditionsRiver, PhasePreFlop, PhaseFlop, PhaseTurn, PhaseRiver, compareTheHands, resetGame, welcomeDeath, DisappearButtonCall, DisappearButtonCheck, DisappearButtonFold, DisappearButtonRaise, AppearButtonCheck, AppearButtonCall, gameLost, deathKiss, deathDancing };
+  function welcomeDeathAdd1() {    
+    const container = document.createElement('div');
+    container.classList.add('welcomeDeathAdd1');
+    container.innerHTML = `
+    <div class="welcomeDeathAdd">
+    <img src="https://media.tenor.com/r1Z2IxWoyN4AAAAC/yeah-pearl.gif" alt="Death" class="welcomeDeathAdd1">
+    </div>
+    `;    
+    const containerAlreadyExistent = document.querySelector('.container');
+    Variables.player2HandHTML.appendChild(container);      
+  }
+
+  function welcomeDeathAdd2() {    
+    const container = document.createElement('div');
+    container.classList.add('welcomeDeathAdd2');
+    container.innerHTML = `
+    <div class="welcomeDeathAdd">
+    <img src="https://media.tenor.com/r1Z2IxWoyN4AAAAC/yeah-pearl.gif" alt="Death" class="welcomeDeathAdd2">
+    </div>
+    `;    
+    const containerAlreadyExistent = document.querySelector('.container');
+    Variables.player2HandHTML.appendChild(container);      
+  }
+
+  
+  function welcomeDeathAdd3() {    
+    const container = document.createElement('div');
+    container.classList.add('welcomeDeathAdd3');
+    container.innerHTML = `
+    <div class="welcomeDeathAdd">
+    <img src="https://media.tenor.com/r1Z2IxWoyN4AAAAC/yeah-pearl.gif" alt="Death" class="welcomeDeathAdd3">
+    </div>
+    `;    
+    const containerAlreadyExistent = document.querySelector('.container');
+    Variables.player2HandHTML.appendChild(container);      
+  }
+
+  function welcomeDeathAdd4() {    
+    const container = document.createElement('div');
+    container.classList.add('welcomeDeathAdd4');
+    container.innerHTML = `
+    <div class="welcomeDeathAdd">
+    <img src="https://media.tenor.com/r1Z2IxWoyN4AAAAC/yeah-pearl.gif" alt="Death" class="welcomeDeathAdd4">
+    </div>
+    `;    
+    const containerAlreadyExistent = document.querySelector('.container');
+    Variables.player2HandHTML.appendChild(container);      
+  }
+
+  function welcomeDeathAdd5() {    
+    const container = document.createElement('div');
+    container.classList.add('welcomeDeathAdd4');
+    container.innerHTML = `
+    <div class="welcomeDeathAdd">
+    <img src="https://media.tenor.com/r1Z2IxWoyN4AAAAC/yeah-pearl.gif" alt="Death" class="welcomeDeathAdd5">
+    </div>
+    `;    
+    const containerAlreadyExistent = document.querySelector('.container');
+    Variables.player2HandHTML.appendChild(container);      
+  }
+
+  // round lost death reaction gif
+  function roundLostDeathKiss() {
+    Variables.player2HandHTML.innerHTML = "";   
+    const container = document.createElement('div');
+    container.classList.add('roundLostDeathKiss');
+    container.innerHTML = `
+    <div class="roundLostDeath">
+    <img src="https://64.media.tumblr.com/7245eb81aaa356947db5690c28307d41/8ea40b1b3bd96097-ff/s540x810/19bb94a74b5f74fa9c4fd668f7dd9afdaa6d2777.gifv" alt="Death" class="roundLostDeathKiss">
+    </div>
+    `;    
+    Variables.player2HandHTML.appendChild(container);    
+  }
+
+  // round won death reaction gif
+  function roundWonDeathReaction() {
+    Variables.player2HandHTML.innerHTML = "";
+    const container = document.createElement('div');
+    container.classList.add('roundWonDeathReaction');
+    container.innerHTML = `
+    <div class="roundWonDeath">
+    <img src="https://3.bp.blogspot.com/-KyTwIisMGxg/VlXlvxRNsXI/AAAAAAAAi0Y/R8tSYHJBi1M/s1600/ownnn%2Bmas%2Beh%2Buma%2Bfofa.gif" alt="Death" class="roundWonDeathReaction">
+    </div>
+    `;
+    Variables.player2HandHTML.appendChild(container);
+  }
+
+
+  export { functionFold, functionCall, functionCheck, functionRaise, foldButton, callButton, checkButton, raiseButton, checkConditionsPreFlop, checkConditionsFlop, checkConditionsTurn, checkConditionsRiver, PhasePreFlop, PhaseFlop, PhaseTurn, PhaseRiver, compareTheHands, resetGame, welcomeDeath, DisappearButtonCall, DisappearButtonCheck, DisappearButtonFold, DisappearButtonRaise, AppearButtonCheck, AppearButtonCall, gameLost, deathKiss, deathDancing, welcomeDeathAdd1, welcomeDeathAdd2, welcomeDeathAdd3, welcomeDeathAdd4, welcomeDeathAdd5 };
   
