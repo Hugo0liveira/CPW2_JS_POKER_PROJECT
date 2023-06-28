@@ -83,13 +83,17 @@ function shuffleDeck() {
       const cardFaceDown1 = document.createElement("div");
       cardFaceDown1.classList.add("card");
       cardFaceDown1.innerHTML = `
-        <div class="cardFaceDown"></div>
+        <div class="cardFaceDown"> 
+        <img src="https://seeklogo.com/images/P/pearl-jam-do-the-evolution-music-video-logo-BEBC20E26C-seeklogo.com.png"  width="56" height="54" >
+        </div>
       `;
       Variables.player2HandHTML.appendChild(cardFaceDown1);     
       const cardFaceDown2 = document.createElement("div");
       cardFaceDown2.classList.add("card");
       cardFaceDown2.innerHTML = `
-        <div class="cardFaceDown"></div>
+        <div class="cardFaceDown">
+        <img src="https://seeklogo.com/images/P/pearl-jam-do-the-evolution-music-video-logo-BEBC20E26C-seeklogo.com.png"  width="56" height="54" >
+        </div>
       `;
       Variables.player2HandHTML.appendChild(cardFaceDown2);     
 

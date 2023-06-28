@@ -12,8 +12,9 @@ Período: 2023/1*/
       */ 
 
 const originalDeck = [
-  { power: 1, author: 'Karl Marx', suit: 'suicide' }, { power: 1, author: 'Karl Marx', suit: 'contemplation' }, 
-  { power: 1, author: 'Karl Marx', suit: 'domination' }, { power: 1, author: 'Karl Marx', suit: 'revolution' },
+  { power: -2, author: 'Thomas Ligotti', suit: 'suicide' }, { power: -2, author: 'Thomas Ligotti', suit: 'contemplation' }, { power: -2, author: 'Thomas Ligotti', suit: 'domination' }, { power: -2, author: 'Thomas Ligotti', suit: 'revolution' },
+  { power: -1, author: 'Schopenhauer', suit: 'suicide' }, { power: -1, author: 'Schopenhauer', suit: 'contemplation' }, { power: -1, author: 'Schopenhauer', suit: 'domination' }, { power: -1, author: 'Schopenhauer', suit: 'revolution' },
+  { power: 1, author: 'Karl Marx', suit: 'suicide' }, { power: 1, author: 'Karl Marx', suit: 'contemplation' }, { power: 1, author: 'Karl Marx', suit: 'domination' }, { power: 1, author: 'Karl Marx', suit: 'revolution' },
   { power: 2, author: 'Nietzsche', suit: 'suicide' }, { power: 2, author: 'Nietzsche', suit: 'contemplation' }, { power: 2, author: 'Nietzsche', suit: 'domination' }, { power: 2, author: 'Nietzsche', suit: 'revolution' },
   { power: 3, author: 'Peter Berger', suit: 'suicide' }, { power: 3, author: 'Peter Berger', suit: 'contemplation' }, { power: 3, author: 'Peter Berger', suit: 'domination' }, { power: 3, author: 'Peter Berger', suit: 'revolution' },
   { power: 4, author: 'Félix Guattari', suit: 'suicide' }, { power: 4, author: 'Félix Guattari', suit: 'contemplation' }, { power: 4, author: 'Félix Guattari', suit: 'domination' }, { power: 4, author: 'Félix Guattari', suit: 'revolution' },
@@ -25,26 +26,8 @@ const originalDeck = [
   { power: 10, author: 'Yuval Harari', suit: 'suicide' }, { power: 10, author: 'Yuval Harari', suit: 'contemplation' }, { power: 10, author: 'Yuval Harari', suit: 'domination' }, { power: 10, author: 'Yuval Harari', suit: 'revolution' },
   { power: 11, author: 'Thomas Metzinger', suit: 'suicide' }, { power: 11, author: 'Thomas Metzinger', suit: 'contemplation' }, { power: 11, author: 'Thomas Metzinger', suit: 'domination' }, { power: 11, author: 'Thomas Metzinger', suit: 'revolution' },
   { power: 12, author: 'Patricia Churchland', suit: 'suicide' }, { power: 12, author: 'Patricia Churchland', suit: 'suicide' }, { power: 12, author: 'Patricia Churchland', suit: 'contemplation' }, { power: 12, author: 'Patricia Churchland', suit: 'domination' },
-  { power: 13, author: 'Robert Sapolsky', suit: 'suicide' }, { power: 13, author: 'Robert Sapolsky', suit: 'contemplation' }, { power: 13, author: 'Robert Sapolsky', suit: 'domination' }, { power: 13, author: 'Robert Sapolsky', suit: 'revolution' },
-  { power: 14, author: 'Thomas Ligotti', suit: 'suicide' }, { power: 14, author: 'Thomas Ligotti', suit: 'contemplation' }, { power: 14, author: 'Thomas Ligotti', suit: 'domination' }, { power: 14, author: 'Thomas Ligotti', suit: 'revolution' }
+  { power: 13, author: 'Robert Sapolsky', suit: 'suicide' }, { power: 13, author: 'Robert Sapolsky', suit: 'contemplation' }, { power: 13, author: 'Robert Sapolsky', suit: 'domination' }, { power: 13, author: 'Robert Sapolsky', suit: 'revolution' }  
 ];
-/*
-const suitElements = document.getElementsByClassName('suit');
-for (let i = 0; i < originalDeck.length; i++) {
-  const card = originalDeck[i];
-  const suit = card.suit;
-  const suitElement = suitElements[i];
-  if (suit == 'suicide') {
-    suitElement.classList.add('suicide');
-  } else if  (suit === 'revolution') {
-    suitElement.classList.add('revolution');
-  } else if  (suit === 'contemplation') {
-    suitElement.classList.add('contemplation');
-  } else if  (suit === 'domination') {
-    suitElement.classList.add('domination');
-  }
-}
-*/
 
 const allCommunityCardsHTML = document.querySelector(".community-cards");
 const allCommunityCards = [];
@@ -56,11 +39,16 @@ infoYears.innerHTML = years;
 const infoRisk = document.querySelector(".riskValue");
 infoRisk.innerHTML = risk;
 var deck = [];
-const initialMessage0 = "Just remember, you can lie to yourself, but never to Death!";
 const initialMessage1 = "Behind every man now alive stand thirty ghosts, for that is the ratio by which the dead outnumber the living. Since the dawn of time, roughly a hundred billion human beings have walked the planet Earth.\n\n Now this is an interesting number, for by a curious coincidence there are approximately a hundred billion stars in our local universe, the Milky Way. So for every man who has ever lived, in this Universe there shines a star.\n\n But every one of those stars is a sun, often far more brilliant and glorious than the small, nearby star we call the Sun. And many--perhaps most--of those alien suns have planets circling them. So almost certainly there is enough land in the sky to give every member of the human species, back to the first ape-man, his own private, world-sized heaven--or hell.\n\n How many of those potential heavens and hells are now inhabited, and by what manner of creatures, we have no way of guessing; the very nearest is a million times farther away than Mars or Venus, those still remote goals of the next generation. But the barriers of distance are crumbling; one day we shall meet our equals, or our masters, among the stars.";
-
 const initialMessage2 = "Men have been slow to face this prospect; \nsome still hope that it may never become reality. Increasing numbers, however are asking; Why have such meetings not occurred already, since we ourselves are about to venture into space?\n\n  Why not, indeed? Here is one possible answer to that very reasonable question. But please remember: this is only a work of fiction.\n\n The truth, as always, will be far stranger.\n\n ― Arthur C. Clarke, 2001: A Space Odyssey";
-
+const initialMessage0 = "Just remember, you can lie to yourself all you want, but never to Death!";
+const messageFold = "It's evolution, baby!";
+const messageCohle1 = "Death created time to grow the things that it would kill.";
+const messageCohle2 = "And time... You know time is a flat circle. Everything we have done or will do we will do over and over and over again—forever. \n\n    Rust Cohle";
+const messageDoTheEvolution1 = "I'm a thief, I'm a liar There's my church, I sing in the choir: Hallelujah! Hallelujah!";
+const messageDoTheEvolution2 = "Admire me, admire my home, admire my son, admire my clones 'Cause we know, appetite for a nightly feast!";
+const messageDoTheEvolution3 = "I am ahead, I am advanced, I am the first mammal to make plans, yeah!";
+const messageDoTheEvolution4 = "Ah, do the evolution! Come on, come on, come on!";
 class Player {
   constructor(name, chips) {
     this.name = name;
@@ -89,6 +77,13 @@ export const Variables = {
   initialMessage0: initialMessage0,
   initialMessage1: initialMessage1,
   initialMessage2: initialMessage2,
+  messageFold: messageFold,
+  messageCohle1: messageCohle1,
+  messageCohle2: messageCohle2,
+  messageDoTheEvolution1: messageDoTheEvolution1,
+  messageDoTheEvolution2: messageDoTheEvolution2,
+  messageDoTheEvolution3: messageDoTheEvolution3,
+  messageDoTheEvolution4: messageDoTheEvolution4,
   allCommunityCardsHTML: allCommunityCardsHTML,
   allCommunityCards: allCommunityCards,
   game: game,

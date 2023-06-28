@@ -110,9 +110,13 @@ body {
     border-radius: 3px;  margin-right: 10px;display: flex; flex-direction: 
     column; justify-content: center; align-items: center; 
     border-top-left-radius: 23%; border-top-right-radius: 23%;   
-
   }
-
+  .deathKiss{ width: 506px;  }
+  .deathDancing{/* element width full  */ width: 100%; 
+    /*vertically  centralized*/ 
+    position: absolute; top: 50%; transform: translateY(-50%);
+    
+   }
 
 
 
@@ -194,5 +198,10 @@ body {
                         border-top-left-radius: 23%; border-top-right-radius: 23%;   
                     
                       }
+  .deathKiss{ width: 320px; }
+  .deathDancing{
+    /* element width full  */
+    width: 100%;
+   }
 }
 
