@@ -96,6 +96,8 @@ function shuffleDeck() {
         </div>
       `;
       Variables.player2HandHTML.appendChild(cardFaceDown2);     
+      changeDivAuthorToShopenhauer(card1);
+      changeDivAuthorToShopenhauer(card2);
 
       return Variables.deck;
     }  
@@ -119,7 +121,7 @@ function shuffleDeck() {
         <div class="power">${card3.power}</div>
       `;
       Variables.player2HandHTML.appendChild(cardE3);
-      changeColorOfSuit(card3, '.suit3');
+      changeColorOfSuit(card3, '.suit3');      
 
       const cardE4 = document.createElement("div");
       cardE4.classList.add("card");
@@ -130,6 +132,8 @@ function shuffleDeck() {
       `;
       Variables.player2HandHTML.appendChild(cardE4);
       changeColorOfSuit(card4, '.suit4');
+      changeDivAuthorToShopenhauer(card3);
+      changeDivAuthorToShopenhauer(card4);
 
     return Variables.deck;
   }  
@@ -153,6 +157,7 @@ function shuffleDeck() {
       `;
        Variables.allCommunityCardsHTML.appendChild(cardEl);
        changeColorOfSuit(card, '.suit11');
+       changeDivAuthorToShopenhauer(card);
       return Variables.deck;
   }
 
@@ -170,6 +175,7 @@ function shuffleDeck() {
     `;
      Variables.allCommunityCardsHTML.appendChild(cardEl);
      changeColorOfSuit(card, '.suit12');
+     changeDivAuthorToShopenhauer(card);
     return Variables.deck;
 }
 
@@ -187,6 +193,7 @@ function addCardOnCommunityCards3() {
   `;
    Variables.allCommunityCardsHTML.appendChild(cardEl);
    changeColorOfSuit(card, '.suit13');
+   changeDivAuthorToShopenhauer(card);
   return Variables.deck;
 }
 
@@ -204,6 +211,7 @@ function addCardOnCommunityCards4() {
   `;
    Variables.allCommunityCardsHTML.appendChild(cardEl);
    changeColorOfSuit(card, '.suit14');
+   changeDivAuthorToShopenhauer(card);
   return Variables.deck;
 }
 
@@ -221,6 +229,7 @@ function addCardOnCommunityCards5() {
   `;
    Variables.allCommunityCardsHTML.appendChild(cardEl);
    changeColorOfSuit(card, '.suit15');
+   changeDivAuthorToShopenhauer(card);
   return Variables.deck;
 }
   
@@ -235,5 +244,17 @@ function addCardOnCommunityCards5() {
 
     return player.hand;
   } // end of concatenateHand function
+
+
+  // function to change the name of the HTML class when the atribute author is "Schopenhauer"
+  function changeDivAuthorToShopenhauer(card){
+    if (card.author == "Schopenhauer"){
+      const author = document.querySelector('.author');
+      // edit the class name
+      author.classList.add('Schopenhauer');
+    }
+  }
+
+
 
   export { shuffleDeck, cleanAllCommunityCards, distributeCards1, distributeCards2, addCardOnCommunityCards1, addCardOnCommunityCards2, addCardOnCommunityCards3, addCardOnCommunityCards4, addCardOnCommunityCards5,  concatenateHand };

@@ -114,9 +114,9 @@ body {
   .deathKiss{ width: 506px;  }
   .deathDancing{/* element width full  */ width: 100%; 
     /*vertically  centralized*/ 
-    position: absolute; top: 50%; transform: translateY(-50%);
-    
-   }
+    position: absolute; top: 50%; transform: translateY(-50%);}
+   .welcomeDeath{/* element width full  */   width: 100%; /*vertically  centralized*/ 
+    position: absolute; top: 50%; transform: translateY(-50%); }
 
 
 
@@ -199,9 +199,8 @@ body {
                     
                       }
   .deathKiss{ width: 320px; }
-  .deathDancing{
-    /* element width full  */
-    width: 100%;
-   }
+  .deathDancing{  /* element width full  */  width: 100%;  }   
+
+  .Schopenhauer{ font-size: 3px;  }
 }
 

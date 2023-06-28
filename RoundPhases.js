@@ -222,6 +222,14 @@ function checkConditionsRiver() {
 
 // PHASES OF THE GAME
 function PhasePreFlop(){    
+  // select <div class="invisible"> HTML element and change the CSS all the elements inside to visible
+  const invisibleHTML = document.querySelector('.invisible');
+  invisibleHTML.style.visibility = "visible";
+  // select <div class="invisible2"> HTML element and change the CSS all the elements inside to visible
+  const invisible2HTML = document.querySelector('.invisible2');
+  invisible2HTML.style.visibility = "visible";
+
+
   AppearButtonCall();
   DisappearButtonCheck();
   Variables.chips1Html.innerHTML = Variables.player1.chips;
@@ -378,6 +386,21 @@ function compareTheHands(){
     callButton.style.backgroundColor = "transparent";
     callButton.style.color = "transparent";
   }
+  function DisappearButtonRaise(){
+    const raiseButton = document.querySelector('.btn-raise');
+    raiseButton.innerHTML = "";
+    // change css to transparent
+    raiseButton.style.backgroundColor = "transparent";
+    raiseButton.style.color = "transparent";
+  }
+  function DisappearButtonFold(){
+    const foldButton = document.querySelector('.btn-fold');
+    foldButton.innerHTML = "";
+    // change css to transparent
+    foldButton.style.backgroundColor = "transparent";
+    foldButton.style.color = "transparent";
+  }
+  
   // Appear buttons
   function AppearButtonCheck(){
     const checkButton = document.querySelector('.btn-check');
@@ -391,7 +414,19 @@ function compareTheHands(){
     callButton.style.backgroundColor = "#f3de21";
     callButton.style.color = "rgb(0, 0, 0)";         
   }
-
+  function AppearButtonRaise(){
+    const raiseButton = document.querySelector('.btn-raise');
+    raiseButton.innerHTML = `
+    <button class="btn-raise" onclick="functionRaise()">Raise</button> 
+    `;
+  }
+  function AppearButtonFold(){
+    const foldButton = document.querySelector('.btn-fold');
+    foldButton.innerHTML = `
+    <button class="btn-fold" onclick="functionFold()">Fold</button>
+    `;
+  }
+     
   // show image when Death wins round
   function deathKiss() {    
     Variables.player2HandHTML.innerHTML = "";   
@@ -432,7 +467,18 @@ function compareTheHands(){
     }    
   }
 
+  // welcome from Death
+  function welcomeDeath() {
+    Variables.player2HandHTML.innerHTML = "";   
+    const container = document.createElement('div');
+    container.classList.add('welcomeDeath');
+    container.innerHTML = `
+    <div class="welcomeFromDeath">
+    <img src="https://media.tenor.com/r1Z2IxWoyN4AAAAC/yeah-pearl.gif" alt="Death" class="welcomeDeath">
+    </div>
+    `;    
+    Variables.player2HandHTML.appendChild(container);    
+  }
 
-
-  export { functionFold, functionCall, functionCheck, functionRaise, foldButton, callButton, checkButton, raiseButton, checkConditionsPreFlop, checkConditionsFlop, checkConditionsTurn, checkConditionsRiver, PhasePreFlop, PhaseFlop, PhaseTurn, PhaseRiver, compareTheHands, resetGame };
+  export { functionFold, functionCall, functionCheck, functionRaise, foldButton, callButton, checkButton, raiseButton, checkConditionsPreFlop, checkConditionsFlop, checkConditionsTurn, checkConditionsRiver, PhasePreFlop, PhaseFlop, PhaseTurn, PhaseRiver, compareTheHands, resetGame, welcomeDeath, DisappearButtonCall, DisappearButtonCheck, DisappearButtonFold, DisappearButtonRaise, AppearButtonCheck, AppearButtonCall, gameLost, deathKiss, deathDancing };
   
