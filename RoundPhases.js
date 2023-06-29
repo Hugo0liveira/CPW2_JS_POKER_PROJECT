@@ -358,26 +358,26 @@ function compareTheHands(){
       
         
       if(Variables.player2.chips <= 0){ 
-          window.alert(Variables.messageNietzscheWin1);          
-          const container = document.querySelector('#end');
-          window.alert(Variables.messageNietzscheWin2);
-          window.alert(Variables.messageChomskyWin);
-          window.alert(Variables.messageCohleWin);
-          humanityVictory();
-          humanityVictoryAdd();
-          humanityVictoryAdd();
-          humanityVictoryAdd();
-          humanityVictoryAdd();
-          humanityVictoryAdd();
-          
+        deathEndStare();
+        setTimeout( awaitStare, 1100);
+          function awaitStare() {   
+            window.alert(Variables.messageNietzscheWin1);          
+            const container = document.querySelector('#end');
+            window.alert(Variables.messageNietzscheWin2);
+            window.alert(Variables.messageChomskyWin);
+            window.alert(Variables.messageCohleWin);
+            humanityVictory1();
+            humanityVictory2();
+            humanityVictory3();
+            humanityVictory4();
+            humanityVictory5();
+          }
         } else{        
           Variables.years = parseInt(Variables.infoYears.innerHTML); 
           Variables.years += 1;
           Variables.infoYears.innerHTML = Variables.years.toString();                    
           }
-        }
-
-        
+        }        
   }
 
   function resetGame() {
@@ -509,17 +509,12 @@ function compareTheHands(){
 
           
             deathDancing(); 
-            deathDancingAdd(); 
-            deathDancingAdd(); 
-            deathDancingAdd(); 
-            deathDancingAdd(); 
-            deathDancingAdd();       
-            deathDancingAdd();       
-            deathDancingAdd();       
-            deathDancingAdd();       
-            deathDancingAdd();       
+            deathDancingAdd(); deathDancingAdd(); deathDancingAdd();       
+            deathDancingAdd(); deathDancingAdd(); deathDancingAdd(); 
+            deathDancingAdd(); deathDancingAdd(); deathDancingAdd();  
+            
             // to delay the execution of the next line of code
-              setTimeout( awaitToEnd, 11000);
+              setTimeout( awaitToEnd, 3000);
               function awaitToEnd() {            
                 resetGame();
               }
@@ -673,29 +668,75 @@ function compareTheHands(){
   }
 
   // humanity victory
-  function humanityVictory() {    
+  function humanityVictory1() {    
 
     const endHTML = document.querySelector('.end'); 
-    endHTML.innerHTML = ' <iframe  src="https://www.youtube.com/embed/j800SVeiS5I&list=PL4nsj6xC-gYHpvjZAzIvi6nN8_8mwGsRw?autoplay=1" frameborder="1" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> ';
-    
+    endHTML.innerHTML = `
+    <div class="humanityVictory1">
+     <iframe  src="https://www.youtube.com/embed/j800SVeiS5I" frameborder="1" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> 
+     </div>
+     `;    
   }
 
-  function humanityVictoryAdd() {   
+  function humanityVictory2() {   
     const endHTML = document.querySelector('.end');
     const container = document.createElement('div');
     container.classList.add('humanityVictoryAdd');
-    container.innerHTML = ' <iframe  src="https://www.youtube.com/embed/j800SVeiS5I&list=PL4nsj6xC-gYHpvjZAzIvi6nN8_8mwGsRw?autoplay=1" frameborder="1" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> ';
+    container.innerHTML = `
+    <div class="humanityVictory2">
+     <iframe  src="https://www.youtube.com/embed/j800SVeiS5I" frameborder="1" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> 
+     </div>     
+     `;
+    endHTML.appendChild(container);
+  }
+
+  function humanityVictory3() {   
+    const endHTML = document.querySelector('.end');
+    const container = document.createElement('div');
+    container.classList.add('humanityVictoryAdd');
+    container.innerHTML = `
+    <div class="humanityVictory3">
+     <iframe  src="https://www.youtube.com/embed/j800SVeiS5I" frameborder="1" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> 
+     </div>     
+     `;
+    endHTML.appendChild(container);
+  }
+
+  function humanityVictory4() {   
+    const endHTML = document.querySelector('.end');
+    const container = document.createElement('div');
+    container.classList.add('humanityVictoryAdd');
+    container.innerHTML = `
+    <div class="humanityVictory4">
+     <iframe  src="https://www.youtube.com/embed/j800SVeiS5I" frameborder="1" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> 
+     </div>     
+     `;
+    endHTML.appendChild(container);
+  }
+
+  function humanityVictory5() {   
+    const endHTML = document.querySelector('.end');
+    const container = document.createElement('div');
+    container.classList.add('humanityVictoryAdd');
+    container.innerHTML = `
+    <div class="humanityVictory5">
+     <iframe  src="https://www.youtube.com/embed/j800SVeiS5I" frameborder="1" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> 
+     </div>     
+     `;
     endHTML.appendChild(container);
   }
 
   // death lost game gif
-  function deathLostGame() {
-    const endHTML = document.querySelector('.end');
-    endHTML.innerHTML = `
-     <div class="deathWinExplosion">
-    <img src="" alt="Death" class="deathWinExplosion">
-    </div>
+  function deathEndStare() {
+    Variables.player2HandHTML.innerHTML = "";
+    Variables.player2HandHTML.innerHTML = `
+    <div class="deathEndStare">
+    <video width="380" height="330" autoplay>
+      <source  src="deathEndStare.mp4" type="video/mp4">
+    </video>
+  </div>
     `;
+
   }
 
 

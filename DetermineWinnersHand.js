@@ -4,7 +4,7 @@ import {royalflush} from "./RoyalFlush.js";
 import {straightflushPower, straightflush} from "./StraightFlush.js";
 import {fourOfaKindKicker, fourOfaKindPower, fourOfaKind} from "./FourOfAKind.js";
 import { fullhousePairPower, fullhouseThreeOfAKindPower, fullhouse } from "./FullHouse.js";
-import {flush, flushKickerOne, flushKickerTwo, flushKickerThree, flushKickerFour, flushKickerFive} from "./Flush.js";
+import {flushFunction, flushKickerOne, flushKickerTwo, flushKickerThree, flushKickerFour, flushKickerFive} from "./Flush.js";
 import  {straight, straightPower} from "./Straight.js";
 import  {threeOfAKind, threeOfAKindPower, threeOfAKindKickerOne, threeOfAKindKickerTwo} from "./ThreeOfAKind.js";
 import { twoPairKicker, worstPairPower, bestPairPower, twoPair } from "./TwoPair.js";
@@ -144,8 +144,8 @@ import  {higherCard, higherCardTwo, higherCardThree, higherCardFour, higherCardF
                 return 2;
             } else if(fullhouse1 == 0 && fullhouse2 == 0) {
 
-              var flush1 = flush( Variables.player1 );
-              var flush2 = flush(Variables.player2);
+              var flush1 = flushFunction( Variables.player1 );
+              var flush2 = flushFunction(Variables.player2);
               var flush1One = flushKickerOne(Variables.player1);
               var flush2One = flushKickerOne(Variables.player2);
               var flush1Two = flushKickerTwo(Variables.player1);

@@ -1,0 +1,45 @@
+body {
+    background-image: url("https://i.redd.it/e31i8qtegam21.png");
+    background-size: cover;
+  }
+
+  ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+  }
+
+  li {
+    margin-bottom: 10px;
+  }
+
+  a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 20px;
+    display: block; 
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
+    text-align: center; 
+  }
+
+  @media only screen and (min-width: 400px) {
+    body {
+      background-size: contain;
+    }
+
+    ul {
+      text-align: left;
+    }
+
+    li {
+      margin-bottom: 20px;
+    }
+
+    a {
+      font-size: 514%;
+      padding: 15px;
+    }
+  }

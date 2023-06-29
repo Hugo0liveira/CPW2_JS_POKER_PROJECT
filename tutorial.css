@@ -1,121 +1,59 @@
-
 body {
-    background-image: url("https://i.redd.it/e31i8qtegam21.png");
-    background-position: center;
-    padding: 32px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
+  background-image: url("https://i.redd.it/e31i8qtegam21.png");
+  background-size: contain;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 300%;
+  display: block;
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 5px;
+  text-align: center;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
+
+li {
+  margin-bottom: 10px;
+}
+
+.rules {  
+  text-align: center;
+  padding: 15px;
+  background-color: rgba(255, 255, 255, 0.575);
   
-  h3 {
-    /*font color*/    
-    font-style: italic;font-size: larger; color: #fffcfc;
-    text-align: center;font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;  
-    font-size: 20px; text-shadow: 1px 6px 11px rgb(183, 167, 167);
-    font-weight: bold;  
-    text-align: center;
+  border-radius: 5px;
+  color: #000000;
+  font-style: italic;font-size: larger;color: #000000;font-size: 18px;
+  text-shadow: 5px 5px 10px rgb(0, 0, 0);
+  margin-right: 11%;
+  margin-left: 11%;
+  font-size: 190%;  
+}
+
+@media only screen and (min-width: 500px) {
+  body {
+    background-size: contain;
   }
-  
+
   ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 20px;
+    text-align: left;
   }
-  
+
   li {
-    margin-bottom: 30px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
+    margin-bottom: 20px;
   }
-  
+
   .rules {
-    display: block;
-    padding: 7px;
-    color: #fff;
-    text-decoration: none;
-    background-color: rgba(0, 0, 0, 0.7);
-    border-radius: 11px;
-    font-style: italic; font-size: larger; 
-    text-align: center; 
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    padding: 15px;
+    font-size: 190%;
   }
-
-
-  a {
-    display: block;
-    padding: 3px;    
-    text-decoration: none;
-    background-color: rgba(0, 0, 0, 0.7);
-    border-radius: 11px;
-    padding: 7px;font-style: italic;font-size: larger; color: #fffcfc;
-    text-align: center; 
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;  
-  }
-  
- 
-
-
-
-
-
-  @media (max-width: 434px) {
-    a {
-      font-size: 15px;
-      margin-top: -11%;        
-    }
-
-    h3{
-      font-size: 14px;
-      margin-top: 4%;  
-      margin-bottom: 4%;          
-    }
-
-  }
-
-    @media (max-width: 333px) {
-      a {
-        font-size: 12px;
-        margin-top: -11%;        
-      }
-  
-      h3{
-        font-size: 11px;
-        margin-top: 4%;  
-        margin-bottom: 4%;          
-      }
-
-      .rules{
-        padding: 3px;
-        /* reduce space between element and borders of screen*/
-        margin-left: 0%;
-        margin-right: 0%;      
-      }
-  }
-
-  @media (max-width: 274px) {
-    a {
-      font-size: 10px;
-      margin-top: -11%;        
-    }
-
-    h3{
-      font-size: 9px;
-      margin-top: 4%;  
-      margin-bottom:0%;     
-      margin-right: 0%;
-      margin-left: 0%;
-    }
-    .rules{
-      padding: 3px;                
-    }
-    ul {
-      list-style-type: none;
-      padding: 0;
-      margin: 0px;
-    }
-
-  
 }

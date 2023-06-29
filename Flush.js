@@ -156,7 +156,7 @@ function  flushKickerOne(player) {
     } // end of flush
     
     // check for flush. If all cards on the hand have the same suit, then the player has a flush.         
-    function  flush(player) { 
+    function  flushFunction(player) { 
     var flush = 0; 
     for (var m = 0; m < player.hand.length; m++) {
       for (var l = 0; l < player.hand.length; l++) {      
@@ -181,4 +181,4 @@ function  flushKickerOne(player) {
     return flush;
     } // end of flush  
     
-    export {flush, flushKickerOne, flushKickerTwo, flushKickerThree, flushKickerFour, flushKickerFive};
+    export {flushFunction, flushKickerOne, flushKickerTwo, flushKickerThree, flushKickerFour, flushKickerFive};
