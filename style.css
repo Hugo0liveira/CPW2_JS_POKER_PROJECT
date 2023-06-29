@@ -1,12 +1,13 @@
 html {
   background: url('https://libn.com/wp-content/blogs.dir/1/files/2014/06/Calverton-National-Cemetery-1.jpg') no-repeat center center fixed;
-  background-color: #000000;
+  background-color: #000000;   
 }
 * {
   box-sizing: border-box; margin: 0; padding: 0;
 }
 body {
   font-family: Arial, sans-serif;
+  
 }
 .container {
   display: flex;flex-direction: column;
@@ -14,9 +15,9 @@ body {
 }
 .player-section {
   display: flex;flex-direction: column;align-items: center;justify-content: center;
-  width: 100%;height: 200px; margin-top: 10px;
+  width: 100%; height: 200px; margin-top: 10px;
 }
-
+.player-section-2{ padding-top: 95%;}
 .sectionPlayerHand2{ margin-bottom: 50px;   }
 
 .player-name {
@@ -124,7 +125,7 @@ body {
 .risk {
   margin-top: 2%; font-size: 18px;   }
 .riskValue {
-  margin-top: 0%; font-size: 18px;
+  margin-top: 0%; font-size: 18px; padding-bottom: 73%;
 }
 .btn-disabled {
   background-color: #ccc;color: #fff;border: none;  }
@@ -259,14 +260,13 @@ body {
         .welcomeDeathAdd3{visibility: hidden; }
           .welcomeDeathAdd4{visibility: hidden; }
             .welcomeDeathAdd5{ visibility: hidden; }
-
   
 }
 
 
 @media (max-width: 365px) {
   html {
-    background-size: 1470px;
+    background-size: 1470px;    
     }
   .community-cards {
     display: flex;flex-direction: column;  margin-top:1px; margin-bottom: -16px;

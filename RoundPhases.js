@@ -676,7 +676,7 @@ function compareTheHands(){
   function humanityVictory() {    
 
     const endHTML = document.querySelector('.end'); 
-    endHTML.innerHTML = ' <iframe  src="https://www.youtube.com/embed/VbJm1OcII-g?autoplay=1" frameborder="1" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> ';
+    endHTML.innerHTML = ' <iframe  src="https://www.youtube.com/embed/j800SVeiS5I&list=PL4nsj6xC-gYHpvjZAzIvi6nN8_8mwGsRw?autoplay=1" frameborder="1" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> ';
     
   }
 
@@ -684,9 +684,20 @@ function compareTheHands(){
     const endHTML = document.querySelector('.end');
     const container = document.createElement('div');
     container.classList.add('humanityVictoryAdd');
-    container.innerHTML = ' <iframe  src="https://www.youtube.com/embed/VbJm1OcII-g?autoplay=1" frameborder="1" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> ';
+    container.innerHTML = ' <iframe  src="https://www.youtube.com/embed/j800SVeiS5I&list=PL4nsj6xC-gYHpvjZAzIvi6nN8_8mwGsRw?autoplay=1" frameborder="1" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> ';
     endHTML.appendChild(container);
   }
+
+  // death lost game gif
+  function deathLostGame() {
+    const endHTML = document.querySelector('.end');
+    endHTML.innerHTML = `
+     <div class="deathWinExplosion">
+    <img src="" alt="Death" class="deathWinExplosion">
+    </div>
+    `;
+  }
+
 
 
   export { functionFold, functionCall, functionCheck, functionRaise, foldButton, callButton, checkButton, raiseButton, checkConditionsPreFlop, checkConditionsFlop, checkConditionsTurn, checkConditionsRiver, PhasePreFlop, PhaseFlop, PhaseTurn, PhaseRiver, compareTheHands, resetGame, welcomeDeath, DisappearButtonCall, DisappearButtonCheck, DisappearButtonFold, DisappearButtonRaise, AppearButtonCheck, AppearButtonCall, gameLost, deathKiss, deathDancing, welcomeDeathAdd1, welcomeDeathAdd2, welcomeDeathAdd3, welcomeDeathAdd4, welcomeDeathAdd5 };

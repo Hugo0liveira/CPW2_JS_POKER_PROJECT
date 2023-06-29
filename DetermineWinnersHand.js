@@ -144,7 +144,7 @@ import  {higherCard, higherCardTwo, higherCardThree, higherCardFour, higherCardF
                 return 2;
             } else if(fullhouse1 == 0 && fullhouse2 == 0) {
 
-              var flush1 = flush(Variables.player1);
+              var flush1 = flush( Variables.player1 );
               var flush2 = flush(Variables.player2);
               var flush1One = flushKickerOne(Variables.player1);
               var flush2One = flushKickerOne(Variables.player2);
@@ -493,11 +493,11 @@ import  {higherCard, higherCardTwo, higherCardThree, higherCardFour, higherCardF
                     }
                   }
                 }
-              } // fullhouse == 0;
-            } // four == 0;
-          } // straightflush == 0;
-        } // royalflush == 0;
-      }
+              } 
+            } 
+          }
+        } 
+      } 
     } // end of function determineWinnersHand
   
 

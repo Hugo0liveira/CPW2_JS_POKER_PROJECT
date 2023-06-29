@@ -2,7 +2,7 @@
     body {
       background-image: url("https://i.redd.it/e31i8qtegam21.png");
       background-position: center;
-      padding: 32px;
+      padding: 0px;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -65,26 +65,18 @@
   }
 
   @media (max-width: 274px) {
-    a {
-      font-size: 10px;
-      margin-top: -11%;        
+    .logo{
+      width: 100%;
+      height: 100%;      
     }
 
-    h3{
-      font-size: 9px;
-      margin-top: 4%;  
-      margin-bottom:0%;     
-      margin-right: 0%;
-      margin-left: 0%;
+    /*ul{
+      font-size: 59%;
     }
-    .rules{
-      padding: 3px;                
-    }
-    ul {
-      list-style-type: none;
-      padding: 0;
-      margin: 0px;
-    }
+    
+    li{
+      font-size: 69%;
+    }*/
 
   }
 
