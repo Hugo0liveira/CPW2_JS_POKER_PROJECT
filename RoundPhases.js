@@ -91,16 +91,16 @@ function checkConditionsPreFlop() {
       }
       if (Variables.raise == 1) {
         //window.alert("RAISE on Phase PRE-FLOP! ");     
-        if(Variables.player1.chips >= Variables.risk*2){
+        //if(Variables.player1.chips >= Variables.risk*2){
           Variables.risk = Variables.risk + Variables.risk; 
           Variables.infoRisk.innerHTML = Variables.risk;        
           Variables.raise = 0; Variables.flop = 1; Variables.turn = 0; Variables.river = 0; Variables.conditionsPreflop=0;
          console.log("RAISE on Phase PRE-FLOP");                         
          PhaseFlop();
-        } else {
+        } /*else {
           window.alert("Not enough lives!");     
-        }
-      }
+        }*/
+      
       console.log("CheckConditionsPreFlop");                         
     }                       
 }        
@@ -127,16 +127,16 @@ function checkConditionsFlop() {
       }    
       if (Variables.raise == 2) {
        // window.alert("RAISE on Phase FLOP! ");     
-        if(Variables.player1.chips >= Variables.risk*2){
+        //if(Variables.player1.chips >= Variables.risk*2){
           Variables.risk = Variables.risk + Variables.risk;
           Variables.infoRisk.innerHTML = Variables.risk;
           Variables.preflop = 0; Variables.flop = 0; Variables.conditionsFlop=0; Variables.river = 0; Variables.turn = 1;
           console.log("RAISE on Phase FLOP");                                 
           PhaseTurn();
-          } else{
+          } /* else{
             window.alert("Not enough lives!");     
-          }
-      }
+          }*/
+      
       console.log("CheckConditionsFlop");                         
     }                           
 }        
@@ -162,16 +162,16 @@ function checkConditionsTurn() {
       }    
       if (Variables.raise == 3) {  
      //   window.alert("RAISE on Phase TURN! ");         
-        if(Variables.player1.chips >= Variables.risk*2){
+       // if(Variables.player1.chips >= Variables.risk*2){
           Variables.risk = Variables.risk + Variables.risk;
           Variables.infoRisk.innerHTML = Variables.risk;
           Variables.preflop = 0;  Variables.flop = 0; Variables.turn = 0; Variables.conditionsTurn=0; Variables.river = 1; 
       //    console.log("RAISE on Phase TURN! ");         
         PhaseRiver();        
-          } else{
+          } /* else{
             window.alert("Not enough lives!");     
-          }                 
-      }
+          }   */              
+      
       console.log("CheckConditionsTurn");                         
     }      
 }        
@@ -201,7 +201,7 @@ function checkConditionsRiver() {
       }    
       if (Variables.raise == 4) {        
      //   window.alert("RAISE on Phase RIVER! ");     
-        if(Variables.player1.chips >= Variables.risk*2){
+       // if(Variables.player1.chips >= Variables.risk*2){
           Variables.risk = Variables.risk + Variables.risk;
           Variables.infoRisk.innerHTML = Variables.risk;
           Variables.preflop = 0;  Variables.flop = 0; Variables.turn = 0; Variables.conditionsRiver=0; Variables.comparehands=1;
@@ -212,10 +212,10 @@ function checkConditionsRiver() {
           compareTheHands();
           }
       //    console.log("RAISE on Phase RIVER! ");     
-          } else{
+          } /*else{
             window.alert("Not enough lives!");     
-          }       
-      }
+          }       */
+      
       console.log("CheckConditionsRIVER");
     } 
   }     
@@ -312,9 +312,14 @@ function compareTheHands(){
     var roundWinner = determineWinnersHand();   
 
         if(roundWinner == 0){
+          roundDrawDeathReaction();
           window.alert("DRAW!");  
           console.log("DRAW!");    
+          // to delay the execution of the next line of code
+          setTimeout( awaitReaction0, 2000);
+          function awaitReaction0() {
           PhasePreFlop();         
+          }
         }
 
         if(roundWinner == 1){
@@ -353,12 +358,17 @@ function compareTheHands(){
       
         
       if(Variables.player2.chips <= 0){ 
-          window.alert(Variables.messageNietzscheWin1);
-          // load video from youtube https://www.youtube.com/watch?v=pw4VEW3StIw  
+          window.alert(Variables.messageNietzscheWin1);          
           const container = document.querySelector('#end');
           window.alert(Variables.messageNietzscheWin2);
-          container.innerHTML = '<iframe width="1080" height="1080" src="https://www.youtube.com/embed/VbJm1OcII-g?autoplay=1" frameborder="1" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>';
-                  
+          window.alert(Variables.messageChomskyWin);
+          window.alert(Variables.messageCohleWin);
+          humanityVictory();
+          humanityVictoryAdd();
+          humanityVictoryAdd();
+          humanityVictoryAdd();
+          humanityVictoryAdd();
+          humanityVictoryAdd();
           
         } else{        
           Variables.years = parseInt(Variables.infoYears.innerHTML); 
@@ -487,22 +497,36 @@ function compareTheHands(){
   
   function gameLost() {
     if (Variables.player1.chips < 0) {        
-      deathDancing(); 
-      deathDancingAdd(); 
-      deathDancingAdd(); 
-      deathDancingAdd(); 
-      deathDancingAdd(); 
-      deathDancingAdd();       
-      deathDancingAdd();       
-      deathDancingAdd();       
-      deathDancingAdd();       
-      deathDancingAdd();       
+      deathWinPilot();
       // to delay the execution of the next line of code
-        setTimeout( awaitToEnd, 11000);
-        function awaitToEnd() {            
-          resetGame();
+      setTimeout( waitPilot, 2000);
+      function waitPilot() { 
+
+        deathWinExplosion();
+        // to delay the execution of the next line of code
+        setTimeout( waitExplosion, 3000);
+        function waitExplosion() {
+
+          
+            deathDancing(); 
+            deathDancingAdd(); 
+            deathDancingAdd(); 
+            deathDancingAdd(); 
+            deathDancingAdd(); 
+            deathDancingAdd();       
+            deathDancingAdd();       
+            deathDancingAdd();       
+            deathDancingAdd();       
+            deathDancingAdd();       
+            // to delay the execution of the next line of code
+              setTimeout( awaitToEnd, 11000);
+              function awaitToEnd() {            
+                resetGame();
+              }
+
         }
-    }    
+      }    
+    }
   }
 
   // welcome from Death
@@ -603,6 +627,65 @@ function compareTheHands(){
     </div>
     `;
     Variables.player2HandHTML.appendChild(container);
+  }
+
+  // round draw death reaction gif
+  function roundDrawDeathReaction() {
+    Variables.player2HandHTML.innerHTML = "";
+    const container = document.createElement('div');
+    container.classList.add('roundDrawDeathReaction');
+    container.innerHTML = `
+    <div class="roundDrawDeath">
+    <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/45e35feb-dd85-4aec-9f8d-79b7f9573776/dax9o68-84588eee-db48-4d45-84eb-807cf0d187e6.gif?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzQ1ZTM1ZmViLWRkODUtNGFlYy05ZjhkLTc5YjdmOTU3Mzc3NlwvZGF4OW82OC04NDU4OGVlZS1kYjQ4LTRkNDUtODRlYi04MDdjZjBkMTg3ZTYuZ2lmIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.I-JXMGntQmQgSGnKgTLle2PsSpToKkk1V7BIxkeo-I8" alt="Death" class="roundDrawDeathReaction">
+    </div>
+    `;
+    Variables.player2HandHTML.appendChild(container);
+  }
+
+  //  death win pilot gif
+  function deathWinPilot() {
+    const invisible3HTML = document.querySelector('.invisible3');
+    invisible3HTML.style.visibility = "hidden";    
+    Variables.player1HandHTML.innerHTML = "";
+    const container = document.createElement('div');
+    container.classList.add('deathWinPilot');
+    container.innerHTML = `
+    <div class="deathWinPilot">
+    <img src="https://i.gifer.com/origin/25/2528ec67b1b4c9fff8ef9c4495c18127.gif" alt="Death" class="deathWinPilot">
+    </div>
+    `;
+    Variables.player1HandHTML.appendChild(container);
+  }
+
+  //  death win exploson gif
+  function deathWinExplosion() {
+    const invisible3HTML = document.querySelector('.invisible3');
+    invisible3HTML.style.visibility = "hidden";
+    Variables.player1HandHTML.innerHTML = "";
+    const container = document.createElement('div');
+    container.classList.add('deathWinExplosion');
+    container.innerHTML = `
+    <div class="deathWinExplosion">
+    <img src="https://i.makeagif.com/media/8-18-2018/ET-_dw.gif" alt="Death" class="deathWinExplosion">
+    </div>
+    `;
+    Variables.player1HandHTML.appendChild(container);
+  }
+
+  // humanity victory
+  function humanityVictory() {    
+
+    const endHTML = document.querySelector('.end'); 
+    endHTML.innerHTML = ' <iframe  src="https://www.youtube.com/embed/VbJm1OcII-g?autoplay=1" frameborder="1" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> ';
+    
+  }
+
+  function humanityVictoryAdd() {   
+    const endHTML = document.querySelector('.end');
+    const container = document.createElement('div');
+    container.classList.add('humanityVictoryAdd');
+    container.innerHTML = ' <iframe  src="https://www.youtube.com/embed/VbJm1OcII-g?autoplay=1" frameborder="1" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> ';
+    endHTML.appendChild(container);
   }
 
 

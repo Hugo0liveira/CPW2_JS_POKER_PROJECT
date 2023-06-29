@@ -150,7 +150,9 @@ body {
         .welcomeDeathAdd3{visibility: hidden; }
           .welcomeDeathAdd4{visibility: hidden; }
             .welcomeDeathAdd5{ visibility: hidden; }
-    
+            .deathWinPilot{ width: 100%;  }
+            .deathWinExplosion{ width: 100%;   }
+    .end{ width: 100%;  }
 
 
 @media (max-width: 768px) {

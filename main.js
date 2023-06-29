@@ -12,13 +12,13 @@ function functionStart(){
 
   setTimeout( await0, 2000);
   function await0() {       
-   /* 
+   
     window.alert(Variables.messageCohle1);
     window.alert(Variables.messageCohle2);  
     window.alert( Variables.initialMessage1 ); 
     window.alert( Variables.initialMessage2 ); 
     window.alert( Variables.initialMessage0 ); 
-*/
+
     welcomeDeath();
     welcomeDeathAdd1();
     welcomeDeathAdd2();
