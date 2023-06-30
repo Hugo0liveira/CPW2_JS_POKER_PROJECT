@@ -262,7 +262,7 @@ import  {higherCard, higherCardTwo, higherCardThree, higherCardFour, higherCardF
                   var threeOfAKind2KickerTwo = threeOfAKindKickerTwo(Variables.player2);                  
                   
                   if(threeOfAKind1 == 1 && threeOfAKind2 == 1) {
-                      if (threeOfAKin1Power > threeOfAKind2Power) {
+                      if (threeOfAKind1Power > threeOfAKind2Power) {
                         console.log("Humanity wins with three of a kind!");
                         window.alert("Humanity wins with three of a kind!");
                         return 1;
