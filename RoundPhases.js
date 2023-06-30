@@ -194,7 +194,7 @@ function checkConditionsRiver() {
         Variables.preflop=0; Variables.flop =0; Variables.turn =0; Variables.river=0; Variables.comparehands=1; 
         Variables.conditionsFlop=0; Variables.conditionsRiver=0; Variables.conditionsTurn =0;
         distributeCards2();
-        setTimeout( awaitComparingHands, 3000);      
+        setTimeout( awaitComparingHands, 2000);      
         function awaitComparingHands() {  
           compareTheHands();
         }
@@ -505,7 +505,6 @@ function compareTheHands(){
         // to delay the execution of the next line of code
         setTimeout( waitExplosion, 8000);
         function waitExplosion() {
-
           
             deathDancing(); 
             deathDancingAdd(); deathDancingAdd(); deathDancingAdd();       
@@ -543,7 +542,6 @@ function compareTheHands(){
     <img src="https://media.tenor.com/r1Z2IxWoyN4AAAAC/yeah-pearl.gif" alt="Death" class="welcomeDeathAdd1">
     </div>
     `;    
-    const containerAlreadyExistent = document.querySelector('.container');
     Variables.player2HandHTML.appendChild(container);      
   }
 
@@ -555,7 +553,6 @@ function compareTheHands(){
     <img src="https://media.tenor.com/r1Z2IxWoyN4AAAAC/yeah-pearl.gif" alt="Death" class="welcomeDeathAdd2">
     </div>
     `;    
-    const containerAlreadyExistent = document.querySelector('.container');
     Variables.player2HandHTML.appendChild(container);      
   }
 
@@ -567,8 +564,7 @@ function compareTheHands(){
     <div class="welcomeDeathAdd">
     <img src="https://media.tenor.com/r1Z2IxWoyN4AAAAC/yeah-pearl.gif" alt="Death" class="welcomeDeathAdd3">
     </div>
-    `;    
-    const containerAlreadyExistent = document.querySelector('.container');
+    `;        
     Variables.player2HandHTML.appendChild(container);      
   }
 
@@ -579,8 +575,7 @@ function compareTheHands(){
     <div class="welcomeDeathAdd">
     <img src="https://media.tenor.com/r1Z2IxWoyN4AAAAC/yeah-pearl.gif" alt="Death" class="welcomeDeathAdd4">
     </div>
-    `;    
-    const containerAlreadyExistent = document.querySelector('.container');
+    `;        
     Variables.player2HandHTML.appendChild(container);      
   }
 
@@ -592,7 +587,6 @@ function compareTheHands(){
     <img src="https://media.tenor.com/r1Z2IxWoyN4AAAAC/yeah-pearl.gif" alt="Death" class="welcomeDeathAdd5">
     </div>
     `;    
-    const containerAlreadyExistent = document.querySelector('.container');
     Variables.player2HandHTML.appendChild(container);      
   }
 

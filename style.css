@@ -248,16 +248,6 @@ body {
   .deathKiss{ width: 320px; }
   .deathDancing{  /* element width full  */  width: 100%;  }   
 
-  .card .Schopenhauer1{ font-size: 8px;  }
-  .card .Schopenhauer2{ font-size: 8px;  }
-  .card .Schopenhauer3{ font-size: 8px;  }
-  .card .Schopenhauer4{ font-size: 8px;  }
-  .card .Schopenhauer11{ font-size: 8px;  }
-  .card .Schopenhauer12{ font-size: 8px;  }
-  .card .Schopenhauer13{ font-size: 8px;  }
-  .card .Schopenhauer14{ font-size: 8px;  }
-  .card .Schopenhauer15{ font-size: 8px;  }
-
   .welcomeDeath{/* element width full  */   width: 100%; /*vertically  centralized*/ 
     position: absolute; top: 30%; transform: translateY(-50%); }
     .welcomeDeathAdd1{/* element width full  */   width: 100%; /*vertically  centralized*/ 

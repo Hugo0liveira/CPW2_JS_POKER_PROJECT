@@ -96,9 +96,6 @@ function shuffleDeck() {
         </div>
       `;
       Variables.player2HandHTML.appendChild(cardFaceDown2);     
-      changeDivAuthorToShopenhauer(card1, 1);
-      changeDivAuthorToShopenhauer(card2, 2);
-
       return Variables.deck;
     }  
 
@@ -132,104 +129,91 @@ function shuffleDeck() {
       `;
       Variables.player2HandHTML.appendChild(cardE4);
       changeColorOfSuit(card4, '.suit4');
-      changeDivAuthorToShopenhauer(card3, 3);
-      changeDivAuthorToShopenhauer(card4, 4);
-
     return Variables.deck;
   }  
-
-// player2 cards face down
-
-
   
   // function to put one card at a time on the community cards
   function addCardOnCommunityCards1() {           
-      const [card] = Variables.deck.splice(0,1);         
-      console.log('card:', card);
+      const [card11] = Variables.deck.splice(0,1);         
+      console.log('card11:', card11);
       //const cardObject = JSON.parse(JSON.stringify(card));
-      Variables.allCommunityCards = [...Variables.allCommunityCards, card];   
+      Variables.allCommunityCards = [...Variables.allCommunityCards, card11];   
       const cardEl = document.createElement("div");
       cardEl.classList.add("card");
       cardEl.innerHTML = `
-        <div class="author">${card.author}</div> <BR>
-        <div class="suit11">${card.suit}</div> <BR>
-        <div class="power">${card.power}</div>
+        <div class="author">${card11.author}</div> <BR>
+        <div class="suit11">${card11.suit}</div> <BR>
+        <div class="power">${card11.power}</div>
       `;
        Variables.allCommunityCardsHTML.appendChild(cardEl);
-       changeColorOfSuit(card, '.suit11');
-       changeDivAuthorToShopenhauer(card, 11);
+       changeColorOfSuit(card11, '.suit11');       
       return Variables.deck;
   }
 
   function addCardOnCommunityCards2() {           
-    const [card] = Variables.deck.splice(0,1);         
-    console.log('card:', card);
+    const [card12] = Variables.deck.splice(0,1);         
+    console.log('card12:', card12);
     //const cardObject = JSON.parse(JSON.stringify(card));
-    Variables.allCommunityCards = [...Variables.allCommunityCards, card];   
+    Variables.allCommunityCards = [...Variables.allCommunityCards, card12];   
     const cardEl = document.createElement("div");
     cardEl.classList.add("card");
     cardEl.innerHTML = `
-      <div class="author">${card.author}</div> <BR>
-      <div class="suit12">${card.suit}</div> <BR>
-      <div class="power">${card.power}</div>
+      <div class="author">${card12.author}</div> <BR>
+      <div class="suit12">${card12.suit}</div> <BR>
+      <div class="power">${card12.power}</div>
     `;
      Variables.allCommunityCardsHTML.appendChild(cardEl);
-     changeColorOfSuit(card, '.suit12');
-     changeDivAuthorToShopenhauer(card, 12);
+     changeColorOfSuit(card12, '.suit12');     
     return Variables.deck;
 }
 
 function addCardOnCommunityCards3() {           
-  const [card] = Variables.deck.splice(0,1);         
-  console.log('card:', card);
-  //const cardObject = JSON.parse(JSON.stringify(card));
-  Variables.allCommunityCards = [...Variables.allCommunityCards, card];   
+  const [card13] = Variables.deck.splice(0,1);         
+  console.log('card13:', card13);
+  Variables.allCommunityCards = [...Variables.allCommunityCards, card13];   
   const cardEl = document.createElement("div");
   cardEl.classList.add("card");
   cardEl.innerHTML = `
-    <div class="author">${card.author}</div> <BR>
-    <div class="suit13">${card.suit}</div> <BR>
-    <div class="power">${card.power}</div>
+    <div class="author">${card13.author}</div> <BR>
+    <div class="suit13">${card13.suit}</div> <BR>
+    <div class="power">${card13.power}</div>
   `;
    Variables.allCommunityCardsHTML.appendChild(cardEl);
-   changeColorOfSuit(card, '.suit13');
-   changeDivAuthorToShopenhauer(card, 13);
+   changeColorOfSuit(card13, '.suit13');   
   return Variables.deck;
 }
 
 function addCardOnCommunityCards4() {           
-  const [card] = Variables.deck.splice(0,1);         
-  console.log('card:', card);
+  const [card14] = Variables.deck.splice(0,1);         
+  console.log('card14:', card14);
   //const cardObject = JSON.parse(JSON.stringify(card));
-  Variables.allCommunityCards = [...Variables.allCommunityCards, card];   
+  Variables.allCommunityCards = [...Variables.allCommunityCards, card14];   
   const cardEl = document.createElement("div");
   cardEl.classList.add("card");
   cardEl.innerHTML = `
-    <div class="author">${card.author}</div> <BR>
-    <div class="suit14">${card.suit}</div> <BR>
-    <div class="power">${card.power}</div>
+    <div class="author">${card14.author}</div> <BR>
+    <div class="suit14">${card14.suit}</div> <BR>
+    <div class="power">${card14.power}</div>
   `;
    Variables.allCommunityCardsHTML.appendChild(cardEl);
-   changeColorOfSuit(card, '.suit14');
-   changeDivAuthorToShopenhauer(card, 14);
+   changeColorOfSuit(card14, '.suit14');   
   return Variables.deck;
 }
 
 function addCardOnCommunityCards5() {           
-  const [card] = Variables.deck.splice(0,1);         
-  console.log('card:', card);
+  const [card15] = Variables.deck.splice(0,1);         
+  console.log('card15:', card15);
   //const cardObject = JSON.parse(JSON.stringify(card));
-  Variables.allCommunityCards = [...Variables.allCommunityCards, card];   
+  Variables.allCommunityCards = [...Variables.allCommunityCards, card15];   
   const cardEl = document.createElement("div");
   cardEl.classList.add("card");
   cardEl.innerHTML = `
-    <div class="author">${card.author}</div> <BR>
-    <div class="suit15">${card.suit}</div> <BR>
-    <div class="power">${card.power}</div>
+    <div class="author">${card15.author}</div> <BR>
+    <div class="suit15">${card15.suit}</div> <BR>
+    <div class="power">${card15.power}</div>
   `;
    Variables.allCommunityCardsHTML.appendChild(cardEl);
-   changeColorOfSuit(card, '.suit15');
-   changeDivAuthorToShopenhauer(card, 15);
+   changeColorOfSuit(card15, '.suit15');   
   return Variables.deck;
 }
   
@@ -244,76 +228,6 @@ function addCardOnCommunityCards5() {
 
     return player.hand;
   } // end of concatenateHand function
-
-
-  // function to change the name of the HTML class when the atribute author is "Schopenhauer"
-  function changeDivAuthorToShopenhauer(card, num){
-    if(num == 1) {
-      if (card.author == "Schopenhauer"){
-        const author = document.querySelector('.author');
-        // edit the class name
-        author.classList.add('Schopenhauer1');
-      }
-    }
-    if(num == 2) {
-      if (card.author == "Schopenhauer"){
-        const author = document.querySelector('.author');
-        // edit the class name
-        author.classList.add('Schopenhauer2');
-      }
-    }
-    if(num == 3) {
-      if (card.author == "Schopenhauer"){
-        const author = document.querySelector('.author');
-        // edit the class name
-        author.classList.add('Schopenhauer3');
-      }
-    }
-    if(num == 4) {
-      if (card.author == "Schopenhauer"){
-        const author = document.querySelector('.author');
-        // edit the class name
-        author.classList.add('Schopenhauer4');
-      }
-    }
-    if(num == 11) {
-      if (card.author == "Schopenhauer"){
-        const author = document.querySelector('.author');
-        // edit the class name
-        author.classList.add('Schopenhauer11');
-      }
-    }
-    if(num == 12) {
-      if (card.author == "Schopenhauer"){
-        const author = document.querySelector('.author');
-        // edit the class name
-        author.classList.add('Schopenhauer12');
-      }
-    }
-    if(num == 13) {
-      if (card.author == "Schopenhauer"){
-        const author = document.querySelector('.author');
-        // edit the class name
-        author.classList.add('Schopenhauer13');
-      }
-    }
-    if(num == 14) {
-      if (card.author == "Schopenhauer"){
-        const author = document.querySelector('.author');
-        // edit the class name
-        author.classList.add('Schopenhauer14');
-      }
-    }
-    if(num == 15) {
-      if (card.author == "Schopenhauer"){
-        const author = document.querySelector('.author');
-        // edit the class name
-        author.classList.add('Schopenhauer15');
-      }
-    }
-  }
-
-
 
   export { shuffleDeck, cleanAllCommunityCards, distributeCards1, distributeCards2, addCardOnCommunityCards1, addCardOnCommunityCards2, addCardOnCommunityCards3, addCardOnCommunityCards4, addCardOnCommunityCards5,  concatenateHand };
 
