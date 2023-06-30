@@ -313,7 +313,7 @@ function compareTheHands(){
 
         if(roundWinner == 0){
           roundDrawDeathReaction();
-          window.alert("DRAW!");  
+         // window.alert("DRAW!");  
           console.log("DRAW!");    
           // to delay the execution of the next line of code
           setTimeout( awaitReaction0, 2000);
@@ -324,7 +324,7 @@ function compareTheHands(){
 
         if(roundWinner == 1){
           roundLostDeathKiss();
-          window.alert("HUMANITY won the round.");
+         // window.alert("HUMANITY won the round.");
           console.log("HUMANITY won the round.");
           Variables.player1.chips += Variables.risk;      
           Variables.player2.chips -= Variables.risk;   
@@ -338,7 +338,7 @@ function compareTheHands(){
         if(roundWinner == 2){
           roundWonDeathReaction()
           //window.alert("DEATH won the round.");
-          console.log("DEATH won the round.");
+        //  console.log("DEATH won the round.");
           Variables.player1.chips -= Variables.risk;      
           Variables.player2.chips += Variables.risk; 
           // to delay the execution of the next line of code
