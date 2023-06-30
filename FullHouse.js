@@ -1,7 +1,7 @@
 
 function fullhousePairPower(player) {
     // check for full house. If the player's hand has a three of a kind and a pair, then the player has a full house.
-    var pairPower = 0; 
+    var pairPower = -10; 
     for (var m = 0; m < player.hand.length; m++) {
       for (var l = 0; l < player.hand.length; l++) {      
         for (var k = 0; k < player.hand.length; k++) {          
@@ -26,7 +26,7 @@ function fullhousePairPower(player) {
 
 function fullhouseThreeOfAKindPower(player) {
     // check for full house. If the player's hand has a three of a kind and a pair, then the player has a full house.
-    var threeOfAKindPower = 0; 
+    var threeOfAKindPower = -10; 
     for (var m = 0; m < player.hand.length; m++) {
       for (var l = 0; l < player.hand.length; l++) {      
         for (var k = 0; k < player.hand.length; k++) {          

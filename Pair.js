@@ -1,6 +1,6 @@
 
 function  pairKickerThree(player) {
-    var kickerThree = 0;
+    var kickerThree = -10;
     for (var m = 0; m < player.hand.length; m++) {
       for (var l = 0; l < player.hand.length; l++) {      
         for (var k = 0; k < player.hand.length; k++) {          
@@ -23,7 +23,7 @@ function  pairKickerThree(player) {
   }
 
   function  pairKickerTwo(player) {
-    var kickerTwo = 0;
+    var kickerTwo = -10;
     for (var m = 0; m < player.hand.length; m++) {
       for (var l = 0; l < player.hand.length; l++) {      
         for (var k = 0; k < player.hand.length; k++) {          
@@ -46,7 +46,7 @@ function  pairKickerThree(player) {
   }
 
   function  pairKickerOne(player) {
-    var kickerOne = 0;
+    var kickerOne = -10;
     for (var m = 0; m < player.hand.length; m++) {
       for (var l = 0; l < player.hand.length; l++) {      
         for (var k = 0; k < player.hand.length; k++) {          
@@ -69,7 +69,7 @@ function  pairKickerThree(player) {
   }
 
   function  pairPower(player) {
-    var pairPower = 0; 
+    var pairPower = -10; 
     for (var m = 0; m < player.hand.length; m++) {
       for (var l = 0; l < player.hand.length; l++) {      
         for (var k = 0; k < player.hand.length; k++) {          

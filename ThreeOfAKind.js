@@ -1,6 +1,6 @@
 
 function threeOfAKindKickerTwo(player) {
-    var kickerTwo = 0;
+    var kickerTwo = -10;
     for (var m = 0; m < player.hand.length; m++) {
       for (var l = 0; l < player.hand.length; l++) {      
         for (var k = 0; k < player.hand.length; k++) {          
@@ -26,7 +26,7 @@ function threeOfAKindKickerTwo(player) {
   
    // check for three of a kind
    function  threeOfAKindKickerOne(player) {
-    var kickerOne = 0;
+    var kickerOne = -10;
     for (var m = 0; m < player.hand.length; m++) {
       for (var l = 0; l < player.hand.length; l++) {      
         for (var k = 0; k < player.hand.length; k++) {          
@@ -52,7 +52,7 @@ function threeOfAKindKickerTwo(player) {
   
     // check for three of a kind
     function  threeOfAKindPower(player) {      
-      var threeOfAKindPower = 0;
+      var threeOfAKindPower = -10;
       for (var m = 0; m < player.hand.length; m++) {
         for (var l = 0; l < player.hand.length; l++) {      
           for (var k = 0; k < player.hand.length; k++) {          

@@ -150,9 +150,7 @@ body {
       .welcomeDeathAdd2{ visibility: hidden; }
         .welcomeDeathAdd3{visibility: hidden; }
           .welcomeDeathAdd4{visibility: hidden; }
-            .welcomeDeathAdd5{ visibility: hidden; }
-            .deathWinPilot{ width: 100%;  }
-            .deathWinExplosion{ width: 100%;   }
+            .welcomeDeathAdd5{ visibility: hidden; }                
     .end{ width: 100%; }
     .humanityVictory1{ width: 100%;  }
     .humanityVictory2{ width: 100%;  }
@@ -160,10 +158,12 @@ body {
     .humanityVictory4{ width: 100%;  }
     .humanityVictory5{ width: 100%;  }
     .deathEndStare{ width: 100%;  }
+    .deathWinExplosion{ width: 100%;   }
 
 
-@media (max-width: 768px) {
+@media (max-width: 771px) {
   .container {padding: 20px; }
+  .deathWinExplosion{ width: 100%   }
 }
 
 @media (max-width: 677px) {
@@ -266,6 +266,8 @@ body {
         .welcomeDeathAdd3{visibility: hidden; }
           .welcomeDeathAdd4{visibility: hidden; }
             .welcomeDeathAdd5{ visibility: hidden; }
+            .deathWinExplosion{ width: 100%;   }
+
   
 }
 
@@ -303,4 +305,5 @@ body {
     .humanityVictory5{ width: 100%;  }
     .deathEndStare{ width: 100%;  }
     .player-section-2{ padding-top: 175%;}
+    .deathWinExplosion{ width: 100%  }
 }

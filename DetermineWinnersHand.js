@@ -4,7 +4,7 @@ import {royalflush} from "./RoyalFlush.js";
 import {straightflushPower, straightflush} from "./StraightFlush.js";
 import {fourOfaKindKicker, fourOfaKindPower, fourOfaKind} from "./FourOfAKind.js";
 import { fullhousePairPower, fullhouseThreeOfAKindPower, fullhouse } from "./FullHouse.js";
-import {flushFunction, flushKickerOne, flushKickerTwo, flushKickerThree, flushKickerFour, flushKickerFive} from "./Flush.js";
+import { flushFunc, flushKickerOneFunc, flushKickerTwoFunc, flushKickerThreeFunc, flushKickerFourFunc, flushKickerFiveFunc } from "./Flush.js";
 import  {straight, straightPower} from "./Straight.js";
 import  {threeOfAKind, threeOfAKindPower, threeOfAKindKickerOne, threeOfAKindKickerTwo} from "./ThreeOfAKind.js";
 import { twoPairKicker, worstPairPower, bestPairPower, twoPair } from "./TwoPair.js";
@@ -144,18 +144,18 @@ import  {higherCard, higherCardTwo, higherCardThree, higherCardFour, higherCardF
                 return 2;
             } else if(fullhouse1 == 0 && fullhouse2 == 0) {
 
-              var flush1 = flushFunction( Variables.player1 );
-              var flush2 = flushFunction(Variables.player2);
-              var flush1One = flushKickerOne(Variables.player1);
-              var flush2One = flushKickerOne(Variables.player2);
-              var flush1Two = flushKickerTwo(Variables.player1);
-              var flush2Two = flushKickerTwo(Variables.player2);
-              var flush1Three = flushKickerThree(Variables.player1);
-              var flush2Three = flushKickerThree(Variables.player2);
-              var flush1Four = flushKickerFour(Variables.player1);
-              var flush2Four = flushKickerFour(Variables.player2);
-              var flush1Five = flushKickerFive(Variables.player1);
-              var flush2Five = flushKickerFive(Variables.player2);
+              var flush1 = flushFunc( Variables.player1 );
+              var flush2 = flushFunc(Variables.player2);
+              var flush1One = flushKickerOneFunc(Variables.player1);
+              var flush2One = flushKickerOneFunc(Variables.player2);
+              var flush1Two = flushKickerTwoFunc(Variables.player1);
+              var flush2Two = flushKickerTwoFunc(Variables.player2);
+              var flush1Three = flushKickerThreeFunc(Variables.player1);
+              var flush2Three = flushKickerThreeFunc(Variables.player2);
+              var flush1Four = flushKickerFourFunc(Variables.player1);
+              var flush2Four = flushKickerFourFunc(Variables.player2);
+              var flush1Five = flushKickerFiveFunc(Variables.player1);
+              var flush2Five = flushKickerFiveFunc(Variables.player2);
               
               if(flush1 == 1 && flush2 == 1) {
                   if (flush1One > flush2One) {

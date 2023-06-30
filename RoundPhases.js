@@ -68,7 +68,7 @@ function functionRaise(event) {
   const callButton = document.querySelector(".btn-call");
   const checkButton = document.querySelector(".btn-check");
   const raiseButton = document.querySelector(".btn-raise");
-
+ 
 //CHECK CONDITIONS BUTTONS on each phase of the game
 function checkConditionsPreFlop() {  
   if(Variables.conditionsPreflop==1){
@@ -329,7 +329,7 @@ function compareTheHands(){
           Variables.player1.chips += Variables.risk;      
           Variables.player2.chips -= Variables.risk;   
           // to delay the execution of the next line of code
-          setTimeout( awaitReaction1, 3000);
+          setTimeout( awaitReaction1, 2600);
           function awaitReaction1() {
             PhasePreFlop();    
           }
@@ -360,10 +360,11 @@ function compareTheHands(){
       if(Variables.player2.chips <= 0){ 
         deathEndStare();
         setTimeout( awaitStare, 1100);
-          function awaitStare() {   
-            window.alert(Variables.messageNietzscheWin1);          
-            const container = document.querySelector('#end');
+          function awaitStare() {                                 
+            window.alert(Variables.messageNietzscheWin1);    
             window.alert(Variables.messageNietzscheWin2);
+            window.alert(Variables.messageYuvalWin1);
+            window.alert(Variables.messageSapolskyWin1);
             window.alert(Variables.messageChomskyWin);
             window.alert(Variables.messageCohleWin);
             humanityVictory1();
@@ -496,15 +497,13 @@ function compareTheHands(){
   }
   
   function gameLost() {
-    if (Variables.player1.chips < 0) {        
-      deathWinPilot();
+    if (Variables.player1.chips < 0) {              
       // to delay the execution of the next line of code
       setTimeout( waitPilot, 2000);
       function waitPilot() { 
-
         deathWinExplosion();
         // to delay the execution of the next line of code
-        setTimeout( waitExplosion, 3000);
+        setTimeout( waitExplosion, 8000);
         function waitExplosion() {
 
           
@@ -518,7 +517,6 @@ function compareTheHands(){
               function awaitToEnd() {            
                 resetGame();
               }
-
         }
       }    
     }
@@ -637,21 +635,6 @@ function compareTheHands(){
     Variables.player2HandHTML.appendChild(container);
   }
 
-  //  death win pilot gif
-  function deathWinPilot() {
-    const invisible3HTML = document.querySelector('.invisible3');
-    invisible3HTML.style.visibility = "hidden";    
-    Variables.player1HandHTML.innerHTML = "";
-    const container = document.createElement('div');
-    container.classList.add('deathWinPilot');
-    container.innerHTML = `
-    <div class="deathWinPilot">
-    <img src="https://i.gifer.com/origin/25/2528ec67b1b4c9fff8ef9c4495c18127.gif" alt="Death" class="deathWinPilot">
-    </div>
-    `;
-    Variables.player1HandHTML.appendChild(container);
-  }
-
   //  death win exploson gif
   function deathWinExplosion() {
     const invisible3HTML = document.querySelector('.invisible3');
@@ -661,7 +644,9 @@ function compareTheHands(){
     container.classList.add('deathWinExplosion');
     container.innerHTML = `
     <div class="deathWinExplosion">
-    <img src="https://i.makeagif.com/media/8-18-2018/ET-_dw.gif" alt="Death" class="deathWinExplosion">
+      <video  height="200" width"200"  autoplay>
+        <source  src="explosion.mp4" type="video/mp4">
+      </video>
     </div>
     `;
     Variables.player1HandHTML.appendChild(container);
@@ -737,8 +722,7 @@ function compareTheHands(){
   </div>
     `;
 
-  }
-
+  } 
 
 
   export { functionFold, functionCall, functionCheck, functionRaise, foldButton, callButton, checkButton, raiseButton, checkConditionsPreFlop, checkConditionsFlop, checkConditionsTurn, checkConditionsRiver, PhasePreFlop, PhaseFlop, PhaseTurn, PhaseRiver, compareTheHands, resetGame, welcomeDeath, DisappearButtonCall, DisappearButtonCheck, DisappearButtonFold, DisappearButtonRaise, AppearButtonCheck, AppearButtonCall, gameLost, deathKiss, deathDancing, welcomeDeathAdd1, welcomeDeathAdd2, welcomeDeathAdd3, welcomeDeathAdd4, welcomeDeathAdd5 };

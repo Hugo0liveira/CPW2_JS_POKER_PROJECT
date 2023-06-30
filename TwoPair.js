@@ -1,6 +1,6 @@
 
 function  twoPairKicker(player) {
-    var kicker = 0;
+    var kicker = -10;
     for (var m = 0; m < player.hand.length; m++) {
       for (var l = 0; l < player.hand.length; l++) {      
         for (var k = 0; k < player.hand.length; k++) {          
@@ -23,7 +23,7 @@ function  twoPairKicker(player) {
   }
 
   function  worstPairPower(player) {
-    var worstPairPower = 0;
+    var worstPairPower = -10;
     for (var m = 0; m < player.hand.length; m++) {
       for (var l = 0; l < player.hand.length; l++) {      
         for (var k = 0; k < player.hand.length; k++) {          
@@ -46,7 +46,7 @@ function  twoPairKicker(player) {
   }
 
   function  bestPairPower(player) {  
-    var bestPairPower = 0;
+    var bestPairPower = -10;
     for (var m = 0; m < player.hand.length; m++) {
       for (var l = 0; l < player.hand.length; l++) {      
         for (var k = 0; k < player.hand.length; k++) {          

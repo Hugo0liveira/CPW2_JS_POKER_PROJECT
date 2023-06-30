@@ -1,6 +1,6 @@
 
 function  straightPower(player) {
-    var straightPower = 0; 
+    var straightPower = -10; 
         for (var m = 0; m < player.hand.length; m++) {
           for (var l = 0; l < player.hand.length; l++) {      
             for (var k = 0; k < player.hand.length; k++) {          

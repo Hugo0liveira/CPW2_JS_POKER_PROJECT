@@ -1,7 +1,7 @@
 
 function straightflushPower(player) {
     // check for straight flush. If the player's hand has 5 cards of the same suit and each power of the cards is consecutive, then the player has a straight flush.
-    var straightflushPower = 0; 
+    var straightflushPower = -10; 
     for (var m = 0; m < player.hand.length; m++) {
       for (var l = 0; l < player.hand.length; l++) {      
         for (var k = 0; k < player.hand.length; k++) {          

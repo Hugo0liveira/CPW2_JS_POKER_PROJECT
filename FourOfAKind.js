@@ -1,7 +1,7 @@
 
 function fourOfaKindKicker(player) {
     // check for four of a kind. If the player's hand has 4 cards of the same power, then the player has four of a kind.
-    var kicker = 0;
+    var kicker = -10;
     for (var m = 0; m < player.hand.length; m++) {
       for (var l = 0; l < player.hand.length; l++) {      
         for (var k = 0; k < player.hand.length; k++) {          
@@ -25,7 +25,7 @@ function fourOfaKindKicker(player) {
   
   function fourOfaKindPower(player) {
        // check for four of a kind. If the player's hand has 4 cards of the same power, then the player has four of a kind.
-       var fourOfaKindPower = 0;
+       var fourOfaKindPower = -10;
        for (var m = 0; m < player.hand.length; m++) {
          for (var l = 0; l < player.hand.length; l++) {      
            for (var k = 0; k < player.hand.length; k++) {          

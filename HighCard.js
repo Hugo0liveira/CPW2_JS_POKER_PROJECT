@@ -1,6 +1,6 @@
 
 function  higherCardFive(player) {         
-    var higherCardFive = 0;
+    var higherCardFive = -10;
     for (var m = 0; m < player.hand.length; m++) {
       for (var l = 0; l < player.hand.length; l++) {      
         for (var k = 0; k < player.hand.length; k++) {          
@@ -23,7 +23,7 @@ function  higherCardFive(player) {
   }   
 
   function  higherCardFour(player) {      
-    var higherCardFour = 0;
+    var higherCardFour = -10;
     for (var m = 0; m < player.hand.length; m++) {
       for (var l = 0; l < player.hand.length; l++) {      
         for (var k = 0; k < player.hand.length; k++) {          
@@ -46,7 +46,7 @@ function  higherCardFive(player) {
   }   
 
   function  higherCardThree(player) {   
-    var higherCardThree = 0;
+    var higherCardThree = -10;
     for (var m = 0; m < player.hand.length; m++) {
       for (var l = 0; l < player.hand.length; l++) {      
         for (var k = 0; k < player.hand.length; k++) {          
@@ -69,7 +69,7 @@ function  higherCardFive(player) {
   }    
 
   function  higherCardTwo(player) {      
-    var higherCardTwo = 0;
+    var higherCardTwo = -10;
     for (var m = 0; m < player.hand.length; m++) {
       for (var l = 0; l < player.hand.length; l++) {      
         for (var k = 0; k < player.hand.length; k++) {          
@@ -93,7 +93,7 @@ function  higherCardFive(player) {
 
   // check for high card.
   function  higherCard(player) {      
-    var higherCard = 0;
+    var higherCard = -10;
     for (var m = 0; m < player.hand.length; m++) {
       for (var l = 0; l < player.hand.length; l++) {      
         for (var k = 0; k < player.hand.length; k++) {          

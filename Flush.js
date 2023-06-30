@@ -1,7 +1,7 @@
 
 // returns the power of the fisrt kicker card of a flush   
-function  flushKickerOne(player) {     
-    var kickerOne = 0; 
+function  flushKickerOneFunc(player) {     
+    var kickerOne = -10; 
     for (var m = 0; m < player.hand.length; m++) {
       for (var l = 0; l < player.hand.length; l++) {      
         for (var k = 0; k < player.hand.length; k++) {          
@@ -29,8 +29,8 @@ function  flushKickerOne(player) {
     } // end of flush
     
       // check for flush. If all cards on the hand have the same suit, then the player has a flush.         
-      function  flushKickerTwo(player) {         
-        var kickerTwo = 0;       
+      function  flushKickerTwoFunc(player) {         
+        var kickerTwo = -10;       
         for (var m = 0; m < player.hand.length; m++) {
           for (var l = 0; l < player.hand.length; l++) {      
             for (var k = 0; k < player.hand.length; k++) {          
@@ -58,8 +58,8 @@ function  flushKickerOne(player) {
       } // end of flush
     
       // check for flush. If all cards on the hand have the same suit, then the player has a flush.         
-      function  flushKickerThree(player) {        
-        var kickerThree = 0; 
+      function  flushKickerThreeFunc(player) {        
+        var kickerThree = -10; 
         for (var m = 0; m < player.hand.length; m++) {
           for (var l = 0; l < player.hand.length; l++) {      
             for (var k = 0; k < player.hand.length; k++) {          
@@ -88,8 +88,8 @@ function  flushKickerOne(player) {
       } // end of flush
     
       // check for flush. If all cards on the hand have the same suit, then the player has a flush.         
-      function  flushKickerFour(player) { 
-        var kickerFour = 0; 
+      function  flushKickerFourFunc(player) { 
+        var kickerFour = -10; 
         for (var m = 0; m < player.hand.length; m++) {
           for (var l = 0; l < player.hand.length; l++) {      
             for (var k = 0; k < player.hand.length; k++) {          
@@ -100,7 +100,7 @@ function  flushKickerOne(player) {
     
                       // check for five of the highest cards on the hand with the same suit
                       if (player.hand[g].suit == player.hand[h].suit && player.hand[h].suit == player.hand[i].suit && player.hand[i].suit == player.hand[j].suit && player.hand[j].suit == player.hand[k].suit && g != h && g != i && g != j && g != k && g != l && g != m && h != i && h != j && h != k && h != l && h != m && i != j && i != k && i != l && i != m && j != k && j != l && j != m && k != l && k != m && l != m) {
-                        flush = 1;
+                        
                         // determine the kickers
                         if (player.hand[g].power > player.hand[h].power && player.hand[h].power > player.hand[i].power && player.hand[i].power > player.hand[j].power && player.hand[j].power > player.hand[k].power ) {
                           kickerFour = player.hand[j].power;
@@ -120,8 +120,8 @@ function  flushKickerOne(player) {
     
     
     // check for flush. If all cards on the hand have the same suit, then the player has a flush.         
-    function  flushKickerFive(player) { 
-      var kickerFive = 0; 
+    function  flushKickerFiveFunc(player) { 
+      var kickerFive = -10; 
       for (var m = 0; m < player.hand.length; m++) {
         for (var l = 0; l < player.hand.length; l++) {      
           for (var k = 0; k < player.hand.length; k++) {          
@@ -156,7 +156,7 @@ function  flushKickerOne(player) {
     } // end of flush
     
     // check for flush. If all cards on the hand have the same suit, then the player has a flush.         
-    function  flushFunction(player) { 
+    function  flushFunc(player) { 
     var flush = 0; 
     for (var m = 0; m < player.hand.length; m++) {
       for (var l = 0; l < player.hand.length; l++) {      
@@ -181,4 +181,4 @@ function  flushKickerOne(player) {
     return flush;
     } // end of flush  
     
-    export {flushFunction, flushKickerOne, flushKickerTwo, flushKickerThree, flushKickerFour, flushKickerFive};
+    export {flushFunc, flushKickerOneFunc, flushKickerTwoFunc, flushKickerThreeFunc, flushKickerFourFunc, flushKickerFiveFunc};

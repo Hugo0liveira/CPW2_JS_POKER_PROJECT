@@ -49,8 +49,10 @@ const messageDoTheEvolution1 = "I'm a thief, I'm a liar There's my church, I sin
 const messageDoTheEvolution2 = "Admire me, admire my home, admire my son, admire my clones 'Cause we know, appetite for a nightly feast!";
 const messageDoTheEvolution3 = "I am ahead, I am advanced, I am the first mammal to make plans, yeah!";
 const messageDoTheEvolution4 = "Ah, do the evolution! Come on, come on, come on!";
-const messageNietzscheWin2 = '"If one shifts the centre of gravity of life out of life into the “Beyond”—into nothingness—one has deprived life as such of its centre of gravity. The great lie of personal immortality destroys all rationality, all naturalness of instinct—all that is salutary, all that is life-furthering. . . . So to live that there is no longer any meaning in living: that now becomes the “meaning” of life. . . . Christianity has waged a war to the death against every feeling of reverence and distance between man and man . . . against everything noble, joyful, high-spirited on earth, against our happiness on earth."\n\n     Friedrich Nietzsche';
 const messageNietzscheWin1 = "What is the strongest cure? --Victory.";
+const messageNietzscheWin2 = '"If one shifts the centre of gravity of life out of life into the “Beyond”—into nothingness—one has deprived life as such of its centre of gravity. The great lie of personal immortality destroys all rationality, all naturalness of instinct—all that is salutary, all that is life-furthering. . . . So to live that there is no longer any meaning in living: that now becomes the “meaning” of life. . . . Christianity has waged a war to the death against every feeling of reverence and distance between man and man . . . against everything noble, joyful, high-spirited on earth, against our happiness on earth."\n\n     Friedrich Nietzsche';
+const messageYuvalWin1 = "Ever since the Cognitive Revolution, Sapiens have thus been living in a dual reality. On the one hand, the objective reality of rivers, trees and lions; and on the other hand, the imagined reality of gods, nations and corporations. As time went by, the imagined reality became ever more powerful, so that today the very survival of rivers, trees and lions depends on the grace of imagined entities such as the United States and Google.\n\n     Yuval Harari";
+const messageSapolskyWin1 = "We're a miserably violent species. But there's a complication, which is we don't hate violence, we hate the wrong kind. And when it's the right kind, we cheer it on, we hand out medals, we vote for, we mate with our champions of it. When it's the right kind of violence, we love it.\n\n     Robert Sapolsky";
 const messageChomskyWin = "If you assume that there is no hope, you guarantee that there will be no hope. If you assume that there is an instinct for freedom, that there are opportunities to change things, then there is a possibility that you can contribute to making a better world.\n\n     Noam Chomsky";
 const messageCohleWin = "Once there was only dark. If you ask me, the light's winning.\n\n     Rust Cohle";
 
@@ -92,6 +94,8 @@ export const Variables = {
   messageDoTheEvolution4: messageDoTheEvolution4,
   messageNietzscheWin1: messageNietzscheWin1,
   messageNietzscheWin2: messageNietzscheWin2,
+  messageYuvalWin1: messageYuvalWin1,
+  messageSapolskyWin1: messageSapolskyWin1,
   messageChomskyWin: messageChomskyWin,
   allCommunityCardsHTML: allCommunityCardsHTML,
   allCommunityCards: allCommunityCards,
