@@ -9,7 +9,7 @@ function threeOfAKindKickerTwo(player) {
               for (var h = 0; h < player.hand.length; h++) {
                 for (var g = 0; g < player.hand.length; g++) {      
                   // check for three of a kind
-                  if ( player.hand[g].power == player.hand[h].power && player.hand[h].power == player.hand[i].power && player.hand[i].power != player.hand[j].power && player.hand[j].power > player.hand[k].power && player.hand[k].power > player.hand[l].power && player.hand[l].power > player.hand[m].power && g != h && g != i && g != j && g != k && g != l && g != m && h != i && h != j && h != k && h != l && h != m && i != j && i != k && i != l && i != m && j != k && j != l && j != m && k != l && k != m && l != m) {
+                  if ( player.hand[g].power == player.hand[h].power && player.hand[g].power == player.hand[i].power && player.hand[i].power != player.hand[j].power && player.hand[i].power != player.hand[k].power && player.hand[i].power != player.hand[l].power && player.hand[i].power != player.hand[m].power && player.hand[j].power > player.hand[k].power && player.hand[k].power > player.hand[l].power && player.hand[k].power > player.hand[m].power && g != h && g != i && g != j && g != k && g != l && g != m && h != i && h != j && h != k && h != l && h != m && i != j && i != k && i != l && i != m && j != k && j != l && j != m && k != l && k != m && l != m) {
                     // detemine the kickerTwo (the second highest card on the hand that is not part of the three of a kind)
                     kickerTwo = player.hand[k].power;
                   }
@@ -35,7 +35,7 @@ function threeOfAKindKickerTwo(player) {
               for (var h = 0; h < player.hand.length; h++) {
                 for (var g = 0; g < player.hand.length; g++) {      
                   // check for three of a kind
-                  if (player.hand[g].power == player.hand[h].power && player.hand[h].power == player.hand[i].power && player.hand[i].power != player.hand[j].power && player.hand[j].power > player.hand[k].power && player.hand[k].power > player.hand[l].power && player.hand[l].power > player.hand[m].power && g != h && g != i && g != j && g != k && g != l && g != m && h != i && h != j && h != k && h != l && h != m && i != j && i != k && i != l && i != m && j != k && j != l && j != m && k != l && k != m && l != m) {
+                  if ( player.hand[g].power == player.hand[h].power && player.hand[g].power == player.hand[i].power && player.hand[i].power != player.hand[j].power && player.hand[i].power != player.hand[k].power && player.hand[i].power != player.hand[l].power && player.hand[i].power != player.hand[m].power && player.hand[j].power > player.hand[k].power && player.hand[j].power > player.hand[l].power && player.hand[j].power > player.hand[m].power && g != h && g != i && g != j && g != k && g != l && g != m && h != i && h != j && h != k && h != l && h != m && i != j && i != k && i != l && i != m && j != k && j != l && j != m && k != l && k != m && l != m) {
                     // determine the kickerOne (the highest card on the hand that is not part of the three of a kind)
                     kickerOne = player.hand[j].power;
                   }
@@ -61,7 +61,7 @@ function threeOfAKindKickerTwo(player) {
                 for (var h = 0; h < player.hand.length; h++) {
                   for (var g = 0; g < player.hand.length; g++) {      
                     // check for three of a kind
-                    if ( player.hand[g].power == player.hand[h].power && player.hand[h].power == player.hand[i].power && player.hand[i].power != player.hand[j].power && player.hand[j].power > player.hand[k].power && player.hand[k].power > player.hand[l].power && player.hand[l].power > player.hand[m].power && g != h && g != i && g != j && g != k && g != l && g != m && h != i && h != j && h != k && h != l && h != m && i != j && i != k && i != l && i != m && j != k && j != l && j != m && k != l && k != m && l != m) {
+                    if ( player.hand[g].power == player.hand[h].power && player.hand[g].power == player.hand[i].power && player.hand[i].power != player.hand[j].power && player.hand[i].power != player.hand[k].power && player.hand[i].power != player.hand[l].power && player.hand[i].power != player.hand[m].power && g != h && g != i && g != j && g != k && g != l && g != m && h != i && h != j && h != k && h != l && h != m && i != j && i != k && i != l && i != m && j != k && j != l && j != m && k != l && k != m && l != m ) { 
                       // determine the kickerOne (the highest card on the hand that is not part of the three of a kind)
                       threeOfAKindPower = player.hand[g].power;
                     }
@@ -78,6 +78,7 @@ function threeOfAKindKickerTwo(player) {
   
     // check for three of a kind
     function  threeOfAKind(player) {
+      //trecho errado && player.hand[j].power > player.hand[k].power && player.hand[k].power > player.hand[l].power && player.hand[l].power > player.hand[m].power
       var threeOfAKind = 0;
       for (var m = 0; m < player.hand.length; m++) {
         for (var l = 0; l < player.hand.length; l++) {      
@@ -87,8 +88,7 @@ function threeOfAKindKickerTwo(player) {
                 for (var h = 0; h < player.hand.length; h++) {
                   for (var g = 0; g < player.hand.length; g++) {      
                     // check for three of a kind
-                    if ( player.hand[g].power == player.hand[h].power && player.hand[h].power == player.hand[i].power && player.hand[i].power != player.hand[j].power && player.hand[j].power > player.hand[k].power && player.hand[k].power > player.hand[l].power && player.hand[l].power > player.hand[m].power && g != h && g != i && g != j && g != k && g != l && g != m && h != i && h != j && h != k && h != l && h != m && i != j && i != k && i != l && i != m && j != k && j != l && j != m && k != l && k != m && l != m) {
-                      // determine the kickerOne (the highest card on the hand that is not part of the three of a kind)
+                    if ( player.hand[g].power == player.hand[h].power && player.hand[g].power == player.hand[i].power && player.hand[i].power != player.hand[j].power && player.hand[i].power != player.hand[k].power && player.hand[i].power != player.hand[l].power && player.hand[i].power != player.hand[m].power && g != h && g != i && g != j && g != k && g != l && g != m && h != i && h != j && h != k && h != l && h != m && i != j && i != k && i != l && i != m && j != k && j != l && j != m && k != l && k != m && l != m) {                      
                       threeOfAKind = 1;
                     }
                   }

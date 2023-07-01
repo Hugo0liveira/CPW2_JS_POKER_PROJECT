@@ -142,7 +142,7 @@ import  {higherCard, higherCardTwo, higherCardThree, higherCardFour, higherCardF
                 console.log("DEATH wins with a full house!");
                 window.alert("DEATH wins with a full house!");
                 return 2;
-            } else if(fullhouse1 == 0 && fullhouse2 == 0) {
+            } else if(fullhouse1 == 0 && fullhouse2 == 0) {    
 
               var flush1 = flushFunc( Variables.player1 );
               var flush2 = flushFunc(Variables.player2);
