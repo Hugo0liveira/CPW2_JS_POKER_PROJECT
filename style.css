@@ -139,10 +139,10 @@ iframe {
   background-color: #eee; }
 
   .cardFaceDown {
-    width: 126px;height: 120px;background-color: #bcbbbb;border: 5px solid #ffffff;  
-    border-bottom: #000000; border-right: #000000;
-    border-radius: 3px;  margin-right: 10px;display: flex; flex-direction: 
-    column; justify-content: center; align-items: center; 
+    width: 126px;height: 120px; background-color: #bcbbbb; border: 5px solid #ffffff;      
+    border-bottom: #000000; border-right: #000000; 
+    margin-right: 10px; display: flex; flex-direction: column; 
+    justify-content: center; align-items: center; border-top: #bcbbbb;
     border-top-left-radius: 23%; border-top-right-radius: 23%;   
   }
   .deathKiss{ width: 506px;  }
@@ -291,14 +291,7 @@ iframe {
                     .card .suit15 {
                       font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
                       font-style: italic; font-size: 9px; margin-top: -7px;  text-shadow: 1px 1px 1px rgb(0, 0, 0); }
-                      .cardFaceDown {
-                        width: 62px; height: 76px; background-color: #bcbbbb;border: 5px solid #ffffff;  
-                        border-bottom: #000000; border-right: #000000;
-                        border-radius: 3px;  margin-right: 10px;display: flex; flex-direction: 
-                        column; justify-content: center; align-items: center; 
-                        border-top-left-radius: 23%; border-top-right-radius: 23%;   
-                    
-                      }
+                      .cardFaceDown { width: 62px; height: 76px; }
   .deathKiss{ width: 320px; }
   .deathDancing{  /* element width full  */  width: 100%;  }   
 
