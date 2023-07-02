@@ -74,7 +74,7 @@ function checkConditionsPreFlop() {
   if(Variables.conditionsPreflop==1){
       if (Variables.fold == 1) {
         //window.alert("FOLD on Phase PRE-FLOP! ");             
-        Variables.player1.chips -= Math.floor(Variables.risk/3); Variables.player2.chips += Math.floor(Variables.risk/3);  Variables.infoRisk.innerHTML = Variables.risk;
+        Variables.player1.chips -= Math.floor(Variables.risk/5); Variables.player2.chips += Math.floor(Variables.risk/5);  Variables.infoRisk.innerHTML = Variables.risk;
         Variables.preflop = 1; Variables.flop = 0; Variables.turn = 0; Variables.river = 0; Variables.comparehands=0; 
         Variables.conditionsFlop=0; Variables.conditionsRiver=0; Variables.conditionsTurn =0;
         PhasePreFlop();
@@ -110,7 +110,7 @@ function checkConditionsFlop() {
   if(Variables.conditionsFlop==1){
       if (Variables.fold == 2) {
        // window.alert("FOLD on Phase FLOP! ");     
-        Variables.player1.chips -= Math.floor(Variables.risk/2); Variables.player2.chips += Math.floor(Variables.risk/2);  Variables.infoRisk.innerHTML = Variables.risk;
+        Variables.player1.chips -= Math.floor(Variables.risk/4); Variables.player2.chips += Math.floor(Variables.risk/4);  Variables.infoRisk.innerHTML = Variables.risk;
         Variables.preflop = 1; Variables.flop = 0; Variables.turn = 0; Variables.river = 0; Variables.comparehands=0; 
         Variables.conditionsFlop=0; Variables.conditionsRiver=0; Variables.conditionsTurn =0;
         PhasePreFlop();
@@ -145,7 +145,7 @@ function checkConditionsTurn() {
   if(Variables.conditionsTurn==1){
       if (Variables.fold == 3) {
      //   window.alert("FOLD on Phase TURN! ");     
-        Variables.player1.chips -= Variables.risk; Variables.player2.chips += Variables.risk;  Variables.infoRisk.innerHTML = Variables.risk;
+        Variables.player1.chips -= Math.floor(Variables.risk /3); Variables.player2.chips += Math.floor(Variables.risk/3);  Variables.infoRisk.innerHTML = Variables.risk;
         Variables.preflop = 1; Variables.flop = 0; Variables.turn = 0; Variables.river = 0; Variables.comparehands=0; 
         Variables.conditionsFlop=0; Variables.conditionsRiver=0; Variables.conditionsTurn =0;
         PhasePreFlop();
@@ -180,7 +180,7 @@ function checkConditionsRiver() {
   if(Variables.conditionsRiver==1){    
       if (Variables.fold == 4) {
     //    window.alert("FOLD on Phase RIVER! ");     
-        Variables.player1.chips -= Math.floor(Variables.risk * 2); Variables.player2.chips += Math.floor(Variables.risk * 2);  Variables.infoRisk.innerHTML = Variables.risk;
+        Variables.player1.chips -= Math.floor(Variables.risk/2); Variables.player2.chips += Math.floor(Variables.risk/2);  Variables.infoRisk.innerHTML = Variables.risk;
         Variables.preflop = 1; Variables.flop = 0; Variables.turn = 0; Variables.river = 0; Variables.comparehands=0; 
         Variables.conditionsFlop=0; Variables.conditionsRiver=0; Variables.conditionsTurn =0;    
         PhasePreFlop();
