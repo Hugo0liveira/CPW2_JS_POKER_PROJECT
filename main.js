@@ -10,7 +10,7 @@ function functionStart(){
   invisible2HTML.style.visibility = "hidden";
   
 
-  setTimeout( await0, 2000);
+  setTimeout( await0, 1000);
   function await0() {       
    
     window.alert(Variables.messageCohle1);

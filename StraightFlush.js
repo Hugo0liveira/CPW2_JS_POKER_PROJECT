@@ -18,7 +18,7 @@ function straightflushPower(player) {
     }
     console.log("straightflushPower: " + straightflushPower);
     return straightflushPower;        
-  }   
+  }
   
   
   function straightflush(player) {

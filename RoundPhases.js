@@ -367,11 +367,7 @@ function compareTheHands(){
             window.alert(Variables.messageSapolskyWin1);
             window.alert(Variables.messageChomskyWin);
             window.alert(Variables.messageCohleWin);
-            humanityVictory1();
-            humanityVictory2();
-            humanityVictory3();
-            humanityVictory4();
-            humanityVictory5();
+            humanityVictory();
           }
         } else{        
           Variables.years = parseInt(Variables.infoYears.innerHTML); 
@@ -647,62 +643,14 @@ function compareTheHands(){
   }
 
   // humanity victory
-  function humanityVictory1() {    
-
-    const endHTML = document.querySelector('.end'); 
-    endHTML.innerHTML = `
-    <div class="humanityVictory1">
-     <iframe  src="https://www.youtube.com/embed/j800SVeiS5I" frameborder="1" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> 
+  function humanityVictory() {   
+    document.body.innerHTML = ""
+    document.body.innerHTML = `
+    <div class="humanityVictory">
+     <iframe  src="https://www.youtube.com/embed/j800SVeiS5I" frameborder="0" allowfullscreen></iframe> 
      </div>
      `;    
-  }
-
-  function humanityVictory2() {   
-    const endHTML = document.querySelector('.end');
-    const container = document.createElement('div');
-    container.classList.add('humanityVictoryAdd');
-    container.innerHTML = `
-    <div class="humanityVictory2">
-     <iframe  src="https://www.youtube.com/embed/j800SVeiS5I" frameborder="1" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> 
-     </div>     
-     `;
-    endHTML.appendChild(container);
-  }
-
-  function humanityVictory3() {   
-    const endHTML = document.querySelector('.end');
-    const container = document.createElement('div');
-    container.classList.add('humanityVictoryAdd');
-    container.innerHTML = `
-    <div class="humanityVictory3">
-     <iframe  src="https://www.youtube.com/embed/j800SVeiS5I" frameborder="1" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> 
-     </div>     
-     `;
-    endHTML.appendChild(container);
-  }
-
-  function humanityVictory4() {   
-    const endHTML = document.querySelector('.end');
-    const container = document.createElement('div');
-    container.classList.add('humanityVictoryAdd');
-    container.innerHTML = `
-    <div class="humanityVictory4">
-     <iframe  src="https://www.youtube.com/embed/j800SVeiS5I" frameborder="1" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> 
-     </div>     
-     `;
-    endHTML.appendChild(container);
-  }
-
-  function humanityVictory5() {   
-    const endHTML = document.querySelector('.end');
-    const container = document.createElement('div');
-    container.classList.add('humanityVictoryAdd');
-    container.innerHTML = `
-    <div class="humanityVictory5">
-     <iframe  src="https://www.youtube.com/embed/j800SVeiS5I" frameborder="1" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> 
-     </div>     
-     `;
-    endHTML.appendChild(container);
+     
   }
 
   // death lost game gif
