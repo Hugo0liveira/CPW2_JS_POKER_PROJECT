@@ -26,7 +26,7 @@ function functionStart(){
     welcomeDeathAdd4();
     welcomeDeathAdd5();    
     // to delay the execution of the next line of code
-    setTimeout( awaitWelcome, 2000);
+    setTimeout( awaitWelcome, 2500);
     function awaitWelcome() {           
       Variables.preflop = 1; 
 

@@ -523,7 +523,7 @@ function compareTheHands(){
     container.classList.add('welcomeDeath');
     container.innerHTML = `
     <div class="welcomeFromDeath">
-    <img src="https://media.tenor.com/r1Z2IxWoyN4AAAAC/yeah-pearl.gif" alt="Death" class="welcomeDeath">
+    <img src="deathWelcome.gif" alt="Death" class="welcomeDeath">
     </div>
     `;    
     Variables.player2HandHTML.appendChild(container);    
@@ -534,7 +534,7 @@ function compareTheHands(){
     container.classList.add('welcomeDeathAdd1');
     container.innerHTML = `
     <div class="welcomeDeathAdd">
-    <img src="https://media.tenor.com/r1Z2IxWoyN4AAAAC/yeah-pearl.gif" alt="Death" class="welcomeDeathAdd1">
+    <img src="deathWelcome.gif" alt="Death" class="welcomeDeathAdd1">
     </div>
     `;    
     Variables.player2HandHTML.appendChild(container);      
@@ -545,7 +545,7 @@ function compareTheHands(){
     container.classList.add('welcomeDeathAdd2');
     container.innerHTML = `
     <div class="welcomeDeathAdd">
-    <img src="https://media.tenor.com/r1Z2IxWoyN4AAAAC/yeah-pearl.gif" alt="Death" class="welcomeDeathAdd2">
+    <img src="deathWelcome.gif" alt="Death" class="welcomeDeathAdd2">
     </div>
     `;    
     Variables.player2HandHTML.appendChild(container);      
@@ -633,9 +633,7 @@ function compareTheHands(){
     container.classList.add('deathWinExplosion');
     container.innerHTML = `
     <div class="deathWinExplosion">
-      <video  height="200" width"200"  autoplay>
-        <source  src="explosion.mp4" type="video/mp4">
-      </video>
+      <img src="explosion.gif">
     </div>
     `;
     Variables.player1HandHTML.appendChild(container);
