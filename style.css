@@ -1,7 +1,7 @@
 html {
   background: url('https://libn.com/wp-content/blogs.dir/1/files/2014/06/Calverton-National-Cemetery-1.jpg') no-repeat center center fixed;
   background-color: #000000;   
-  background-size: 1570px;    
+  background-size: cover;    
 }
 * {
   box-sizing: border-box; margin: 0; padding: 0;
@@ -221,7 +221,7 @@ iframe {
 @media (max-width: 700px) {
   /*change backgroud image height*/
   html {
-    background-size: 1570px;    
+    background-size: cover;
   }
   iframe {  
   width: 100%; 
@@ -331,7 +331,7 @@ iframe {
 
 @media (max-width: 405px) {
   html {
-    background-size: 1570px;    
+    background-size: cover;    
     }
     iframe {  
       width: 100%; 

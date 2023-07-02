@@ -74,7 +74,7 @@ function checkConditionsPreFlop() {
   if(Variables.conditionsPreflop==1){
       if (Variables.fold == 1) {
         //window.alert("FOLD on Phase PRE-FLOP! ");             
-        Variables.player1.chips -= Math.floor(Variables.risk/5); Variables.player2.chips += Math.floor(Variables.risk/5);  Variables.infoRisk.innerHTML = Variables.risk;
+        Variables.player1.chips -= Math.floor(Variables.risk/5); Variables.player2.chips += Math.floor(Variables.risk/5);  Variables.infoRisk.innerHTML = Variables.risk.toLocaleString('en-US');
         Variables.preflop = 1; Variables.flop = 0; Variables.turn = 0; Variables.river = 0; Variables.comparehands=0; 
         Variables.conditionsFlop=0; Variables.conditionsRiver=0; Variables.conditionsTurn =0;
         PhasePreFlop();
@@ -93,7 +93,7 @@ function checkConditionsPreFlop() {
         //window.alert("RAISE on Phase PRE-FLOP! ");     
         //if(Variables.player1.chips >= Variables.risk*2){
           Variables.risk = Variables.risk + Variables.risk; 
-          Variables.infoRisk.innerHTML = Variables.risk;        
+          Variables.infoRisk.innerHTML = Variables.risk.toLocaleString('en-US');    
           Variables.raise = 0; Variables.flop = 1; Variables.turn = 0; Variables.river = 0; Variables.conditionsPreflop=0;
          console.log("RAISE on Phase PRE-FLOP");                         
          PhaseFlop();
@@ -110,7 +110,7 @@ function checkConditionsFlop() {
   if(Variables.conditionsFlop==1){
       if (Variables.fold == 2) {
        // window.alert("FOLD on Phase FLOP! ");     
-        Variables.player1.chips -= Math.floor(Variables.risk/4); Variables.player2.chips += Math.floor(Variables.risk/4);  Variables.infoRisk.innerHTML = Variables.risk;
+        Variables.player1.chips -= Math.floor(Variables.risk/4); Variables.player2.chips += Math.floor(Variables.risk/4);  Variables.infoRisk.innerHTML = Variables.risk.toLocaleString('en-US');
         Variables.preflop = 1; Variables.flop = 0; Variables.turn = 0; Variables.river = 0; Variables.comparehands=0; 
         Variables.conditionsFlop=0; Variables.conditionsRiver=0; Variables.conditionsTurn =0;
         PhasePreFlop();
@@ -129,7 +129,7 @@ function checkConditionsFlop() {
        // window.alert("RAISE on Phase FLOP! ");     
         //if(Variables.player1.chips >= Variables.risk*2){
           Variables.risk = Variables.risk + Variables.risk;
-          Variables.infoRisk.innerHTML = Variables.risk;
+          Variables.infoRisk.innerHTML = Variables.risk.toLocaleString('en-US');
           Variables.preflop = 0; Variables.flop = 0; Variables.conditionsFlop=0; Variables.river = 0; Variables.turn = 1;
           console.log("RAISE on Phase FLOP");                                 
           PhaseTurn();
@@ -145,7 +145,7 @@ function checkConditionsTurn() {
   if(Variables.conditionsTurn==1){
       if (Variables.fold == 3) {
      //   window.alert("FOLD on Phase TURN! ");     
-        Variables.player1.chips -= Math.floor(Variables.risk /3); Variables.player2.chips += Math.floor(Variables.risk/3);  Variables.infoRisk.innerHTML = Variables.risk;
+        Variables.player1.chips -= Math.floor(Variables.risk /3); Variables.player2.chips += Math.floor(Variables.risk/3);  Variables.infoRisk.innerHTML = Variables.risk.toLocaleString('en-US');
         Variables.preflop = 1; Variables.flop = 0; Variables.turn = 0; Variables.river = 0; Variables.comparehands=0; 
         Variables.conditionsFlop=0; Variables.conditionsRiver=0; Variables.conditionsTurn =0;
         PhasePreFlop();
@@ -164,7 +164,7 @@ function checkConditionsTurn() {
      //   window.alert("RAISE on Phase TURN! ");         
        // if(Variables.player1.chips >= Variables.risk*2){
           Variables.risk = Variables.risk + Variables.risk;
-          Variables.infoRisk.innerHTML = Variables.risk;
+          Variables.infoRisk.innerHTML = Variables.risk.toLocaleString('en-US');
           Variables.preflop = 0;  Variables.flop = 0; Variables.turn = 0; Variables.conditionsTurn=0; Variables.river = 1; 
       //    console.log("RAISE on Phase TURN! ");         
         PhaseRiver();        
@@ -180,7 +180,7 @@ function checkConditionsRiver() {
   if(Variables.conditionsRiver==1){    
       if (Variables.fold == 4) {
     //    window.alert("FOLD on Phase RIVER! ");     
-        Variables.player1.chips -= Math.floor(Variables.risk/2); Variables.player2.chips += Math.floor(Variables.risk/2);  Variables.infoRisk.innerHTML = Variables.risk;
+        Variables.player1.chips -= Math.floor(Variables.risk/2); Variables.player2.chips += Math.floor(Variables.risk/2);  Variables.infoRisk.innerHTML = Variables.risk.toLocaleString('en-US');
         Variables.preflop = 1; Variables.flop = 0; Variables.turn = 0; Variables.river = 0; Variables.comparehands=0; 
         Variables.conditionsFlop=0; Variables.conditionsRiver=0; Variables.conditionsTurn =0;    
         PhasePreFlop();
@@ -203,7 +203,7 @@ function checkConditionsRiver() {
      //   window.alert("RAISE on Phase RIVER! ");     
        // if(Variables.player1.chips >= Variables.risk*2){
           Variables.risk = Variables.risk + Variables.risk;
-          Variables.infoRisk.innerHTML = Variables.risk;
+          Variables.infoRisk.innerHTML = Variables.risk.toLocaleString('en-US');
           Variables.preflop = 0;  Variables.flop = 0; Variables.turn = 0; Variables.conditionsRiver=0; Variables.comparehands=1;
           // comparar cartas e decidir vencedor de rodada          
           distributeCards2();
@@ -216,7 +216,7 @@ function checkConditionsRiver() {
             window.alert("Not enough lives!");     
           }       */
       
-      console.log("CheckConditionsRIVER");
+      console.log("CheckConditionsRIVER");      
     } 
   }     
 
@@ -232,8 +232,8 @@ function PhasePreFlop(){
 
   AppearButtonCall();
   DisappearButtonCheck();
-  Variables.chips1Html.innerHTML = Variables.player1.chips;
-  Variables.chips2Html.innerHTML = Variables.player2.chips;
+  Variables.chips1Html.innerHTML = Variables.player1.chips.toLocaleString('en-US');
+  Variables.chips2Html.innerHTML = Variables.player2.chips.toLocaleString('en-US');
   cleanAllCommunityCards();
   // refill deck with original deck
   Variables.deck = [];
@@ -306,18 +306,18 @@ function compareTheHands(){
       Variables.fold = 0; Variables.check = 0; Variables.call = 0;  Variables.raise = 0;
       Variables.conditionsPreflop=1; Variables.conditionsFlop=0; Variables.conditionsTurn=0; Variables.conditionsRiver=0;       
 
-    console.log("compareTheHands()");  
+    console.log("compareTheHands()");      
    // window.alert("COMPARING HANDS... ");
     
     var roundWinner = determineWinnersHand();   
 
-        if(roundWinner == 0){
+        if(roundWinner == 0){          
           roundDrawDeathReaction();
          // window.alert("DRAW!");  
           console.log("DRAW!");    
           // to delay the execution of the next line of code
           setTimeout( awaitReaction0, 2000);
-          function awaitReaction0() {
+          function awaitReaction0() {            
           PhasePreFlop();         
           }
         }
@@ -330,11 +330,11 @@ function compareTheHands(){
           Variables.player2.chips -= Variables.risk;   
           // to delay the execution of the next line of code
           setTimeout( awaitReaction1, 2600);
-          function awaitReaction1() {
+          function awaitReaction1() {            
             PhasePreFlop();    
           }
         } 
-
+        
         if(roundWinner == 2){
           roundWonDeathReaction()
           //window.alert("DEATH won the round.");
@@ -343,7 +343,7 @@ function compareTheHands(){
           Variables.player2.chips += Variables.risk; 
           // to delay the execution of the next line of code
           setTimeout( awaitReaction2, 2000);
-          function awaitReaction2() {   
+          function awaitReaction2() {               
             gameLost();   
             PhasePreFlop();    
           }      
@@ -369,10 +369,9 @@ function compareTheHands(){
             window.alert(Variables.messageCohleWin);
             humanityVictory();
           }
-        } else{        
-          Variables.years = parseInt(Variables.infoYears.innerHTML); 
+        } else{                  
           Variables.years += 1;
-          Variables.infoYears.innerHTML = Variables.years.toString();                    
+          Variables.infoYears.innerHTML = Variables.years.toLocaleString('en-US');          
           }
         }        
   }
@@ -391,8 +390,8 @@ function compareTheHands(){
     Variables.years = 300000;
     Variables.player1.chips = 8000000000; Variables.player2.chips = 107000000000;   
     // Reset DOM elements
-    Variables.infoYears.innerHTML = Variables.years;
-    Variables.infoRisk.innerHTML = Variables.risk;  
+    Variables.infoYears.innerHTML = Variables.years.toLocaleString('en-US');
+    Variables.infoRisk.innerHTML = Variables.risk.toLocaleString('en-US');
     functionStart();
   }
 

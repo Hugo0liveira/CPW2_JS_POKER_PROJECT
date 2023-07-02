@@ -39,6 +39,8 @@ li {
   font-size: 190%;  
 }
 
+
+
 @media only screen and (min-width: 500px) {
   body {
     background-size: contain;
