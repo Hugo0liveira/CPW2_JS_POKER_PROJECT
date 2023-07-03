@@ -77,7 +77,10 @@ const player2HandHTML = document.querySelector(".player2-hand");
 infoYears.innerHTML = years.toLocaleString('en-US');     
 infoRisk.innerHTML = risk.toLocaleString('en-US');     
 
+var okNotOk = 0;
+
 export const Variables = {
+  okNotOk: okNotOk,
   player1: player1, 
   player2: player2,
   deck: deck,

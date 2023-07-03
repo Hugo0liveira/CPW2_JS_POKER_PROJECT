@@ -11,7 +11,7 @@ function functionFold(event) {
   setTimeout( awaitToFold, 2000);
 
   function awaitToFold() {  
-    window.alert(Variables.messageFold);
+    alert(Variables.messageFold);
     event.stopPropagation(); // Stop event propagation
         if(Variables.conditionsPreflop==1){
           Variables.fold = 1; checkConditionsPreFlop(); 
@@ -87,7 +87,7 @@ function checkConditionsPreFlop() {
       }  
       if (Variables.check == 1) {
         Variables.check == 0;
-        window.alert("Check button is not used on preflop phase!");          
+        alert("Check button is not used on preflop phase!");          
       }
       if (Variables.raise == 1) {
         //window.alert("RAISE on Phase PRE-FLOP! ");     
@@ -117,7 +117,7 @@ function checkConditionsFlop() {
       }  
       if (Variables.call == 2) {          
         Variables.call == 0;
-        window.alert("Call button is NOT used on Phase FLOP! ");             
+        alert("Call button is NOT used on Phase FLOP! ");             
       }    
       if (Variables.check == 2) {
        // window.alert("CHECK on Phase FLOP! ");     
@@ -152,7 +152,7 @@ function checkConditionsTurn() {
       }  
       if (Variables.call == 3) {          
         Variables.call == 0;
-        window.alert("Call button is NOT used on Phase TURN! ");             
+        alert("Call button is NOT used on Phase TURN! ");             
       }    
       if (Variables.check == 3) {
     //    window.alert("CHECK on Phase TURN! ");     
@@ -187,7 +187,7 @@ function checkConditionsRiver() {
       }  
       if (Variables.call == 4) {          
         Variables.call == 0;
-        window.alert("Call button is NOT used on Phase RIVER! ");             
+        alert("Call button is NOT used on Phase RIVER! ");             
       }    
       if (Variables.check == 4) {
      //   window.alert("CHECK on Phase RIVER! ");     
@@ -349,7 +349,7 @@ function compareTheHands(){
           }      
         } 
         if (roundWinner != 0 && roundWinner != 1 && roundWinner != 2) {
-          window.alert("ERROR: roundWinner");
+          alert("ERROR: roundWinner");
           console.log("ERROR: roundWinner");
         } 
         // update chips on screen
@@ -361,12 +361,12 @@ function compareTheHands(){
         deathEndStare();
         setTimeout( awaitStare, 1100);
           function awaitStare() {                                 
-            window.alert(Variables.messageNietzscheWin1);    
-            window.alert(Variables.messageNietzscheWin2);
-            window.alert(Variables.messageYuvalWin1);
-            window.alert(Variables.messageSapolskyWin1);
-            window.alert(Variables.messageChomskyWin);
-            window.alert(Variables.messageCohleWin);
+            alert(Variables.messageNietzscheWin1);    
+            alert(Variables.messageNietzscheWin2);
+            alert(Variables.messageYuvalWin1);
+            alert(Variables.messageSapolskyWin1);
+            alert(Variables.messageChomskyWin);
+            alert(Variables.messageCohleWin);
             humanityVictory();
           }
         } else{                  
@@ -377,10 +377,10 @@ function compareTheHands(){
   }
 
   function resetGame() {
-    window.alert(Variables.messageDoTheEvolution1);
-    window.alert(Variables.messageDoTheEvolution2);
-    window.alert(Variables.messageDoTheEvolution3);
-    window.alert(Variables.messageDoTheEvolution4);
+    alert(Variables.messageDoTheEvolution1);
+    alert(Variables.messageDoTheEvolution2);
+    alert(Variables.messageDoTheEvolution3);
+    alert(Variables.messageDoTheEvolution4);
     
     // Reset variables    
     Variables.game = 0; Variables.conditionsPreflop = 0;  Variables.conditionsFlop = 0;  Variables.conditionsTurn = 0;  Variables.conditionsRiver = 0;
