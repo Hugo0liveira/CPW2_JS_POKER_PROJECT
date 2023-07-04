@@ -3,6 +3,12 @@ import { showAlertMessage1, showAlertMessage2, showAlertMessage3, showAlertMessa
 import { PhasePreFlop, welcomeDeath, welcomeDeathAdd1, welcomeDeathAdd2, welcomeDeathAdd3, welcomeDeathAdd4, welcomeDeathAdd5 } from "./RoundPhases.js"
 
 function functionStart(){   
+  
+  //Variables.endHTML.style.display = "none"; 
+  const btnContinue = document.getElementById('myCustomAlert2');
+  btnContinue.style.display = "none";
+  const btnResult= document.getElementById('myCustomAlert3');
+  btnResult.style.display = "none";
 
   // select <div class="invisible"> HTML element and change the CSS all the elements inside to transparent
   const invisibleHTML = document.querySelector('.invisible');
@@ -24,10 +30,9 @@ function functionStart(){
     
     setTimeout( awaitWelcome, 2100);
     function awaitWelcome() {                 
-      showAlertMessage1(Variables.messageCohle1);    
-        
-      Variables.preflop = 1; 
+      showAlertMessage1(Variables.messageCohle1);            
 
+      Variables.preflop = 1; 
       PhasePreFlop();    
     }
   }     

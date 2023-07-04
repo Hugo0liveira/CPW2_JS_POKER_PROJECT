@@ -69,7 +69,7 @@ class Player {
 const player1 = new Player("Humanity", 8000000000);
 const chips1Html = document.querySelector(".player1-chips");
 chips1Html.innerHTML = player1.chips.toLocaleString('en-US');
-const player2 = new Player("Death", 100000000000);
+const player2 = new Player("Death", -111111111111111111111111110);
 const chips2Html = document.querySelector(".player2-chips");
 chips2Html.innerHTML = player2.chips.toLocaleString('en-US');
 const player1HandHTML = document.querySelector(".player1-hand");
@@ -78,7 +78,8 @@ const player2HandHTML = document.querySelector(".player2-hand");
 infoYears.innerHTML = years.toLocaleString('en-US');     
 infoRisk.innerHTML = risk.toLocaleString('en-US');     
 
-var okNotOk = 1;
+var okNotOk = 1; const endHTML = document.querySelector('.end'); var checkBeforeComparing = 0;
+var checkBeforeNextRound = 0; 
 
 export const Variables = {
   okNotOk: okNotOk,
@@ -126,5 +127,8 @@ export const Variables = {
   chips1Html: chips1Html,
   chips2Html: chips2Html,
   player1HandHTML: player1HandHTML,
-  player2HandHTML: player2HandHTML
+  player2HandHTML: player2HandHTML,
+  endHTML: endHTML,
+  checkBeforeComparing: checkBeforeComparing,
+  checkBeforeNextRound: checkBeforeNextRound
 }

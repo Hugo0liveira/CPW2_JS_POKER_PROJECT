@@ -3,6 +3,59 @@ import { shuffleDeck, cleanAllCommunityCards, distributeCards1, distributeCards2
 import {determineWinnersHand} from "./DetermineWinnersHand.js";
 import { Variables } from "./Variables.js"
 import {functionStart} from "./main.js"
+import {showAlertMessage, showAlertMessageLost1, showAlertMessageVictory1, showAlertMessageSeeDeathCards} from "./Messages.js"
+
+// checking ERROR of calling function more than once inexplicably relate  Messages.js
+function checkBeforeCompare(){
+  console.log("checkBeforeCompare");
+  console.log("Variables.checkBeforeComparing: ", Variables.checkBeforeComparing);
+  if(Variables.checkBeforeComparing==1){
+    Variables.checkBeforeComparing=2;
+    compareTheHands();
+  }
+}
+
+
+// checking ERROR of calling function more than once inexplicably relate  Messages.js
+function checkBeforeGoingToNextRound(){
+  console.log("checkBeforeGoingToNextRound");
+  console.log("Variables.checkBeforeNextRound: ", Variables.checkBeforeNextRound);
+  if(Variables.checkBeforeNextRound==1){
+    Variables.checkBeforeNextRound = 2;
+    PhasePreFlop(); 
+  }
+}
+
+
+function continueToNextRound(message) {
+  
+  const noneDisplayAlert = document.getElementById('myCustomAlert');
+  noneDisplayAlert.style.display = 'none';
+  
+  console.log("continueToNextRound");
+
+  const btnContinue = document.getElementById('myCustomAlert2');
+  btnContinue.style.display = "block";
+  btnContinue.style.zIndex = "18";
+
+  // Set the message text
+  const alertMessage = document.getElementById('custom-alert-message2');
+  alertMessage.textContent = message;
+
+  // Attach event listener to the OK button
+  const continueButton = document.getElementById('btn-continue');
+  continueButton.addEventListener('click', function functionContinue(event) {
+      event.stopPropagation();
+
+    // to avoid being called more than once each time button is pressed
+    Variables.checkBeforeNextRound += 1;
+    console.log('Variables.checkBeforeNextRound', Variables.checkBeforeNextRound);
+    // Strange error happening here. The function checkBeforeGoingToNextRound() is being called more than once.
+        checkBeforeGoingToNextRound();      
+        btnContinue.style.display =  'none';          
+  });
+}
+
 
 // Buttons functions 
 function functionFold(event) {  
@@ -11,7 +64,7 @@ function functionFold(event) {
   setTimeout( awaitToFold, 2000);
 
   function awaitToFold() {  
-    alert(Variables.messageFold);
+    showAlertMessage(Variables.messageFold);
     event.stopPropagation(); // Stop event propagation
         if(Variables.conditionsPreflop==1){
           Variables.fold = 1; checkConditionsPreFlop(); 
@@ -87,7 +140,7 @@ function checkConditionsPreFlop() {
       }  
       if (Variables.check == 1) {
         Variables.check == 0;
-        alert("Check button is not used on preflop phase!");          
+        //showAlertMessage("Check button is not used on preflop phase!");          
       }
       if (Variables.raise == 1) {
         //window.alert("RAISE on Phase PRE-FLOP! ");     
@@ -117,7 +170,7 @@ function checkConditionsFlop() {
       }  
       if (Variables.call == 2) {          
         Variables.call == 0;
-        alert("Call button is NOT used on Phase FLOP! ");             
+        //showAlertMessage("Call button is NOT used on Phase FLOP! ");             
       }    
       if (Variables.check == 2) {
        // window.alert("CHECK on Phase FLOP! ");     
@@ -152,7 +205,7 @@ function checkConditionsTurn() {
       }  
       if (Variables.call == 3) {          
         Variables.call == 0;
-        alert("Call button is NOT used on Phase TURN! ");             
+        //showAlertMessage("Call button is NOT used on Phase TURN! ");             
       }    
       if (Variables.check == 3) {
     //    window.alert("CHECK on Phase TURN! ");     
@@ -187,30 +240,36 @@ function checkConditionsRiver() {
       }  
       if (Variables.call == 4) {          
         Variables.call == 0;
-        alert("Call button is NOT used on Phase RIVER! ");             
+        //showAlertMessage("Call button is NOT used on Phase RIVER! ");             
       }    
-      if (Variables.check == 4) {
-     //   window.alert("CHECK on Phase RIVER! ");     
+      if (Variables.check == 4) {        
+        // to avoid being called more than once each time button is pressed  
+        // Strange error happening here. The function checkBeforeCompare() is being called more than once.
+        Variables.checkBeforeNextRound = 0;
+        Variables.checkBeforeComparing = 0;          
+
         Variables.preflop=0; Variables.flop =0; Variables.turn =0; Variables.river=0; Variables.comparehands=1; 
         Variables.conditionsFlop=0; Variables.conditionsRiver=0; Variables.conditionsTurn =0;
-        distributeCards2();
-        setTimeout( awaitComparingHands, 2000);      
-        function awaitComparingHands() {  
-          compareTheHands();
-        }
-      }    
-      if (Variables.raise == 4) {        
-     //   window.alert("RAISE on Phase RIVER! ");     
+        console.log('check', Variables.check);
+        console.log('raise', Variables.raise);
+        distributeCards2();   
+        showAlertMessageSeeDeathCards("Comparing Hands");          
+        
+      } else if (Variables.raise == 4) {        
+        // to avoid being called more than once each time button is pressed  
+        // Strange error happening here. The function checkBeforeCompare() is being called more than once.
+        Variables.checkBeforeNextRound = 0;
+        Variables.checkBeforeComparing = 0; 
+        
        // if(Variables.player1.chips >= Variables.risk*2){
           Variables.risk = Variables.risk + Variables.risk;
           Variables.infoRisk.innerHTML = Variables.risk.toLocaleString('en-US');
           Variables.preflop = 0;  Variables.flop = 0; Variables.turn = 0; Variables.conditionsRiver=0; Variables.comparehands=1;
-          // comparar cartas e decidir vencedor de rodada          
-          distributeCards2();
-          setTimeout( awaitComparingHands, 4000);        
-          function awaitComparingHands() {  
-          compareTheHands();
-          }
+          console.log('check', Variables.check);
+          console.log('raise', Variables.raise);     
+          distributeCards2();   
+          showAlertMessageSeeDeathCards("Comparing Hands");          
+          
       //    console.log("RAISE on Phase RIVER! ");     
           } /*else{
             window.alert("Not enough lives!");     
@@ -221,7 +280,7 @@ function checkConditionsRiver() {
   }     
 
 // PHASES OF THE GAME
-function PhasePreFlop(){    
+function PhasePreFlop(){   
   // select <div class="invisible"> HTML element and change the CSS all the elements inside to visible
   const invisibleHTML = document.querySelector('.invisible');
   invisibleHTML.style.visibility = "visible";
@@ -305,21 +364,14 @@ function compareTheHands(){
       Variables.preflop=1;
       Variables.fold = 0; Variables.check = 0; Variables.call = 0;  Variables.raise = 0;
       Variables.conditionsPreflop=1; Variables.conditionsFlop=0; Variables.conditionsTurn=0; Variables.conditionsRiver=0;       
-
     console.log("compareTheHands()");      
-   // window.alert("COMPARING HANDS... ");
     
-    var roundWinner = determineWinnersHand();   
+    var roundWinner = determineWinnersHand();       
 
         if(roundWinner == 0){          
           roundDrawDeathReaction();
          // window.alert("DRAW!");  
-          console.log("DRAW!");    
-          // to delay the execution of the next line of code
-          setTimeout( awaitReaction0, 2000);
-          function awaitReaction0() {            
-          PhasePreFlop();         
-          }
+          console.log("DRAW!");              
         }
 
         if(roundWinner == 1){
@@ -327,29 +379,19 @@ function compareTheHands(){
          // window.alert("HUMANITY won the round.");
           console.log("HUMANITY won the round.");
           Variables.player1.chips += Variables.risk;      
-          Variables.player2.chips -= Variables.risk;   
-          // to delay the execution of the next line of code
-          setTimeout( awaitReaction1, 2600);
-          function awaitReaction1() {            
-            PhasePreFlop();    
-          }
+          Variables.player2.chips -= Variables.risk;             
         } 
         
         if(roundWinner == 2){
           roundWonDeathReaction()
           //window.alert("DEATH won the round.");
-        //  console.log("DEATH won the round.");
+          console.log("DEATH won the round.");
           Variables.player1.chips -= Variables.risk;      
           Variables.player2.chips += Variables.risk; 
-          // to delay the execution of the next line of code
-          setTimeout( awaitReaction2, 2000);
-          function awaitReaction2() {               
-            gameLost();   
-            PhasePreFlop();    
-          }      
         } 
+
         if (roundWinner != 0 && roundWinner != 1 && roundWinner != 2) {
-          alert("ERROR: roundWinner");
+          showAlertMessage("ERROR: roundWinner");
           console.log("ERROR: roundWinner");
         } 
         // update chips on screen
@@ -358,16 +400,12 @@ function compareTheHands(){
       
         
       if(Variables.player2.chips <= 0){ 
+        setTimeout( deathEndStare(), 2100);
         deathEndStare();
-        setTimeout( awaitStare, 1100);
+        setTimeout( awaitStare, 2100);
           function awaitStare() {                                 
-            alert(Variables.messageNietzscheWin1);    
-            alert(Variables.messageNietzscheWin2);
-            alert(Variables.messageYuvalWin1);
-            alert(Variables.messageSapolskyWin1);
-            alert(Variables.messageChomskyWin);
-            alert(Variables.messageCohleWin);
-            humanityVictory();
+            showAlertMessageVictory1(Variables.messageNietzscheWin1);               
+            
           }
         } else{                  
           Variables.years += 1;
@@ -377,10 +415,8 @@ function compareTheHands(){
   }
 
   function resetGame() {
-    alert(Variables.messageDoTheEvolution1);
-    alert(Variables.messageDoTheEvolution2);
-    alert(Variables.messageDoTheEvolution3);
-    alert(Variables.messageDoTheEvolution4);
+    showAlertMessageLost1(Variables.messageDoTheEvolution1);
+    
     
     // Reset variables    
     Variables.game = 0; Variables.conditionsPreflop = 0;  Variables.conditionsFlop = 0;  Variables.conditionsTurn = 0;  Variables.conditionsRiver = 0;
@@ -597,7 +633,7 @@ function compareTheHands(){
     `;    
     Variables.player2HandHTML.appendChild(container);    
   }
-
+   //alert
   // round won death reaction gif
   function roundWonDeathReaction() {
     Variables.player2HandHTML.innerHTML = "";
@@ -639,17 +675,6 @@ function compareTheHands(){
     Variables.player1HandHTML.appendChild(container);
   }
 
-  // humanity victory
-  function humanityVictory() {   
-    document.body.innerHTML = ""
-    document.body.innerHTML = `
-    <div class="humanityVictory">
-     <iframe  src="https://www.youtube.com/embed/j800SVeiS5I" frameborder="0" allowfullscreen></iframe> 
-     </div>
-     `;    
-     
-  }
-
   // death lost game gif
   function deathEndStare() {
     Variables.player2HandHTML.innerHTML = "";
@@ -664,5 +689,5 @@ function compareTheHands(){
   } 
 
 
-  export { functionFold, functionCall, functionCheck, functionRaise, foldButton, callButton, checkButton, raiseButton, checkConditionsPreFlop, checkConditionsFlop, checkConditionsTurn, checkConditionsRiver, PhasePreFlop, PhaseFlop, PhaseTurn, PhaseRiver, compareTheHands, resetGame, welcomeDeath, DisappearButtonCall, DisappearButtonCheck, DisappearButtonFold, DisappearButtonRaise, AppearButtonCheck, AppearButtonCall, gameLost, deathKiss, deathDancing, welcomeDeathAdd1, welcomeDeathAdd2, welcomeDeathAdd3, welcomeDeathAdd4, welcomeDeathAdd5 };
+  export { functionFold, functionCall, functionCheck, functionRaise, foldButton, callButton, checkButton, raiseButton, checkConditionsPreFlop, checkConditionsFlop, checkConditionsTurn, checkConditionsRiver, PhasePreFlop, PhaseFlop, PhaseTurn, PhaseRiver, compareTheHands, resetGame, welcomeDeath, DisappearButtonCall, DisappearButtonCheck, DisappearButtonFold, DisappearButtonRaise, AppearButtonCheck, AppearButtonCall, gameLost, deathKiss, deathDancing, welcomeDeathAdd1, welcomeDeathAdd2, welcomeDeathAdd3, welcomeDeathAdd4, welcomeDeathAdd5, checkBeforeCompare, checkBeforeGoingToNextRound, continueToNextRound };
   
