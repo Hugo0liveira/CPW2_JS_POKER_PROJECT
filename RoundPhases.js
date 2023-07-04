@@ -400,9 +400,9 @@ function compareTheHands(){
       
         
       if(Variables.player2.chips <= 0){ 
-        setTimeout( deathEndStare(), 2100);
+        setTimeout( deathEndStare(), 3200);
         deathEndStare();
-        setTimeout( awaitStare, 2100);
+        setTimeout( awaitStare, 3200);
           function awaitStare() {                                 
             showAlertMessageVictory1(Variables.messageNietzscheWin1);               
             

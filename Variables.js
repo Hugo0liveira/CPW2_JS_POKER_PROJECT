@@ -69,7 +69,7 @@ class Player {
 const player1 = new Player("Humanity", 8000000000);
 const chips1Html = document.querySelector(".player1-chips");
 chips1Html.innerHTML = player1.chips.toLocaleString('en-US');
-const player2 = new Player("Death", -111111111111111111111111110);
+const player2 = new Player("Death", 100000000000);
 const chips2Html = document.querySelector(".player2-chips");
 chips2Html.innerHTML = player2.chips.toLocaleString('en-US');
 const player1HandHTML = document.querySelector(".player1-hand");
