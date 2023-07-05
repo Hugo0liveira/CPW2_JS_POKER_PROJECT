@@ -5,7 +5,7 @@ import { Variables } from "./Variables.js"
 function shuffleDeck() {
     // loop over the deck of cards backwards. 
     for (let i = Variables.deck.length - 1; i > 0; i--) {
-      // grab a random index before current element.
+      // grab a random index before current element. Math.random() * (i + 1) will generate a random number between 0 and i.
       const j = Math.floor(Math.random() * (i + 1));
       // swap the current card with the random card.
       [Variables.deck[i], Variables.deck[j]] = [Variables.deck[j], Variables.deck[i]];
@@ -48,6 +48,240 @@ function shuffleDeck() {
     }
   }
 
+  // change card css if author == "Elysium"
+  function cssElysium(card, num){    
+    if(card.suit == "Elysium"){      
+      if(num == 1){ 
+        card.power = Variables.ElysiumPower();        
+        const card1HTML = document.querySelector('.card1');      
+        const author = document.querySelector('.author1');      
+        author.style.display = 'none';            
+        const s1 = document.querySelector('.suit1'); 
+        s1.style.color = "rgb(230, 129, 75)";        
+        s1.style.fontWeight = "bold";
+        s1.style.textShadow = "2px 2px 2px black";
+        s1.style.textAlign = "center";                       
+        const p1 = document.querySelector('.power1'); 
+        p1.style.textAlign = "center";       
+        p1.style.color = 'rgb(94, 35, 35)';
+        // show the changed power of the card on the HTML                
+        p1.innerHTML = card.power;
+        const img = document.createElement('div');
+        img.classList.add('imgElysium');
+        img.innerHTML = `
+        <div class="imgElysium">
+          <img src="Elysium.png">
+        </div>
+        `;    
+        card1HTML.style.backgroundImage = `url('Elysium.png')`;    
+      }
+
+      if(num == 2){ 
+        card.power = Variables.ElysiumPower();
+        const card1HTML = document.querySelector('.card2');      
+        const author = document.querySelector('.author2');      
+        author.style.display = 'none';            
+        const s1 = document.querySelector('.suit2'); 
+        s1.style.color = "rgb(230, 129, 75)";
+        s1.style.fontWeight = "bold";
+        s1.style.textShadow = "2px 2px 2px black";
+        s1.style.textAlign = "center";                
+        const p1 = document.querySelector('.power2'); 
+        p1.style.textAlign = "center";               
+        p1.style.color = 'rgb(94, 35, 35)';
+        // show the changed power of the card on the HTML                
+        p1.innerHTML = card.power;
+        const img = document.createElement('div');
+        img.classList.add('imgElysium');
+        img.innerHTML = `
+        <div class="imgElysium">
+          <img src="Elysium.png">
+        </div>
+        `;    
+        card1HTML.style.backgroundImage = `url('Elysium.png')`;   
+      }
+      
+      if(num == 3){ 
+        card.power = Variables.ElysiumPower();
+        const card1HTML = document.querySelector('.card3');      
+        const author = document.querySelector('.author3');      
+        author.style.display = 'none';            
+        const s1 = document.querySelector('.suit3'); 
+        s1.style.color = "rgb(230, 129, 75)";
+        s1.style.fontWeight = "bold";
+        s1.style.textShadow = "2px 2px 2px black";
+        s1.style.textAlign = "center";               
+        const p1 = document.querySelector('.power3'); 
+        p1.style.textAlign = "center";       
+        p1.style.color = 'rgb(94, 35, 35)';
+        // show the changed power of the card on the HTML                
+        p1.innerHTML = card.power;
+        const img = document.createElement('div');
+        img.classList.add('imgElysium');
+        img.innerHTML = `
+        <div class="imgElysium">
+          <img src="Elysium.png">
+        </div>
+        `;    
+        card1HTML.style.backgroundImage = `url('Elysium.png')`;   
+      }
+
+      if(num == 4){ 
+        card.power = Variables.ElysiumPower();
+        const card1HTML = document.querySelector('.card4');      
+        const author = document.querySelector('.author4');      
+        author.style.display = 'none';            
+        const s1 = document.querySelector('.suit4'); 
+        s1.style.color = "rgb(230, 129, 75)";
+        s1.style.fontWeight = "bold";
+        s1.style.textShadow = "2px 2px 2px black";
+        s1.style.textAlign = "center";               
+        const p1 = document.querySelector('.power4'); 
+        p1.style.textAlign = "center";       
+        p1.style.color = 'rgb(94, 35, 35)';
+        // show the changed power of the card on the HTML        
+        p1.innerHTML = card.power;
+        const img = document.createElement('div');
+        img.classList.add('imgElysium');
+        img.innerHTML = `
+        <div class="imgElysium">
+          <img src="Elysium.png">
+        </div>
+        `;    
+        card1HTML.style.backgroundImage = `url('Elysium.png')`;   
+      }
+
+      if(num == 11){ 
+        card.power = Variables.ElysiumPower();
+        const card1HTML = document.querySelector('.card11');      
+        const author = document.querySelector('.author11');      
+        author.style.display = 'none';            
+        const s1 = document.querySelector('.suit11'); 
+        s1.style.color = "rgb(230, 129, 75)";
+        s1.style.fontWeight = "bold";
+        s1.style.textShadow = "2px 2px 2px black";
+        s1.style.textAlign = "center";               
+        const p1 = document.querySelector('.power11'); 
+        p1.style.textAlign = "center";       
+        p1.style.color = 'rgb(94, 35, 35)';
+        // show the changed power of the card on the HTML        
+        p1.innerHTML = card.power;
+        const img = document.createElement('div');
+        img.classList.add('imgElysium');
+        img.innerHTML = `
+        <div class="imgElysium">
+          <img src="Elysium.png">
+        </div>
+        `;    
+        card1HTML.style.backgroundImage = `url('Elysium.png')`;   
+      }
+
+      
+      if(num == 12){ 
+        card.power = Variables.ElysiumPower();
+        const card1HTML = document.querySelector('.card12');      
+        const author = document.querySelector('.author12');      
+        author.style.display = 'none';            
+        const s1 = document.querySelector('.suit12'); 
+        s1.style.color = "rgb(230, 129, 75)";
+        s1.style.fontWeight = "bold";
+        s1.style.textShadow = "2px 2px 2px black";
+        s1.style.textAlign = "center";               
+        const p1 = document.querySelector('.power12'); 
+        p1.style.textAlign = "center";       
+        p1.style.color = 'rgb(94, 35, 35)';
+        // show the changed power of the card on the HTML        
+        p1.innerHTML = card.power;
+        const img = document.createElement('div');
+        img.classList.add('imgElysium');
+        img.innerHTML = `
+        <div class="imgElysium">
+          <img src="Elysium.png">
+        </div>
+        `;    
+        card1HTML.style.backgroundImage = `url('Elysium.png')`;   
+      }
+
+      
+      if(num == 13){ 
+        card.power = Variables.ElysiumPower();
+        const card1HTML = document.querySelector('.card13');      
+        const author = document.querySelector('.author13');      
+        author.style.display = 'none';            
+        const s1 = document.querySelector('.suit13'); 
+        s1.style.color = "rgb(230, 129, 75)";
+        s1.style.fontWeight = "bold";
+        s1.style.textShadow = "2px 2px 2px black";
+        s1.style.textAlign = "center";               
+        const p1 = document.querySelector('.power13'); 
+        p1.style.textAlign = "center";       
+        p1.style.color = 'rgb(94, 35, 35)';
+        // show the changed power of the card on the HTML        
+        p1.innerHTML = card.power;
+        const img = document.createElement('div');
+        img.classList.add('imgElysium');
+        img.innerHTML = `
+        <div class="imgElysium">
+          <img src="Elysium.png">
+        </div>
+        `;    
+        card1HTML.style.backgroundImage = `url('Elysium.png')`;   
+      }
+      
+      if(num == 14){ 
+        card.power = Variables.ElysiumPower();
+        const card1HTML = document.querySelector('.card14');      
+        const author = document.querySelector('.author14');      
+        author.style.display = 'none';            
+        const s1 = document.querySelector('.suit14'); 
+        s1.style.color = "rgb(230, 129, 75)";
+        s1.style.fontWeight = "bold";
+        s1.style.textShadow = "2px 2px 2px black";
+        s1.style.textAlign = "center";               
+        const p1 = document.querySelector('.power14'); 
+        p1.style.textAlign = "center";       
+        p1.style.color = 'rgb(94, 35, 35)';
+        // show the changed power of the card on the HTML        
+        p1.innerHTML = card.power;
+        const img = document.createElement('div');
+        img.classList.add('imgElysium');
+        img.innerHTML = `
+        <div class="imgElysium">
+          <img src="Elysium.png">
+        </div>
+        `;    
+        card1HTML.style.backgroundImage = `url('Elysium.png')`;   
+      }
+
+      
+      if(num == 15){ 
+        card.power = Variables.ElysiumPower();
+        const card1HTML = document.querySelector('.card15');      
+        const author = document.querySelector('.author15');      
+        author.style.display = 'none';            
+        const s1 = document.querySelector('.suit15'); 
+        s1.style.color = "rgb(230, 129, 75)";
+        s1.style.fontWeight = "bold";
+        s1.style.textShadow = "2px 2px 2px black";
+        s1.style.textAlign = "center";               
+        const p1 = document.querySelector('.power15'); 
+        p1.style.textAlign = "center";       
+        p1.style.color = 'rgb(94, 35, 35)';
+        // show the changed power of the card on the HTML        
+        p1.innerHTML = card.power;
+        const img = document.createElement('div');
+        img.classList.add('imgElysium');
+        img.innerHTML = `
+        <div class="imgElysium">
+          <img src="Elysium.png">
+        </div>
+        `;    
+        card1HTML.style.backgroundImage = `url('Elysium.png')`;   
+      }
+      
+    }    
+  }
+
   //   Distribute 2 cards to each player 
  function distributeCards1() {     
   cleanAllCommunityCards();
@@ -60,24 +294,30 @@ function shuffleDeck() {
 
     const playerHandEl = document.querySelector('.player1-hand');
     const cardEl = document.createElement("div");
-    cardEl.classList.add("card");        
+    cardEl.classList.add("card1");        
       cardEl.innerHTML = `
-        <div class="author">${card1.author}</div> <BR>
-        <div class="suit1">${card1.suit}</div> <BR>        
-        <div class="power">${card1.power}</div>        
+        <div class="Elysium1">
+          <div class="author1">${card1.author}</div> <BR>
+          <div class="suit1">${ card1.suit}</div> <BR>        
+          <div class="power1">${card1.power}</div>        
+        </div>    
       `;            
       playerHandEl.appendChild(cardEl);      
       changeColorOfSuit(card1, '.suit1');
+      cssElysium(card1, 1);      
 
     const cardE2 = document.createElement("div");  
-      cardE2.classList.add("card");
+      cardE2.classList.add("card2");
       cardE2.innerHTML = `
-        <div class="author">${card2.author}</div> <BR>
+      <div class="Elysium2">
+        <div class="author2">${card2.author}</div> <BR>
         <div class="suit2">${card2.suit}</div> <BR>
-        <div class="power">${card2.power}</div>
+        <div class="power2">${card2.power}</div>
+      </div>
       `;
       playerHandEl.appendChild(cardE2);      
       changeColorOfSuit(card2, '.suit2');
+      cssElysium(card2, 2);
 
       // player 2 cards face down      
       const cardFaceDown1 = document.createElement("div");
@@ -111,24 +351,31 @@ function shuffleDeck() {
     console.log('card3:',card3); console.log('card4:',card4);
       Variables.player2.hand = [card3, card4];          
       const cardE3 = document.createElement("div");
-      cardE3.classList.add("card");
+      cardE3.classList.add("card3");
       cardE3.innerHTML = `
-        <div class="author">${card3.author}</div> <BR>
+      <div class="Elysium3">
+        <div class="author3">${card3.author}</div> <BR>
         <div class="suit3">${card3.suit}</div> <BR>
-        <div class="power">${card3.power}</div>
+        <div class="power3">${card3.power}</div>
+      </div>
       `;
       Variables.player2HandHTML.appendChild(cardE3);
       changeColorOfSuit(card3, '.suit3');      
+      cssElysium(card3, 3);
 
       const cardE4 = document.createElement("div");
-      cardE4.classList.add("card");
+      cardE4.classList.add("card4");
       cardE4.innerHTML = `
-        <div class="author">${card4.author}</div> <BR>
+      <div class="Elysium4">
+        <div class="author4">${card4.author}</div> <BR>
         <div class="suit4">${card4.suit}</div> <BR>
-        <div class="power">${card4.power}</div>
+        <div class="power4">${card4.power}</div>
+      </div>
       `;
       Variables.player2HandHTML.appendChild(cardE4);
       changeColorOfSuit(card4, '.suit4');
+      cssElysium(card4, 4);
+
     return Variables.deck;
   }  
   
@@ -139,14 +386,18 @@ function shuffleDeck() {
       //const cardObject = JSON.parse(JSON.stringify(card));
       Variables.allCommunityCards = [...Variables.allCommunityCards, card11];   
       const cardEl = document.createElement("div");
-      cardEl.classList.add("card");
+      cardEl.classList.add("card11");
       cardEl.innerHTML = `
-        <div class="author">${card11.author}</div> <BR>
+      <div class="Elysium11">
+        <div class="author11">${card11.author}</div> <BR>
         <div class="suit11">${card11.suit}</div> <BR>
-        <div class="power">${card11.power}</div>
+        <div class="power11">${card11.power}</div>
+      </div>
       `;
        Variables.allCommunityCardsHTML.appendChild(cardEl);
-       changeColorOfSuit(card11, '.suit11');       
+       changeColorOfSuit(card11, '.suit11');    
+       cssElysium(card11, 11);
+
       return Variables.deck;
   }
 
@@ -156,14 +407,18 @@ function shuffleDeck() {
     //const cardObject = JSON.parse(JSON.stringify(card));
     Variables.allCommunityCards = [...Variables.allCommunityCards, card12];   
     const cardEl = document.createElement("div");
-    cardEl.classList.add("card");
+    cardEl.classList.add("card12");
     cardEl.innerHTML = `
-      <div class="author">${card12.author}</div> <BR>
+    <div class="Elysium12">
+      <div class="author12">${card12.author}</div> <BR>
       <div class="suit12">${card12.suit}</div> <BR>
-      <div class="power">${card12.power}</div>
+      <div class="power12">${card12.power}</div>
+    </div>
     `;
      Variables.allCommunityCardsHTML.appendChild(cardEl);
-     changeColorOfSuit(card12, '.suit12');     
+     changeColorOfSuit(card12, '.suit12');   
+     cssElysium(card12, 12);
+
     return Variables.deck;
 }
 
@@ -172,14 +427,18 @@ function addCardOnCommunityCards3() {
   console.log('card13:', card13);
   Variables.allCommunityCards = [...Variables.allCommunityCards, card13];   
   const cardEl = document.createElement("div");
-  cardEl.classList.add("card");
+  cardEl.classList.add("card13");
   cardEl.innerHTML = `
-    <div class="author">${card13.author}</div> <BR>
+  <div class="Elysium13">
+    <div class="author13">${card13.author}</div> <BR>
     <div class="suit13">${card13.suit}</div> <BR>
-    <div class="power">${card13.power}</div>
+    <div class="power13">${card13.power}</div>
+  </div>
   `;
    Variables.allCommunityCardsHTML.appendChild(cardEl);
    changeColorOfSuit(card13, '.suit13');   
+   cssElysium(card13, 13);
+
   return Variables.deck;
 }
 
@@ -189,14 +448,18 @@ function addCardOnCommunityCards4() {
   //const cardObject = JSON.parse(JSON.stringify(card));
   Variables.allCommunityCards = [...Variables.allCommunityCards, card14];   
   const cardEl = document.createElement("div");
-  cardEl.classList.add("card");
+  cardEl.classList.add("card14");
   cardEl.innerHTML = `
-    <div class="author">${card14.author}</div> <BR>
+  <div class="Elysium14">
+    <div class="author14">${card14.author}</div> <BR>
     <div class="suit14">${card14.suit}</div> <BR>
-    <div class="power">${card14.power}</div>
+    <div class="power14">${card14.power}</div>
+  </div>
   `;
    Variables.allCommunityCardsHTML.appendChild(cardEl);
    changeColorOfSuit(card14, '.suit14');   
+   cssElysium(card14, 14);
+   
   return Variables.deck;
 }
 
@@ -206,14 +469,18 @@ function addCardOnCommunityCards5() {
   //const cardObject = JSON.parse(JSON.stringify(card));
   Variables.allCommunityCards = [...Variables.allCommunityCards, card15];   
   const cardEl = document.createElement("div");
-  cardEl.classList.add("card");
+  cardEl.classList.add("card15");
   cardEl.innerHTML = `
-    <div class="author">${card15.author}</div> <BR>
+  <div class="Elysium15">
+    <div class="author15">${card15.author}</div> <BR>
     <div class="suit15">${card15.suit}</div> <BR>
-    <div class="power">${card15.power}</div>
+    <div class="power15">${card15.power}</div>
+  </div>
   `;
    Variables.allCommunityCardsHTML.appendChild(cardEl);
    changeColorOfSuit(card15, '.suit15');   
+   cssElysium(card15, 15);
+
   return Variables.deck;
 }
   

@@ -148,52 +148,146 @@ iframe {
 .community-cards {
   display: flex;flex-direction: row; margin-top: 10px;
 }
-.card {
+
+.card1 { background: url('/tombstone.png');
   width: 126px;height: 120px;background-color: #bcbbbb; border: 5px solid #ffffff;  
   border-bottom: #000000; border-right: #000000;
   border-radius: 3px;  margin-right: 10px; display: flex; flex-direction: 
   column; justify-content: center; align-items: center; 
-  border-top-left-radius: 23%; border-top-right-radius: 23%;
-}
-.card .author {
+  border-top-left-radius: 23%; border-top-right-radius: 23%;}
+.card2 { background: url('/tombstone.png');
+  width: 126px;height: 120px;background-color: #bcbbbb; border: 5px solid #ffffff;  
+  border-bottom: #000000; border-right: #000000;
+  border-radius: 3px;  margin-right: 10px; display: flex; flex-direction: 
+  column; justify-content: center; align-items: center; 
+  border-top-left-radius: 23%; border-top-right-radius: 23%;}
+.card3 { background: url('/tombstone.png');
+  width: 126px;height: 120px;background-color: #bcbbbb; border: 5px solid #ffffff;  
+  border-bottom: #000000; border-right: #000000;
+  border-radius: 3px;  margin-right: 10px; display: flex; flex-direction: 
+  column; justify-content: center; align-items: center; 
+  border-top-left-radius: 23%; border-top-right-radius: 23%;}
+.card4 { background: url('/tombstone.png');
+  width: 126px;height: 120px;background-color: #bcbbbb; border: 5px solid #ffffff;  
+  border-bottom: #000000; border-right: #000000;
+  border-radius: 3px;  margin-right: 10px; display: flex; flex-direction: 
+  column; justify-content: center; align-items: center; 
+  border-top-left-radius: 23%; border-top-right-radius: 23%;}
+.card11 { background: url('/tombstone.png');
+  width: 126px;height: 120px;background-color: #bcbbbb; border: 5px solid #ffffff;  
+  border-bottom: #000000; border-right: #000000;
+  border-radius: 3px;  margin-right: 10px; display: flex; flex-direction: 
+  column; justify-content: center; align-items: center; 
+  border-top-left-radius: 23%; border-top-right-radius: 23%;}
+.card12 { background: url('/tombstone.png');
+  width: 126px;height: 120px;background-color: #bcbbbb; border: 5px solid #ffffff;  
+  border-bottom: #000000; border-right: #000000;
+  border-radius: 3px;  margin-right: 10px; display: flex; flex-direction: 
+  column; justify-content: center; align-items: center; 
+  border-top-left-radius: 23%; border-top-right-radius: 23%;}
+.card13 { background: url('/tombstone.png');
+  width: 126px;height: 120px;background-color: #bcbbbb; border: 5px solid #ffffff;  
+  border-bottom: #000000; border-right: #000000;
+  border-radius: 3px;  margin-right: 10px; display: flex; flex-direction: 
+  column; justify-content: center; align-items: center; 
+  border-top-left-radius: 23%; border-top-right-radius: 23%;}
+.card14 { background: url('/tombstone.png');
+  width: 126px;height: 120px;background-color: #bcbbbb; border: 5px solid #ffffff;  
+  border-bottom: #000000; border-right: #000000;
+  border-radius: 3px;  margin-right: 10px; display: flex; flex-direction: 
+  column; justify-content: center; align-items: center; 
+  border-top-left-radius: 23%; border-top-right-radius: 23%;}
+.card15 { background: url('/tombstone.png');
+  width: 126px;height: 120px;background-color: #bcbbbb; border: 5px solid #ffffff;  
+  border-bottom: #000000; border-right: #000000;
+  border-radius: 3px;  margin-right: 10px; display: flex; flex-direction: 
+  column; justify-content: center; align-items: center; 
+  border-top-left-radius: 23%; border-top-right-radius: 23%;}
+
+.author1 {
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; margin-top: 2px; 
+  font-style: italic; color: #000000; margin-inline-start: 9px; margin-inline-end: 7px;}
+.author2 {
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; margin-top: 2px;
-  font-style: italic; color: black; margin-inline-start: 9px; margin-inline-end: 7px;
-}
-.card .suit {
-  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-  font-style: italic; color: #5645aa; font-size: 14px;
-}
-.card .suit1 {
-  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-style: italic; color: black; margin-inline-start: 9px; margin-inline-end: 7px;}
+.author3 {
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; margin-top: 2px;
+  font-style: italic; color: #000000; margin-inline-start: 9px; margin-inline-end: 7px;}
+.author4 {
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; margin-top: 2px;
+  font-style: italic; color: #000000; margin-inline-start: 9px; margin-inline-end: 7px;}
+.author11 {
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; margin-top: 2px;
+  font-style: italic; color: #000000; margin-inline-start: 9px; margin-inline-end: 7px;}
+.author12 {
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; margin-top: 2px;
+  font-style: italic; color: #000000; margin-inline-start: 9px; margin-inline-end: 7px;}
+.author13 {
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; margin-top: 2px;
+  font-style: italic; color: #000000; margin-inline-start: 9px; margin-inline-end: 7px;}
+.author14 {
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; margin-top: 2px;
+  font-style: italic; color: #000000; margin-inline-start: 9px; margin-inline-end: 7px;}
+.author15 {
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; margin-top: 2px;
+  font-style: italic; color: #000000; margin-inline-start: 9px; margin-inline-end: 7px;}
+
+.power1 {
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; margin-bottom: 1px; text-align: center;
+  color: rgb(230, 89, 89);}
+.power2 {
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; margin-bottom: 1px; text-align: center;
+  color: rgb(230, 89, 89);}
+.power3 {
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; margin-bottom: 1px; text-align: center;
+  color: rgb(230, 89, 89);}
+.power4 {
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; margin-bottom: 1px; text-align: center;
+  color: rgb(230, 89, 89);}
+.power11 {
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; margin-bottom: 1px; text-align: center;
+  color: rgb(230, 89, 89);}
+.power12 {
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; margin-bottom: 1px; text-align: center;
+  color: rgb(230, 89, 89);}
+.power13 {
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; margin-bottom: 1px; text-align: center;
+  color: rgb(230, 89, 89);}
+.power14 {
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; margin-bottom: 1px; text-align: center;
+  color: rgb(230, 89, 89);}
+.power15 {
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; margin-bottom: 1px; text-align: center;
+  color: rgb(230, 89, 89);}
+
+.suit1 {
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; text-align: center;
   font-style: italic; font-size: 14px; margin-top: -7px; text-shadow: 1px 1px 1px rgb(0, 0, 0); }
-  .card .suit2 {
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    font-style: italic; font-size: 14px; margin-top: -7px; text-shadow: 1px 1px 1px rgb(0, 0, 0); }
-    .card .suit3 {
-      font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-      font-style: italic; font-size: 14px; margin-top: -7px; text-shadow: 1px 1px 1px rgb(0, 0, 0); }
-      .card .suit4 {
-        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-        font-style: italic; font-size: 14px; margin-top: -7px; text-shadow: 1px 1px 1px rgb(0, 0, 0); }
-        .card .suit11 {
-          font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-          font-style: italic; font-size: 14px; margin-top: -7px; text-shadow: 1px 1px 1px rgb(0, 0, 0); }
-          .card .suit12 {
-            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-            font-style: italic; font-size: 14px; margin-top: -7px; text-shadow: 1px 1px 1px rgb(0, 0, 0); }
-            .card .suit13 {
-              font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-              font-style: italic; font-size: 14px; margin-top: -7px; text-shadow: 1px 1px 1px rgb(0, 0, 0); }
-              .card .suit14 {
-                font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-                font-style: italic; font-size: 14px; margin-top: -7px; text-shadow: 1px 1px 1px rgb(0, 0, 0); }
-                .card .suit15 {
-                  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-                  font-style: italic; font-size: 14px; margin-top: -7px;  text-shadow: 1px 1px 1px rgb(0, 0, 0); }
-.card .power {
-  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; margin-bottom: 1px; 
-  color: rgb(230, 89, 89);
-}
+.suit2 {
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; text-align: center;
+  font-style: italic; font-size: 14px; margin-top: -7px; text-shadow: 1px 1px 1px rgb(0, 0, 0); }
+.suit3 {
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; text-align: center;
+  font-style: italic; font-size: 14px; margin-top: -7px; text-shadow: 1px 1px 1px rgb(0, 0, 0); }
+.suit4 {
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; text-align: center;
+  font-style: italic; font-size: 14px; margin-top: -7px; text-shadow: 1px 1px 1px rgb(0, 0, 0); }
+.suit11 {
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; text-align: center;
+  font-style: italic; font-size: 14px; margin-top: -7px; text-shadow: 1px 1px 1px rgb(0, 0, 0); }
+.suit12 {
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; text-align: center;
+  font-style: italic; font-size: 14px; margin-top: -7px; text-shadow: 1px 1px 1px rgb(0, 0, 0); }
+.suit13 {
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; text-align: center;
+  font-style: italic; font-size: 14px; margin-top: -7px; text-shadow: 1px 1px 1px rgb(0, 0, 0); }
+.suit14 {
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; text-align: center;
+  font-style: italic; font-size: 14px; margin-top: -7px; text-shadow: 1px 1px 1px rgb(0, 0, 0); }
+.suit15 {
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; text-align: center;
+  font-style: italic; font-size: 14px; margin-top: -7px;  text-shadow: 1px 1px 1px rgb(0, 0, 0); }
+
 .actions {
   display: flex;justify-content: center;align-items: center; margin-top: 10px;
 }
@@ -235,7 +329,7 @@ iframe {
     width: 126px;height: 120px; background-color: #bcbbbb; border: 5px solid #ffffff;      
     border-bottom: #000000; border-right: #000000; 
     margin-right: 10px; display: flex; flex-direction: column; 
-    justify-content: center; align-items: center; border-top: #bcbbbb;
+    justify-content: center; align-items: center; 
     border-top-left-radius: 23%; border-top-right-radius: 23%;   
   }
   .deathKiss{ width: 506px;  }
@@ -338,20 +432,78 @@ iframe {
     .player2-hand {      
       margin-top: 11px;    }
       .player1-chips { font-size: 11px;     }
-      .player2-chips { font-size: 11px;     }
-  .card {
+      .player2-chips { font-size: 11px;     } 
+
+  .card1 {
     width: 67px; height: 76px;
     border-top-left-radius: 23%; border-top-right-radius: 23%; }     
-  .card .author {
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    font-style: italic;color: black;font-size: 10px; margin-top: 5px; margin-inline-start: 7px; margin-inline-end: 7px;}
-  .card .suit {
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    font-style: italic; font-size: 9px; margin-top: -7px;  }
+  .card2 {  
+    width: 67px; height: 76px;
+    border-top-left-radius: 23%; border-top-right-radius: 23%; }
+  .card3 {
+    width: 67px; height: 76px;
+    border-top-left-radius: 23%; border-top-right-radius: 23%; }
+  .card4 {
+    width: 67px; height: 76px;
+    border-top-left-radius: 23%; border-top-right-radius: 23%; }
+  .card11 {
+    width: 67px; height: 76px;
+    border-top-left-radius: 23%; border-top-right-radius: 23%; margin-top: 2%; }
+  .card12 {
+    width: 67px; height: 76px;
+    border-top-left-radius: 23%; border-top-right-radius: 23%; margin-top: 2%;   }
+  .card13 {
+    width: 67px; height: 76px;
+    border-top-left-radius: 23%; border-top-right-radius: 23%; margin-top: 2%;   }
+  .card14 {
+    width: 67px; height: 76px;
+    border-top-left-radius: 23%; border-top-right-radius: 23%; margin-top: 2%;   }
+  .card15 {
+    width: 67px; height: 76px;
+    border-top-left-radius: 23%; border-top-right-radius: 23%; margin-top: 2%;   }
+    
+  .author1 {
+    font-size: 10px; margin-top: 5px; margin-inline-start: 7px; margin-inline-end: 7px;}
+  .author2 {
+    font-size: 10px; margin-top: 5px; margin-inline-start: 7px; margin-inline-end: 7px;}
+  .author3 {
+    font-size: 10px; margin-top: 5px; margin-inline-start: 7px; margin-inline-end: 7px;}
+  .author4 {
+    font-size: 10px; margin-top: 5px; margin-inline-start: 7px; margin-inline-end: 7px;}
+  .author11 {
+   font-size: 10px; margin-top: 5px; margin-inline-start: 7px; margin-inline-end: 7px;}
+  .author12 {
+    font-size: 10px; margin-top: 5px; margin-inline-start: 7px; margin-inline-end: 7px;}
+  .author13 {
+    font-size: 10px; margin-top: 5px; margin-inline-start: 7px; margin-inline-end: 7px;}
+  .author14 {
+    font-size: 10px; margin-top: 5px; margin-inline-start: 7px; margin-inline-end: 7px;}
+  .author15 {
+    font-size: 10px; margin-top: 5px; margin-inline-start: 7px; margin-inline-end: 7px;}
   
-  .card .power {
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    color: rgb(230, 89, 89); font-size: 10px; margin-top: -11px; margin-bottom: 4px; }
+  .suit1 {font-size: 9px; margin-top: -7px;  }
+  .suit2 {font-size: 9px; margin-top: -7px;  }
+  .suit3 {font-size: 9px; margin-top: -7px;  }
+  .suit4 {font-size: 9px; margin-top: -7px;  }
+  .suit11 {font-size: 9px; margin-top: -7px;  }
+  .suit12 {font-size: 9px; margin-top: -7px;  }
+  .suit13 {font-size: 9px; margin-top: -7px;  }
+  .suit14 {font-size: 9px; margin-top: -7px;  }
+  .suit15 {font-size: 9px; margin-top: -7px;  }
+      
+  .power1 {    font-size: 10px; margin-top: -11px; margin-bottom: 4px; }
+  .power2 {    font-size: 10px; margin-top: -11px; margin-bottom: 4px; }
+  .power3 {    font-size: 10px; margin-top: -11px; margin-bottom: 4px; }
+  .power4 {    font-size: 10px; margin-top: -11px; margin-bottom: 4px; }
+  .power11 {    font-size: 10px; margin-top: -11px; margin-bottom: 4px; }
+  .power12 {    font-size: 10px; margin-top: -11px; margin-bottom: 4px; }
+  .power13 {    font-size: 10px; margin-top: -11px; margin-bottom: 4px; }
+  .power14 {    font-size: 10px; margin-top: -11px; margin-bottom: 4px; }
+  .power15 {    font-size: 10px; margin-top: -11px; margin-bottom: 4px; }
+
+  .cardFaceDown { width: 62px; height: 76px; }
+
+    
     .actions { margin-top: -11px;   }
   .btn-fold,.btn-check,.btn-raise,.btn-call {
     padding: 4px;font-size: 11px;font-weight: bold;
@@ -364,34 +516,7 @@ iframe {
     .risk{ font-size: 11px;   }
   .riskValue {    
     margin-top: 0%; font-size: 13px;  }
-    .card .suit1 {
-      font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-      font-style: italic; font-size: 9px; margin-top: -7px; text-shadow: 1px 1px 1px rgb(0, 0, 0); }
-      .card .suit2 {
-        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-        font-style: italic; font-size: 9px; margin-top: -7px; text-shadow: 1px 1px 1px rgb(0, 0, 0); }
-        .card .suit3 {
-          font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-          font-style: italic; font-size: 9px; margin-top: -7px;  text-shadow: 1px 1px 1px rgb(0, 0, 0); }
-          .card .suit4 {
-            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-            font-style: italic; font-size: 9px; margin-top: -7px;  text-shadow: 1px 1px 1px rgb(0, 0, 0); }
-            .card .suit11 {
-              font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-              font-style: italic; font-size: 9px; margin-top: -7px; text-shadow: 1px 1px 1px rgb(0, 0, 0); }
-              .card .suit12 {
-                font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-                font-style: italic; font-size: 9px; margin-top: -7px;  text-shadow: 1px 1px 1px rgb(0, 0, 0); }
-                .card .suit13 {
-                  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-                  font-style: italic; font-size: 9px; margin-top: -7px; text-shadow: 1px 1px 1px rgb(0, 0, 0); }
-                  .card .suit14 {
-                    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-                    font-style: italic; font-size: 9px; margin-top: -7px; text-shadow: 1px 1px 1px rgb(0, 0, 0); }
-                    .card .suit15 {
-                      font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-                      font-style: italic; font-size: 9px; margin-top: -7px;  text-shadow: 1px 1px 1px rgb(0, 0, 0); }
-                      .cardFaceDown { width: 62px; height: 76px; }
+                    
   .deathKiss{ width: 320px; }
   .deathDancing{  /* element width full  */  width: 100%;  }   
 
@@ -447,14 +572,14 @@ iframe {
       }
     .player-section-2{ padding-top: 60%; padding-bottom: 4%;}
   .community-cards {
-    display: flex;flex-direction: column;  margin-top:1px; margin-bottom: -16px;
+    display: flex;flex-direction: column;  margin-top:11px; margin-bottom: -16px;
   }
-   .card {
-    width: 67px; height: 70px;
-    border-top-left-radius: 23%; border-top-right-radius: 23%; margin-top:3px;}    
     .btn-fold,.btn-check,.btn-raise,.btn-call {
       padding: 0px;font-size: 11px;font-weight: bold;
       margin-right: 2px;border-radius: 23%;  }
+
+
+
       .welcomeDeath{/* element width full  */   width: 100%; /*vertically  centralized*/ 
         position: absolute; top: 15%; transform: translateY(-50%); }
         .welcomeDeathAdd1{/* element width full  */   width: 100%; /*vertically  centralized*/ 

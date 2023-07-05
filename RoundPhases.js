@@ -424,7 +424,7 @@ function compareTheHands(){
     Variables.fold = 0; Variables.call = 0; Variables.check = 0;  Variables.raise = 0;    
     Variables.risk = 67100000;
     Variables.years = 300000;
-    Variables.player1.chips = 8000000000; Variables.player2.chips = 107000000000;   
+    Variables.player1.chips = 8000000000; Variables.player2.chips = 100000000000;   
     // Reset DOM elements
     Variables.infoYears.innerHTML = Variables.years.toLocaleString('en-US');
     Variables.infoRisk.innerHTML = Variables.risk.toLocaleString('en-US');

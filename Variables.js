@@ -11,6 +11,11 @@ Período: 2023/1*/
                                  PHILOSOPHIC_POKER 
       */ 
 
+  // random power to Elysium card from -2 to 13                                
+  function ElysiumPower() {
+    return Math.floor(Math.random() * 16) - 2;
+  }
+
 const originalDeck = [
   { power: -2, author: 'Thomas Ligotti', suit: 'suicide' }, { power: -2, author: 'Thomas Ligotti', suit: 'contemplation' }, { power: -2, author: 'Thomas Ligotti', suit: 'domination' }, { power: -2, author: 'Thomas Ligotti', suit: 'revolution' },
   { power: -1, author: 'Schopenhauer', suit: 'suicide' }, { power: -1, author: 'Schopenhauer', suit: 'contemplation' }, { power: -1, author: 'Schopenhauer', suit: 'domination' }, { power: -1, author: 'Schopenhauer', suit: 'revolution' },
@@ -26,8 +31,8 @@ const originalDeck = [
   { power: 10, author: 'Yuval Harari', suit: 'suicide' }, { power: 10, author: 'Yuval Harari', suit: 'contemplation' }, { power: 10, author: 'Yuval Harari', suit: 'domination' }, { power: 10, author: 'Yuval Harari', suit: 'revolution' },
   { power: 11, author: 'Thomas Metzinger', suit: 'suicide' }, { power: 11, author: 'Thomas Metzinger', suit: 'contemplation' }, { power: 11, author: 'Thomas Metzinger', suit: 'domination' }, { power: 11, author: 'Thomas Metzinger', suit: 'revolution' },
   { power: 12, author: 'Patricia Churchland', suit: 'suicide' }, { power: 12, author: 'Patricia Churchland', suit: 'suicide' }, { power: 12, author: 'Patricia Churchland', suit: 'contemplation' }, { power: 12, author: 'Patricia Churchland', suit: 'domination' },
-  { power: 13, author: 'Robert Sapolsky', suit: 'suicide' }, { power: 13, author: 'Robert Sapolsky', suit: 'contemplation' }, { power: 13, author: 'Robert Sapolsky', suit: 'domination' }, { power: 13, author: 'Robert Sapolsky', suit: 'revolution' }  
-
+  { power: 13, author: 'Robert Sapolsky', suit: 'suicide' }, { power: 13, author: 'Robert Sapolsky', suit: 'contemplation' }, { power: 13, author: 'Robert Sapolsky', suit: 'domination' }, { power: 13, author: 'Robert Sapolsky', suit: 'revolution' }, 
+  { power: ElysiumPower(), suit: 'Elysium' }, { power: ElysiumPower(), suit: 'Elysium' }, { power: ElysiumPower(), suit: 'Elysium' }, { power: ElysiumPower(), suit: 'Elysium' }, { power: ElysiumPower(), suit: 'Elysium' }
 ];
 
 const allCommunityCardsHTML = document.querySelector(".community-cards");
@@ -130,5 +135,6 @@ export const Variables = {
   player2HandHTML: player2HandHTML,
   endHTML: endHTML,
   checkBeforeComparing: checkBeforeComparing,
-  checkBeforeNextRound: checkBeforeNextRound
+  checkBeforeNextRound: checkBeforeNextRound,
+  ElysiumPower: ElysiumPower  
 }
