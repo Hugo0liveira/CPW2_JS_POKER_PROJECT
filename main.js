@@ -29,10 +29,10 @@ function functionStart(){
   setTimeout( await0, 1000);
   function await0() {        
 
-    //welcomeDeath();
+    welcomeDeath();
     setTimeout( awaitWelcome, 2100);
     function awaitWelcome() {                 
-    //  showAlertMessage1(Variables.messageCohle1);            
+      showAlertMessage1(Variables.messageCohle1);            
 
       Variables.preflop = 1; 
       PhasePreFlop();    
