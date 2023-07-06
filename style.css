@@ -1,3 +1,6 @@
+html {
+  scroll-behavior: smooth;
+}
 
 .end{
   padding-top: 4%;
@@ -153,25 +156,58 @@ iframe {
   border-bottom: #000000; border-right: #000000;
   border-radius: 3px;  margin-right: 10px; display: flex; flex-direction: 
   column; justify-content: center; align-items: center; 
-  border-top-left-radius: 23%; border-top-right-radius: 23%;}
+  border-top-left-radius: 23%; border-top-right-radius: 23%;
+}
 .card2 { background: url('/tombstone.png');
   width: 126px;height: 120px;background-color: #bcbbbb; border: 5px solid #ffffff;  
   border-bottom: #000000; border-right: #000000;
   border-radius: 3px;  margin-right: 10px; display: flex; flex-direction: 
   column; justify-content: center; align-items: center; 
-  border-top-left-radius: 23%; border-top-right-radius: 23%;}
-.card3 { background: url('/tombstone.png');
+  border-top-left-radius: 23%; border-top-right-radius: 23%;  
+}
+
+
+  .card3FaceDown { background: url('/favicon.ico'); background-position: 92%; background-size: 100%; background-repeat: no-repeat; 
+    width: 126px;height: 120px; background-color: #6a62625e;   border-top: #000000; 
+    margin-right: 10px; display: flex; flex-direction: column; 
+    justify-content: center; align-items: center; 
+    border-top-left-radius: 23%; border-top-right-radius: 23%;   
+
+    transition: transform 4.0s;    
+  }
+  .card3FaceDown.flipped {
+    transition: transform 4.0s;
+    transform: rotateY(95deg);
+
+    /*background: url('/tombstone.png');*/
+    width: 126px;height: 120px;background-color: #bcbbbb; border: 5px solid #ffffff;  
+    border-bottom: #000000; border-right: #000000;
+    border-radius: 3px;  margin-right: 10px; display: flex; flex-direction: 
+    column; justify-content: center; align-items: center; 
+    border-top-left-radius: 23%; border-top-right-radius: 23%;        
+  }
+  
+
+  .card4FaceDown { background: url('/favicon.ico'); background-position: 92%; background-size: 100%; background-repeat: no-repeat; 
+    width: 126px;height: 120px; background-color: #6a62625e;   border-top: #000000; 
+    margin-right: 10px; display: flex; flex-direction: column; 
+    justify-content: center; align-items: center; 
+    border-top-left-radius: 23%; border-top-right-radius: 23%;   
+
+    transition: transform 4.0s;    
+  }
+  .card4FaceDown.flipped {
+    transform: rotateY(95deg);
+    transition: transform 4.0s;
+
+    /*background: url('/tombstone.png');*/
   width: 126px;height: 120px;background-color: #bcbbbb; border: 5px solid #ffffff;  
   border-bottom: #000000; border-right: #000000;
   border-radius: 3px;  margin-right: 10px; display: flex; flex-direction: 
   column; justify-content: center; align-items: center; 
-  border-top-left-radius: 23%; border-top-right-radius: 23%;}
-.card4 { background: url('/tombstone.png');
-  width: 126px;height: 120px;background-color: #bcbbbb; border: 5px solid #ffffff;  
-  border-bottom: #000000; border-right: #000000;
-  border-radius: 3px;  margin-right: 10px; display: flex; flex-direction: 
-  column; justify-content: center; align-items: center; 
-  border-top-left-radius: 23%; border-top-right-radius: 23%;}
+  border-top-left-radius: 23%; border-top-right-radius: 23%;      
+  }
+
 .card11 { background: url('/tombstone.png');
   width: 126px;height: 120px;background-color: #bcbbbb; border: 5px solid #ffffff;  
   border-bottom: #000000; border-right: #000000;
@@ -324,12 +360,10 @@ iframe {
 .active-player {
   background-color: #eee; }
 
-  .cardFaceDown { background: url('/favicon.ico'); background-position: 92%; background-size: 100%; background-repeat: no-repeat; 
-    width: 126px;height: 120px; background-color: #6a62625e;   border-top: #000000; 
-    margin-right: 10px; display: flex; flex-direction: column; 
-    justify-content: center; align-items: center; 
-    border-top-left-radius: 23%; border-top-right-radius: 23%;   
-  }
+   
+
+
+
   .deathKiss{ width: 506px;  }
   .deathDancing{/* element width full  */ width: 100%; 
     /*vertically  centralized*/ 
@@ -419,12 +453,20 @@ iframe {
   .card2 {  
     width: 67px; height: 76px;
     border-top-left-radius: 23%; border-top-right-radius: 23%; }
-  .card3 {
+
+    .card3FaceDown{
+      width: 67px; height: 76px;
+      border-top-left-radius: 23%; border-top-right-radius: 23%; }
+.card3FaceDown.flipped{
+  width: 67px; height: 76px;
+  border-top-left-radius: 23%; border-top-right-radius: 23%; }
+  .card4FaceDown{
     width: 67px; height: 76px;
     border-top-left-radius: 23%; border-top-right-radius: 23%; }
-  .card4 {
-    width: 67px; height: 76px;
-    border-top-left-radius: 23%; border-top-right-radius: 23%; }
+    .card4FaceDown.flipped{
+      width: 67px; height: 76px;
+      border-top-left-radius: 23%; border-top-right-radius: 23%; }  
+
   .card11 {
     width: 67px; height: 76px;
     border-top-left-radius: 23%; border-top-right-radius: 23%; margin-top: 2%; }

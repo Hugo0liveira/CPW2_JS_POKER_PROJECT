@@ -1,8 +1,9 @@
 import { Variables } from "./Variables.js"
-import { showAlertMessage1, showAlertMessage2, showAlertMessage3, showAlertMessage4, showAlertMessage5 } from "./Messages.js"
+import { showAlertMessage1 } from "./Messages.js"
 import { PhasePreFlop, welcomeDeath } from "./RoundPhases.js"
 
 function functionStart(){   
+  document.body.style.backgroundColor = "black";
 
   // avoid ugly HTML before loading 
   const actions = document.querySelector('.actions');

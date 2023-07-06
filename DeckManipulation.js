@@ -510,59 +510,82 @@ function shuffleDeck() {
       changeColorOfSuit(card2, '.suit2');
 
       // player 2 cards face down      
-      const cardFaceDown1 = document.createElement("div");
-      cardFaceDown1.classList.add("card");
-      cardFaceDown1.innerHTML = `
-        <div class="cardFaceDown"> </div>
+      const card3FaceDown = document.createElement("div");
+      card3FaceDown.classList.add("card");
+      card3FaceDown.innerHTML = `
+        <div class="card3FaceDown"> </div>
       `;
-      Variables.player2HandHTML.appendChild(cardFaceDown1);     
-      const cardFaceDown2 = document.createElement("div");
-      cardFaceDown2.classList.add("card");
-      cardFaceDown2.innerHTML = `
-        <div class="cardFaceDown"> </div>
+      Variables.player2HandHTML.appendChild(card3FaceDown);     
+
+      const card4FaceDown = document.createElement("div");
+      card4FaceDown.classList.add("card");
+      card4FaceDown.innerHTML = `
+        <div class="card4FaceDown"> </div>
       `;
-      Variables.player2HandHTML.appendChild(cardFaceDown2);     
+      Variables.player2HandHTML.appendChild(card4FaceDown);     
       return Variables.deck;
     }  
 
 
   function distributeCards2() {              
      // clean the player 2 hand
-     Variables.player2.hand = [];
-     Variables.player2HandHTML.innerHTML = ""; 
+     //Variables.player2.hand = [];
+     //Variables.player2HandHTML.innerHTML = ""; 
+     const card3FaceDown = document.querySelector('.card3FaceDown');    
+    card3FaceDown.classList.toggle('flipped');
 
-    // to player 2
-    const [ card3 ] = spliceRandomCardFromDeck();
-    const [ card4 ] =  spliceRandomCardFromDeck();
-    console.log('card3:',card3); console.log('card4:',card4);
-      Variables.player2.hand = [card3, card4];          
-      const cardE3 = document.createElement("div");
-      cardE3.classList.add("card3");
-      cardE3.innerHTML = `
-      <div class="Elysium3">
-        <div class="author3">${card3.author}</div> <BR>
-        <div class="suit3">${card3.suit}</div> <BR>
-        <div class="power3">${card3.power}</div>
-      </div>
-      `;
-      Variables.player2HandHTML.appendChild(cardE3);
-      cssElysium(card3, 3);
-      cssArtificial(card3, 3);
-      changeColorOfSuit(card3, '.suit3');      
+    const card4FaceDown = document.querySelector('.card4FaceDown');    
+    card4FaceDown.classList.toggle('flipped');    
+    
+    setTimeout(function(){
+        // to player 2
+        const [ card3 ] = spliceRandomCardFromDeck();
+        const [ card4 ] =  spliceRandomCardFromDeck();
+        console.log('card3:',card3); console.log('card4:',card4);
+          Variables.player2.hand = [card3, card4];          
+          const cardE3 = document.querySelector('.card3FaceDown');      
+          cardE3.innerHTML = `
+          <div class="Elysium3">
+            <div class="author3">${card3.author}</div> <BR>
+            <div class="suit3">${card3.suit}</div> <BR>
+            <div class="power3">${card3.power}</div>
+          </div>
+          `;
+          Variables.player2HandHTML.appendChild(cardE3);
+          // flip the card again
+          cardE3.classList.add("card3");
+          cardE3.classList.toggle('flipped');
+          cardE3.style.backgroundImage = `url('tombstone.png')`;
+          // start with the card on 90 degrees rotated and then goes to 180 
 
-      const cardE4 = document.createElement("div");
-      cardE4.classList.add("card4");
-      cardE4.innerHTML = `
-      <div class="Elysium4">
-        <div class="author4">${card4.author}</div> <BR>
-        <div class="suit4">${card4.suit}</div> <BR>
-        <div class="power4">${card4.power}</div>
-      </div>
-      `;
-      Variables.player2HandHTML.appendChild(cardE4);
-      cssElysium(card4, 4);
-      cssArtificial(card4, 4);
-      changeColorOfSuit(card4, '.suit4');
+
+          cssElysium(card3, 3);
+          cssArtificial(card3, 3);
+          changeColorOfSuit(card3, '.suit3');      
+
+          const cardE4 = document.querySelector('.card4FaceDown');          
+          cardE4.innerHTML = `
+          <div class="Elysium4">
+            <div class="author4">${card4.author}</div> <BR>
+            <div class="suit4">${card4.suit}</div> <BR>
+            <div class="power4">${card4.power}</div>
+          </div>
+          `;          
+          Variables.player2HandHTML.appendChild(cardE4);
+          // flip the card again
+          cardE4.classList.add("card4");
+          cardE4.classList.toggle('flipped');
+          cardE4.style.backgroundImage = `url('tombstone.png')`;
+          // start with the card on 90 degrees rotated and then goes to 180 
+
+
+
+
+
+          cssElysium(card4, 4);
+          cssArtificial(card4, 4);
+          changeColorOfSuit(card4, '.suit4');
+    }, 3000);
 
     return Variables.deck;
   }  

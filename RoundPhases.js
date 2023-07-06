@@ -280,7 +280,7 @@ function checkConditionsRiver() {
   }     
 
 // PHASES OF THE GAME
-function PhasePreFlop(){   
+function PhasePreFlop(){     
   document.body.style.backgroundImage = "url('Calverton-National-Cemetery.jpg')";
   // background no-repeat;
   document.body.style.backgroundRepeat = "no-repeat";  
