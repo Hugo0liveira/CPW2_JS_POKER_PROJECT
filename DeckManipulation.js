@@ -12,6 +12,15 @@ function shuffleDeck() {
     }
     return Variables.deck;
   }
+
+  // return the splice random card from deck 
+  function spliceRandomCardFromDeck() {
+    // grab a random index before current element. Math.random() * (i + 1) will generate a random number between 0 and i.
+    const j = Math.floor(Math.random() * (Variables.deck.length));
+    // splice the current card with the random card.
+    const card = Variables.deck.splice(j, 1);
+    return card;
+  }
   
   function cleanAllCommunityCards() {
     // clean the community cards element
@@ -63,7 +72,7 @@ function shuffleDeck() {
         s1.style.textAlign = "center";                       
         const p1 = document.querySelector('.power1'); 
         p1.style.textAlign = "center";       
-        p1.style.color = 'rgb(94, 35, 35)';
+        //p1.style.color = 'rgb(94, 35, 35)';
         // show the changed power of the card on the HTML                
         p1.innerHTML = card.power;
         const img = document.createElement('div');
@@ -74,6 +83,7 @@ function shuffleDeck() {
         </div>
         `;    
         card1HTML.style.backgroundImage = `url('Elysium.png')`;    
+        card1HTML.style.border = 'none';
       }
 
       if(num == 2){ 
@@ -88,7 +98,7 @@ function shuffleDeck() {
         s1.style.textAlign = "center";                
         const p1 = document.querySelector('.power2'); 
         p1.style.textAlign = "center";               
-        p1.style.color = 'rgb(94, 35, 35)';
+        //p1.style.color = 'rgb(94, 35, 35)';
         // show the changed power of the card on the HTML                
         p1.innerHTML = card.power;
         const img = document.createElement('div');
@@ -99,6 +109,7 @@ function shuffleDeck() {
         </div>
         `;    
         card1HTML.style.backgroundImage = `url('Elysium.png')`;   
+        card1HTML.style.border = 'none';
       }
       
       if(num == 3){ 
@@ -113,7 +124,7 @@ function shuffleDeck() {
         s1.style.textAlign = "center";               
         const p1 = document.querySelector('.power3'); 
         p1.style.textAlign = "center";       
-        p1.style.color = 'rgb(94, 35, 35)';
+        //p1.style.color = 'rgb(94, 35, 35)';
         // show the changed power of the card on the HTML                
         p1.innerHTML = card.power;
         const img = document.createElement('div');
@@ -124,6 +135,7 @@ function shuffleDeck() {
         </div>
         `;    
         card1HTML.style.backgroundImage = `url('Elysium.png')`;   
+        card1HTML.style.border = 'none';
       }
 
       if(num == 4){ 
@@ -138,7 +150,7 @@ function shuffleDeck() {
         s1.style.textAlign = "center";               
         const p1 = document.querySelector('.power4'); 
         p1.style.textAlign = "center";       
-        p1.style.color = 'rgb(94, 35, 35)';
+       // p1.style.color = 'rgb(94, 35, 35)';
         // show the changed power of the card on the HTML        
         p1.innerHTML = card.power;
         const img = document.createElement('div');
@@ -149,6 +161,7 @@ function shuffleDeck() {
         </div>
         `;    
         card1HTML.style.backgroundImage = `url('Elysium.png')`;   
+        card1HTML.style.border = 'none';
       }
 
       if(num == 11){ 
@@ -163,7 +176,7 @@ function shuffleDeck() {
         s1.style.textAlign = "center";               
         const p1 = document.querySelector('.power11'); 
         p1.style.textAlign = "center";       
-        p1.style.color = 'rgb(94, 35, 35)';
+       // p1.style.color = 'rgb(94, 35, 35)';
         // show the changed power of the card on the HTML        
         p1.innerHTML = card.power;
         const img = document.createElement('div');
@@ -174,6 +187,7 @@ function shuffleDeck() {
         </div>
         `;    
         card1HTML.style.backgroundImage = `url('Elysium.png')`;   
+        card1HTML.style.border = 'none';
       }
 
       
@@ -189,7 +203,7 @@ function shuffleDeck() {
         s1.style.textAlign = "center";               
         const p1 = document.querySelector('.power12'); 
         p1.style.textAlign = "center";       
-        p1.style.color = 'rgb(94, 35, 35)';
+      //  p1.style.color = 'rgb(94, 35, 35)';
         // show the changed power of the card on the HTML        
         p1.innerHTML = card.power;
         const img = document.createElement('div');
@@ -200,6 +214,7 @@ function shuffleDeck() {
         </div>
         `;    
         card1HTML.style.backgroundImage = `url('Elysium.png')`;   
+        card1HTML.style.border = 'none';
       }
 
       
@@ -215,7 +230,7 @@ function shuffleDeck() {
         s1.style.textAlign = "center";               
         const p1 = document.querySelector('.power13'); 
         p1.style.textAlign = "center";       
-        p1.style.color = 'rgb(94, 35, 35)';
+      //  p1.style.color = 'rgb(94, 35, 35)';
         // show the changed power of the card on the HTML        
         p1.innerHTML = card.power;
         const img = document.createElement('div');
@@ -226,6 +241,7 @@ function shuffleDeck() {
         </div>
         `;    
         card1HTML.style.backgroundImage = `url('Elysium.png')`;   
+        card1HTML.style.border = 'none';
       }
       
       if(num == 14){ 
@@ -240,7 +256,7 @@ function shuffleDeck() {
         s1.style.textAlign = "center";               
         const p1 = document.querySelector('.power14'); 
         p1.style.textAlign = "center";       
-        p1.style.color = 'rgb(94, 35, 35)';
+      //  p1.style.color = 'rgb(94, 35, 35)';
         // show the changed power of the card on the HTML        
         p1.innerHTML = card.power;
         const img = document.createElement('div');
@@ -251,6 +267,8 @@ function shuffleDeck() {
         </div>
         `;    
         card1HTML.style.backgroundImage = `url('Elysium.png')`;   
+        card1HTML.style.border = 'none';
+        card1HTML.style.border = 'none';
       }
 
       
@@ -266,7 +284,7 @@ function shuffleDeck() {
         s1.style.textAlign = "center";               
         const p1 = document.querySelector('.power15'); 
         p1.style.textAlign = "center";       
-        p1.style.color = 'rgb(94, 35, 35)';
+      //  p1.style.color = 'rgb(94, 35, 35)';
         // show the changed power of the card on the HTML        
         p1.innerHTML = card.power;
         const img = document.createElement('div');
@@ -276,18 +294,187 @@ function shuffleDeck() {
           <img src="Elysium.png">
         </div>
         `;    
-        card1HTML.style.backgroundImage = `url('Elysium.png')`;   
+        card1HTML.style.backgroundImage = `url('Elysium.png')`;           
+        card1HTML.style.border = 'none';
+        card1HTML.style.border = 'none';
       }
       
     }    
   }
 
-  //   Distribute 2 cards to each player 
+  // function cssArtificial 
+  function cssArtificial(card, num){
+    if(card.author == 'Artificial'){
+      if(num == 1){
+        card.suit = Variables.ArtificialSuit();
+        const s1 = document.querySelector('.suit1'); 
+        s1.style.display = 'block';
+        s1.style.color = "opacity: 0.6";
+        s1.innerHTML = card.suit;
+        const a1 = document.querySelector('.author1'); 
+        a1.style.display = 'none';  
+        const p1 = document.querySelector('.power1'); 
+        p1.style.display = 'none';             
+        const cardHTML = document.querySelector('.card1');
+        cardHTML.style.backgroundImage = `url('Artificial.jpg')`;
+        // change the background image of the card to fit the size of the card
+        cardHTML.style.backgroundSize = 'cover';
+        cardHTML.style.backgroundPosition = 'center';      
+        // no card boder
+        cardHTML.style.border = 'none';
+      }
+      if(num == 2){
+        card.suit = Variables.ArtificialSuit();
+        const s1 = document.querySelector('.suit2');
+        s1.style.display = 'block';
+        s1.style.color = "opacity: 0.6";
+        s1.innerHTML = card.suit;
+        const a1 = document.querySelector('.author2'); 
+        a1.style.display = 'none';  
+        const p1 = document.querySelector('.power2'); 
+        p1.style.display = 'none';             
+        const cardHTML = document.querySelector('.card2');
+        cardHTML.style.backgroundImage = `url('Artificial.jpg')`;
+        // change the background image of the card to fit the size of the card
+        cardHTML.style.backgroundSize = 'cover';
+        cardHTML.style.backgroundPosition = 'center';      
+        // no card boder
+        cardHTML.style.border = 'none';
+      }
+      if(num == 3){
+        card.suit = Variables.ArtificialSuit();
+        const s1 = document.querySelector('.suit3');
+        s1.style.display = 'block';
+        s1.style.color = "opacity: 0.6";
+        s1.innerHTML = card.suit;
+        const a1 = document.querySelector('.author3'); 
+        a1.style.display = 'none';  
+        const p1 = document.querySelector('.power3'); 
+        p1.style.display = 'none';             
+        const cardHTML = document.querySelector('.card3');
+        cardHTML.style.backgroundImage = `url('Artificial.jpg')`;
+        // change the background image of the card to fit the size of the card
+        cardHTML.style.backgroundSize = 'cover';
+        cardHTML.style.backgroundPosition = 'center';      
+        // no card boder
+        cardHTML.style.border = 'none';
+      }
+      if(num == 4){
+        card.suit = Variables.ArtificialSuit();
+        const s1 = document.querySelector('.suit4');
+        s1.style.display = 'block';
+        s1.style.color = "opacity: 0.6";
+        s1.innerHTML = card.suit;
+        const a1 = document.querySelector('.author4'); 
+        a1.style.display = 'none';  
+        const p1 = document.querySelector('.power4'); 
+        p1.style.display = 'none';             
+        const cardHTML = document.querySelector('.card4');
+        cardHTML.style.backgroundImage = `url('Artificial.jpg')`;
+        // change the background image of the card to fit the size of the card
+        cardHTML.style.backgroundSize = 'cover';
+        cardHTML.style.backgroundPosition = 'center';      
+        // no card boder
+        cardHTML.style.border = 'none';
+      }
+      if(num == 11){
+        card.suit = Variables.ArtificialSuit();
+        const s1 = document.querySelector('.suit11');
+        s1.style.display = 'block';
+        s1.style.color = "opacity: 0.6";
+        s1.innerHTML = card.suit;
+        const a1 = document.querySelector('.author11'); 
+        a1.style.display = 'none';  
+        const p1 = document.querySelector('.power11'); 
+        p1.style.display = 'none';             
+        const cardHTML = document.querySelector('.card11');
+        cardHTML.style.backgroundImage = `url('Artificial.jpg')`;
+        // change the background image of the card to fit the size of the card
+        cardHTML.style.backgroundSize = 'cover';
+        cardHTML.style.backgroundPosition = 'center';      
+        // no card boder
+        cardHTML.style.border = 'none';
+      }
+      if(num == 12){
+        card.suit = Variables.ArtificialSuit();
+        const s1 = document.querySelector('.suit12');
+        s1.style.display = 'block';
+        s1.style.color = "opacity: 0.6";
+        s1.innerHTML = card.suit;
+        const a1 = document.querySelector('.author12'); 
+        a1.style.display = 'none';  
+        const p1 = document.querySelector('.power12'); 
+        p1.style.display = 'none';             
+        const cardHTML = document.querySelector('.card12');
+        cardHTML.style.backgroundImage = `url('Artificial.jpg')`;
+        // change the background image of the card to fit the size of the card
+        cardHTML.style.backgroundSize = 'cover';
+        cardHTML.style.backgroundPosition = 'center';      
+        // no card boder
+        cardHTML.style.border = 'none';
+      }
+      if(num == 13){
+        card.suit = Variables.ArtificialSuit();
+        const s1 = document.querySelector('.suit13');
+        s1.style.display = 'block';
+        s1.style.color = "opacity: 0.6";
+        s1.innerHTML = card.suit;
+        const a1 = document.querySelector('.author13'); 
+        a1.style.display = 'none';  
+        const p1 = document.querySelector('.power13'); 
+        p1.style.display = 'none';             
+        const cardHTML = document.querySelector('.card13');
+        cardHTML.style.backgroundImage = `url('Artificial.jpg')`;
+        // change the background image of the card to fit the size of the card
+        cardHTML.style.backgroundSize = 'cover';
+        cardHTML.style.backgroundPosition = 'center';      
+        // no card boder
+        cardHTML.style.border = 'none';
+      }
+      if(num == 14){
+        card.suit = Variables.ArtificialSuit();
+        const s1 = document.querySelector('.suit14');
+        s1.style.display = 'block';
+        s1.style.color = "opacity: 0.6";
+        s1.innerHTML = card.suit;
+        const a1 = document.querySelector('.author14'); 
+        a1.style.display = 'none';  
+        const p1 = document.querySelector('.power14'); 
+        p1.style.display = 'none';             
+        const cardHTML = document.querySelector('.card14');
+        cardHTML.style.backgroundImage = `url('Artificial.jpg')`;
+        // change the background image of the card to fit the size of the card
+        cardHTML.style.backgroundSize = 'cover';
+        cardHTML.style.backgroundPosition = 'center';      
+        // no card boder
+        cardHTML.style.border = 'none';
+      }
+      if(num == 15){
+        card.suit = Variables.ArtificialSuit();
+        const s1 = document.querySelector('.suit15');
+        s1.style.display = 'block';
+        s1.style.color = "opacity: 0.6";
+        s1.innerHTML = card.suit;        
+        const a1 = document.querySelector('.author15'); 
+        a1.style.display = 'none';  
+        const p1 = document.querySelector('.power15'); 
+        p1.style.display = 'none';             
+        const cardHTML = document.querySelector('.card15');
+        cardHTML.style.backgroundImage = `url('Artificial.jpg')`;
+        // change the background image of the card to fit the size of the card
+        cardHTML.style.backgroundSize = 'cover';
+        cardHTML.style.backgroundPosition = 'center';      
+        // no card boder
+        cardHTML.style.border = 'none';
+      }
+    }
+  }
+   
  function distributeCards1() {     
   cleanAllCommunityCards();
   cleanHands();
-    const [ card1 ] = Variables.deck.splice(0, 1);
-    const [ card2 ] = Variables.deck.splice(0, 1);    
+    const [ card1 ] = spliceRandomCardFromDeck();
+    const [ card2 ] = spliceRandomCardFromDeck() 
     console.log('card1:',card1); console.log('card2:',card2); 
     // to player 1
     Variables.player1.hand = [card1, card2];        
@@ -303,8 +490,10 @@ function shuffleDeck() {
         </div>    
       `;            
       playerHandEl.appendChild(cardEl);      
+      cssElysium(card1, 1);   
+      cssArtificial(card1, 1);
       changeColorOfSuit(card1, '.suit1');
-      cssElysium(card1, 1);      
+         
 
     const cardE2 = document.createElement("div");  
       cardE2.classList.add("card2");
@@ -316,24 +505,21 @@ function shuffleDeck() {
       </div>
       `;
       playerHandEl.appendChild(cardE2);      
-      changeColorOfSuit(card2, '.suit2');
       cssElysium(card2, 2);
+      cssArtificial(card2, 2);
+      changeColorOfSuit(card2, '.suit2');
 
       // player 2 cards face down      
       const cardFaceDown1 = document.createElement("div");
       cardFaceDown1.classList.add("card");
       cardFaceDown1.innerHTML = `
-        <div class="cardFaceDown"> 
-        <img src="https://seeklogo.com/images/P/pearl-jam-do-the-evolution-music-video-logo-BEBC20E26C-seeklogo.com.png"  width="56" height="54" >
-        </div>
+        <div class="cardFaceDown"> </div>
       `;
       Variables.player2HandHTML.appendChild(cardFaceDown1);     
       const cardFaceDown2 = document.createElement("div");
       cardFaceDown2.classList.add("card");
       cardFaceDown2.innerHTML = `
-        <div class="cardFaceDown">
-        <img src="https://seeklogo.com/images/P/pearl-jam-do-the-evolution-music-video-logo-BEBC20E26C-seeklogo.com.png"  width="56" height="54" >
-        </div>
+        <div class="cardFaceDown"> </div>
       `;
       Variables.player2HandHTML.appendChild(cardFaceDown2);     
       return Variables.deck;
@@ -346,8 +532,8 @@ function shuffleDeck() {
      Variables.player2HandHTML.innerHTML = ""; 
 
     // to player 2
-    const [ card3 ] = Variables.deck.splice(0, 1);
-    const [ card4 ] = Variables.deck.splice(0, 1);
+    const [ card3 ] = spliceRandomCardFromDeck();
+    const [ card4 ] =  spliceRandomCardFromDeck();
     console.log('card3:',card3); console.log('card4:',card4);
       Variables.player2.hand = [card3, card4];          
       const cardE3 = document.createElement("div");
@@ -360,8 +546,9 @@ function shuffleDeck() {
       </div>
       `;
       Variables.player2HandHTML.appendChild(cardE3);
-      changeColorOfSuit(card3, '.suit3');      
       cssElysium(card3, 3);
+      cssArtificial(card3, 3);
+      changeColorOfSuit(card3, '.suit3');      
 
       const cardE4 = document.createElement("div");
       cardE4.classList.add("card4");
@@ -373,15 +560,16 @@ function shuffleDeck() {
       </div>
       `;
       Variables.player2HandHTML.appendChild(cardE4);
-      changeColorOfSuit(card4, '.suit4');
       cssElysium(card4, 4);
+      cssArtificial(card4, 4);
+      changeColorOfSuit(card4, '.suit4');
 
     return Variables.deck;
   }  
   
   // function to put one card at a time on the community cards
   function addCardOnCommunityCards1() {           
-      const [card11] = Variables.deck.splice(0,1);         
+      const [card11] = spliceRandomCardFromDeck();   
       console.log('card11:', card11);
       //const cardObject = JSON.parse(JSON.stringify(card));
       Variables.allCommunityCards = [...Variables.allCommunityCards, card11];   
@@ -395,14 +583,15 @@ function shuffleDeck() {
       </div>
       `;
        Variables.allCommunityCardsHTML.appendChild(cardEl);
-       changeColorOfSuit(card11, '.suit11');    
        cssElysium(card11, 11);
+        cssArtificial(card11, 11);
+       changeColorOfSuit(card11, '.suit11');    
 
       return Variables.deck;
   }
 
   function addCardOnCommunityCards2() {           
-    const [card12] = Variables.deck.splice(0,1);         
+    const [card12] = spliceRandomCardFromDeck();   
     console.log('card12:', card12);
     //const cardObject = JSON.parse(JSON.stringify(card));
     Variables.allCommunityCards = [...Variables.allCommunityCards, card12];   
@@ -416,14 +605,14 @@ function shuffleDeck() {
     </div>
     `;
      Variables.allCommunityCardsHTML.appendChild(cardEl);
-     changeColorOfSuit(card12, '.suit12');   
      cssElysium(card12, 12);
-
+      cssArtificial(card12, 12);
+     changeColorOfSuit(card12, '.suit12');   
     return Variables.deck;
 }
 
 function addCardOnCommunityCards3() {           
-  const [card13] = Variables.deck.splice(0,1);         
+  const [card13] = spliceRandomCardFromDeck(); 
   console.log('card13:', card13);
   Variables.allCommunityCards = [...Variables.allCommunityCards, card13];   
   const cardEl = document.createElement("div");
@@ -436,14 +625,15 @@ function addCardOnCommunityCards3() {
   </div>
   `;
    Variables.allCommunityCardsHTML.appendChild(cardEl);
-   changeColorOfSuit(card13, '.suit13');   
    cssElysium(card13, 13);
+    cssArtificial(card13, 13);
+   changeColorOfSuit(card13, '.suit13');   
 
   return Variables.deck;
 }
 
 function addCardOnCommunityCards4() {           
-  const [card14] = Variables.deck.splice(0,1);         
+  const [card14] = spliceRandomCardFromDeck();   
   console.log('card14:', card14);
   //const cardObject = JSON.parse(JSON.stringify(card));
   Variables.allCommunityCards = [...Variables.allCommunityCards, card14];   
@@ -457,14 +647,15 @@ function addCardOnCommunityCards4() {
   </div>
   `;
    Variables.allCommunityCardsHTML.appendChild(cardEl);
-   changeColorOfSuit(card14, '.suit14');   
    cssElysium(card14, 14);
+    cssArtificial(card14, 14);
+   changeColorOfSuit(card14, '.suit14');   
    
   return Variables.deck;
 }
 
 function addCardOnCommunityCards5() {           
-  const [card15] = Variables.deck.splice(0,1);         
+  const [card15] = spliceRandomCardFromDeck();     
   console.log('card15:', card15);
   //const cardObject = JSON.parse(JSON.stringify(card));
   Variables.allCommunityCards = [...Variables.allCommunityCards, card15];   
@@ -478,8 +669,9 @@ function addCardOnCommunityCards5() {
   </div>
   `;
    Variables.allCommunityCardsHTML.appendChild(cardEl);
-   changeColorOfSuit(card15, '.suit15');   
    cssElysium(card15, 15);
+    cssArtificial(card15, 15);
+   changeColorOfSuit(card15, '.suit15');   
 
   return Variables.deck;
 }

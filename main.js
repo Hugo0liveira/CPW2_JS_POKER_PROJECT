@@ -1,10 +1,19 @@
 import { Variables } from "./Variables.js"
 import { showAlertMessage1, showAlertMessage2, showAlertMessage3, showAlertMessage4, showAlertMessage5 } from "./Messages.js"
-import { PhasePreFlop, welcomeDeath, welcomeDeathAdd1, welcomeDeathAdd2, welcomeDeathAdd3, welcomeDeathAdd4, welcomeDeathAdd5 } from "./RoundPhases.js"
+import { PhasePreFlop, welcomeDeath } from "./RoundPhases.js"
 
 function functionStart(){   
-  
-  //Variables.endHTML.style.display = "none"; 
+
+  // avoid ugly HTML before loading 
+  const actions = document.querySelector('.actions');
+  actions.style.visibility = "hidden";
+  const info = document.querySelector('.info');
+  info.style.visibility = "hidden";
+  const section1 = document.querySelector('.player-section-1');
+  section1.style.visibility = "hidden";
+  const section2 = document.querySelector('.player-section-2');
+  section2.style.visibility = "hidden";
+
   const btnContinue = document.getElementById('myCustomAlert2');
   btnContinue.style.display = "none";
   const btnResult= document.getElementById('myCustomAlert3');
@@ -15,22 +24,15 @@ function functionStart(){
   invisibleHTML.style.visibility = "hidden";
   // select <div class="invisible2"> HTML element and change the CSS all the elements inside to transparent
   const invisible2HTML = document.querySelector('.invisible2');
-  invisible2HTML.style.visibility = "hidden";
-  
+  invisible2HTML.style.visibility = "hidden";  
 
   setTimeout( await0, 1000);
   function await0() {        
 
-    welcomeDeath();
-    welcomeDeathAdd1();
-    welcomeDeathAdd2();
-    welcomeDeathAdd3();
-    welcomeDeathAdd4();
-    welcomeDeathAdd5();    
-    
+    //welcomeDeath();
     setTimeout( awaitWelcome, 2100);
     function awaitWelcome() {                 
-      showAlertMessage1(Variables.messageCohle1);            
+    //  showAlertMessage1(Variables.messageCohle1);            
 
       Variables.preflop = 1; 
       PhasePreFlop();    

@@ -281,7 +281,25 @@ function checkConditionsRiver() {
 
 // PHASES OF THE GAME
 function PhasePreFlop(){   
-  // select <div class="invisible"> HTML element and change the CSS all the elements inside to visible
+  document.body.style.backgroundImage = "url('Calverton-National-Cemetery.jpg')";
+  // background no-repeat;
+  document.body.style.backgroundRepeat = "no-repeat";  
+  document.body.style.backgroundSize = "cover";
+  // background center fixed;
+  document.body.style.backgroundPosition = "center fixed";
+  // background full screen SCROLLING;
+  document.body.style.backgroundAttachment = "fixed";
+
+  // void ugly HTML before loading
+  const actions = document.querySelector('.actions');
+  actions.style.visibility = "visible";
+  const info = document.querySelector('.info');
+  info.style.visibility = "visible";
+  const section1 = document.querySelector('.player-section-1');
+  section1.style.visibility = "visible";
+  const section2 = document.querySelector('.player-section-2');
+  section2.style.visibility = "visible";
+
   const invisibleHTML = document.querySelector('.invisible');
   invisibleHTML.style.visibility = "visible";
   // select <div class="invisible2"> HTML element and change the CSS all the elements inside to visible
@@ -554,72 +572,12 @@ function compareTheHands(){
 
   // welcome from Death
   function welcomeDeath() {
-    Variables.player2HandHTML.innerHTML = "";   
-    const container = document.createElement('div');
-    container.classList.add('welcomeDeath');
-    container.innerHTML = `
-    <div class="welcomeFromDeath">
-    <img src="deathWelcome.gif" alt="Death" class="welcomeDeath">
-    </div>
-    `;    
-    Variables.player2HandHTML.appendChild(container);    
-  }
-
-  function welcomeDeathAdd1() {    
-    const container = document.createElement('div');
-    container.classList.add('welcomeDeathAdd1');
-    container.innerHTML = `
-    <div class="welcomeDeathAdd">
-    <img src="deathWelcome.gif" alt="Death" class="welcomeDeathAdd1">
-    </div>
-    `;    
-    Variables.player2HandHTML.appendChild(container);      
-  }
-
-  function welcomeDeathAdd2() {    
-    const container = document.createElement('div');
-    container.classList.add('welcomeDeathAdd2');
-    container.innerHTML = `
-    <div class="welcomeDeathAdd">
-    <img src="deathWelcome.gif" alt="Death" class="welcomeDeathAdd2">
-    </div>
-    `;    
-    Variables.player2HandHTML.appendChild(container);      
-  }
-
-  
-  function welcomeDeathAdd3() {    
-    const container = document.createElement('div');
-    container.classList.add('welcomeDeathAdd3');
-    container.innerHTML = `
-    <div class="welcomeDeathAdd">
-    <img src="https://media.tenor.com/r1Z2IxWoyN4AAAAC/yeah-pearl.gif" alt="Death" class="welcomeDeathAdd3">
-    </div>
-    `;        
-    Variables.player2HandHTML.appendChild(container);      
-  }
-
-  function welcomeDeathAdd4() {    
-    const container = document.createElement('div');
-    container.classList.add('welcomeDeathAdd4');
-    container.innerHTML = `
-    <div class="welcomeDeathAdd">
-    <img src="https://media.tenor.com/r1Z2IxWoyN4AAAAC/yeah-pearl.gif" alt="Death" class="welcomeDeathAdd4">
-    </div>
-    `;        
-    Variables.player2HandHTML.appendChild(container);      
-  }
-
-  function welcomeDeathAdd5() {    
-    const container = document.createElement('div');
-    container.classList.add('welcomeDeathAdd4');
-    container.innerHTML = `
-    <div class="welcomeDeathAdd">
-    <img src="https://media.tenor.com/r1Z2IxWoyN4AAAAC/yeah-pearl.gif" alt="Death" class="welcomeDeathAdd5">
-    </div>
-    `;    
-    Variables.player2HandHTML.appendChild(container);      
-  }
+    // change document.body background to  deathWelcome.gif 
+    document.body.style.backgroundImage = "url('deathWelcome.gif')";
+    // centralizing backgorund image
+    document.body.style.backgroundPosition = "center";
+    
+  }  
 
   // round lost death reaction gif
   function roundLostDeathKiss() {
@@ -673,6 +631,7 @@ function compareTheHands(){
     </div>
     `;
     Variables.player1HandHTML.appendChild(container);
+    container.style.zIndex = "433";
   }
 
   // death lost game gif
@@ -684,10 +643,9 @@ function compareTheHands(){
       <source  src="deathEndStare.mp4" type="video/mp4">
     </video>
   </div>
-    `;
-
+    `;    
   } 
 
 
-  export { functionFold, functionCall, functionCheck, functionRaise, foldButton, callButton, checkButton, raiseButton, checkConditionsPreFlop, checkConditionsFlop, checkConditionsTurn, checkConditionsRiver, PhasePreFlop, PhaseFlop, PhaseTurn, PhaseRiver, compareTheHands, resetGame, welcomeDeath, DisappearButtonCall, DisappearButtonCheck, DisappearButtonFold, DisappearButtonRaise, AppearButtonCheck, AppearButtonCall, gameLost, deathKiss, deathDancing, welcomeDeathAdd1, welcomeDeathAdd2, welcomeDeathAdd3, welcomeDeathAdd4, welcomeDeathAdd5, checkBeforeCompare, checkBeforeGoingToNextRound, continueToNextRound };
+  export { functionFold, functionCall, functionCheck, functionRaise, foldButton, callButton, checkButton, raiseButton, checkConditionsPreFlop, checkConditionsFlop, checkConditionsTurn, checkConditionsRiver, PhasePreFlop, PhaseFlop, PhaseTurn, PhaseRiver, compareTheHands, resetGame, welcomeDeath, DisappearButtonCall, DisappearButtonCheck, DisappearButtonFold, DisappearButtonRaise, AppearButtonCheck, AppearButtonCall, gameLost, deathKiss, deathDancing, checkBeforeCompare, checkBeforeGoingToNextRound, continueToNextRound };
   

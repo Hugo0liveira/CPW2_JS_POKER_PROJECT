@@ -11,9 +11,72 @@ Período: 2023/1*/
                                  PHILOSOPHIC_POKER 
       */ 
 
+// avoid ugly HTML before loading 
+ const container = document.createElement('div');
+  container.classList.add('game');
+  container.innerHTML = `
+  <div class="end">
+  <div class = "container">        
+      <div class="player-section-2">
+          <div class="invisible">
+              <h2 class="player-name">DEATH</h2>
+              <div class="player2-chips"></div> 
+          </div>                    
+              <div class="player2-hand"></div>                     
+      </div>
+          <div class="invisible2">
+              <div class="community-cards">        </div>
+              <div class="player-section player-section-1">
+                  <h2 class="player-name">Humanity</h2>
+                  <div class="player1-chips"></div> 
+                  <div class="player1-hand"></div>
+              </div><BR>
+                  <div class="invisible3">
+                      <div class="actions">
+                          <button class="btn-fold" onclick="functionFold()">Fold</button> 
+                          <button class="btn-call" onclick="functionCall()">Call</button> 
+                          <button class="btn-check" onclick="functionCheck()">Check</button> 
+                          <button class="btn-raise" onclick="functionRaise()">Raise</button>
+                      </div> 
+                      <div class="info">
+                          <h1 class="yearsAndValue">
+                              <h2 class="years">Years Survived<h4 class="yearsSurviving"></h4>
+                              </h2>
+                          </h1>
+                          <h1 class="riskAndValue">
+                              <h2 class="risk">Risk<h4 class="riskValue"></h4>
+                              </h2>
+                          </h1>
+                      </div>
+                  </div>    
+          </div>
+  </div>
+</div>   
+  `;    
+  document.body.appendChild(container);
+
   // random power to Elysium card from -2 to 13                                
   function ElysiumPower() {
     return Math.floor(Math.random() * 16) - 2;
+  }
+  // random suit to Artificial card from 0 to 4
+  function ArtificialSuit() {
+    var num = Math.floor(Math.random() * 5);
+    if(num == 0) {
+      return "suicide";
+    }
+    if(num == 1){
+      return "domination";
+    }
+    if(num == 2){
+      return "contemplation";
+    }
+    if(num == 3){
+      return 'revolution';
+    }
+    if(num == 4){
+      return 'Elysium';
+    }
   }
 
 const originalDeck = [
@@ -32,7 +95,7 @@ const originalDeck = [
   { power: 11, author: 'Thomas Metzinger', suit: 'suicide' }, { power: 11, author: 'Thomas Metzinger', suit: 'contemplation' }, { power: 11, author: 'Thomas Metzinger', suit: 'domination' }, { power: 11, author: 'Thomas Metzinger', suit: 'revolution' },
   { power: 12, author: 'Patricia Churchland', suit: 'suicide' }, { power: 12, author: 'Patricia Churchland', suit: 'suicide' }, { power: 12, author: 'Patricia Churchland', suit: 'contemplation' }, { power: 12, author: 'Patricia Churchland', suit: 'domination' },
   { power: 13, author: 'Robert Sapolsky', suit: 'suicide' }, { power: 13, author: 'Robert Sapolsky', suit: 'contemplation' }, { power: 13, author: 'Robert Sapolsky', suit: 'domination' }, { power: 13, author: 'Robert Sapolsky', suit: 'revolution' }, 
-  { power: ElysiumPower(), suit: 'Elysium' }, { power: ElysiumPower(), suit: 'Elysium' }, { power: ElysiumPower(), suit: 'Elysium' }, { power: ElysiumPower(), suit: 'Elysium' }, { power: ElysiumPower(), suit: 'Elysium' }
+  { power: ElysiumPower(), suit: 'Elysium' }, { power: ElysiumPower(), suit: 'Elysium' }, { power: ElysiumPower(), suit: 'Elysium' }, { power: ElysiumPower(), suit: 'Elysium' }, { power: 99, author: 'Artificial', suit: '' }
 ];
 
 const allCommunityCardsHTML = document.querySelector(".community-cards");
@@ -65,9 +128,6 @@ class Player {
     this.name = name;
     this.chips = chips;    
     this.hand = [];
-  }
-  getHand() {
-    return this.hand;
   }
 }
 
@@ -136,5 +196,6 @@ export const Variables = {
   endHTML: endHTML,
   checkBeforeComparing: checkBeforeComparing,
   checkBeforeNextRound: checkBeforeNextRound,
-  ElysiumPower: ElysiumPower  
+  ElysiumPower: ElysiumPower,
+  ArtificialSuit: ArtificialSuit
 }

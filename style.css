@@ -1,8 +1,8 @@
-html {
-  background: url('https://libn.com/wp-content/blogs.dir/1/files/2014/06/Calverton-National-Cemetery-1.jpg') no-repeat center center fixed;
-  background-color: #000000;   
-  background-size: cover;    
+
+.end{
+  padding-top: 4%;
 }
+
       .custom-alert {
         display: none;
         position: fixed;
@@ -64,8 +64,7 @@ html {
   
         #btn-continue {
           margin-top: 10px;  position: relative;
-          left: 40%; border-radius: 100%;         }
-
+          left: 40%; border-radius: 100%;         } 
 
           .custom-alert3 {
             display: none;
@@ -139,11 +138,11 @@ iframe {
 }
 .player1-hand {
   display: flex;flex-direction: row;justify-content: center;
-  align-items: center;width: 100%;height: 60px; margin-top: 45px;
+  align-items: center;width: 100%;height: 60px; margin-top: 45px; 
 }
 .player2-hand {
   display: flex;flex-direction: row;justify-content: center;
-  align-items: center;width: 100%;height: 60px; margin-top: 45px;
+  align-items: center;width: 100%;height: 60px; margin-top: 45px;  
 }
 .community-cards {
   display: flex;flex-direction: row; margin-top: 10px;
@@ -234,33 +233,33 @@ iframe {
 
 .power1 {
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; margin-bottom: 1px; text-align: center;
-  color: rgb(230, 89, 89);}
+  color: rgb(222, 213, 213); }
 .power2 {
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; margin-bottom: 1px; text-align: center;
-  color: rgb(230, 89, 89);}
+  color: rgb(222, 213, 213); }
 .power3 {
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; margin-bottom: 1px; text-align: center;
-  color: rgb(230, 89, 89);}
+  color: rgb(222, 213, 213); }
 .power4 {
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; margin-bottom: 1px; text-align: center;
-  color: rgb(230, 89, 89);}
+  color: rgb(222, 213, 213); }
 .power11 {
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; margin-bottom: 1px; text-align: center;
-  color: rgb(230, 89, 89);}
+  color: rgb(222, 213, 213); }
 .power12 {
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; margin-bottom: 1px; text-align: center;
-  color: rgb(230, 89, 89);}
+  color: rgb(222, 213, 213); }
 .power13 {
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; margin-bottom: 1px; text-align: center;
-  color: rgb(230, 89, 89);}
+  color: rgb(222, 213, 213); }
 .power14 {
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; margin-bottom: 1px; text-align: center;
-  color: rgb(230, 89, 89);}
+  color: rgb(222, 213, 213); }
 .power15 {
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; margin-bottom: 1px; text-align: center;
-  color: rgb(230, 89, 89);}
+  color: rgb(222, 213, 213); }
 
-.suit1 {
+.suit1 { 
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; text-align: center;
   font-style: italic; font-size: 14px; margin-top: -7px; text-shadow: 1px 1px 1px rgb(0, 0, 0); }
 .suit2 {
@@ -325,9 +324,8 @@ iframe {
 .active-player {
   background-color: #eee; }
 
-  .cardFaceDown {
-    width: 126px;height: 120px; background-color: #bcbbbb; border: 5px solid #ffffff;      
-    border-bottom: #000000; border-right: #000000; 
+  .cardFaceDown { background: url('/favicon.ico'); background-position: 92%; background-size: 100%; background-repeat: no-repeat; 
+    width: 126px;height: 120px; background-color: #6a62625e;   border-top: #000000; 
     margin-right: 10px; display: flex; flex-direction: column; 
     justify-content: center; align-items: center; 
     border-top-left-radius: 23%; border-top-right-radius: 23%;   
@@ -335,19 +333,9 @@ iframe {
   .deathKiss{ width: 506px;  }
   .deathDancing{/* element width full  */ width: 100%; 
     /*vertically  centralized*/ 
-    position: absolute; top: 50%; transform: translateY(-50%);}
-   .welcomeDeath{  width: 100%;   background-position-x: center; background-position-y: center;    }    
-   .welcomeDeathAdd1{   width: 100%;   position: absolute; top: 46%; transform: translateY(-50%);   }
-        .welcomeDeathAdd3{visibility: hidden; }
-          .welcomeDeathAdd4{visibility: hidden; }
-            .welcomeDeathAdd5{ visibility: hidden; }    
+    position: absolute; top: 50%; transform: translateY(-50%);} 
     .deathDancingAdd{ width: 100%;   }            
-    .end{ width: 100%; }
-    .humanityVictory1{ width: 100%;  }
-    .humanityVictory2{ width: 100%;  }
-    .humanityVictory3{ width: 100%;  }
-    .humanityVictory4{ width: 100%;  }
-    .humanityVictory5{ width: 100%;  }
+    .end{ width: 100%; } 
     .deathEndStare{ width: 100%;  }
     .deathWinExplosion{ width: 100%;   }
 
@@ -361,28 +349,19 @@ iframe {
       .player-section-2{ padding-top: 37%; padding-bottom: 3%;}            
     }    
     @media (max-width: 1430px) {
-      .player-section-2{ padding-top: 38%; padding-bottom: 3%;}
-      .welcomeDeathAdd1{  width: 100%;   position: absolute; top: 36%; transform: translateY(-50%); }      
-      .welcomeDeathAdd2{  width: 100%;   position: absolute; top: 80%; transform: translateY(-50%); }      
+      .player-section-2{ padding-top: 38%; padding-bottom: 3%;} 
     }
     @media (max-width: 1330px) {
-      .player-section-2{ padding-top: 42%; padding-bottom: 3%;}
-      .welcomeDeathAdd1{  width: 100%;   position: absolute; top: 36%; transform: translateY(-50%); }      
-      .welcomeDeathAdd2{  width: 100%;   position: absolute; top: 80%; transform: translateY(-50%); }      
+      .player-section-2{ padding-top: 42%; padding-bottom: 3%;} 
     }
     @media (max-width: 1230px) {
       .player-section-2{ padding-top: 50%; padding-bottom: 3%;}      
-      .welcomeDeathAdd1{  width: 100%;   position: absolute; top: 36%; transform: translateY(-50%); }      
-      .welcomeDeathAdd2{  width: 100%;   position: absolute; top: 80%; transform: translateY(-50%); }      
     }
     @media (max-width: 1130px) {
-      .player-section-2{ padding-top: 52%; padding-bottom: 3%;}      
-      .welcomeDeathAdd1{  width: 100%;   position: absolute; top: 26%; transform: translateY(-50%); }
-      .welcomeDeathAdd2{  width: 100%;   position: absolute; top: 66%; transform: translateY(-50%); }
+      .player-section-2{ padding-top: 52%; padding-bottom: 3%;}     
     }
     @media (max-width: 1030px) {
       .player-section-2{ padding-top: 55%; padding-bottom: 4%;}
-      .welcomeDeathAdd2{  width: 100%;   position: absolute; top: 66%; transform: translateY(-50%); }
     }
       @media (width: 1024px), (height: 600px) {
         .player-section-2{ padding-top: 70%; padding-bottom: 4%;}       
@@ -519,15 +498,6 @@ iframe {
                     
   .deathKiss{ width: 320px; }
   .deathDancing{  /* element width full  */  width: 100%;  }   
-
-  .welcomeDeath{/* element width full  */   width: 100%; /*vertically  centralized*/ 
-    position: absolute; top: 30%; transform: translateY(-50%); }
-    .welcomeDeathAdd1{/* element width full  */   width: 100%; /*vertically  centralized*/ 
-      position: absolute; top: 70%; transform: translateY(-50%); visibility: visible;  }   
-      .welcomeDeathAdd2{visibility: hidden; }   
-        .welcomeDeathAdd3{visibility: hidden; }
-          .welcomeDeathAdd4{visibility: hidden; }
-            .welcomeDeathAdd5{ visibility: hidden; }
             .deathWinExplosion{ width: 100%;   }  
 }
 
@@ -545,10 +515,8 @@ iframe {
   .custom-alert-content3 {  font-size: 12px; margin-left: 0%; margin-right: -40%; }
 }
 
-  
-
 @media (max-width: 600px) {
-  .player-section-2{ padding-top: 50%; padding-bottom: 2%;}
+  .player-section-2{ padding-top: 50%; padding-bottom: 2%;}  
   iframe {  
     width: 100%; 
     height: 700px;
@@ -571,29 +539,13 @@ iframe {
       height: 600px;
       }
     .player-section-2{ padding-top: 60%; padding-bottom: 4%;}
+    .section-welcome {  padding-top: 60%; padding-bottom: 4%;}
   .community-cards {
     display: flex;flex-direction: column;  margin-top:11px; margin-bottom: -16px;
   }
     .btn-fold,.btn-check,.btn-raise,.btn-call {
       padding: 0px;font-size: 11px;font-weight: bold;
       margin-right: 2px;border-radius: 23%;  }
-
-
-
-      .welcomeDeath{/* element width full  */   width: 100%; /*vertically  centralized*/ 
-        position: absolute; top: 15%; transform: translateY(-50%); }
-        .welcomeDeathAdd1{/* element width full  */   width: 100%; /*vertically  centralized*/ 
-          position: absolute; top: 30%; transform: translateY(-50%); }
-          .welcomeDeathAdd2{/* element width full  */   width: 100%; /*vertically  centralized*/ 
-            position: absolute; top: 45%; transform: translateY(-50%); visibility: visible;  }
-            .welcomeDeathAdd3{/* element width full  */   width: 100%; /*vertically  centralized*/ 
-              position: absolute; top: 60%; transform: translateY(-50%); visibility: visible;  }
-              .welcomeDeathAdd4{/* element width full  */   width: 100%; /*vertically  centralized*/ 
-                position: absolute; top: 75%; transform: translateY(-50%); visibility: visible;  }
-                .welcomeDeathAdd5{/* element width full  */   width: 100%; /*vertically  centralized*/ 
-                  position: absolute; top: 90%; transform: translateY(-50%); visibility: visible;  }
-                  
-   
     .deathEndStare{ width: 100%;  }    
     .deathWinExplosion{ width: 100%  }
 }
@@ -601,14 +553,14 @@ iframe {
   .player-section-2{ padding-top: 10%; padding-bottom: 4%;}  
 }
 @media (width: 280px), (height: 653px) {
-  .player-section-2{ padding-top: 110%; padding-bottom: 4%;}  
+  .player-section-2{ padding-top: 110%; padding-bottom: 4%;} 
 }
 @media (width: 240px), (height: 520px) {
-  .player-section-2{ padding-top: 190%; padding-bottom: 4%;}  
+  .player-section-2{ padding-top: 190%; padding-bottom: 4%;} 
 }
 
 @media (max-width: 185px) {
-  .player-section-2{ padding-top: 85%; padding-bottom: 6%;}
+  .player-section-2{ padding-top: 85%; padding-bottom: 6%;}  
   iframe {  
     width: 100%; 
     height: 300px;
