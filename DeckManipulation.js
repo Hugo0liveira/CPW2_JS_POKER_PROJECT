@@ -316,7 +316,7 @@ function shuffleDeck() {
         const p1 = document.querySelector('.power1'); 
         p1.style.display = 'none';             
         const cardHTML = document.querySelector('.card1');
-        cardHTML.style.backgroundImage = `url('Artificial.jpg')`;
+        cardHTML.style.backgroundImage = `url('artificial.png')`;
         // change the background image of the card to fit the size of the card
         cardHTML.style.backgroundSize = 'cover';
         cardHTML.style.backgroundPosition = 'center';      
@@ -334,7 +334,7 @@ function shuffleDeck() {
         const p1 = document.querySelector('.power2'); 
         p1.style.display = 'none';             
         const cardHTML = document.querySelector('.card2');
-        cardHTML.style.backgroundImage = `url('Artificial.jpg')`;
+        cardHTML.style.backgroundImage = `url('artificial.png')`;
         // change the background image of the card to fit the size of the card
         cardHTML.style.backgroundSize = 'cover';
         cardHTML.style.backgroundPosition = 'center';      
@@ -352,7 +352,7 @@ function shuffleDeck() {
         const p1 = document.querySelector('.power3'); 
         p1.style.display = 'none';             
         const cardHTML = document.querySelector('.card3');
-        cardHTML.style.backgroundImage = `url('Artificial.jpg')`;
+        cardHTML.style.backgroundImage = `url('artificial.png')`;
         // change the background image of the card to fit the size of the card
         cardHTML.style.backgroundSize = 'cover';
         cardHTML.style.backgroundPosition = 'center';      
@@ -370,7 +370,7 @@ function shuffleDeck() {
         const p1 = document.querySelector('.power4'); 
         p1.style.display = 'none';             
         const cardHTML = document.querySelector('.card4');
-        cardHTML.style.backgroundImage = `url('Artificial.jpg')`;
+        cardHTML.style.backgroundImage = `url('artificial.png')`;
         // change the background image of the card to fit the size of the card
         cardHTML.style.backgroundSize = 'cover';
         cardHTML.style.backgroundPosition = 'center';      
@@ -388,7 +388,7 @@ function shuffleDeck() {
         const p1 = document.querySelector('.power11'); 
         p1.style.display = 'none';             
         const cardHTML = document.querySelector('.card11');
-        cardHTML.style.backgroundImage = `url('Artificial.jpg')`;
+        cardHTML.style.backgroundImage = `url('artificial.png')`;
         // change the background image of the card to fit the size of the card
         cardHTML.style.backgroundSize = 'cover';
         cardHTML.style.backgroundPosition = 'center';      
@@ -406,7 +406,7 @@ function shuffleDeck() {
         const p1 = document.querySelector('.power12'); 
         p1.style.display = 'none';             
         const cardHTML = document.querySelector('.card12');
-        cardHTML.style.backgroundImage = `url('Artificial.jpg')`;
+        cardHTML.style.backgroundImage = `url('artificial.png')`;
         // change the background image of the card to fit the size of the card
         cardHTML.style.backgroundSize = 'cover';
         cardHTML.style.backgroundPosition = 'center';      
@@ -424,7 +424,7 @@ function shuffleDeck() {
         const p1 = document.querySelector('.power13'); 
         p1.style.display = 'none';             
         const cardHTML = document.querySelector('.card13');
-        cardHTML.style.backgroundImage = `url('Artificial.jpg')`;
+        cardHTML.style.backgroundImage = `url('artificial.png')`;
         // change the background image of the card to fit the size of the card
         cardHTML.style.backgroundSize = 'cover';
         cardHTML.style.backgroundPosition = 'center';      
@@ -442,7 +442,7 @@ function shuffleDeck() {
         const p1 = document.querySelector('.power14'); 
         p1.style.display = 'none';             
         const cardHTML = document.querySelector('.card14');
-        cardHTML.style.backgroundImage = `url('Artificial.jpg')`;
+        cardHTML.style.backgroundImage = `url('artificial.png')`;
         // change the background image of the card to fit the size of the card
         cardHTML.style.backgroundSize = 'cover';
         cardHTML.style.backgroundPosition = 'center';      
@@ -460,7 +460,7 @@ function shuffleDeck() {
         const p1 = document.querySelector('.power15'); 
         p1.style.display = 'none';             
         const cardHTML = document.querySelector('.card15');
-        cardHTML.style.backgroundImage = `url('Artificial.jpg')`;
+        cardHTML.style.backgroundImage = `url('artificial.png')`;
         // change the background image of the card to fit the size of the card
         cardHTML.style.backgroundSize = 'cover';
         cardHTML.style.backgroundPosition = 'center';      
