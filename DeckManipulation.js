@@ -527,10 +527,7 @@ function shuffleDeck() {
     }  
 
 
-  function distributeCards2() {              
-     // clean the player 2 hand
-     //Variables.player2.hand = [];
-     //Variables.player2HandHTML.innerHTML = ""; 
+  function distributeCards2() {        
      const card3FaceDown = document.querySelector('.card3FaceDown');    
     card3FaceDown.classList.toggle('flipped');
 
@@ -554,10 +551,12 @@ function shuffleDeck() {
           Variables.player2HandHTML.appendChild(cardE3);
           // flip the card again
           cardE3.classList.add("card3");
-          cardE3.classList.toggle('flipped');
           cardE3.style.backgroundImage = `url('tombstone.png')`;
-          // start with the card on 90 degrees rotated and then goes to 180 
 
+          setTimeout(function(){
+          cardE3.classList.toggle('flipped');
+          
+          }, 100);
 
           cssElysium(card3, 3);
           cssArtificial(card3, 3);
@@ -573,14 +572,12 @@ function shuffleDeck() {
           `;          
           Variables.player2HandHTML.appendChild(cardE4);
           // flip the card again
-          cardE4.classList.add("card4");
-          cardE4.classList.toggle('flipped');
+          cardE4.classList.add("card4");          
           cardE4.style.backgroundImage = `url('tombstone.png')`;
-          // start with the card on 90 degrees rotated and then goes to 180 
-
-
-
-
+          
+          setTimeout(function(){
+            cardE4.classList.toggle('flipped');
+          }, 100);
 
           cssElysium(card4, 4);
           cssArtificial(card4, 4);

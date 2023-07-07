@@ -35,8 +35,10 @@ function continueToNextRound(message) {
   console.log("continueToNextRound");
 
   const btnContinue = document.getElementById('myCustomAlert2');
+  setTimeout( function() {
   btnContinue.style.display = "block";
-  btnContinue.style.zIndex = "18";
+  btnContinue.style.zIndex = "1";
+  }, 2000);
 
   // Set the message text
   const alertMessage = document.getElementById('custom-alert-message2');

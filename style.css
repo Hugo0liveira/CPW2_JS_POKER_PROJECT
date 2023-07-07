@@ -178,7 +178,6 @@ iframe {
   .card3FaceDown.flipped {
     transition: transform 4.0s;
     transform: rotateY(95deg);
-
     /*background: url('/tombstone.png');*/
     width: 126px;height: 120px;background-color: #bcbbbb; border: 5px solid #ffffff;  
     border-bottom: #000000; border-right: #000000;
@@ -187,6 +186,19 @@ iframe {
     border-top-left-radius: 23%; border-top-right-radius: 23%;        
   }
   
+  .card3{
+    transform: rotateY(0deg);
+    width: 126px;height: 120px;background-color: #bcbbbb; border: 5px solid #ffffff;  
+    border-bottom: #000000; border-right: #000000;
+    border-radius: 3px;  margin-right: 10px; display: flex; flex-direction: 
+    column; justify-content: center; align-items: center; 
+    border-top-left-radius: 23%; border-top-right-radius: 23%; background: url('/tombstone.png');
+  }
+  
+  .card3.flipped{
+    transition: transform 0s;
+    transform: rotateY(90deg);
+  }  
 
   .card4FaceDown { background: url('/favicon.ico'); background-position: 92%; background-size: 100%; background-repeat: no-repeat; 
     width: 126px;height: 120px; background-color: #6a62625e;   border-top: #000000; 
@@ -197,9 +209,8 @@ iframe {
     transition: transform 4.0s;    
   }
   .card4FaceDown.flipped {
-    transform: rotateY(95deg);
     transition: transform 4.0s;
-
+    transform: rotateY(95deg);
     /*background: url('/tombstone.png');*/
   width: 126px;height: 120px;background-color: #bcbbbb; border: 5px solid #ffffff;  
   border-bottom: #000000; border-right: #000000;
@@ -207,6 +218,20 @@ iframe {
   column; justify-content: center; align-items: center; 
   border-top-left-radius: 23%; border-top-right-radius: 23%;      
   }
+
+  .card4{
+    transform: rotateY(0deg);
+    width: 126px;height: 120px;background-color: #bcbbbb; border: 5px solid #ffffff;  
+    border-bottom: #000000; border-right: #000000;
+    border-radius: 3px;  margin-right: 10px; display: flex; flex-direction: 
+    column; justify-content: center; align-items: center; 
+    border-top-left-radius: 23%; border-top-right-radius: 23%; background: url('/tombstone.png');
+  }
+  
+  .card4.flipped{
+    transition: transform 0s;
+    transform: rotateY(90deg);
+  }  
 
 .card11 { background: url('/tombstone.png');
   width: 126px;height: 120px;background-color: #bcbbbb; border: 5px solid #ffffff;  

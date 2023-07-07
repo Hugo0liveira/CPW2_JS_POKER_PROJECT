@@ -28,7 +28,7 @@ function showAlertMessageSeeDeathCards(message) {
       Variables.checkBeforeComparing += 1;
       // Strange error happening here. The function checkBeforeCompare() is being called more than once.
        checkBeforeCompare();
-       showAlertMessageSeeReaction('');       
+       seeReaction();       
 
             }
               , 0 );
@@ -36,20 +36,10 @@ function showAlertMessageSeeDeathCards(message) {
     });
   }
 
-  function showAlertMessageSeeReaction(message) {
+  function seeReaction() {
     console.log("showAlertMessageSeeDeathCards");
     const customAlert = document.getElementById('myCustomAlert');
-    const alertMessage = document.getElementById('custom-alert-message');
-  
-    // Set the message text
-    alertMessage.textContent = message;
-  
-    // Show the custom alert
-    customAlert.style.display = 'block';
-    customAlert.style.zIndex = "23";
-    // customAlert.style padding top relative to the bottom of the screen
-    customAlert.style.paddingTop = "90%";
-
+    const alertMessage = document.getElementById('custom-alert-message');  
   
       setTimeout( function () {     
         
