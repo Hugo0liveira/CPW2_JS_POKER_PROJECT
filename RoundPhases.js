@@ -622,18 +622,11 @@ function compareTheHands(){
 
   //  death win exploson gif
   function deathWinExplosion() {
-    const invisible3HTML = document.querySelector('.invisible3');
-    invisible3HTML.style.visibility = "hidden";
-    Variables.player1HandHTML.innerHTML = "";
-    const container = document.createElement('div');
-    container.classList.add('deathWinExplosion');
-    container.innerHTML = `
-    <div class="deathWinExplosion">
-      <img src="explosion.gif">
-    </div>
-    `;
-    Variables.player1HandHTML.appendChild(container);
-    container.style.zIndex = "433";
+    const endHTML = document.querySelector('.end');    
+    endHTML.innerHTML = "";
+    document.body.style.backgroundImage = "url('explosion.gif')";
+    document.body.style.backgroundPosition = "center";
+    
   }
 
   // death lost game gif
