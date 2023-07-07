@@ -3,7 +3,7 @@ import { shuffleDeck, cleanAllCommunityCards, distributeCards1, distributeCards2
 import {determineWinnersHand} from "./DetermineWinnersHand.js";
 import { Variables } from "./Variables.js"
 import {functionStart} from "./main.js"
-import {showAlertMessage, showAlertMessageLost1, showAlertMessageVictory1, showAlertMessageSeeDeathCards} from "./Messages.js"
+import {showAlertMessage, showAlertMessageLost1, showAlertMessageVictory1, showAlertMessageSeeDeathCards, showAlertMessageNoClick} from "./Messages.js"
 
 // checking ERROR of calling function more than once inexplicably relate  Messages.js
 function checkBeforeCompare(){
@@ -65,8 +65,8 @@ function functionFold(event) {
   // to delay the execution of the next line of code
   setTimeout( awaitToFold, 2000);
 
-  function awaitToFold() {  
-    showAlertMessage(Variables.messageFold);
+  function awaitToFold() {      
+    showAlertMessageNoClick(Variables.messageFold);
     event.stopPropagation(); // Stop event propagation
         if(Variables.conditionsPreflop==1){
           Variables.fold = 1; checkConditionsPreFlop(); 
@@ -637,15 +637,21 @@ function compareTheHands(){
   }
 
   // death lost game gif
-  function deathEndStare() {
-    Variables.player2HandHTML.innerHTML = "";
-    Variables.player2HandHTML.innerHTML = `
-    <div class="deathEndStare">
-    <video width="380" height="330" autoplay>
-      <source  src="deathEndStare.mp4" type="video/mp4">
-    </video>
-  </div>
-    `;    
+  function deathEndStare() {    
+    const btnContinue = document.getElementById('myCustomAlert2');    
+    btnContinue.innerHTML = '';
+
+    const endHTML = document.querySelector('.end');    
+    endHTML.innerHTML = "";
+    // change document.body background to deathEndStare.gif
+    document.body.style.backgroundImage = "url('deathEndStare.gif')";
+    // centralizing backgorund image
+    document.body.style.backgroundPosition = "center";
+
+    setTimeout( function() {
+        endHTML.innerHTML = "";
+        document.body.style.backgroundImage = "url('eye.png')";    
+    }, 1700);
   } 
 
 

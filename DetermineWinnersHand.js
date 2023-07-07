@@ -11,7 +11,7 @@ import  {threeOfAKind, threeOfAKindPower, threeOfAKindKickerOne, threeOfAKindKic
 import { twoPairKicker, worstPairPower, bestPairPower, twoPair } from "./TwoPair.js";
 import { pair, pairPower, pairKickerOne, pairKickerTwo, pairKickerThree} from "./Pair.js";
 import  {higherCard, higherCardTwo, higherCardThree, higherCardFour, higherCardFive } from "./HighCard.js";
-import {showAlertMessageRoundWinner} from "./Messages.js";
+import {showAlertMessageNoClick} from "./Messages.js";
 
   // returns 0 if is a tie. returns 1 if Variables.player1 wins. returns 2 if Variables.player2 wins.
   function determineWinnersHand() {
@@ -24,15 +24,15 @@ import {showAlertMessageRoundWinner} from "./Messages.js";
         var elysium2 = elysium(Variables.player2);   
         if(elysium1 = 1 && elysium2 == 1) {
           console.log("It's a tie!");  
-          showAlertMessageRoundWinner( "It's a tie!");   
+          showAlertMessageNoClick( "It's a tie!");   
           return 0;    
         } else if (elysium1 == 1 && elysium2 == 0) {
           console.log("Humanity wins with a Elysium!");
-          showAlertMessageRoundWinner("Humanity wins with a Elysium!");
+          showAlertMessageNoClick("Humanity wins with a Elysium!");
           return 1;
         } else if (elysium1 == 0 && elysium2 == 1) {
           console.log("DEATH wins with a Elysium!");
-          showAlertMessageRoundWinner("DEATH wins with a Elysium!");
+          showAlertMessageNoClick("DEATH wins with a Elysium!");
           return 2;
         } else if (elysium1 == 0 && elysium2 == 0) {
 
@@ -40,15 +40,15 @@ import {showAlertMessageRoundWinner} from "./Messages.js";
           var royalflush2 = royalflush(Variables.player2);
           if(royalflush1 == 1 && royalflush2 == 1) {      
               console.log("It's a tie!");  
-              showAlertMessageRoundWinner( "It's a tie!");   
+              showAlertMessageNoClick( "It's a tie!");   
               return 0;    
           } else if (royalflush1 == 1 && royalflush2 == 0) {
             console.log("Humanity wins with a royal flush!");
-            showAlertMessageRoundWinner("Humanity wins with a royal flush!");
+            showAlertMessageNoClick("Humanity wins with a royal flush!");
             return 1;
           } else if (royalflush1 == 0 && royalflush2 == 1) {
             console.log("DEATH wins with a royal flush!");
-            showAlertMessageRoundWinner("DEATH wins with a royal flush!");
+            showAlertMessageNoClick("DEATH wins with a royal flush!");
             return 2;
           } else if (royalflush1 == 0 && royalflush2 == 0) {
           
@@ -60,24 +60,24 @@ import {showAlertMessageRoundWinner} from "./Messages.js";
               if(straightflush1 == 1 && straightflush2 == 1) {      
                 if (straightflush1Power > straightflush2Power) {
                   console.log("Humanity wins with a straight flush!");
-                  showAlertMessageRoundWinner("Humanity wins with a straight flush!");
+                  showAlertMessageNoClick("Humanity wins with a straight flush!");
                   return 1;
                 } else if (straightflush2Power > straightflush1Power) {
                   console.log("DEATH wins with a straight flush!");
-                  showAlertMessageRoundWinner("DEATH wins with a straight flush!");
+                  showAlertMessageNoClick("DEATH wins with a straight flush!");
                   return 2;
                 } else {
                   console.log("It's a tie!");
-                  showAlertMessageRoundWinner("It's a tie!");
+                  showAlertMessageNoClick("It's a tie!");
                   return 0;
                 }
             } else if(straightflush1 == 1 && straightflush2 == 0) {
               console.log("Humanity wins with a straight flush!");
-              showAlertMessageRoundWinner("Humanity wins with a straight flush!");
+              showAlertMessageNoClick("Humanity wins with a straight flush!");
               return 1;
             } else if(straightflush1 == 0 && straightflush2 == 1) {
               console.log("DEATH wins with a straight flush!");
-              showAlertMessageRoundWinner("DEATH wins with a straight flush!");
+              showAlertMessageNoClick("DEATH wins with a straight flush!");
               return 2;
             } else if(straightflush1 == 0 && straightflush2 == 0) {
 
@@ -91,32 +91,32 @@ import {showAlertMessageRoundWinner} from "./Messages.js";
               if(four1 == 1 && four2 == 1) {
                   if (four1Power > four2Power) {
                     console.log("Humanity wins with four of a kind!");
-                    showAlertMessageRoundWinner("Humanity wins with four of a kind!");
+                    showAlertMessageNoClick("Humanity wins with four of a kind!");
                     return 1;
                   } else if (four2Power > four1Power) {
                     console.log("DEATH wins with four of a kind!");
-                    showAlertMessageRoundWinner("DEATH wins with four of a kind!");
+                    showAlertMessageNoClick("DEATH wins with four of a kind!");
                     return 2;
                   } else if (kicker1 > kicker2) {
                     console.log("Humanity wins with four of a kind!");
-                    showAlertMessageRoundWinner("Humanity wins with four of a kind!");
+                    showAlertMessageNoClick("Humanity wins with four of a kind!");
                     return 1;
                   } else if (kicker2 > kicker1) {
                     console.log("DEATH wins with four of a kind!");
-                    showAlertMessageRoundWinner("DEATH wins with four of a kind!");
+                    showAlertMessageNoClick("DEATH wins with four of a kind!");
                     return 2;
                   } else {
                     console.log("It's a tie!");
-                    showAlertMessageRoundWinner("It's a tie!");
+                    showAlertMessageNoClick("It's a tie!");
                     return 0;
                   }
               } else if(four1 == 1 && four2 == 0) {
                   console.log("Humanity wins with four of a kind!");
-                  showAlertMessageRoundWinner("Humanity wins with four of a kind!");
+                  showAlertMessageNoClick("Humanity wins with four of a kind!");
                   return 1;
               } else if(four1 == 0 && four2 == 1) {
                   console.log("DEATH wins with four of a kind!");
-                  showAlertMessageRoundWinner("DEATH wins with four of a kind!");
+                  showAlertMessageNoClick("DEATH wins with four of a kind!");
                   return 2;
               } else if(four1 == 0 && four2 == 0) {
                 
@@ -130,35 +130,35 @@ import {showAlertMessageRoundWinner} from "./Messages.js";
                 if(fullhouse1 == 1 && fullhouse2 == 1) {
                     if (threeOfAKind1Power > threeOfAKind2Power) {
                       console.log("Humanity wins with a full house!");
-                      showAlertMessageRoundWinner("Humanity wins with a full house!");
+                      showAlertMessageNoClick("Humanity wins with a full house!");
                       return 1;
                     }
                     else if (threeOfAKind2Power > threeOfAKind1Power) {
                       console.log("DEATH wins with a full house!");
-                      showAlertMessageRoundWinner("DEATH wins with a full house!");
+                      showAlertMessageNoClick("DEATH wins with a full house!");
                       return 2;
                     }
                     else if (Pair1Power > Pair2Power) {
                       console.log("Humanity wins with a full house!");
-                      showAlertMessageRoundWinner("Humanity wins with a full house!");
+                      showAlertMessageNoClick("Humanity wins with a full house!");
                       return 1;
                     }
                     else if (Pair2Power > Pair1Power) {
                       console.log("DEATH wins with a full house!");
-                      showAlertMessageRoundWinner("DEATH wins with a full house!");
+                      showAlertMessageNoClick("DEATH wins with a full house!");
                       return 2;
                     } else {
                       console.log("It's a tie!");
-                      showAlertMessageRoundWinner("It's a tie!");
+                      showAlertMessageNoClick("It's a tie!");
                       return 0;
                     }
                 } else if(fullhouse1 == 1 && fullhouse2 == 0) {
                     console.log("Humanity wins with a full house!");
-                    showAlertMessageRoundWinner("Humanity wins with a full house!");
+                    showAlertMessageNoClick("Humanity wins with a full house!");
                     return 1;
                 } else if(fullhouse1 == 0 && fullhouse2 == 1) {
                     console.log("DEATH wins with a full house!");
-                    showAlertMessageRoundWinner("DEATH wins with a full house!");
+                    showAlertMessageNoClick("DEATH wins with a full house!");
                     return 2;
                 } else if(fullhouse1 == 0 && fullhouse2 == 0) {    
 
@@ -178,65 +178,65 @@ import {showAlertMessageRoundWinner} from "./Messages.js";
                   if(flush1 == 1 && flush2 == 1) {
                       if (flush1One > flush2One) {
                         console.log("Humanity wins with a flush!");
-                        showAlertMessageRoundWinner("Humanity wins with a flush!");
+                        showAlertMessageNoClick("Humanity wins with a flush!");
                         return 1;
                       }
                       else if (flush2One > flush1One) {
                         console.log("DEATH wins with a flush!");
-                        showAlertMessageRoundWinner("DEATH wins with a flush!");
+                        showAlertMessageNoClick("DEATH wins with a flush!");
                         return 2;
                       }
                       else if (flush1Two > flush2Two) {
                         console.log("Humanity wins with a flush!");
-                        showAlertMessageRoundWinner("Humanity wins with a flush!");
+                        showAlertMessageNoClick("Humanity wins with a flush!");
                         return 1;
                       }
                       else if (flush2Two > flush1Two) {
                         console.log("DEATH wins with a flush!");
-                        showAlertMessageRoundWinner("DEATH wins with a flush!");
+                        showAlertMessageNoClick("DEATH wins with a flush!");
                         return 2;
                       }
                       else if (flush1Three > flush2Three) {
                         console.log("Humanity wins with a flush!");
-                        showAlertMessageRoundWinner("Humanity wins with a flush!");
+                        showAlertMessageNoClick("Humanity wins with a flush!");
                         return 1;
                       }
                       else if (flush2Three > flush1Three) {
                         console.log("DEATH wins with a flush!");
-                        showAlertMessageRoundWinner("DEATH wins with a flush!");
+                        showAlertMessageNoClick("DEATH wins with a flush!");
                         return 2;
                       }
                       else if (flush1Four > flush2Four) {
                         console.log("Humanity wins with a flush!");
-                        showAlertMessageRoundWinner("Humanity wins with a flush!");
+                        showAlertMessageNoClick("Humanity wins with a flush!");
                         return 1;
                       }
                       else if (flush2Four > flush1Four) {
                         console.log("DEATH wins with a flush!");
-                        showAlertMessageRoundWinner("DEATH wins with a flush!");
+                        showAlertMessageNoClick("DEATH wins with a flush!");
                         return 2;
                       }
                       else if (flush1Five > flush2Five) {
                         console.log("Humanity wins with a flush!");
-                        showAlertMessageRoundWinner("Humanity wins with a flush!");
+                        showAlertMessageNoClick("Humanity wins with a flush!");
                         return 1;
                       }
                       else if (flush2Five > flush1Five) {
                         console.log("DEATH wins with a flush!");
-                        showAlertMessageRoundWinner("DEATH wins with a flush!");
+                        showAlertMessageNoClick("DEATH wins with a flush!");
                         return 2;
                       } else {
                         console.log("It's a tie!");
-                        showAlertMessageRoundWinner("It's a tie!");
+                        showAlertMessageNoClick("It's a tie!");
                         return 0;
                       }
                   } else if(flush1 == 1 && flush2 == 0) {
                       console.log("Humanity wins with a flush!");
-                      showAlertMessageRoundWinner("Humanity wins with a flush!");
+                      showAlertMessageNoClick("Humanity wins with a flush!");
                       return 1;
                   } else if(flush1 == 0 && flush2 == 1) {
                       console.log("DEATH wins with a flush!");
-                      showAlertMessageRoundWinner("DEATH wins with a flush!");
+                      showAlertMessageNoClick("DEATH wins with a flush!");
                       return 2;
                   } else if(flush1 == 0 && flush2 == 0) {
 
@@ -248,25 +248,25 @@ import {showAlertMessageRoundWinner} from "./Messages.js";
                     if(straight1 == 1 && straight2 == 1) {
                         if (straight1Power > straight2Power) {
                           console.log("Humanity wins with a straight!");
-                          showAlertMessageRoundWinner("Humanity wins with a straight!");
+                          showAlertMessageNoClick("Humanity wins with a straight!");
                           return 1;
                         }
                         else if (straight2Power > straight1Power) {
                           console.log("DEATH wins with a straight!");
-                          showAlertMessageRoundWinner("DEATH wins with a straight!");
+                          showAlertMessageNoClick("DEATH wins with a straight!");
                           return 2;
                         } else {
                           console.log("It's a tie!");
-                          showAlertMessageRoundWinner("It's a tie!");
+                          showAlertMessageNoClick("It's a tie!");
                           return 0;
                         }
                     } else if(straight1 == 1 && straight2 == 0) {
                         console.log("Humanity wins with a straight!");
-                        showAlertMessageRoundWinner("Humanity wins with a straight!");
+                        showAlertMessageNoClick("Humanity wins with a straight!");
                         return 1;
                     } else if(straight1 == 0 && straight2 == 1) {
                         console.log("DEATH wins with a straight!");
-                        showAlertMessageRoundWinner("DEATH wins with a straight!");
+                        showAlertMessageNoClick("DEATH wins with a straight!");
                         return 2;
                     } else if(straight1 == 0 && straight2 == 0) {
 
@@ -282,44 +282,44 @@ import {showAlertMessageRoundWinner} from "./Messages.js";
                       if(threeOfAKind1 == 1 && threeOfAKind2 == 1) {
                           if (threeOfAKind1Power > threeOfAKind2Power) {
                             console.log("Humanity wins with three of a kind!");
-                            showAlertMessageRoundWinner("Humanity wins with three of a kind!");
+                            showAlertMessageNoClick("Humanity wins with three of a kind!");
                             return 1;
                           }
                           else if (threeOfAKind2Power > threeOfAKind1Power) {
                             console.log("DEATH wins with three of a kind!");
-                            showAlertMessageRoundWinner("DEATH wins with three of a kind!");
+                            showAlertMessageNoClick("DEATH wins with three of a kind!");
                             return 2;
                           }
                           else if (threeOfAKind1KickerOne > threeOfAKind2KickerOne) {
                             console.log("Humanity wins with three of a kind!");
-                            showAlertMessageRoundWinner("Humanity wins with three of a kind!");
+                            showAlertMessageNoClick("Humanity wins with three of a kind!");
                             return 1;
                           }
                           else if (threeOfAKind2KickerOne > threeOfAKind1KickerOne) {
                             console.log("DEATH wins with three of a kind!");
-                            showAlertMessageRoundWinner("DEATH wins with three of a kind!");
+                            showAlertMessageNoClick("DEATH wins with three of a kind!");
                             return 2;
                           }
                           else if (threeOfAKind1KickerTwo > threeOfAKind2KickerTwo) {
                             console.log("Humanity wins with three of a kind!");
-                            showAlertMessageRoundWinner("Humanity wins with three of a kind!");
+                            showAlertMessageNoClick("Humanity wins with three of a kind!");
                             return 1;
                           }
                           else if (threeOfAKind2KickerTwo > threeOfAKind1KickerTwo) {
                             console.log("DEATH wins with three of a kind!");
-                            showAlertMessageRoundWinner("DEATH wins with three of a kind!");
+                            showAlertMessageNoClick("DEATH wins with three of a kind!");
                             return 2;
                           } else {
                             console.log("It's a tie!");
-                            showAlertMessageRoundWinner("It's a tie!");
+                            showAlertMessageNoClick("It's a tie!");
                           }                      
                       } else if(threeOfAKind1 == 1 && threeOfAKind2 == 0) {
                           console.log("Humanity wins with three of a kind!");
-                          showAlertMessageRoundWinner("Humanity wins with three of a kind!");
+                          showAlertMessageNoClick("Humanity wins with three of a kind!");
                           return 1;
                       } else if(threeOfAKind1 == 0 && threeOfAKind2 == 1) {
                           console.log("DEATH wins with three of a kind!");
-                          showAlertMessageRoundWinner("DEATH wins with three of a kind!");
+                          showAlertMessageNoClick("DEATH wins with three of a kind!");
                           return 2;
                       } else if(threeOfAKind1 == 0 && threeOfAKind2 == 0) {
 
@@ -335,45 +335,45 @@ import {showAlertMessageRoundWinner} from "./Messages.js";
                         if(twoPair1 == 1 && twoPair2 == 1) {
                             if (bestPairPower1 > bestPairPower2) {
                               console.log("Humanity wins with two pair!");
-                              showAlertMessageRoundWinner("Humanity wins with two pair!");
+                              showAlertMessageNoClick("Humanity wins with two pair!");
                               return 1;
                             }
                             else if (bestPairPower2 > bestPairPower1) {
                               console.log("DEATH wins with two pair!");
-                              showAlertMessageRoundWinner("DEATH wins with two pair!");
+                              showAlertMessageNoClick("DEATH wins with two pair!");
                               return 2;
                             }
                             else if (worstPairPower1 > worstPairPower2) {
                               console.log("Humanity wins with two pair!");
-                              showAlertMessageRoundWinner("Humanity wins with two pair!");
+                              showAlertMessageNoClick("Humanity wins with two pair!");
                               return 1;
                             }
                             else if (worstPairPower2 > worstPairPower1) {
                               console.log("DEATH wins with two pair!");
-                              showAlertMessageRoundWinner("DEATH wins with two pair!");
+                              showAlertMessageNoClick("DEATH wins with two pair!");
                               return 2;
                             }
                             else if (kicker1 > kicker2) {
                               console.log("Humanity wins with two pair!");
-                              showAlertMessageRoundWinner("Humanity wins with two pair!");
+                              showAlertMessageNoClick("Humanity wins with two pair!");
                               return 1;
                             }
                             else if (kicker2 > kicker1) {
                               console.log("DEATH wins with two pair!");
-                              showAlertMessageRoundWinner("DEATH wins with two pair!");
+                              showAlertMessageNoClick("DEATH wins with two pair!");
                               return 2;
                             } else{
                               console.log("It's a tie!");
-                              showAlertMessageRoundWinner("It's a tie!");
+                              showAlertMessageNoClick("It's a tie!");
                               return 0;
                             }                                              
                         } else if(twoPair1 == 1 && twoPair2 == 0) {
                             console.log("Humanity wins with two pair!");
-                            showAlertMessageRoundWinner("Humanity wins with two pair!");
+                            showAlertMessageNoClick("Humanity wins with two pair!");
                             return 1;
                         } else if(twoPair1 == 0 && twoPair2 == 1) {
                             console.log("DEATH wins with two pair!");
-                            showAlertMessageRoundWinner("DEATH wins with two pair!");
+                            showAlertMessageNoClick("DEATH wins with two pair!");
                             return 2;
                         } else if(twoPair1 == 0 && twoPair2 == 0) {
 
@@ -391,55 +391,55 @@ import {showAlertMessageRoundWinner} from "./Messages.js";
                           if(pair1 == 1 && pair2 == 1) {
                               if (pair1Power > pair2Power) {
                                 console.log("Humanity wins with a pair!");
-                                showAlertMessageRoundWinner("Humanity wins with a pair!");
+                                showAlertMessageNoClick("Humanity wins with a pair!");
                                 return 1;
                               }
                               else if (pair2Power > pair1Power) {
                                 console.log("DEATH wins with a pair!");
-                                showAlertMessageRoundWinner("DEATH wins with a pair!");
+                                showAlertMessageNoClick("DEATH wins with a pair!");
                                 return 2;
                               }
                               else if (pair1kickerOne > pair2kickerOne) {
                                 console.log("Humanity wins with a pair!");
-                                showAlertMessageRoundWinner("Humanity wins with a pair!");
+                                showAlertMessageNoClick("Humanity wins with a pair!");
                                 return 1;
                               }
                               else if (pair2kickerOne > pair1kickerOne) {
                                 console.log("DEATH wins with a pair!");
-                                showAlertMessageRoundWinner("DEATH wins with a pair!");
+                                showAlertMessageNoClick("DEATH wins with a pair!");
                                 return 2;
                               }
                               else if (pair1kickerTwo > pair2kickerTwo) {
                                 console.log("Humanity wins with a pair!");
-                                showAlertMessageRoundWinner("Humanity wins with a pair!");
+                                showAlertMessageNoClick("Humanity wins with a pair!");
                                 return 1;
                               }
                               else if (pair2kickerTwo > pair1kickerTwo) {
                                 console.log("DEATH wins with a pair!");
-                                showAlertMessageRoundWinner("DEATH wins with a pair!");
+                                showAlertMessageNoClick("DEATH wins with a pair!");
                                 return 2;
                               }
                               else if (pair1kickerThree > pair2kickerThree) {
                                 console.log("Humanity wins with a pair!");
-                                showAlertMessageRoundWinner("Humanity wins with a pair!");
+                                showAlertMessageNoClick("Humanity wins with a pair!");
                                 return 1;
                               }
                               else if (pair2kickerThree > pair1kickerThree) {
                                 console.log("DEATH wins with a pair!");
-                                showAlertMessageRoundWinner("DEATH wins with a pair!");
+                                showAlertMessageNoClick("DEATH wins with a pair!");
                                 return 2;
                               } else {
                                 console.log("It's a tie!");
-                                showAlertMessageRoundWinner("It's a tie!");
+                                showAlertMessageNoClick("It's a tie!");
                                 return 0;
                               }
                           } else if(pair1 == 1 && pair2 == 0) {
                               console.log("Humanity wins with a pair!");
-                              showAlertMessageRoundWinner("Humanity wins with a pair!");
+                              showAlertMessageNoClick("Humanity wins with a pair!");
                               return 1;
                           } else if(pair1 == 0 && pair2 == 1) {
                               console.log("DEATH wins with a pair!");
-                              showAlertMessageRoundWinner("DEATH wins with a pair!");
+                              showAlertMessageNoClick("DEATH wins with a pair!");
                               return 2;
                           } else if(pair1 == 0 && pair2 == 0) {
 
@@ -456,51 +456,51 @@ import {showAlertMessageRoundWinner} from "./Messages.js";
 
                             if(higherCard1One > higherCard2One){
                                 console.log("Humanity wins with a high card!");
-                                showAlertMessageRoundWinner("Humanity wins with a high card!");
+                                showAlertMessageNoClick("Humanity wins with a high card!");
                                 return 1;
                             } else if(higherCard2One > higherCard1One){
                                 console.log("DEATH wins with a high card!");
-                                showAlertMessageRoundWinner("DEATH wins with a high card!");
+                                showAlertMessageNoClick("DEATH wins with a high card!");
                                 return 2;
                             } else if(higherCard1One == higherCard2One){
                                 if(higherCard1Two > higherCard2Two){
                                     console.log("Humanity wins with a high card!");
-                                    showAlertMessageRoundWinner("Humanity wins with a high card!");
+                                    showAlertMessageNoClick("Humanity wins with a high card!");
                                     return 1;
                                 } else if(higherCard2Two > higherCard1Two){
                                     console.log("DEATH wins with a high card!");
-                                    showAlertMessageRoundWinner("DEATH wins with a high card!");
+                                    showAlertMessageNoClick("DEATH wins with a high card!");
                                     return 2;
                                 } else if(higherCard1Two == higherCard2Two){
                                     if(higherCard1Three > higherCard2Three){
                                         console.log("Humanity wins with a high card!");
-                                        showAlertMessageRoundWinner("Humanity wins with a high card!");
+                                        showAlertMessageNoClick("Humanity wins with a high card!");
                                         return 1;
                                     } else if(higherCard2Three > higherCard1Three){  
                                         console.log("DEATH wins with a high card!");
-                                        showAlertMessageRoundWinner("DEATH wins with a high card!");
+                                        showAlertMessageNoClick("DEATH wins with a high card!");
                                         return 2;
                                     } else if( higherCard1Three == higherCard2Three){
                                         if(higherCard1Four > higherCard2Four){
                                             console.log("Humanity wins with a high card!"); 
-                                            showAlertMessageRoundWinner("Humanity wins with a high card!");  
+                                            showAlertMessageNoClick("Humanity wins with a high card!");  
                                             return 1;
                                         } else if(higherCard2Four > higherCard1Four){
                                             console.log("DEATH wins with a high card!");
-                                            showAlertMessageRoundWinner("DEATH wins with a high card!");  
+                                            showAlertMessageNoClick("DEATH wins with a high card!");  
                                             return 2;
                                         } else if( higherCard1Four == higherCard2Four){
                                             if(higherCard1Five > higherCard2Five){
                                                 console.log("Humanity wins with a high card!");
-                                                showAlertMessageRoundWinner("Humanity wins with a high card!");
+                                                showAlertMessageNoClick("Humanity wins with a high card!");
                                                 return 1;
                                             } else if(higherCard2Five > higherCard1Five){
                                                 console.log("DEATH wins with a high card!");
-                                                showAlertMessageRoundWinner("DEATH wins with a high card!");
+                                                showAlertMessageNoClick("DEATH wins with a high card!");
                                                 return 2;
                                             } else if(higherCard1Five == higherCard2Five){
                                                 console.log("It's a tie!");
-                                                showAlertMessageRoundWinner("It's a tie!");
+                                                showAlertMessageNoClick("It's a tie!");
                                                 return 0;
                                             }
                                         }

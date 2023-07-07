@@ -51,7 +51,7 @@ function showAlertMessageSeeDeathCards(message) {
     
   }
 
-function showAlertMessageRoundWinner(message) {
+function showAlertMessageNoClick(message) {
     console.log("showAlertMessageRoundWinner");
         
     const btnResult= document.getElementById('myCustomAlert3');
@@ -480,4 +480,4 @@ function showAlertMessage1(message) {
 
 
 
-export { showAlertMessage1, showAlertMessage2, showAlertMessage3, showAlertMessage4, showAlertMessage5, showAlertMessage, showAlertMessageLost1, showAlertMessageVictory1, showAlertMessageRoundWinner,showAlertMessageSeeDeathCards };
+export { showAlertMessage1, showAlertMessage2, showAlertMessage3, showAlertMessage4, showAlertMessage5, showAlertMessage, showAlertMessageLost1, showAlertMessageVictory1, showAlertMessageNoClick, showAlertMessageSeeDeathCards };
