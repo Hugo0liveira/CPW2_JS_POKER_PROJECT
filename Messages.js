@@ -443,11 +443,33 @@ function showAlertMessage1(message) {
       // Hide the custom alert
       customAlert.style.display = 'none';    
       
-      showAlertMessageVictory6(Variables.messageCohleWin);
+      showAlertMessageVictory6(Variables.messageMetzingerWin);
     });
   }
 
   function showAlertMessageVictory6(message) {
+    const customAlert = document.getElementById('myCustomAlert');
+    const alertMessage = document.getElementById('custom-alert-message');
+  
+    // Set the message text
+    alertMessage.textContent = message;
+  
+    // Show the custom alert
+    customAlert.style.display = 'block';
+  
+    // Attach event listener to the OK button
+    const okButton = document.getElementById('custom-alert-ok');
+    okButton.addEventListener('click', function(event) {
+        event.stopPropagation();
+        
+      // Hide the custom alert
+      customAlert.style.display = 'none';    
+      
+      showAlertMessageVictory7(Variables.messageCohleWin);
+    });
+  }
+
+  function showAlertMessageVictory7(message) {
     const customAlert = document.getElementById('myCustomAlert');
     const alertMessage = document.getElementById('custom-alert-message');
   

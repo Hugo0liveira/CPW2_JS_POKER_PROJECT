@@ -473,42 +473,21 @@ function shuffleDeck() {
  function distributeCards1() {     
   cleanAllCommunityCards();
   cleanHands();
-    const [ card1 ] = spliceRandomCardFromDeck();
-    const [ card2 ] = spliceRandomCardFromDeck() 
-    console.log('card1:',card1); console.log('card2:',card2); 
-    // to player 1
-    Variables.player1.hand = [card1, card2];        
-
-    const playerHandEl = document.querySelector('.player1-hand');
-    const cardEl = document.createElement("div");
-    cardEl.classList.add("card1");        
-      cardEl.innerHTML = `
-        <div class="Elysium1">
-          <div class="author1">${card1.author}</div> <BR>
-          <div class="suit1">${ card1.suit}</div> <BR>        
-          <div class="power1">${card1.power}</div>        
-        </div>    
-      `;            
-      playerHandEl.appendChild(cardEl);      
-      cssElysium(card1, 1);   
-      cssArtificial(card1, 1);
-      changeColorOfSuit(card1, '.suit1');
-         
-
-    const cardE2 = document.createElement("div");  
-      cardE2.classList.add("card2");
-      cardE2.innerHTML = `
-      <div class="Elysium2">
-        <div class="author2">${card2.author}</div> <BR>
-        <div class="suit2">${card2.suit}</div> <BR>
-        <div class="power2">${card2.power}</div>
-      </div>
+      // player 1 cards face down      
+      const card1FaceDown = document.createElement("div");  
+      card1FaceDown.classList.add("card");
+      card1FaceDown.innerHTML = `
+        <div class="card1FaceDown"> </div>
       `;
-      playerHandEl.appendChild(cardE2);      
-      cssElysium(card2, 2);
-      cssArtificial(card2, 2);
-      changeColorOfSuit(card2, '.suit2');
+      Variables.player1HandHTML.appendChild(card1FaceDown);
 
+      const card2FaceDown = document.createElement("div");
+      card2FaceDown.classList.add("card");
+      card2FaceDown.innerHTML = `
+        <div class="card2FaceDown"> </div>
+      `;
+      Variables.player1HandHTML.appendChild(card2FaceDown);
+          
       // player 2 cards face down      
       const card3FaceDown = document.createElement("div");
       card3FaceDown.classList.add("card");
@@ -523,8 +502,67 @@ function shuffleDeck() {
         <div class="card4FaceDown"> </div>
       `;
       Variables.player2HandHTML.appendChild(card4FaceDown);     
+      setTimeout(function(){
+      cardsPlayer1FaceUp();
+      }, 3000);
       return Variables.deck;
     }  
+
+    function cardsPlayer1FaceUp() {      
+      const card1FaceDown = document.querySelector('.card1FaceDown');    
+      card1FaceDown.classList.toggle('flipped');  
+      const card2FaceDown = document.querySelector('.card2FaceDown');    
+      card2FaceDown.classList.toggle('flipped');   
+
+      setTimeout(function(){
+      
+        const [ card1 ] = spliceRandomCardFromDeck();        
+        console.log('card1:',card1);         
+        Variables.player1.hand = [card1];        
+        const cardEl = document.querySelector(".card1FaceDown");       
+          cardEl.innerHTML = `
+            <div class="Elysium1">
+              <div class="author1">${card1.author}</div> <BR>
+              <div class="suit1">${ card1.suit}</div> <BR>        
+              <div class="power1">${card1.power}</div>        
+            </div>    
+          `;            
+          Variables.player1HandHTML.appendChild(cardEl);               
+          // flip the card again
+          cardEl.classList.add("card1");
+          cardEl.style.backgroundImage = `url('tombstone.png')`;
+
+          setTimeout(function(){
+            cardEl.classList.toggle('flipped');            
+            }, 100);
+          cssElysium(card1, 1);   
+          cssArtificial(card1, 1);
+          changeColorOfSuit(card1, '.suit1');
+
+        const [ card2 ] = spliceRandomCardFromDeck(); 
+        console.log('card2:',card2); 
+        Variables.player1.hand = [card2];        
+        const cardE2 = document.querySelector(".card2FaceDown");     
+          cardE2.innerHTML = `
+          <div class="Elysium2">
+            <div class="author2">${card2.author}</div> <BR>
+            <div class="suit2">${card2.suit}</div> <BR>
+            <div class="power2">${card2.power}</div>
+          </div>
+          `;
+          Variables.player1HandHTML.appendChild(cardE2);      
+          // flip the card again
+          cardE2.classList.add("card2");
+          cardE2.style.backgroundImage = `url('tombstone.png')`;
+          
+          setTimeout(function(){
+            cardE2.classList.toggle('flipped');            
+            }, 100);
+          cssElysium(card2, 2);
+          cssArtificial(card2, 2);
+          changeColorOfSuit(card2, '.suit2');
+      }, 3000);
+    }
 
 
   function distributeCards2() {        
@@ -708,5 +746,5 @@ function addCardOnCommunityCards5() {
     return player.hand;
   } // end of concatenateHand function
 
-  export { shuffleDeck, cleanAllCommunityCards, distributeCards1, distributeCards2, addCardOnCommunityCards1, addCardOnCommunityCards2, addCardOnCommunityCards3, addCardOnCommunityCards4, addCardOnCommunityCards5,  concatenateHand };
+  export { shuffleDeck, cleanAllCommunityCards, distributeCards1, distributeCards2, addCardOnCommunityCards1, addCardOnCommunityCards2, addCardOnCommunityCards3, addCardOnCommunityCards4, addCardOnCommunityCards5,  concatenateHand, cardsPlayer1FaceUp };
 

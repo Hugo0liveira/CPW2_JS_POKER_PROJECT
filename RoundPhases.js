@@ -1,5 +1,5 @@
 
-import { shuffleDeck, cleanAllCommunityCards, distributeCards1, distributeCards2, addCardOnCommunityCards1, addCardOnCommunityCards2, addCardOnCommunityCards3, addCardOnCommunityCards4, addCardOnCommunityCards5, concatenateHand } from "./DeckManipulation.js";
+import { shuffleDeck, cleanAllCommunityCards, distributeCards1, distributeCards2, addCardOnCommunityCards1, addCardOnCommunityCards2, addCardOnCommunityCards3, addCardOnCommunityCards4, addCardOnCommunityCards5, concatenateHand, cardsPlayer1FaceUp } from "./DeckManipulation.js";
 import {determineWinnersHand} from "./DetermineWinnersHand.js";
 import { Variables } from "./Variables.js"
 import {functionStart} from "./main.js"
