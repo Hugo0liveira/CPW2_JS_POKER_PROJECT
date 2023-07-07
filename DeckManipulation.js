@@ -514,11 +514,15 @@ function shuffleDeck() {
       const card2FaceDown = document.querySelector('.card2FaceDown');    
       card2FaceDown.classList.toggle('flipped');   
 
-      setTimeout(function(){
-      
-        const [ card1 ] = spliceRandomCardFromDeck();        
-        console.log('card1:',card1);         
-        Variables.player1.hand = [card1];        
+      const [ card1 ] = spliceRandomCardFromDeck();
+      const [ card2 ] = spliceRandomCardFromDeck() 
+      console.log('card1:',card1); console.log('card2:',card2); 
+      // to player 1
+      Variables.player1.hand = [card1, card2];  
+      console.log("player1.hand: ", Variables.player1.hand);
+
+      setTimeout(function(){        
+        
         const cardEl = document.querySelector(".card1FaceDown");       
           cardEl.innerHTML = `
             <div class="Elysium1">
@@ -538,10 +542,7 @@ function shuffleDeck() {
           cssElysium(card1, 1);   
           cssArtificial(card1, 1);
           changeColorOfSuit(card1, '.suit1');
-
-        const [ card2 ] = spliceRandomCardFromDeck(); 
-        console.log('card2:',card2); 
-        Variables.player1.hand = [card2];        
+      
         const cardE2 = document.querySelector(".card2FaceDown");     
           cardE2.innerHTML = `
           <div class="Elysium2">
