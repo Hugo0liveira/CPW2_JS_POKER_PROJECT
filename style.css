@@ -151,17 +151,16 @@ iframe {
   display: flex;flex-direction: row; margin-top: 10px;
 }
 
-.card1FaceDown { background: url('/favicon.ico'); background-position: 92%; background-size: 100%; background-repeat: no-repeat; 
+.card1FaceDown { background: url('/cardBack.ico'); background-position: 92%; background-size: 100%; background-repeat: no-repeat; 
   width: 126px;height: 120px; background-color: #6a62625e;   border-top: #000000; 
   margin-right: 10px; display: flex; flex-direction: column; 
   justify-content: center; align-items: center; 
   border-top-left-radius: 23%; border-top-right-radius: 23%;   
-
-  transition: transform 4.0s;    
+  transition: transform 2.0s;    transform: translateX(450%) translateY(-200%) rotate(1440deg) 
 }
 .card1FaceDown.flipped {
-  transition: transform 4.0s;    
-  transform: rotateY(95deg);
+  transition: transform 2.0s;    
+  transform: rotateX(95deg);
   /*background: url('/tombstone.png');*/
   width: 126px;height: 120px;background-color: #bcbbbb; border: 5px solid #ffffff;  
   border-bottom: #000000; border-right: #000000;
@@ -182,20 +181,20 @@ iframe {
 
 .card1.flipped{
   transition: transform 0s;
-  transform: rotateY(90deg);
+  transform: rotateX(90deg);
 }  
 
-.card2FaceDown { background: url('/favicon.ico'); background-position: 92%; background-size: 100%; background-repeat: no-repeat; 
+.card2FaceDown { background: url('/cardBack.ico'); background-position: 92%; background-size: 100%; background-repeat: no-repeat;   
+
   width: 126px;height: 120px; background-color: #6a62625e;   border-top: #000000; 
   margin-right: 10px; display: flex; flex-direction: column; 
   justify-content: center; align-items: center; 
   border-top-left-radius: 23%; border-top-right-radius: 23%;   
-
-  transition: transform 4.0s;    
+  transition: transform 2.0s;    transform: translateX(450%) translateY(-200%) rotate(1440deg) 
 }
 .card2FaceDown.flipped {
-  transition: transform 4.0s;    
-  transform: rotateY(95deg);
+  transition: transform 2.0s;    
+  transform: rotateX(95deg);
   /*background: url('/tombstone.png');*/
   width: 126px;height: 120px;background-color: #bcbbbb; border: 5px solid #ffffff;  
   border-bottom: #000000; border-right: #000000;
@@ -204,7 +203,7 @@ iframe {
   border-top-left-radius: 23%; border-top-right-radius: 23%;        
 }
 .card2 { 
-  transform: rotateY(0deg);
+  transform: rotateX(0deg);
   width: 126px;height: 120px;background-color: #bcbbbb; border: 5px solid #ffffff;  
   border-bottom: #000000; border-right: #000000;
   border-radius: 3px;  margin-right: 10px; display: flex; flex-direction: 
@@ -214,16 +213,15 @@ iframe {
 }
 .card2.flipped{
   transition: transform 0s;
-  transform: rotateY(90deg);
+  transform: rotateX(90deg);
 }
 
   .card3FaceDown { background: url('/favicon.ico'); background-position: 92%; background-size: 100%; background-repeat: no-repeat; 
     width: 126px;height: 120px; background-color: #6a62625e;   border-top: #000000; 
     margin-right: 10px; display: flex; flex-direction: column; 
     justify-content: center; align-items: center; 
-    border-top-left-radius: 23%; border-top-right-radius: 23%;   
-
-    transition: transform 4.0s;    
+    border-top-left-radius: 23%; border-top-right-radius: 23%;       
+    transition: transform 4.0s;  
   }
   .card3FaceDown.flipped {
     transition: transform 4.0s;
@@ -233,7 +231,7 @@ iframe {
     border-bottom: #000000; border-right: #000000;
     border-radius: 3px;  margin-right: 10px; display: flex; flex-direction: 
     column; justify-content: center; align-items: center; 
-    border-top-left-radius: 23%; border-top-right-radius: 23%;        
+    border-top-left-radius: 23%; border-top-right-radius: 23%; 
   }
   
   .card3{
@@ -283,58 +281,99 @@ iframe {
     transform: rotateY(90deg);
   }  
 
+  @keyframes card11Animation {
+    0% {
+      transform: translateX(500%) 
+    }
+    100% {
+       transition: transform 1s translateX(0%);
+    }
+  }
 .card11 { background: url('/tombstone.png');
   width: 126px;height: 120px;background-color: #bcbbbb; border: 5px solid #ffffff;  
   border-bottom: #000000; border-right: #000000;
   border-radius: 3px;  margin-right: 10px; display: flex; flex-direction: 
   column; justify-content: center; align-items: center; 
-  border-top-left-radius: 23%; border-top-right-radius: 23%;}
-  
+  border-top-left-radius: 23%; border-top-right-radius: 23%;
+  animation: card11Animation 1s;  
+}  
+  .center11{
+    position: relative; transform:  translateX(0%) rotateY(75deg); 
+  }
+  .onSide11{
+    position: relative; transition: transform 2s;  transform: translateX(0%);
+  }
+
+  @keyframes card12Animation {
+    0% {
+      transform: translateX(500%) 
+    }
+    100% {
+       transition: transform 1s translateX(-100%);
+    }
+  }
 .card12 { background: url('/tombstone.png');
   width: 126px;height: 120px;background-color: #bcbbbb; border: 5px solid #ffffff;  
   border-bottom: #000000; border-right: #000000;
   border-radius: 3px;  margin-right: 10px; display: flex; flex-direction: 
   column; justify-content: center; align-items: center; 
-  border-top-left-radius: 23%; border-top-right-radius: 23%;}
+  border-top-left-radius: 23%; border-top-right-radius: 23%;
+  animation: card12Animation 1s;  
+}  
+  .center12{
+    position: relative; transform:  translateX(-100%) rotateY(75deg); 
+  }
+  .onSide12{
+    position: relative; transition: transform 2s; transform: translateX(0%);
+  }
 
+  @keyframes card13Animation {
+    0% {
+      transform: translateX(500%) 
+    }
+    100% {
+       transition: transform 1s translateX(-200%);
+    }
+  }
+  
 .card13 { background: url('/tombstone.png');
   width: 126px;height: 120px;background-color: #bcbbbb; border: 5px solid #ffffff;  
   border-bottom: #000000; border-right: #000000;
   border-radius: 3px;  margin-right: 10px; display: flex; flex-direction: 
   column; justify-content: center; align-items: center; 
-  border-top-left-radius: 23%; border-top-right-radius: 23%;}
-
-  .center11{
-    position: relative; transform: translateX(0%);
-  }
-  .center12{
-    position: relative; transform: translateX(-100%);
-  }
+  border-top-left-radius: 23%; border-top-right-radius: 23%;
+  animation: card13Animation 1s;  
+}  
   .center13{
-    position: relative; transform: translateX(-200%);
-  }
-  .onSide11{
-    position: relative; transition: transform 1s;  transform: translateX(0%);
-  }
-  .onSide12{
-    position: relative; transition: transform 1s; transform: translateX(0%);
+    position: relative;  transform:  translateX(-200%) rotateY(75deg); 
   }
   .onSide13{
-    position: relative; transition: transform 1s; transform: translateX(0%);
+    position: relative; transition: transform 2s; transform: translateX(0%);
   }
-
+  
 .card14 { background: url('/tombstone.png');
   width: 126px;height: 120px;background-color: #bcbbbb; border: 5px solid #ffffff;  
   border-bottom: #000000; border-right: #000000;
   border-radius: 3px;  margin-right: 10px; display: flex; flex-direction: 
   column; justify-content: center; align-items: center; 
-  border-top-left-radius: 23%; border-top-right-radius: 23%;}
+  border-top-left-radius: 23%; border-top-right-radius: 23%;
+  position: relative;  transform: translateX(1000%) translateY(100%) rotate(720deg) rotateY(720deg);
+}
+  .onPlace14{
+    position: relative; transition: transform 1.0s; transform: translateX(0%) translateY(0%) rotateY(0deg); 
+  }
+
 .card15 { background: url('/tombstone.png');
   width: 126px;height: 120px;background-color: #bcbbbb; border: 5px solid #ffffff;  
   border-bottom: #000000; border-right: #000000;
   border-radius: 3px;  margin-right: 10px; display: flex; flex-direction: 
   column; justify-content: center; align-items: center; 
-  border-top-left-radius: 23%; border-top-right-radius: 23%;}
+  border-top-left-radius: 23%; border-top-right-radius: 23%;
+  position: relative;  transform: translateX(1000%) translateY(100%) rotate(1440deg) rotateY(1440deg);
+}
+.onPlace15{
+  position: relative; transition: transform 1.0s; transform: translateX(0%) translateY(0%) rotateY(0deg);
+}
 
 .author1 {
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; margin-top: 2px; 
@@ -546,7 +585,9 @@ iframe {
 
       .card1FaceDown{
         width: 67px; height: 76px;
-        border-top-left-radius: 23%; border-top-right-radius: 23%; }
+        border-top-left-radius: 23%; border-top-right-radius: 23%; 
+        
+      }
   .card1FaceDown.flipped{
     width: 67px; height: 76px;
     border-top-left-radius: 23%; border-top-right-radius: 23%; }

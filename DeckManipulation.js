@@ -504,7 +504,7 @@ function shuffleDeck() {
       Variables.player2HandHTML.appendChild(card4FaceDown);     
       setTimeout(function(){
       cardsPlayer1FaceUp();
-      }, 3000);
+      }, 1000);
       return Variables.deck;
     }  
 
@@ -562,7 +562,7 @@ function shuffleDeck() {
           cssElysium(card2, 2);
           cssArtificial(card2, 2);
           changeColorOfSuit(card2, '.suit2');
-      }, 3000);
+      }, 1500);
     }
 
 
@@ -647,7 +647,7 @@ function shuffleDeck() {
 
        setTimeout(function(){
         cardEl.classList.add('onSide11');
-       }, 1000);
+       }, 1500);
 
       return Variables.deck;
   }
@@ -673,7 +673,7 @@ function shuffleDeck() {
 
      setTimeout(function(){
       cardEl.classList.add('onSide12');
-     }, 2000);
+     }, 1500);
 
     return Variables.deck;
 }
@@ -695,10 +695,10 @@ function addCardOnCommunityCards3() {
    cssElysium(card13, 13);
     cssArtificial(card13, 13);
    changeColorOfSuit(card13, '.suit13');   
-
+   
    setTimeout(function(){
     cardEl.classList.add('onSide13');
-   }, 2000);
+   }, 1500);
 
   return Variables.deck;
 }
@@ -721,6 +721,10 @@ function addCardOnCommunityCards4() {
    cssElysium(card14, 14);
     cssArtificial(card14, 14);
    changeColorOfSuit(card14, '.suit14');   
+
+   setTimeout(function(){
+    cardEl.classList.add('onPlace14');
+   }, 500);
    
   return Variables.deck;
 }
@@ -743,6 +747,10 @@ function addCardOnCommunityCards5() {
    cssElysium(card15, 15);
     cssArtificial(card15, 15);
    changeColorOfSuit(card15, '.suit15');   
+
+   setTimeout(function(){
+    cardEl.classList.add('onPlace15');
+   }, 500);
 
   return Variables.deck;
 }
