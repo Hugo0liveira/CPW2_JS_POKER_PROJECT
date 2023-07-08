@@ -629,11 +629,10 @@ function shuffleDeck() {
   // function to put one card at a time on the community cards
   function addCardOnCommunityCards1() {           
       const [card11] = spliceRandomCardFromDeck();   
-      console.log('card11:', card11);
-      //const cardObject = JSON.parse(JSON.stringify(card));
+      console.log('card11:', card11); 
       Variables.allCommunityCards = [...Variables.allCommunityCards, card11];   
       const cardEl = document.createElement("div");
-      cardEl.classList.add("card11");
+      cardEl.classList.add( 'center11',"card11");
       cardEl.innerHTML = `
       <div class="Elysium11">
         <div class="author11">${card11.author}</div> <BR>
@@ -646,6 +645,10 @@ function shuffleDeck() {
         cssArtificial(card11, 11);
        changeColorOfSuit(card11, '.suit11');    
 
+       setTimeout(function(){
+        cardEl.classList.add('onSide11');
+       }, 1000);
+
       return Variables.deck;
   }
 
@@ -655,7 +658,7 @@ function shuffleDeck() {
     //const cardObject = JSON.parse(JSON.stringify(card));
     Variables.allCommunityCards = [...Variables.allCommunityCards, card12];   
     const cardEl = document.createElement("div");
-    cardEl.classList.add("card12");
+    cardEl.classList.add( 'center12',"card12");
     cardEl.innerHTML = `
     <div class="Elysium12">
       <div class="author12">${card12.author}</div> <BR>
@@ -667,6 +670,11 @@ function shuffleDeck() {
      cssElysium(card12, 12);
       cssArtificial(card12, 12);
      changeColorOfSuit(card12, '.suit12');   
+
+     setTimeout(function(){
+      cardEl.classList.add('onSide12');
+     }, 3000);
+
     return Variables.deck;
 }
 
@@ -675,7 +683,7 @@ function addCardOnCommunityCards3() {
   console.log('card13:', card13);
   Variables.allCommunityCards = [...Variables.allCommunityCards, card13];   
   const cardEl = document.createElement("div");
-  cardEl.classList.add("card13");
+  cardEl.classList.add( 'center13',"card13");
   cardEl.innerHTML = `
   <div class="Elysium13">
     <div class="author13">${card13.author}</div> <BR>
@@ -687,6 +695,10 @@ function addCardOnCommunityCards3() {
    cssElysium(card13, 13);
     cssArtificial(card13, 13);
    changeColorOfSuit(card13, '.suit13');   
+
+   setTimeout(function(){
+    cardEl.classList.add('onSide13');
+   }, 2000);
 
   return Variables.deck;
 }

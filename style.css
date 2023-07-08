@@ -289,18 +289,40 @@ iframe {
   border-radius: 3px;  margin-right: 10px; display: flex; flex-direction: 
   column; justify-content: center; align-items: center; 
   border-top-left-radius: 23%; border-top-right-radius: 23%;}
+  
 .card12 { background: url('/tombstone.png');
   width: 126px;height: 120px;background-color: #bcbbbb; border: 5px solid #ffffff;  
   border-bottom: #000000; border-right: #000000;
   border-radius: 3px;  margin-right: 10px; display: flex; flex-direction: 
   column; justify-content: center; align-items: center; 
   border-top-left-radius: 23%; border-top-right-radius: 23%;}
+
 .card13 { background: url('/tombstone.png');
   width: 126px;height: 120px;background-color: #bcbbbb; border: 5px solid #ffffff;  
   border-bottom: #000000; border-right: #000000;
   border-radius: 3px;  margin-right: 10px; display: flex; flex-direction: 
   column; justify-content: center; align-items: center; 
   border-top-left-radius: 23%; border-top-right-radius: 23%;}
+
+  .center11{
+    position: relative; transform: translateX(0%);
+  }
+  .center12{
+    position: relative; transform: translateX(-100%);
+  }
+  .center13{
+    position: relative; transform: translateX(-200%);
+  }
+  .onSide11{
+    position: relative; transition: transform 1s;  transform: translateX(0%);
+  }
+  .onSide12{
+    position: relative; transition: transform 1s; transform: translateX(0%);
+  }
+  .onSide13{
+    position: relative; transition: transform 1s; transform: translateX(0%);
+  }
+
 .card14 { background: url('/tombstone.png');
   width: 126px;height: 120px;background-color: #bcbbbb; border: 5px solid #ffffff;  
   border-bottom: #000000; border-right: #000000;

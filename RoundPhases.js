@@ -343,7 +343,14 @@ function PhasePreFlop(){
       // remove previous community cards  
       cleanAllCommunityCards();
          // PUTS 3 COMMUNITY CARDS
-        addCardOnCommunityCards1(); addCardOnCommunityCards2(); addCardOnCommunityCards3();
+        addCardOnCommunityCards1(); 
+        
+        addCardOnCommunityCards2(); 
+        
+        addCardOnCommunityCards3();
+
+
+        
         foldButton.addEventListener("click", functionFold);
         callButton.addEventListener("click", functionCall);
         checkButton.addEventListener("click", functionCheck);
