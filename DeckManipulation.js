@@ -673,7 +673,7 @@ function shuffleDeck() {
 
      setTimeout(function(){
       cardEl.classList.add('onSide12');
-     }, 3000);
+     }, 2000);
 
     return Variables.deck;
 }
