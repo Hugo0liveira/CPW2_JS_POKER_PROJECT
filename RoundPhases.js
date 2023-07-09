@@ -457,56 +457,30 @@ function compareTheHands(){
   // Disapear buttons
   function DisappearButtonCheck(){
    const checkButton = document.querySelector('.btn-check');
-   checkButton.innerHTML = "";    
-   // change css to transparent
-     checkButton.style.backgroundColor = "transparent";
-      checkButton.style.color = "transparent";
+   checkButton.style.display = "none";
   }
   function DisappearButtonCall(){
     const callButton = document.querySelector('.btn-call');    
-    // change css to transparent
-    callButton.style.backgroundColor = "transparent";
-    callButton.style.color = "transparent";
+    callButton.style.display = "none";
   }
   function DisappearButtonRaise(){
-    const raiseButton = document.querySelector('.btn-raise');
-    raiseButton.innerHTML = "";
-    // change css to transparent
-    raiseButton.style.backgroundColor = "transparent";
-    raiseButton.style.color = "transparent";
+    const raiseButton = docum
+    ent.querySelector('.btn-raise');        
+    raiseButton.style.display = "none";
   }
   function DisappearButtonFold(){
     const foldButton = document.querySelector('.btn-fold');
-    foldButton.innerHTML = "";
-    // change css to transparent
-    foldButton.style.backgroundColor = "transparent";
-    foldButton.style.color = "transparent";
+    foldButton.style.display = "none";
   }
   
   // Appear buttons
   function AppearButtonCheck(){
     const checkButton = document.querySelector('.btn-check');
-    checkButton.innerHTML = ` 
-    <button class="btn-check" onclick="functionCheck()">Check</button>  
-    `;  
+    checkButton.style.display = "block";
   }
   function AppearButtonCall(){
     const callButton = document.querySelector('.btn-call');
-    // undo the transparence of css     
-    callButton.style.backgroundColor = "#f3de21";
-    callButton.style.color = "rgb(0, 0, 0)";         
-  }
-  function AppearButtonRaise(){
-    const raiseButton = document.querySelector('.btn-raise');
-    raiseButton.innerHTML = `
-    <button class="btn-raise" onclick="functionRaise()">Raise</button> 
-    `;
-  }
-  function AppearButtonFold(){
-    const foldButton = document.querySelector('.btn-fold');
-    foldButton.innerHTML = `
-    <button class="btn-fold" onclick="functionFold()">Fold</button>
-    `;
+    callButton.style.display = "block";
   }
      
   // show image when Death wins round
@@ -647,7 +621,7 @@ function compareTheHands(){
     setTimeout( function() {
         endHTML.innerHTML = "";
         document.body.style.backgroundImage = "url('eye.png')";    
-    }, 1700);
+    }, 1600);
   } 
 
 

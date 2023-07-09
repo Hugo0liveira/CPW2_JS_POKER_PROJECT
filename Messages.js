@@ -375,7 +375,7 @@ function showAlertMessage1(message) {
       // Hide the custom alert
       customAlert.style.display = 'none';    
       
-      showAlertMessageVictory3(Variables.messageYuvalWin1);       
+      showAlertMessageVictory3(Variables.messageYuvalWin);       
        
     });
   }
@@ -398,7 +398,7 @@ function showAlertMessage1(message) {
       // Hide the custom alert
       customAlert.style.display = 'none';    
       
-      showAlertMessageVictory4(Variables.messageSapolskyWin1);    
+      showAlertMessageVictory4(Variables.messageSapolskyWin);    
        
     });
   }
@@ -421,9 +421,10 @@ function showAlertMessage1(message) {
       // Hide the custom alert
       customAlert.style.display = 'none';    
       
-      showAlertMessageVictory5(Variables.messageChomskyWin);
+      showAlertMessageVictory5( Variables.messageChurchlandWin);
     });
   }
+
 
   function showAlertMessageVictory5(message) {
     const customAlert = document.getElementById('myCustomAlert');
@@ -465,11 +466,33 @@ function showAlertMessage1(message) {
       // Hide the custom alert
       customAlert.style.display = 'none';    
       
-      showAlertMessageVictory7(Variables.messageCohleWin);
+      showAlertMessageVictory7(Variables.messageChomskyWin);
     });
   }
 
   function showAlertMessageVictory7(message) {
+    const customAlert = document.getElementById('myCustomAlert');
+    const alertMessage = document.getElementById('custom-alert-message');
+  
+    // Set the message text
+    alertMessage.textContent = message;
+  
+    // Show the custom alert
+    customAlert.style.display = 'block';
+  
+    // Attach event listener to the OK button
+    const okButton = document.getElementById('custom-alert-ok');
+    okButton.addEventListener('click', function(event) {
+        event.stopPropagation();
+        
+      // Hide the custom alert
+      customAlert.style.display = 'none';    
+      
+      showAlertMessageVictory8(Variables.messageCohleWin);
+    });
+  }
+
+  function showAlertMessageVictory8(message) {
     const customAlert = document.getElementById('myCustomAlert');
     const alertMessage = document.getElementById('custom-alert-message');
   

@@ -121,6 +121,7 @@ const messageNietzscheWin2 = '"If one shifts the centre of gravity of life out o
 const messageYuvalWin1 = "Ever since the Cognitive Revolution, Sapiens have thus been living in a dual reality. On the one hand, the objective reality of rivers, trees and lions; and on the other hand, the imagined reality of gods, nations and corporations. As time went by, the imagined reality became ever more powerful, so that today the very survival of rivers, trees and lions depends on the grace of imagined entities such as the United States and Google.\n\n     Yuval Harari";
 const messageSapolskyWin1 = "We're a miserably violent species. But there's a complication, which is we don't hate violence, we hate the wrong kind. And when it's the right kind, we cheer it on, we hand out medals, we vote for, we mate with our champions of it. When it's the right kind of violence, we love it.\n\n     Robert Sapolsky";
 const messageChomskyWin = "If you assume that there is no hope, you guarantee that there will be no hope. If you assume that there is an instinct for freedom, that there are opportunities to change things, then there is a possibility that you can contribute to making a better world.\n\n     Noam Chomsky";
+const messageChurchlandWin = "The brain is a causal machine. Patricia Churchland";
 const messageMetzingerWin = `The conscious experience of being a subject arises when a single organism learns to enslave itself. Thomas Metzinger`;
 const messageCohleWin = "Once there was only dark. If you ask me, the light's winning.\n\n     Rust Cohle";
 
@@ -159,17 +160,18 @@ export const Variables = {
   messageFold: messageFold,
   messageCohle1: messageCohle1,
   messageCohle2: messageCohle2,
-  messageCohleWin: messageCohleWin,
   messageDoTheEvolution1: messageDoTheEvolution1,
   messageDoTheEvolution2: messageDoTheEvolution2,
   messageDoTheEvolution3: messageDoTheEvolution3,
   messageDoTheEvolution4: messageDoTheEvolution4,
   messageNietzscheWin1: messageNietzscheWin1,
   messageNietzscheWin2: messageNietzscheWin2,
-  messageYuvalWin1: messageYuvalWin1,
-  messageSapolskyWin1: messageSapolskyWin1,
-  messageChomskyWin: messageChomskyWin,
+  messageYuvalWin: messageYuvalWin1,
+  messageSapolskyWin: messageSapolskyWin1,
+  messageChurchlandWin: messageChurchlandWin,
   messageMetzingerWin: messageMetzingerWin,
+  messageChomskyWin: messageChomskyWin,
+  messageCohleWin: messageCohleWin,
   allCommunityCardsHTML: allCommunityCardsHTML,
   allCommunityCards: allCommunityCards,
   game: game,
