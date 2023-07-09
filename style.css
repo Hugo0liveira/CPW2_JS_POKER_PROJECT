@@ -190,7 +190,7 @@ iframe {
   margin-right: 10px; display: flex; flex-direction: column; 
   justify-content: center; align-items: center; 
   border-top-left-radius: 23%; border-top-right-radius: 23%;   
-  transition: transform 2.0s;    transform: translateX(450%) translateY(-200%) rotate(1440deg) 
+  transition: transform 2.0s;    transform: translateX(350%) translateY(-200%) rotate(1440deg) 
 }
 .card2FaceDown.flipped {
   transition: transform 2.0s;    
@@ -306,7 +306,7 @@ iframe {
 
   @keyframes card12Animation {
     0% {
-      transform: translateX(500%) 
+      transform: translateX(400%) 
     }
     100% {
        transition: transform 1s translateX(-100%);
@@ -329,7 +329,7 @@ iframe {
 
   @keyframes card13Animation {
     0% {
-      transform: translateX(500%) 
+      transform: translateX(300%) 
     }
     100% {
        transition: transform 1s translateX(-200%);
