@@ -1,6 +1,6 @@
 import { Variables } from "./Variables.js"
-import { showAlertMessage1 } from "./Messages.js"
-import { PhasePreFlop, welcomeDeath } from "./RoundPhases.js"
+import { showAlertMessage1 } from "./services/Messages.js"
+import { PhasePreFlop, welcomeDeath } from "./services/RoundPhases.js"
 
 function functionStart(){   
   document.body.style.backgroundColor = "black";

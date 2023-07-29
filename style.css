@@ -151,7 +151,7 @@ iframe {
   display: flex;flex-direction: row; margin-top: 10px;
 }
 
-.card1FaceDown { background: url('/cardBack.ico'); background-position: 92%; background-size: 100%; background-repeat: no-repeat; 
+.card1FaceDown { background: url('/visual/cardBack.ico'); background-position: 92%; background-size: 100%; background-repeat: no-repeat; 
   width: 126px;height: 120px; background-color: #6a62625e;   border-top: #000000; 
   margin-right: 10px; display: flex; flex-direction: column; 
   justify-content: center; align-items: center; 
@@ -161,7 +161,7 @@ iframe {
 .card1FaceDown.flipped {
   transition: transform 2.0s;    
   transform: rotateX(95deg);
-  /*background: url('/tombstone.png');*/
+  /*background: url('/visual/tombstone.png');*/
   width: 126px;height: 120px;background-color: #bcbbbb; border: 5px solid #ffffff;  
   border-bottom: #000000; border-right: #000000;
   border-radius: 3px;  margin-right: 10px; display: flex; flex-direction: 
@@ -176,7 +176,7 @@ iframe {
   border-radius: 3px;  margin-right: 10px; display: flex; flex-direction: 
   column; justify-content: center; align-items: center; 
   border-top-left-radius: 23%; border-top-right-radius: 23%;
-  background: url('/tombstone.png');
+  background: url('/visual/tombstone.png');
 }
 
 .card1.flipped{
@@ -184,7 +184,7 @@ iframe {
   transform: rotateX(90deg);
 }  
 
-.card2FaceDown { background: url('/cardBack.ico'); background-position: 92%; background-size: 100%; background-repeat: no-repeat;   
+.card2FaceDown { background: url('/visual/cardBack.ico'); background-position: 92%; background-size: 100%; background-repeat: no-repeat;   
 
   width: 126px;height: 120px; background-color: #6a62625e;   border-top: #000000; 
   margin-right: 10px; display: flex; flex-direction: column; 
@@ -195,7 +195,7 @@ iframe {
 .card2FaceDown.flipped {
   transition: transform 2.0s;    
   transform: rotateX(95deg);
-  /*background: url('/tombstone.png');*/
+  /*background: url('/visual/tombstone.png');*/
   width: 126px;height: 120px;background-color: #bcbbbb; border: 5px solid #ffffff;  
   border-bottom: #000000; border-right: #000000;
   border-radius: 3px;  margin-right: 10px; display: flex; flex-direction: 
@@ -209,14 +209,14 @@ iframe {
   border-radius: 3px;  margin-right: 10px; display: flex; flex-direction: 
   column; justify-content: center; align-items: center; 
   border-top-left-radius: 23%; border-top-right-radius: 23%;  
-  background: url('/tombstone.png');
+  background: url('/visual/tombstone.png');
 }
 .card2.flipped{
   transition: transform 0s;
   transform: rotateX(90deg);
 }
 
-  .card3FaceDown { background: url('/favicon.ico'); background-position: 92%; background-size: 100%; background-repeat: no-repeat; 
+  .card3FaceDown { background: url('/visual/favicon.ico'); background-position: 92%; background-size: 100%; background-repeat: no-repeat; 
     width: 126px;height: 120px; background-color: #6a62625e;   border-top: #000000; 
     margin-right: 10px; display: flex; flex-direction: column; 
     justify-content: center; align-items: center; 
@@ -226,7 +226,7 @@ iframe {
   .card3FaceDown.flipped {
     transition: transform 4.0s;
     transform: rotateY(95deg);
-    /*background: url('/tombstone.png');*/
+    /*background: url('/visual/tombstone.png');*/
     width: 126px;height: 120px;background-color: #bcbbbb; border: 5px solid #ffffff;  
     border-bottom: #000000; border-right: #000000;
     border-radius: 3px;  margin-right: 10px; display: flex; flex-direction: 
@@ -240,7 +240,7 @@ iframe {
     border-bottom: #000000; border-right: #000000;
     border-radius: 3px;  margin-right: 10px; display: flex; flex-direction: 
     column; justify-content: center; align-items: center; 
-    border-top-left-radius: 23%; border-top-right-radius: 23%; background: url('/tombstone.png');
+    border-top-left-radius: 23%; border-top-right-radius: 23%; background: url('/visual/tombstone.png');
   }
   
   .card3.flipped{
@@ -248,7 +248,7 @@ iframe {
     transform: rotateY(90deg);
   }  
 
-  .card4FaceDown { background: url('/favicon.ico'); background-position: 92%; background-size: 100%; background-repeat: no-repeat; 
+  .card4FaceDown { background: url('/visual/favicon.ico'); background-position: 92%; background-size: 100%; background-repeat: no-repeat; 
     width: 126px;height: 120px; background-color: #6a62625e;   border-top: #000000; 
     margin-right: 10px; display: flex; flex-direction: column; 
     justify-content: center; align-items: center; 
@@ -259,7 +259,7 @@ iframe {
   .card4FaceDown.flipped {
     transition: transform 4.0s;
     transform: rotateY(95deg);
-    /*background: url('/tombstone.png');*/
+    /*background: url('/visual/tombstone.png');*/
   width: 126px;height: 120px;background-color: #bcbbbb; border: 5px solid #ffffff;  
   border-bottom: #000000; border-right: #000000;
   border-radius: 3px;  margin-right: 10px; display: flex; flex-direction: 
@@ -273,7 +273,7 @@ iframe {
     border-bottom: #000000; border-right: #000000;
     border-radius: 3px;  margin-right: 10px; display: flex; flex-direction: 
     column; justify-content: center; align-items: center; 
-    border-top-left-radius: 23%; border-top-right-radius: 23%; background: url('/tombstone.png');
+    border-top-left-radius: 23%; border-top-right-radius: 23%; background: url('/visual/tombstone.png');
   }
   
   .card4.flipped{
@@ -289,7 +289,7 @@ iframe {
        transition: transform 1s translateX(0%);
     }
   }
-.card11 { background: url('/tombstone.png');
+.card11 { background: url('/visual/tombstone.png');
   width: 126px;height: 120px;background-color: #bcbbbb; border: 5px solid #ffffff;  
   border-bottom: #000000; border-right: #000000;
   border-radius: 3px;  margin-right: 10px; display: flex; flex-direction: 
@@ -312,7 +312,7 @@ iframe {
        transition: transform 1s translateX(-100%);
     }
   }
-.card12 { background: url('/tombstone.png');
+.card12 { background: url('/visual/tombstone.png');
   width: 126px;height: 120px;background-color: #bcbbbb; border: 5px solid #ffffff;  
   border-bottom: #000000; border-right: #000000;
   border-radius: 3px;  margin-right: 10px; display: flex; flex-direction: 
@@ -336,7 +336,7 @@ iframe {
     }
   }
   
-.card13 { background: url('/tombstone.png');
+.card13 { background: url('/visual/tombstone.png');
   width: 126px;height: 120px;background-color: #bcbbbb; border: 5px solid #ffffff;  
   border-bottom: #000000; border-right: #000000;
   border-radius: 3px;  margin-right: 10px; display: flex; flex-direction: 
@@ -351,7 +351,7 @@ iframe {
     position: relative; transition: transform 2s; transform: translateX(0%);
   }
   
-.card14 { background: url('/tombstone.png');
+.card14 { background: url('/visual/tombstone.png');
   width: 126px;height: 120px;background-color: #bcbbbb; border: 5px solid #ffffff;  
   border-bottom: #000000; border-right: #000000;
   border-radius: 3px;  margin-right: 10px; display: flex; flex-direction: 
@@ -363,7 +363,7 @@ iframe {
     position: relative; transition: transform 1.0s; transform: translateX(0%) translateY(0%) rotateY(0deg); 
   }
 
-.card15 { background: url('/tombstone.png');
+.card15 { background: url('/visual/tombstone.png');
   width: 126px;height: 120px;background-color: #bcbbbb; border: 5px solid #ffffff;  
   border-bottom: #000000; border-right: #000000;
   border-radius: 3px;  margin-right: 10px; display: flex; flex-direction: 
