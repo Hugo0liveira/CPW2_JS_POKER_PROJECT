@@ -663,15 +663,25 @@ iframe {
   .suit14 {font-size: 9px; margin-top: -7px;  }
   .suit15 {font-size: 9px; margin-top: -7px;  }
       
-  .power1 {    font-size: 10px; margin-top: -11px; margin-bottom: 4px; }
-  .power2 {    font-size: 10px; margin-top: -11px; margin-bottom: 4px; }
-  .power3 {    font-size: 10px; margin-top: -11px; margin-bottom: 4px; }
-  .power4 {    font-size: 10px; margin-top: -11px; margin-bottom: 4px; }
-  .power11 {    font-size: 10px; margin-top: -11px; margin-bottom: 4px; }
-  .power12 {    font-size: 10px; margin-top: -11px; margin-bottom: 4px; }
-  .power13 {    font-size: 10px; margin-top: -11px; margin-bottom: 4px; }
-  .power14 {    font-size: 10px; margin-top: -11px; margin-bottom: 4px; }
-  .power15 {    font-size: 10px; margin-top: -11px; margin-bottom: 4px; }
+  .power1 { font-size: 10px; margin-top: -11px; margin-bottom: 4px; }
+  .power2 { font-size: 10px; margin-top: -11px; margin-bottom: 4px; }
+  .power3 { font-size: 10px; margin-top: -11px; margin-bottom: 4px; }
+  .power4 { font-size: 10px; margin-top: -11px; margin-bottom: 4px; }
+  .power11 { font-size: 10px; margin-top: -11px; margin-bottom: 4px; }
+  .power12 { font-size: 10px; margin-top: -11px; margin-bottom: 4px; }
+  .power13 { font-size: 10px; margin-top: -11px; margin-bottom: 4px; }
+  .power14 { font-size: 10px; margin-top: -11px; margin-bottom: 4px; }
+  .power15 { font-size: 10px; margin-top: -11px; margin-bottom: 4px; }
+
+  .Schopenhauer1{ font-size: 8.9px;}
+  .Schopenhauer2{ font-size: 8.9px;}
+  .Schopenhauer3{ font-size: 8.9px;}
+  .Schopenhauer4{ font-size: 8.9px;}
+  .Schopenhauer11{ font-size: 8.9px;}
+  .Schopenhauer12{ font-size: 8.9px;}
+  .Schopenhauer13{ font-size: 8.9px;}
+  .Schopenhauer14{ font-size: 8.9px;}
+  .Schopenhauer15{ font-size: 8.9px;}
 
   .cardFaceDown { width: 62px; height: 76px; }
 

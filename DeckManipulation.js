@@ -302,6 +302,58 @@ function shuffleDeck() {
     }    
   }
 
+  // function responsiveSchopenhauer
+  function responsiveSchopenhauer(card, num){
+    if(card.author == 'Schopenhauer'){
+      if(num == 1){        
+        const author1 = document.querySelector('.author1');        
+        author1.classList.add('Schopenhauer1');
+        author1.innerHTML = card.author;
+      }
+      if(num == 2){
+        const author2 = document.querySelector('.author2');
+        author2.classList.add('Schopenhauer2');
+        author2.innerHTML = card.author;
+      } 
+      if(num == 3){
+        const author3 = document.querySelector('.author3');
+        author3.classList.add('Schopenhauer3');
+        author3.innerHTML = card.author;
+      }
+      if(num == 4){
+        const author4 = document.querySelector('.author4');
+        author4.classList.add('Schopenhauer4');
+        author4.innerHTML = card.author;
+      }
+      if(num == 11){
+        const author11 = document.querySelector('.author11');
+        author11.classList.add('Schopenhauer11');
+        author11.innerHTML = card.author;
+      }
+      if(num == 12){
+        const author12 = document.querySelector('.author12');
+        author12.classList.add('Schopenhauer12');
+        author12.innerHTML = card.author;
+      }
+      if(num == 13){
+        const author13 = document.querySelector('.author13');
+        author13.classList.add('Schopenhauer13');
+        author13.innerHTML = card.author;
+      }
+      if(num == 14){
+        const author14 = document.querySelector('.author14');
+        author14.classList.add('Schopenhauer14');
+        author14.innerHTML = card.author;
+      }
+      if(num == 15){
+        const author15 = document.querySelector('.author15');
+        author15.classList.add('Schopenhauer15');
+        author15.innerHTML = card.author;
+      }
+  }
+}
+
+
   // function cssArtificial 
   function cssArtificial(card, num){
     if(card.author == 'Artificial'){
@@ -539,6 +591,7 @@ function shuffleDeck() {
           setTimeout(function(){
             cardEl.classList.toggle('flipped');            
             }, 100);
+          responsiveSchopenhauer(card1, 1);
           cssElysium(card1, 1);   
           cssArtificial(card1, 1);
           changeColorOfSuit(card1, '.suit1');
@@ -559,6 +612,7 @@ function shuffleDeck() {
           setTimeout(function(){
             cardE2.classList.toggle('flipped');            
             }, 100);
+          responsiveSchopenhauer(card2, 2);
           cssElysium(card2, 2);
           cssArtificial(card2, 2);
           changeColorOfSuit(card2, '.suit2');
@@ -596,7 +650,7 @@ function shuffleDeck() {
           cardE3.classList.toggle('flipped');
           
           }, 100);
-
+          responsiveSchopenhauer(card3, 3);
           cssElysium(card3, 3);
           cssArtificial(card3, 3);
           changeColorOfSuit(card3, '.suit3');      
@@ -617,7 +671,7 @@ function shuffleDeck() {
           setTimeout(function(){
             cardE4.classList.toggle('flipped');
           }, 100);
-
+          responsiveSchopenhauer(card4, 4);
           cssElysium(card4, 4);
           cssArtificial(card4, 4);
           changeColorOfSuit(card4, '.suit4');
@@ -641,6 +695,7 @@ function shuffleDeck() {
       </div>
       `;
        Variables.allCommunityCardsHTML.appendChild(cardEl);
+       responsiveSchopenhauer(card11, 11)
        cssElysium(card11, 11);
         cssArtificial(card11, 11);
        changeColorOfSuit(card11, '.suit11');    
@@ -667,8 +722,9 @@ function shuffleDeck() {
     </div>
     `;
      Variables.allCommunityCardsHTML.appendChild(cardEl);
+     responsiveSchopenhauer(card12, 12);
      cssElysium(card12, 12);
-      cssArtificial(card12, 12);
+     cssArtificial(card12, 12);
      changeColorOfSuit(card12, '.suit12');   
 
      setTimeout(function(){
@@ -692,8 +748,9 @@ function addCardOnCommunityCards3() {
   </div>
   `;
    Variables.allCommunityCardsHTML.appendChild(cardEl);
+   responsiveSchopenhauer(card13, 13);
    cssElysium(card13, 13);
-    cssArtificial(card13, 13);
+   cssArtificial(card13, 13);
    changeColorOfSuit(card13, '.suit13');   
    
    setTimeout(function(){
@@ -718,6 +775,7 @@ function addCardOnCommunityCards4() {
   </div>
   `;
    Variables.allCommunityCardsHTML.appendChild(cardEl);
+   responsiveSchopenhauer(card14, 14);
    cssElysium(card14, 14);
     cssArtificial(card14, 14);
    changeColorOfSuit(card14, '.suit14');   
@@ -744,6 +802,7 @@ function addCardOnCommunityCards5() {
   </div>
   `;
    Variables.allCommunityCardsHTML.appendChild(cardEl);
+   responsiveSchopenhauer(card15, 15);
    cssElysium(card15, 15);
     cssArtificial(card15, 15);
    changeColorOfSuit(card15, '.suit15');   

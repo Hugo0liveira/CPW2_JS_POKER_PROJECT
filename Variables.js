@@ -4,7 +4,7 @@ Sistemas para Internet
 Construção de Páginas WEB 2
 Professor: Rodrigo Prestes Machado
 Aluno: Hugo Romão Lisboa Oliveira
-Período: 2023/1*/
+Início de desenvolvimento: março de 2023 */
 
       /* Trabalho: Programar um jogo em JAVASCRIPT:
 
